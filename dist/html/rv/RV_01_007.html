@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-title" content="With KMI">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="refresh" content="300">
+
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="author" content="With KMI">
+    <meta name="title" content="건강검진 서비스 - With KMI">
+    <meta name="description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta name="keywords" content="With KMI, 위드케이엠아이, 비타브릿지, vitabridge, 건강검진, 헬스케어서비스, 헬스케어">
+    <meta name="copyright" content="© 2022. KMI All Rights Reserved.">
+
+    <link rel="canonical" href="{유동 도메인 주소}.withkmi.or.kr">
+
+    <meta property="og:locale" content="ko-KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="With KMI - 건강검진 서비스">
+    <meta property="og:description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta property="og:image" content="../../images/kmi_info_img.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:url" content="https://{유동 도메인 주소}.withkmi.or.kr">
+    <meta property="og:site_name" content="With KMI">
+
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/logo/home-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/logo/home-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../../images/logo/home-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/logo/home-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/logo/home-icon-192x192.png">
+    <link rel="stylesheet" href="../../lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../lib/datepicker/datepicker.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/swiper/js/swiper.min.js"></script>
+    <script defer src="../../js/common.js"></script>
+    <title>건강검진 서비스 - With KMI</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="flex-wrap">
+            <div class="flex-container">
+                <a href="javascript:void(0);" role="button" title="팝업열림" class="btn-open-popup" data-toggle="modal" data-target="popupInstitutionDetails">팝업 확인용 버튼</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- full popup - 검진기관 상세 - 의료 인력 안내 -->
+    <div class="c-full-layer kmi-popup type-full popup-institution-details" id="popupInstitutionDetails" role="dialog" aria-labelledby="popupInstitutionDetails_Label" aria-modal="true" aria-hidden="true">
+        <div class="c-container" tabindex="0">
+            <div class="full-header">
+                <button class="btn-go-back popup-btn-close">
+                    <span>뒤로 가기</span>
+                </button>
+            </div>
+
+            <div class="full-body"><!-- + 의료인력 안내 -->
+                <div class="full-body">
+                    <h1 id="popupInstitutionDetails_Label" class="top-title-box type-sm">한국의학연구소 강남센터</h1>
+
+                    <div class="cont-box">
+                        <!--
+			* 탭 터치 시 panel이 바뀌는 case
+			* 탭의 aria-controls와 panel의 aria-labelledby가 동일해야 됨
+		-->
+                        <ul class="c-tab type-slide type-move" role="tablist" data-tablist="instDetTab">
+                            <li role="tab" aria-controls="institution-details-center">
+                                <a href="javascript:void(0);" title="페이지 이동" class="tab">검진센터 안내</a>
+                            </li>
+                            <li role="tab" aria-controls="institution-details-manpower">
+                                <a href="javascript:void(0);" title="페이지 이동" class="tab active">의료 인력 안내</a>
+                            </li>
+                            <li role="tab" aria-controls="institution-details-equipment">
+                                <a href="javascript:void(0);" title="페이지 이동" class="tab">의료장비 안내</a>
+                            </li>
+                        </ul>
+
+                        <!--
+			* 의료 인력 안내 panel
+			* tab-panel show class: show || null
+		-->
+                        <div class="tab-panel show" role="tabpanel" aria-labelledby="institution-details-manpower" data-panelname="instDetTab">
+                            <div class="accordion-list">
+                                <div class="accordion type-profile type-open-one">
+                                    <button class="accordion-header" id="instDet1" aria-controls="instDet-1">
+                                        <img src="../../images/dummy/dr_profile/kmi_gwangju/dr_profile_song_wan_hee.png" alt="원장 외과 송완희">
+                                        <p>원장</p>
+                                        <p>송완희 / 외과</p>
+                                    </button>
+                                    <div class="accordion-body" id="instDet-1" role="region" aria-labelledby="instDet1"></div>
+                                </div>
+
+                                <div class="accordion type-profile type-open-one">
+                                    <button class="accordion-header" id="instDet2" aria-controls="instDet-2">
+                                        <img src="../../images/dummy/dr_profile/kmi_gwangju/dr_profile_kim_kyung_yeon.png" alt="의료기획본부장 직업환경의학과 김경연">
+                                        <p>의료기획본부장</p>
+                                        <p>김경연 / 직업환경의학과</p>
+                                    </button>
+                                    <div class="accordion-body" id="instDet-2" role="region" aria-labelledby="instDet2">
+                                        <h2 class="box-tit">의료기획본부장</h2>
+                                        <div class="box type6">김경연</div>
+
+                                        <h2 class="box-tit">진료 분야</h2>
+                                        <div class="box type6">직업환경의학과</div>
+
+                                        <h2 class="box-tit">학력</h2>
+                                        <div class="box type6">인제대학교 의과대학 졸업</div>
+
+                                        <h2 class="box-tit">경력</h2>
+                                        <div class="box type6">
+                                            <ul class="list type1">
+                                                <li>인제대 서울백병원 인턴/레지던트</li>
+                                                <li>대림성모병원 과장</li>
+                                                <li>세림병원과장</li>
+                                                <li>이광설진단방사선과의원 원장</li>
+                                                <li>세란병원 과장</li>
+                                                <li>서울백병원 외래교수</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion type-profile type-open-one">
+                                    <button class="accordion-header" id="instDet3" aria-controls="instDet-3">
+                                        <img src="../../images/dummy/dr_profile/kmi_gwangju/dr_profile_shin_sang_yeop.png" alt="상임연구위원 감염내과 신상엽">
+                                        <p>상임연구위원</p>
+                                        <p>신상엽 / 감염내과</p>
+                                    </button>
+                                    <div class="accordion-body" id="instDet-3" role="region" aria-labelledby="instDet3"></div>
+                                </div>
+
+                                <div class="accordion type-profile type-open-one">
+                                    <button class="accordion-header" id="instDet4" aria-controls="instDet-4">
+                                        <img src="../../images/dummy/dr_profile/kmi_gwangju/dr_profile_kim_Jae_yong.png" alt="진료부장 가정의학과 김재용">
+                                        <p>진료부장</p>
+                                        <p>김재용 / 가정의학과</p>
+                                    </button>
+                                    <div class="accordion-body" id="instDet-4" role="region" aria-labelledby="instDet4"></div>
+                                </div>
+
+                                <div class="accordion type-profile type-open-one">
+                                    <button class="accordion-header" id="instDet5" aria-controls="instDet-5">
+                                        <img src="../../images/dummy/dr_profile/kmi_gwangju/dr_profile_kim_dong_ju.png" alt="진료부장 영상의학과 김동주">
+                                        <p>진료부장</p>
+                                        <p>김동주 / 영상의학과</p>
+                                    </button>
+                                    <div class="accordion-body" id="instDet-5" role="region" aria-labelledby="instDet5"></div>
+                                </div>
+
+                                <div class="accordion type-profile type-open-one">
+                                    <button class="accordion-header" id="instDet6" aria-controls="instDet-6">
+                                        <img src="../../images/dummy/dr_profile/kmi_gwangju/dr_profile_lee_beom_jun.png" alt="진료부장 직업환경의학과 이범준">
+                                        <p>진료부장</p>
+                                        <p>이범준 / 직업환경의학과</p>
+                                    </button>
+                                    <div class="accordion-body" id="instDet-6" role="region" aria-labelledby="instDet6"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

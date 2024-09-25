@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-title" content="With KMI">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="refresh" content="300">
+
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="author" content="With KMI">
+    <meta name="title" content="건강검진 서비스 - With KMI">
+    <meta name="description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta name="keywords" content="With KMI, 위드케이엠아이, 비타브릿지, vitabridge, 건강검진, 헬스케어서비스, 헬스케어">
+    <meta name="copyright" content="© 2022. KMI All Rights Reserved.">
+
+    <link rel="canonical" href="{유동 도메인 주소}.withkmi.or.kr">
+
+    <meta property="og:locale" content="ko-KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="With KMI - 건강검진 서비스">
+    <meta property="og:description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta property="og:image" content="../../images/kmi_info_img.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:url" content="https://{유동 도메인 주소}.withkmi.or.kr">
+    <meta property="og:site_name" content="With KMI">
+
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/logo/home-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/logo/home-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../../images/logo/home-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/logo/home-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/logo/home-icon-192x192.png">
+    <link rel="stylesheet" href="../../lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../lib/datepicker/datepicker.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/swiper/js/swiper.min.js"></script>
+    <script defer src="../../js/common.js"></script>
+    <title>건강검진 서비스 - With KMI</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="flex-wrap"> <!-- Header -->
+            <header class="header co-header">
+                <!-- 기업 로고에 따른 alt값 부여 -->
+                <h1 class="logo">
+                    <a href="../vgt/vgt_01_001.html"><img src="../../images/dummy/dummy_logo02.png" alt="LG화학 로고"></a>
+                </h1>
+                <!-- 컬러로고: type-color -->
+                <!-- <h1 class="logo type-color">
+    <a href="javascrpit:void(0);"><img src="../../images/dummy/dummy_logo02.png" alt="LG화학 로고"></a>
+  </h1> -->
+                <div class="menu">
+                    <button type="button" class="btn-open-gnb">
+                        <span class="skip">전체 메뉴 열기</span>
+                        <img src="../../images/ico/ico_gnb_hamberger.svg" alt="전체메뉴 아이콘">
+                    </button>
+                </div>
+            </header>
+            <div class="flex-container">
+                <div class="rv-block">
+                    <h1 class="tit type-step type-floating"> 검진 대상자 <i class="skip">6단계 중 1단게</i>
+                        <button class="ico-plus" aria-label="두번탭하면개인비용대상자추가할수있는팝업열림"></button>
+                    </h1>
+                    <div class="tab-floating">
+                        <ul class="c-tab type-slide type-panel type-move type-step" role="tablist" data-tablist="appointmentCheckup">
+                            <li role="tab" aria-controls="ap-step-1-panel">
+                                <a href="./RV_01_001_2.html" title="페이지 이동" class="tab active">검진 대상자</a>
+                            </li>
+                            <li role="tab" aria-controls="ap-step-2-panel">
+                                <a href="./RV_01_002.html" title="페이지 이동" class="tab">검진기관</a>
+                            </li>
+                            <li role="tab" aria-controls="ap-step-3-panel">
+                                <a href="./RV_01_012.html" title="페이지 이동" class="tab">검사 항목</a>
+                            </li>
+                            <li role="tab" aria-controls="ap-step-4-panel">
+                                <a href="./RV_01_015.html" title="페이지 이동" class="tab">검진 일자</a>
+                            </li>
+                            <li role="tab" aria-controls="ap-step-5-panel">
+                                <a href="./RV_01_018.html" title="페이지 이동" class="tab">개인 정보 입력</a>
+                            </li>
+                            <li role="tab" aria-controls="ap-step-6-panel">
+                                <a href="./RV_01_019.html" title="페이지 이동" class="tab">최종 확인</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-panel show" role="tabpanel" aria-labelledby="ap-step-1-panel" data-panelname="appointmentCheckup">
+                        <p>예약 진행하실 대상자를 선택하여 주시기 바랍니다.</p>
+                        <p>개인 비용의 가족 및 지인 검진 신청을 원하실 경우 우측 상단 [추가] 버튼을 선택하여 주시기 바랍니다.</p>
+                        <div class="swiper examinationPeriod type-hide-arr">
+                            <button class="btn-swiper-stop" data-swiper="examinationPeriod"></button>
+                            <div class="swiper-wrapper">
+                                <ul class="swiper-slide">
+                                    <li aria-hidden="true">고객사 검진기간</li>
+                                    <li aria-hidden="true">2021.03.01 ~ 2021.06.30</li>
+                                    <li class="alt-txt">고객사검진기간2021년3월1일부터2021년6월30일까지</li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li aria-hidden="true">신청기간</li>
+                                    <li aria-hidden="true">2021.03.01 ~ 2021.06.30</li>
+                                    <li class="alt-txt">신청기간2021년3월1일부터2021년6월30일까지</li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li aria-hidden="true">가족검진기간</li>
+                                    <li aria-hidden="true">2021.03.01 ~ 2021.06.30</li>
+                                    <li class="alt-txt">가족검진기간2021년3월1일부터2021년6월30일까지</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- [ mod(230224) ]
+							- 삭제 버튼 클릭 시 삭제 안내 문구 팝업 (RV_01_001_1_popup.html)
+						-->
+                        <div class="sub-card type4">
+                            <!-- [ mod(230404) ]
+								대상자 수정 버튼 추가
+							-->
+                            <div class="target-btn-list">
+                                <button type="button" class="btn-open-popup btn-modify-target" data-toggle="modal" data-target="#popupModExamTarget"><span>대상자 수정</span></button>
+                                <button type="button" class="btn-open-popup btn-del-target" data-toggle="modal" data-target="#popupDeleteExamTarget"><span>대상자 삭제하기</span></button>
+                            </div>
+                            <input type="radio" id="patient1" name="patientList">
+                            <label for="patient1">
+                                <div class="inner">
+                                    <ul class="case">
+                                        <li class="target">본인</li>
+                                    </ul>
+                                    <ul class="profile">
+                                        <li>홍길동</li>
+                                        <li>
+                                            <em class="alt-txt">1988년6월30일생</em>
+                                            <span aria-hidden="true">1988-06-30</span>
+                                        </li>
+                                    </ul>
+                                    <ul class="tag-list">
+                                        <li># 회사 지원</li>
+                                        <li># 종합검진</li>
+                                        <li># 특수검진</li>
+                                    </ul>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="sub-card type4">
+                            <input type="radio" id="patient2" name="patientList">
+                            <label for="patient2">
+                                <div class="inner">
+                                    <ul class="case">
+                                        <li class="target">배우자</li>
+                                    </ul>
+                                    <ul class="profile">
+                                        <li>홍길순</li>
+                                        <li>
+                                            <em class="alt-txt">1988년6월30일생</em>
+                                            <span aria-hidden="true">1988-06-30</span>
+                                        </li>
+                                    </ul>
+                                    <ul class="tag-list">
+                                        <li># 종합검진</li>
+                                        <li># 기타</li>
+                                    </ul>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="sub-card type4">
+                            <input type="radio" id="patient3" name="patientList">
+                            <label for="patient3">
+                                <div class="inner">
+                                    <ul class="case">
+                                        <li class="target">미지정</li>
+                                    </ul>
+                                    <ul class="profile">
+                                        <li>미지정</li>
+                                        <li>
+                                            <em class="alt-txt">미지정된대상자입니다대상자추가안된경우이카드를두번탭하면가족검진지원대상자 를추가할수있는팝업이열립니다</em>
+                                            <span aria-hidden="true">0000-00-00</span>
+                                        </li>
+                                    </ul>
+                                    <ul class="tag-list">
+                                        <li># 회사 지원</li>
+                                    </ul>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="sub-card type4">
+                            <input type="radio" id="patient4" name="patientList">
+                            <label for="patient4">
+                                <div class="inner">
+                                    <ul class="case">
+                                        <li class="target">본인</li>
+                                    </ul>
+                                    <ul class="profile">
+                                        <li>홍길동</li>
+                                        <li>
+                                            <em class="alt-txt">1988년6월30일생</em>
+                                            <span aria-hidden="true">1988-06-30</span>
+                                        </li>
+                                    </ul>
+                                    <ul class="tag-list">
+                                        <li># 회사 지원</li>
+                                        <li># 출장검진</li>
+                                        <li># 기타</li>
+                                    </ul>
+                                    <dl>
+                                        <dt>장소</dt>
+                                        <dd><span>한국의학연구소 광화문센터</span></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>일자</dt>
+                                        <dd>
+                                            <em class="alt-txt">2022년5월12일오전</em>
+                                            <span aria-hidden="true">2022-05-12 / 오전2022-05-12 / 오전2022-05-12 / 오전2022-05-12 / 오전2022-05-12 /
+                                                오전2022-05-12 / 오전2022-05-12 / 오전2022-05-12 / 오전</span>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </label>
+                        </div>
+                        <!-- [ //  mod(230224) ] -->
+                        <div class="accordion type4 open">
+                            <button class="accordion-header" id="notesReservation" aria-controls="notes-reservation" aria-expanded="true">
+                                <h1 class="acc-tit">예약 시 유의사항</h1>
+                                <img src="../../images/ico/ico_arrow_accordion_28x28.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="notes-reservation" role="region" aria-labelledby="notesReservation" tabindex="0" aria-hidden="false" style="max-height: 236px">
+                                <div class="list default"> - 검진 희망 일은 예약 일로부터 최소 7일 이후부터 선택 가능하며, 검진 기관별로 상이 할 수 있습니다.<br><br> - 검진 예약의
+                                    "예약 상태"는 예약 신청 &gt; 병원 접수 &gt; 예약 확정 &gt; 검진 완료 순으로 진행됩니다.<br><br> - 검진 예약 변경 및 취소는 [검진 예약] 메뉴 또는 [
+                                    MY&gt;예약 신청내역 ]에서 신청 가능합니다.<br><br> - 특수검사(대장 내시경, MRI, MRA, 유방초음파, 심장초음파 등)의 일정에 따라 예약 신청 일정이 변경될 수
+                                    있습니다. </div>
+                            </div>
+                        </div>
+                        <div class="btn-bottom-floating">
+                            <a href="./RV_01_002.html" class="co-btn btn-next" title="페이지이동"><span>다음</span></a>
+                        </div>
+                    </div>
+                </div> <button class="btn-move-top"><span class="skip">터치시최상단으로이동</span></button>
+            </div> <!-- footer -->
+            <footer class="footer type-default">
+                <a href="javascript:void(0);" title="페이지이동" class="img-logo"><img src="../../images/logo/footer_logo_01.svg" alt="KMI 재단법인 한국의학연구소 KOREA MEDICAL INSTITUTE"></a>
+
+                <!-- [ mod(230130) ] -->
+                <div class="btn-list type-footer"> <a href="javascript:void(0);" title="페이지 이동" class="personal-policy">개인정보처리방침</a>
+                    <a href="javascript:void(0);" title="페이지 이동">이용약관</a>
+                    <a href="javascript:void(0);" title="페이지 이동">이용가이드</a>
+                </div>
+
+                <div class="footer-txt">
+                    상호 : 재단법인 한국의학연구소 ㅣ 대표자 성명 : 이상호 ㅣ 본원 : (우)03173 서울시 종로구 세종대로 23길 54(당주동, 세종빌딩) ㅣ 사업자등록번호 : 130-82-06960 ㅣ 서비스 운영사 :
+                    ㈜옴니케어 ㅣ 전자우편주소 : <a href="mailto:webmaster@kmi.or.kr">webmaster@kmi.or.kr</a> ㅣ 고객문의 : <a href="tel:1533-0505">1533-0505</a> / 평일 : 오전 07:00 ~
+                    오후 18:00
+                    (토요일 오전 07:00 ~ 오후 12:30)
+                    (일/공휴일 휴무)
+                </div>
+
+                <div class="copyright">© 2022. <strong>KMI</strong> All Rights Reserved.</div>
+                <!-- [ // mod(230130) ] -->
+            </footer>
+        </div>
+    </div>
+    <!-- GNB -->
+    <!-- // GNB -->
+    <!-- script - swiper -->
+    <script src="../../js/common-swiper.js"></script>
+    <script>
+        function* swiperStep() {
+            yield swiperStep1();
+        }
+        const SWIPER_START = swiperStep();
+
+        function swiperStep1() {
+            const SWIPER = document.querySelectorAll('.swiper');
+            if (SWIPER.length > 0) swiperReadyCheck(SWIPER);
+        }
+
+        function swiperReadyCheck(_swiper) {
+            for (let i = 0; i < _swiper.length; i++) swiperReady(_swiper[i]);
+        }
+
+        function swiperReady(_swiperEl) {
+            const SLIDE = _swiperEl.querySelectorAll('.swiper-slide');
+            if (SLIDE.length > 1) {
+                _swiperEl.classList.add('swiper-ready');
+                swiperStep2(_swiperEl.classList);
+            } else {
+                const STOP_BTN = _swiperEl.querySelector('.btn-swiper-stop');
+                if (STOP_BTN) STOP_BTN.remove();
+            }
+        }
+
+        function swiperStep2(_swiper) {
+            let swiper = swuperReturn(_swiper);
+            const SWIPER_INIT = new Swiper(swiper, {
+                direction: 'vertical',
+                loop: true,
+                allowTouchMove: false,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false, // 자동재생 비활성화
+                },
+                speed: 800,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                on: {
+                    init: function() {
+                        swiperInitEvt(this);
+                    },
+                    slideChangeTransitionEnd: function() {
+                        swiperTransitionEndEvt(this);
+                    },
+                },
+            });
+        }
+
+        function swuperReturn(_rSwiper) {
+            let swiper = [];
+            for (let i = 0; i < _rSwiper.length; i++) swiper.push('.' + _rSwiper[i]);
+            swiper = swiper.join('');
+            return swiper;
+        }
+        // swiper 실행 명령
+        SWIPER_START.next();
+    </script>
+    <!-- // script - swiper --> <!-- GNB -->
+    <div class="co-gnb">
+        <!-- gnb bg -->
+        <div class="gnb-bg"></div>
+        <!-- gnb header -->
+        <div class="gnb-header">
+            <h1 class="profile">
+                <a href="javascrpit:void(0);" title="마이페이지로 이동">
+                    <img src="../../images/ico/ico_gnb_profile.svg" alt="기본 프로필">
+                    <span><em>홍길동</em> 님</span>
+                </a>
+            </h1>
+            <button class="btn-close-gnb">
+                <img src="../../images/ico/ico_close_white_34x34.svg" alt="전체메뉴 닫기">
+            </button>
+        </div>
+        <!-- gnb body -->
+        <ul class="gnb-body accordion-list">
+            <li>
+                <a href="../vgt/vgt_01_001.html" title="페이지 이동" class="btn-gnb-main">
+                    <h2>메인</h2>
+                </a>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuHealthCheckSystem" aria-controls="gnb-menu-health-check-system">
+                    <h2>건강검진 제도</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-health-check-system" role="region" aria-labelledby="gnbMenuHealthCheckSystem">
+                    <!-- [Comment]
+					+ 서브메뉴 현재 페이지 클래스 제어 : active
+				-->
+                    <a href="../ti/TI_01_001.html" title="페이지 이동" class="active">국가건강 검진 제도 안내</a>
+                    <a href="../ti/TI_01_002.html" title="페이지 이동">우리 회사 검진제도 안내</a>
+                </div>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuExamination" aria-controls="gnb-menu-examination">
+                    <h2>검진 예약/결과 조회</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-examination" role="region" aria-labelledby="gnbMenuExamination">
+                    <a href="../rv/RV_01_001_2.html" title="페이지 이동">검진 예약</a>
+                    <a href="../rv/RV_01_027.html" title="페이지 이동">예약 내역</a>
+                    <a href="../vgt/VGT_03_001.html" title="페이지 이동">검진기관</a>
+                    <a href="../ri/RI_01_001.html" title="페이지 이동">검진 결과</a>
+                </div>
+            </li>
+            <!-- [ mod(230310) ]
+	직무스트레스 메뉴  markup 변경
+	-->
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbJobStress" aria-controls="gnb-jobstress">
+                    <div class="gnb-mark">
+                        <h2>직무스트레스</h2>
+                        <div class="badge">
+                            <em>대상자</em>
+                        </div>
+                    </div>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-jobstress" role="region" aria-labelledby="gnbJobStress">
+                    <a href="../jo/JO_01_001.html" title="페이지 이동">검사하기</a>
+                    <a href="../jo/JO_02_001.html" title="페이지 이동">검사결과</a>
+                </div>
+            </li>
+            <!-- [ // mod(230309) ]-->
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuResultConsultation" aria-controls="gnb-menu-result-consultation">
+                    <h2>결과 상담</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-result-consultation" role="region" aria-labelledby="gnbMenuResultConsultation">
+                    <a href="../rc/RC_01_001.html" title="페이지 이동">결과 상담하기</a>
+                    <a href="../rc/RC_01_004.html" title="페이지 이동">상담 이력</a>
+                </div>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuHealthInformation" aria-controls="gnb-menu-health-information">
+                    <h2>건강 정보</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-health-information" role="region" aria-labelledby="gnbMenuHealthInformation">
+                    <a href="../hi/HI_01_001.html" title="페이지 이동">검진 항목 정보</a>
+                    <a href="../hi/HI_01_002_1.html" title="페이지 이동">영상 건강 정보</a>
+                    <a href="../hi/HI_01_003_1.html" title="페이지 이동">질환별 건강 정보</a>
+                    <a href="../hi/HI_01_004_1.html" title="페이지 이동">검진센터 탐방</a>
+                </div>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuCommunity" aria-controls="gnb-menu-community">
+                    <h2>커뮤니티</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-community" role="region" aria-labelledby="gnbMenuCommunity">
+                    <a href="../ni/NI_01_001.html" title="페이지 이동">이벤트</a>
+                    <a href="../ni/NI_01_002.html" title="페이지 이동">공지사항</a>
+                    <a href="../guide/GUIDE_01_004_4.html" title="페이지 이동">FAQ</a>
+                    <a href="../guide/GUIDE_01_004_1.html" title="페이지 이동">서비스 문의</a>
+                </div>
+            </li>
+        </ul>
+        <!-- gnb bottom button - logout -->
+        <a href="javascript:void(0);" class="gnb-btn-logout" title="전체 메뉴 닫히고 페이지 이동">
+            <img src="../../images/ico/ico_gnb_logout.svg" alt="로그아웃 아이콘">
+            <span>로그아웃</span>
+        </a>
+    </div>
+</body>
+
+</html>

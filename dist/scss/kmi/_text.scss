@@ -1,0 +1,88 @@
+// pre {
+//   &.title-pre {
+//     background-color: $color-black-05;
+//     border: 1px solid $color-black-40;
+//     color: $color-black-100;
+//     padding: 0.75rem;
+//     border-radius: 0.75rem;
+//     margin-top: 0.625rem;
+//     font-size: 0.875rem;
+//   }
+// }
+// h3[data-style="titleHeadlineLarge"] {
+//   & ~ .d_desc.code {
+//     h1 {
+//       color: $color-black-100;
+//     }
+//   }
+// }
+// h3[data-style="titleHeadlineLarge"] {
+//   & ~ .d_desc.code {
+//     h1 {
+//       @include coTxtTitleHeadingLarge;
+//     }
+//   }
+// }
+// h3[data-style="titleHeadlineSmall"] {
+//   & ~ .d_desc.code {
+//     h1 {
+//       @include coTxtTitleHeadingSmall;
+//     }
+//   }
+// }
+// h3[data-style="titleTitleLarge"] {
+//   & ~ .d_desc.code {
+//     h1 {
+//       @include coTxtTitleLarge;
+//     }
+//   }
+// }
+// h3[data-style="titleTitleSmall"] {
+//   & ~ .d_desc.code {
+//     h1 {
+//       @include coTxtTitleSmall;
+//     }
+//   }
+// }
+// h3[data-style="Body"] {
+//   & ~ .d_desc.code {
+//     h1 {
+//       @include coTxtBody;
+//     }
+//   }
+// }
+// h3[data-style="BodySmall"] {
+//   & ~ .d_desc.code {
+//     h1 {
+//       @include coTxtBodySmall;
+//     }
+//   }
+// }
+// h3[data-style="LabelLarge"] {
+//   & ~ .d_desc.code {
+//     h1 {
+//       @include coTxtLabelLarge;
+//     }
+//   }
+// }
+// h3[data-style="LabelMedium"] {
+//   & ~ .d_desc.code {
+//     h1 {
+//       @include coTxtLabelMedium;
+//     }
+//   }
+// }
+// h3[data-style="ButtonBtn"] {
+//   & ~ .d_desc.code {
+//     h1 {
+//       @include coTxtBtn;
+//     }
+//   }
+// }
+// h3[data-style="ButtonBtnSm"] {
+//   & ~ .d_desc.code {
+//     h1 {
+//       @include coTxtBtnSmall;
+//     }
+//   }
+// }

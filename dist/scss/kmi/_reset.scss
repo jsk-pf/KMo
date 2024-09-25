@@ -1,0 +1,352 @@
+@import 'variables';
+@import 'mixin';
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+* {
+  touch-action: manipulation;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: inherit;
+  box-sizing: border-box;
+}
+
+html {
+  text-size-adjust: none;
+}
+
+html,
+body {
+  background-color: $color-white-100;
+  height: 100%;
+  color: $color-black-100;
+  font: {
+    size: $g-font-size;
+    family: #{$font-name} + ', HelveticaNeue-Light, AppleSDGothicNeo-Light, sans-serif';
+    weight: $default-font-weight;
+  }
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  // overscroll-behavior-y: none;
+}
+html {
+  // height: -webkit-fill-available;
+  // @supports (-webkit-touch-callout: none) {
+  //   height: -webkit-fill-available;
+  // }
+  height: 100%;
+}
+
+body {
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+  height: 100%;
+}
+
+// notch safe-area
+html,
+body {
+  width: 100%;
+  box-sizing: inherit;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+input,
+select,
+button,
+select {
+  font-family: inherit;
+  vertical-align: middle;
+}
+
+address,
+caption,
+cite,
+code,
+dfn {
+  font: {
+    weight: normal;
+    style: normal;
+  }
+}
+
+code,
+pre {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+}
+
+button,
+select {
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+  appearance: none;
+}
+
+img {
+  outline: 0;
+  border: 0;
+  vertical-align: top;
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+blockquote,
+q {
+  quotes: none;
+
+  &::before,
+  &::after {
+    content: '';
+  }
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+fieldset {
+  border: 0;
+  outline: 0;
+}
+
+button {
+  color: inherit;
+  &.btn-txt {
+    position: relative;
+  }
+}
+
+textarea {
+  color: $default-font-color;
+  &:focus {
+    outline: 0;
+  }
+}
+
+a {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+  &:hover {
+    color: inherit;
+  }
+}
+
+select {
+  appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  vertical-align: baseline;
+}
+input,
+textarea {
+  max-width: 100%;
+  box-sizing: border-box;
+  &::placeholder {
+    font: $default-font-weight $default-font-size/#{$default-line-height} $font-name;
+    color: $color-black-40;
+    letter-spacing: $default-letter-spacing;
+  }
+}
+
+// Iframe
+iframe {
+  border: 0;
+}
+
+// Table
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+
+  &:not([align]) {
+    text-align: inherit;
+  }
+}
+
+em {
+  font-style: normal;
+}
+
+legend {
+  display: table;
+  box-sizing: border-box;
+  padding: 0;
+  max-width: 100%;
+  color: inherit;
+  white-space: normal;
+}
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+  margin: 0;
+  -webkit-appearance: none;
+}
+[type='search'] {
+  outline-offset: -2px;
+  -webkit-appearance: textfield;
+}
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+// italics
+div,
+p,
+span,
+em,
+i {
+  font-style: normal;
+}
+
+// scrollbar reset
+* {
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}

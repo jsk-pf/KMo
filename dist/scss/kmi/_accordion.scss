@@ -1,0 +1,646 @@
+.accordion {
+  .accordion-header {
+    img {
+      &.img-acc-arrow {
+        transform: rotate(0);
+      }
+    }
+  }
+  .accordion-body {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height $transition-3, padding $transition-3, opacity $transition-3;
+  }
+  &.open {
+    .accordion-header {
+      img {
+        &.img-acc-arrow {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .accordion-body {
+      opacity: 1;
+      max-height: max-content;
+    }
+  }
+
+  // = type1
+  &.type1 {
+    border: 1px solid $color-black-20;
+    border-radius: 0.75rem;
+    .accordion-header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0.6875rem 1.25rem;
+      .acc-tit {
+        font-size: 0.875rem;
+        line-height: 1.75rem;
+        letter-spacing: -0.01875rem;
+        color: $color-black-80;
+        text-align: left;
+        flex-grow: 1;
+        white-space: nowrap;
+      }
+      .co-btn {
+        margin-right: 1.25rem;
+        background: $color-bg-03;
+        border-radius: 1.25rem;
+        border: 0 none;
+        span {
+          color: $color-main;
+        }
+      }
+      img {
+        &.img-acc-arrow {
+          width: 2.125rem;
+          height: 2.125rem;
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .accordion-body {
+      background-color: $color-black-05;
+      border-top: 0 none;
+      padding: 0 0.75rem;
+      .card_06 {
+        &:first-child {
+          margin-top: 1.25rem;
+        }
+        &:last-child {
+          margin-bottom: 1.25rem;
+        }
+      }
+      & > .list {
+        &.type1 {
+          margin-top: 1.25rem;
+          margin-bottom: 1.25rem;
+        }
+      }
+    }
+    &.open {
+      .accordion-header {
+        img {
+          &.img-acc-arrow {
+            transform: rotate(0);
+          }
+        }
+      }
+      .accordion-body {
+        position: relative;
+        border-top: 0 none;
+        .card_06,
+        .list {
+          &:first-child {
+            &::after {
+              content: '';
+              display: block;
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 1px;
+              background-color: $color-black-20;
+            }
+          }
+        }
+      }
+    }
+    & ~ .type1 {
+      margin-top: 1.25rem;
+    }
+  }
+
+  // = type2
+  &.type2 {
+    .accordion-header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0.6875rem 1.25rem;
+      border-radius: 0.75rem;
+      border: 1px solid $color-black-20;
+      transition: border-color $transition-3;
+      .acc-tit {
+        @include coTxtBody;
+        color: $color-black-100;
+        text-align: left;
+        flex-grow: 1;
+        width: 100%;
+        @include shortening-one;
+        transition: color $transition-3;
+      }
+    }
+    .accordion-body {
+      background-color: $color-bg-04;
+      border-radius: 0.75rem;
+      padding: 0 1.25rem;
+      margin-top: 0;
+      transition: max-height $transition-3, margin-top $transition-3, opacity $transition-3;
+      p {
+        &.acc-body-tit,
+        &.acc-body-con {
+          color: $color-black-80;
+        }
+        &.acc-body-tit {
+          @include coTxtLabelLarge;
+          margin-top: 1.25rem;
+        }
+        &.acc-body-con {
+          @include coTxtBody;
+          margin-top: 0.75rem;
+          margin-bottom: 0.75rem;
+        }
+      }
+    }
+    &.open {
+      .accordion-header {
+        border-color: $color-sub-02;
+        .acc-tit {
+          color: $color-sub-02;
+        }
+      }
+      .accordion-body {
+        margin-top: 0.75rem;
+      }
+    }
+    & ~ .type2 {
+      margin-top: 1.25rem;
+    }
+  }
+
+  // = type3
+  &.type3 {
+    .accordion-header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0.6875rem 1.25rem;
+      border-radius: 0.75rem;
+      border: 1px solid $color-black-20;
+      ul {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: hidden;
+        position: relative;
+        li {
+          @include coTxtBody;
+          color: $color-black-100;
+          text-align: left;
+          white-space: nowrap;
+          &.state {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+              @include coTxtLabelMedium;
+              color: $color-white-100;
+              display: inline-block;
+              padding: 0 0.75rem;
+              border-radius: 1rem;
+              &.ing {
+                background-color: $color-black-60;
+              }
+              &.end {
+                background-color: $color-main;
+              }
+            }
+          }
+          &.case {
+            flex-grow: 1;
+            @include shortening-one;
+          }
+          & ~ li {
+            margin-left: 0.75rem;
+          }
+        }
+      }
+    }
+    .accordion-body {
+      padding: 0;
+      transition: max-height $transition-3, opacity $transition-3;
+      .contact-ques,
+      .contact-answer {
+        padding: 1.25rem;
+        border: 1px solid $color-black-20;
+        border-radius: 0.75rem;
+        margin-top: 0.5rem;
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          position: relative;
+          li {
+            @include coTxtLabelLarge;
+            color: $color-black-40;
+            &:first-child {
+              color: $color-sub-02;
+            }
+          }
+        }
+        p {
+          @include coTxtBody;
+          color: $color-black-80;
+          margin-top: 0.75rem;
+        }
+      }
+      .contact-answer {
+        background-color: $color-black-05;
+      }
+    }
+    & ~ .type3 {
+      margin-top: 1.25rem;
+    }
+  }
+
+  // = type4
+  &.type4 {
+    .accordion-header,
+    .accordion-body {
+      border-radius: 0.75rem;
+      border: 1px solid $color-black-20;
+    }
+    .accordion-header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0.6875rem 1.25rem;
+      .acc-tit {
+        @include coTxtBody;
+        color: $color-black-100;
+        text-align: left;
+        flex-grow: 1;
+        width: 100%;
+        @include shortening-one;
+      }
+    }
+    .accordion-body {
+      padding: 0 1.25rem;
+      margin-top: 0;
+      transition: max-height $transition-3, margin-top $transition-3, opacity $transition-3;
+      .list {
+        &.default {
+          margin-top: 1.25rem;
+          margin-bottom: 1.25rem;
+        }
+      }
+    }
+    &.open {
+      .accordion-body {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  // = type5
+  &.type5 {
+    .accordion-header {
+      padding: {
+        top: 0.75rem;
+        right: 3rem;
+        bottom: 0.75rem;
+        left: 1.25rem;
+      }
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      border-radius: 0.75rem;
+      box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.08);
+      background-color: $color-white-100;
+      background-image: url($image-ico-path + 'ico_arrow_accordion_20x20.svg');
+      background-size: 1.25rem 1.25rem;
+      background-position: right 1.25rem center;
+      background-repeat: no-repeat;
+      span {
+        @include coTxtLabelLarge;
+        color: $color-black-40;
+        padding-right: 0.5rem;
+        max-width: calc(100% - 1rem);
+        @include shortening-one;
+        transition: color $transition-3;
+      }
+    }
+    .accordion-body {
+      padding: 0;
+      margin-top: 0;
+      overflow: inherit;
+      transition: max-height $transition-3, margin-top $transition-3, opacity $transition-3;
+      .c-loc {
+        padding-top: 1rem;
+        & + .card_05 {
+          margin-top: 1.25rem;
+        }
+      }
+      .card_05 {
+        margin-top: 1rem;
+      }
+    }
+    &.open {
+      .accordion-header {
+        background-image: url($image-ico-path + 'ico_arrow_accordion_20x20_on.svg');
+        span {
+          color: $color-black-80;
+        }
+      }
+      .accordion-body {
+        // margin-top: 1.25rem;
+      }
+    }
+  }
+
+  // = type6
+  &.type6 {
+    .accordion-header,
+    .accordion-body {
+      border-radius: 0.75rem;
+    }
+    .accordion-header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0.6875rem 1.25rem;
+      border: 1px solid $color-black-05;
+      box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.08);
+      .acc-tit {
+        @include coTxtLabelLarge;
+        position: relative;
+        text-align: left;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        span {
+          color: $color-sub-01;
+          padding-right: 0.5rem;
+          em {
+            &.active {
+              color: $color-main;
+            }
+          }
+        }
+        p {
+          color: $color-black-80;
+        }
+      }
+    }
+    .accordion-body {
+      padding: 0;
+      margin-top: 0;
+      transition: max-height $transition-3, margin-top $transition-3, opacity $transition-3;
+      .info-txt {
+        margin: 1.625rem 0 0.875rem;
+        position: relative;
+        display: block;
+        text-align: right;
+        li {
+          & ~ li {
+            @include coTxtLabelMedium;
+            color: $color-black-60;
+            span {
+              color: $color-sub-02;
+              display: inline-block;
+              margin: 0 0.25rem;
+            }
+          }
+        }
+      }
+      .card-box {
+        background: $color-bg-04;
+        border: 1px solid $color-black-10;
+        border-radius: 0.75rem;
+        padding: 1.5rem 1.25rem;
+        .card-box-tit {
+          @include coTxtLabelLarge;
+          color: $color-black-80;
+          & + p {
+            @include coTxtLabelMedium;
+            color: $color-sub-02;
+            margin-top: 0.25rem;
+            & + .card-inspection {
+              margin-top: 1.25rem;
+            }
+          }
+        }
+        .card-inspection {
+          margin-top: 0.75rem;
+          & ~ .card-inspection {
+            margin-top: 1.25rem;
+          }
+          & + p {
+            @include coTxtBodySmall;
+            color: $color-black-80;
+            margin-top: 0.75rem;
+            & + .card-inspection {
+              margin-top: 1.25rem;
+            }
+          }
+        }
+        & ~ .card-box {
+          margin-top: 2.5rem;
+        }
+      }
+    }
+  }
+
+  // = type7
+  &.type-profile,
+  &.type-equipment {
+    .accordion-body {
+      & > .box-tit {
+        margin-top: 2.5rem;
+      }
+      .box-tit {
+        @include coTxtLabelLarge;
+        color: $color-black-80;
+        & ~ .box-tit {
+          padding-top: 0.5rem;
+          margin-top: 0;
+        }
+        & + .box {
+          margin-top: 0.5rem;
+          margin-bottom: 1.25rem;
+        }
+      }
+      .list {
+        li {
+          @include coTxtBody;
+          color: $color-black-80;
+          &:after {
+            top: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+  &.type-equipment {
+    .accordion-header {
+      .in-cont {
+        @include shortening-two;
+      }
+      width: 100%;
+      position: relative;
+      display: block;
+      img,
+      ul {
+        overflow: hidden;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        background: $color-black-10;
+        border-top-left-radius: 0.75rem;
+        border-top-right-radius: 0.75rem;
+        border: 1px solid $color-black-05;
+        border-bottom: 0 none;
+      }
+      ul {
+        display: block;
+        padding: 1.25rem;
+        border-bottom-left-radius: 0.75rem;
+        border-bottom-right-radius: 0.75rem;
+        border: 1px solid $color-black-10;
+        position: relative;
+        li {
+          text-align: left;
+          width: 100%;
+          &:nth-child(1) {
+            @include coTxtLabelMedium;
+            color: $color-sub-02;
+          }
+          &.info-txt {
+            @include coTxtBody;
+            color: $color-black-80;
+            margin-top: 0.25rem;
+            display: flex;
+            > div {
+              //  @include shortening-two;
+              @include ellipsisMultiline(2, 1.75rem, 3.5rem, 3.5rem);
+            }
+          }
+        }
+      }
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: $thumbnail-radius;
+        border: 0.1875rem solid transparent;
+        background: linear-gradient(62deg, $color-sub-02 1%, $color-main 113%) border-box;
+        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        box-sizing: border-box;
+        z-index: 2;
+        opacity: 0;
+        transition: opacity $transition-3 ease-in-out;
+      }
+    }
+    &.open {
+      .accordion-header {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &.type-profile {
+    .accordion-header {
+      position: relative;
+      padding: 1rem;
+      background-color: $color-bg-04;
+      border: 1px solid $color-black-10;
+      border-radius: 0.75rem;
+      width: 100%;
+      img,
+      p {
+        position: relative;
+        z-index: 3;
+      }
+      img {
+        position: absolute;
+        width: 3.625rem;
+        height: 3.625rem;
+        left: 1rem;
+        top: 0.9375rem;
+      }
+      p {
+        @include coTxtLabelLarge;
+        color: $color-sub-02;
+        padding-left: 4.875rem;
+        text-align: left;
+        & ~ p {
+          @include coTxtBody;
+          color: $color-black-100;
+          margin-top: 0.25rem;
+          @include shortening-one;
+        }
+      }
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+      }
+      &::after {
+        width: calc(100% - 0.25rem);
+        height: calc(100% - 0.25rem);
+        left: 0.125rem;
+        top: 0.125rem;
+        background-color: $color-bg-04;
+        border-radius: 0.625rem;
+        z-index: 2;
+      }
+      &::before {
+        left: -1px;
+        top: -1px;
+        width: calc(100% + 0.125rem);
+        height: calc(100% + 0.125rem);
+        border-radius: 0.75rem;
+        background-image: linear-gradient(62deg, $color-sub-02 1%, $color-main 113%);
+        z-index: 1;
+        opacity: 0;
+        transition: opacity $transition-3 ease-in-out;
+      }
+    }
+    &.open {
+      .accordion-header {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.type-equipment {
+  &.type-open-one {
+    .thumbnail {
+      @include listThumbnailType(46.052);
+      border-radius: $thumbnail-radius $thumbnail-radius 0 0;
+      border: 0;
+    }
+  }
+}

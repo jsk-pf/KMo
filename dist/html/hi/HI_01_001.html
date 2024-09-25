@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-title" content="With KMI">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="refresh" content="300">
+
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="author" content="With KMI">
+    <meta name="title" content="건강검진 서비스 - With KMI">
+    <meta name="description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta name="keywords" content="With KMI, 위드케이엠아이, 비타브릿지, vitabridge, 건강검진, 헬스케어서비스, 헬스케어">
+    <meta name="copyright" content="© 2022. KMI All Rights Reserved.">
+
+    <link rel="canonical" href="{유동 도메인 주소}.withkmi.or.kr">
+
+    <meta property="og:locale" content="ko-KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="With KMI - 건강검진 서비스">
+    <meta property="og:description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta property="og:image" content="../../images/kmi_info_img.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:url" content="https://{유동 도메인 주소}.withkmi.or.kr">
+    <meta property="og:site_name" content="With KMI">
+
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/logo/home-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/logo/home-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../../images/logo/home-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/logo/home-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/logo/home-icon-192x192.png">
+    <link rel="stylesheet" href="../../lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../lib/datepicker/datepicker.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/swiper/js/swiper.min.js"></script>
+    <script defer src="../../js/common.js"></script>
+    <title>건강검진 서비스 - With KMI</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="flex-wrap"> <!-- Header -->
+            <header class="header co-header">
+                <!-- 기업 로고에 따른 alt값 부여 -->
+                <h1 class="logo">
+                    <a href="../vgt/vgt_01_001.html"><img src="../../images/dummy/dummy_logo02.png" alt="LG화학 로고"></a>
+                </h1>
+                <!-- 컬러로고: type-color -->
+                <!-- <h1 class="logo type-color">
+    <a href="javascrpit:void(0);"><img src="../../images/dummy/dummy_logo02.png" alt="LG화학 로고"></a>
+  </h1> -->
+                <div class="menu">
+                    <button type="button" class="btn-open-gnb">
+                        <span class="skip">전체 메뉴 열기</span>
+                        <img src="../../images/ico/ico_gnb_hamberger.svg" alt="전체메뉴 아이콘">
+                    </button>
+                </div>
+            </header>
+            <div class="flex-container">
+                <div class="hi-block">
+                    <h1 class="tit type-floating">검진 항목 정보</h1>
+                    <!--
+              * 탭 터치 시 페이지 이동되는 case
+              * 탭의 aria-controls와 panel의 aria-labelledby가 동일해야 됨
+              * 스크롤 시 floating 되는 tab의 경우 div.tab-floating 필요
+            -->
+                    <div class="tab-floating">
+                        <ul class="c-tab type-slide type-move" role="tablist" data-tablist="examination">
+                            <li role="tab" aria-controls="all-examination-tab-panel">
+                                <a href="javascript:void(0);" title="페이지 이동" class="tab active">전체</a>
+                            </li>
+                            <li role="tab" aria-controls="ei-basic-tab-panel">
+                                <a href="javascript:void(0);" title="페이지 이동" class="tab">기초검사</a>
+                            </li>
+                            <li role="tab" aria-controls="ei-blood-tab-panel">
+                                <a href="javascript:void(0);" title="페이지 이동" class="tab">혈액 검사</a>
+                            </li>
+                            <li role="tab" aria-controls="ei-equipment-tab-panel">
+                                <a href="javascript:void(0);" title="페이지 이동" class="tab">장비 검사</a>
+                            </li>
+                            <li role="tab" aria-controls="ei-etc-tab-panel">
+                                <a href="javascript:void(0);" title="페이지 이동" class="tab">기타 검사</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--
+              * 전체 panel
+              * tab-panel show class: show || null
+              * 탭 터치 후 새로고침 된 후: panel의 aria-labelledby가 탭의 active class를 가진 aria-controls로 바뀜
+            -->
+                    <div class="tab-panel show" role="tabpanel" aria-labelledby="all-examination-tab-panel" data-panelname="examination">
+                        <p class="txt">다양한 건강검진 항목에 대해 자세히 안내드립니다.</p>
+                        <div class="item-info">
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_14.png" alt="치아 아이콘" aria-hidden="true">
+                                <p>기초 검사<span>(비조영제)</span></p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_03.png" alt="비커 아이콘" aria-hidden="true">
+                                <p>혈액 검사</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_02.png" alt="종이컵 아이콘" aria-hidden="true">
+                                <p>소변 검사</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_05.png" alt="눈동자 아이콘" aria-hidden="true">
+                                <p>안과 검사</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_04.png" alt="체중계 아이콘" aria-hidden="true">
+                                <p>체성분 검사</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_28.png" alt="뼈의 단면도 아이콘" aria-hidden="true">
+                                <p>골밀도 검사</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_17.png" alt="자궁과 주사 아이콘" aria-hidden="true">
+                                <p>자궁 경부암 검사<span>(여성검사)</span></p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_52.png" alt="심박수를 체크하는 남자 아이콘" aria-hidden="true">
+                                <p>심전도 검사</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_25.png" alt="사람 허파 아이콘" aria-hidden="true">
+                                <p>폐기능 검사</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_26.png" alt="사람 흉부선 엑스레이 아이콘" aria-hidden="true">
+                                <p>흉부선 X선 검사</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_27.png" alt="동맥 아이콘" aria-hidden="true">
+                                <p>동맥경화 검사</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_31.png" alt="사람의 위장 아이콘" aria-hidden="true">
+                                <p>위장 검사</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_29.png" alt="사람의 위장을 내시경으로 촬영한 아이콘" aria-hidden="true">
+                                <p>위 내시경</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_34.png" alt="사람의 대장 아이콘" aria-hidden="true">
+                                <p>대장 내시경</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_36.png" alt="여성의 유방을 옆에서 본 아이콘" aria-hidden="true">
+                                <p>유방 촬영</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_35.png" alt="여성의 유방을 정면에서 본 아이콘" aria-hidden="true">
+                                <p>유방암 검사 (여)</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_37.png" alt="여성의 유방을 정면에서 본 아이콘" aria-hidden="true">
+                                <p>유방 초음파</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_44.png" alt="남성의 상반신을 정면에서 본 아이콘" aria-hidden="true">
+                                <p>복부 초음파</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_47.png" alt="갑상선 아이콘" aria-hidden="true">
+                                <p>갑상선 초음파</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_48.png" alt="전립선 아이콘" aria-hidden="true">
+                                <p>전립선 초음파 (남)</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_46.png" alt="골반 자궁 아이콘" aria-hidden="true">
+                                <p>골반(자궁) 초음파</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_42.png" alt="경동맥 아이콘" aria-hidden="true">
+                                <p>경동맥 초음파</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_43.png" alt="심장 아이콘" aria-hidden="true">
+                                <p>심장 초음파</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_54.png" alt="CT 아이콘" aria-hidden="true">
+                                <p>뇌,폐,요추,경추 CT</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_57.png" alt="심장 아이콘" aria-hidden="true">
+                                <p>심장석회화 CT</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_53.png" alt="뇌를 위에서 본 아이콘" aria-hidden="true">
+                                <p>뇌 MRI</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_55.png" alt="MRI 아이콘" aria-hidden="true">
+                                <p>뇌,폐,요추,경추 MRI</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_56.png" alt="뇌를 위에서 본 아이콘" aria-hidden="true">
+                                <p>뇌,MRI, (+MRA)<span>(비조영제)</span></p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_60.png" alt="CT 아이콘" aria-hidden="true">
+                                <p>PET-CT<span>Torso, +Brain</span></p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_61.png" alt="CT 아이콘" aria-hidden="true">
+                                <p>PET-CT</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_09.png" alt="임신중인 여성 아이콘" aria-hidden="true">
+                                <p>풍진검사</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_08.png" alt="병균 아이콘" aria-hidden="true">
+                                <p>알레르기 검사</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_10.png" alt="병균 아이콘" aria-hidden="true">
+                                <p>산화스트레스</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_11.png" alt="정면에서 본 남성의 상반신 아이콘" aria-hidden="true">
+                                <p>생체나이</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_12.png" alt="DNA 아이콘" aria-hidden="true">
+                                <p>유전체 분석</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_13.png" alt="사람의 치아 아이콘" aria-hidden="true">
+                                <p>구강 검사</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_23.png" alt="서류철 아이콘" aria-hidden="true">
+                                <p>판독 및 상담</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_15.png" alt="주사기 위에 B라고 적혀있는 아이콘" aria-hidden="true">
+                                <p>B형 간염 백신 접종</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_16.png" alt="주사기 위에 A라고 적혀있는 아이콘" aria-hidden="true">
+                                <p>A형 간염 백신 접종</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_18.png" alt="자궁과 주사기 아이콘" aria-hidden="true">
+                                <p>자궁 경부암 백신</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_19.png" alt="구균 아이콘" aria-hidden="true">
+                                <p>폐렴(구균) 백신</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_64.png" alt="위장을 돋보기로 보고있는 아이콘" aria-hidden="true">
+                                <p>M2-PK</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_65.png" alt="위장을 돋보기로 보고있는 아이콘" aria-hidden="true">
+                                <p>얼리텍 검사</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_66.png" alt="여성의 유방을 돋보기로 보고있는 아이콘" aria-hidden="true">
+                                <p>마스토체크</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_67.png" alt="머리위로 파란색 구체가 돌고있는 아이콘" aria-hidden="true">
+                                <p>OAβ 검사</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동">
+                                <img src="../../images/item/ico_img_68.png" alt="문서와 비커 아이콘" aria-hidden="true">
+                                <p>코로나 항체 검사</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- GNB -->
+                <div class="co-gnb">
+                    <!-- gnb bg -->
+                    <div class="gnb-bg"></div>
+                    <!-- gnb header -->
+                    <div class="gnb-header">
+                        <h1 class="profile">
+                            <a href="javascrpit:void(0);" title="마이페이지로 이동">
+                                <img src="../../images/ico/ico_gnb_profile.svg" alt="기본 프로필">
+                                <span><em>홍길동</em> 님</span>
+                            </a>
+                        </h1>
+                        <button class="btn-close-gnb">
+                            <img src="../../images/ico/ico_close_white_34x34.svg" alt="전체메뉴 닫기">
+                        </button>
+                    </div>
+                    <!-- gnb body -->
+                    <ul class="gnb-body accordion-list">
+                        <li>
+                            <a href="../vgt/vgt_01_001.html" title="페이지 이동" class="btn-gnb-main">
+                                <h2>메인</h2>
+                            </a>
+                        </li>
+                        <li class="accordion type-open-one">
+                            <button class="accordion-header" id="gnbMenuHealthCheckSystem" aria-controls="gnb-menu-health-check-system">
+                                <h2>건강검진 제도</h2>
+                                <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="gnb-list accordion-body" id="gnb-menu-health-check-system" role="region" aria-labelledby="gnbMenuHealthCheckSystem">
+                                <!-- [Comment]
+					+ 서브메뉴 현재 페이지 클래스 제어 : active
+				-->
+                                <a href="../ti/TI_01_001.html" title="페이지 이동" class="active">국가건강 검진 제도 안내</a>
+                                <a href="../ti/TI_01_002.html" title="페이지 이동">우리 회사 검진제도 안내</a>
+                            </div>
+                        </li>
+                        <li class="accordion type-open-one">
+                            <button class="accordion-header" id="gnbMenuExamination" aria-controls="gnb-menu-examination">
+                                <h2>검진 예약/결과 조회</h2>
+                                <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="gnb-list accordion-body" id="gnb-menu-examination" role="region" aria-labelledby="gnbMenuExamination">
+                                <a href="../rv/RV_01_001_2.html" title="페이지 이동">검진 예약</a>
+                                <a href="../rv/RV_01_027.html" title="페이지 이동">예약 내역</a>
+                                <a href="../vgt/VGT_03_001.html" title="페이지 이동">검진기관</a>
+                                <a href="../ri/RI_01_001.html" title="페이지 이동">검진 결과</a>
+                            </div>
+                        </li>
+                        <!-- [ mod(230310) ]
+	직무스트레스 메뉴  markup 변경
+	-->
+                        <li class="accordion type-open-one">
+                            <button class="accordion-header" id="gnbJobStress" aria-controls="gnb-jobstress">
+                                <div class="gnb-mark">
+                                    <h2>직무스트레스</h2>
+                                    <div class="badge">
+                                        <em>대상자</em>
+                                    </div>
+                                </div>
+                                <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="gnb-list accordion-body" id="gnb-jobstress" role="region" aria-labelledby="gnbJobStress">
+                                <a href="../jo/JO_01_001.html" title="페이지 이동">검사하기</a>
+                                <a href="../jo/JO_02_001.html" title="페이지 이동">검사결과</a>
+                            </div>
+                        </li>
+                        <!-- [ // mod(230309) ]-->
+                        <li class="accordion type-open-one">
+                            <button class="accordion-header" id="gnbMenuResultConsultation" aria-controls="gnb-menu-result-consultation">
+                                <h2>결과 상담</h2>
+                                <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="gnb-list accordion-body" id="gnb-menu-result-consultation" role="region" aria-labelledby="gnbMenuResultConsultation">
+                                <a href="../rc/RC_01_001.html" title="페이지 이동">결과 상담하기</a>
+                                <a href="../rc/RC_01_004.html" title="페이지 이동">상담 이력</a>
+                            </div>
+                        </li>
+                        <li class="accordion type-open-one">
+                            <button class="accordion-header" id="gnbMenuHealthInformation" aria-controls="gnb-menu-health-information">
+                                <h2>건강 정보</h2>
+                                <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="gnb-list accordion-body" id="gnb-menu-health-information" role="region" aria-labelledby="gnbMenuHealthInformation">
+                                <a href="../hi/HI_01_001.html" title="페이지 이동">검진 항목 정보</a>
+                                <a href="../hi/HI_01_002_1.html" title="페이지 이동">영상 건강 정보</a>
+                                <a href="../hi/HI_01_003_1.html" title="페이지 이동">질환별 건강 정보</a>
+                                <a href="../hi/HI_01_004_1.html" title="페이지 이동">검진센터 탐방</a>
+                            </div>
+                        </li>
+                        <li class="accordion type-open-one">
+                            <button class="accordion-header" id="gnbMenuCommunity" aria-controls="gnb-menu-community">
+                                <h2>커뮤니티</h2>
+                                <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="gnb-list accordion-body" id="gnb-menu-community" role="region" aria-labelledby="gnbMenuCommunity">
+                                <a href="../ni/NI_01_001.html" title="페이지 이동">이벤트</a>
+                                <a href="../ni/NI_01_002.html" title="페이지 이동">공지사항</a>
+                                <a href="../guide/GUIDE_01_004_4.html" title="페이지 이동">FAQ</a>
+                                <a href="../guide/GUIDE_01_004_1.html" title="페이지 이동">서비스 문의</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- gnb bottom button - logout -->
+                    <a href="javascript:void(0);" class="gnb-btn-logout" title="전체 메뉴 닫히고 페이지 이동">
+                        <img src="../../images/ico/ico_gnb_logout.svg" alt="로그아웃 아이콘">
+                        <span>로그아웃</span>
+                    </a>
+                </div> <!-- // GNB -->
+</body>
+
+</html>

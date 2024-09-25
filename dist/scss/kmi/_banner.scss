@@ -1,0 +1,63 @@
+// lo/LO_01_001_1.html
+.login-banner {
+  position: relative;
+  display: block;
+  padding: 2rem 1.5rem;
+  background-color: #e0ebfa;
+  height: 6.875rem;
+  p {
+    position: relative;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    color: $color-main;
+    z-index: 2;
+    &:first-child {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+      color: $color-black-40;
+    }
+  }
+  img {
+    position: absolute;
+    right: 1.25rem;
+    top: 0;
+    width: auto;
+    height: 6.875rem;
+    z-index: 1;
+  }
+}
+
+.login-banner02 {
+  height: 6.875rem;
+  background-color: #e0ebfa;
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: {
+    left: 1.75rem;
+    right: 1.75rem;
+    top: 2rem;
+  }
+
+  p {
+    &:first-of-type {
+      @include fontStyle(0.875rem, 1.25rem, 400, -0.0313rem);
+      color: $color-black-40;
+    }
+    &:last-of-type {
+      @include fontStyle(1.125rem, 1.625rem, 500);
+      color: $color-main;
+    }
+  }
+  img {
+    position: absolute;
+    right: 1.75rem;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+  }
+}

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-title" content="With KMI">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="refresh" content="300">
+
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="author" content="With KMI">
+    <meta name="title" content="건강검진 서비스 - With KMI">
+    <meta name="description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta name="keywords" content="With KMI, 위드케이엠아이, 비타브릿지, vitabridge, 건강검진, 헬스케어서비스, 헬스케어">
+    <meta name="copyright" content="© 2022. KMI All Rights Reserved.">
+
+    <link rel="canonical" href="{유동 도메인 주소}.withkmi.or.kr">
+
+    <meta property="og:locale" content="ko-KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="With KMI - 건강검진 서비스">
+    <meta property="og:description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta property="og:image" content="../../images/kmi_info_img.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:url" content="https://{유동 도메인 주소}.withkmi.or.kr">
+    <meta property="og:site_name" content="With KMI">
+
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/logo/home-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/logo/home-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../../images/logo/home-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/logo/home-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/logo/home-icon-192x192.png">
+    <link rel="stylesheet" href="../../lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../lib/datepicker/datepicker.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/swiper/js/swiper.min.js"></script>
+    <script defer src="../../js/common.js"></script>
+    <title>건강검진 서비스 - With KMI</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="flex-wrap">
+            <div class="flex-container">
+                <!-- BUTTON - 개인 추가금이 존재합니다. 온라인 결제 하시겠습니까? -->
+                <a href="javascript:void(0);" class="btn-open-popup" title="팝업열림" data-toggle="modal" data-target="popupOnlinePayment"><span>팝업열림 - 개인 추가금이 존재합니다. 온라인 결제 하시겠습니까?</span></a>
+                <br><br><br>
+                <!-- BUTTON - 취소처리 되었습니다. -->
+                <a href="javascript:void(0);" class="btn-open-popup" title="팝업열림" data-toggle="modal" data-target="popupCancellationProcessing"><span>팝업열림 - 취소처리 되었습니다.</span></a>
+                <br><br><br>
+                <!-- BUTTON - 개인 추가금이 존재합니다.검진 시 병원에서 수납 부탁드립니다. -->
+                <a href="javascript:void(0);" class="btn-open-popup" title="팝업열림" data-toggle="modal" data-target="popupHospitalBill"><span>팝업열림 - 개인 추가금이 존재합니다.검진 시 병원에서 수납 부탁드립니다.</span></a>
+                <br><br><br>
+                <!-- BUTTON - 검진예약을 신청하시겠습니까? -->
+                <a href="javascript:void(0);" class="btn-open-popup" title="팝업열림" data-toggle="modal" data-target="popupApplyCheckup"><span>팝업열림 - 검진예약을 신청하시겠습니까?</span></a>
+                <!-- BUTTON -  검진 당일 현장 결재 ? 클릭 시 팝업 -->
+                <br><br>
+                <span>팝업열림 - 검진 당일 현장 결제 ? 클릭 시 팝업</span>
+                <button type="button" class="co-tooltip btn-open-popup" aria-label="두번탭하면,상세팝업열림" data-toggle="modal" data-target="popupTotalPriceInfo01"></button>
+
+                <br><br>
+                <span>팝업열림 - 서비스 이용료 결제 ? 클릭 시 팝업</span>
+                <button type="button" class="co-tooltip btn-open-popup" aria-label="두번탭하면,상세팝업열림" data-toggle="modal" data-target="popupTotalPriceInfo02"></button>
+            </div>
+        </div>
+
+        <!-- POPUP - 개인 추가금이 존재합니다. 온라인 결제 하시겠습니까? -->
+        <div class="c-layer-popup kmi-popup type-modal" id="popupOnlinePayment" role="dialog" aria-labelledby="popupOnlinePayment_Label" aria-modal="true" aria-hidden="true">
+            <div class="modal-wrap">
+                <div class="popup-bg" aria-label="팝업의 배경입니다."></div>
+                <div class="modal-field" tabindex="0">
+                    <!-- 닫힘버튼 class: popup-btn-close -->
+                    <button type="button" class="popup-cls-btn popup-btn-close"><span class="skip">팝업 닫기</span></button>
+
+                    <div class="c-modal-body">
+                        <div class="c-modal-inner">
+                            <div class="in-cont">
+                                <p id="popupOnlinePayment_Label">
+                                    개인 추가금이 존재합니다.<br>온라인 결제 하시겠습니까?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="c-modal-footer">
+                        <div class="inner">
+                            <div class="buttons">
+                                <a href="javascript:void(0);" title="팝업닫힘" class="co-btn is-outline-navy-1 popup-btn-close"><span>취소</span></a>
+                                <a href="javascript:void(0);" title="페이지이동" class="co-btn bg-navy-1"><span>확인</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- POPUP - 취소처리 되었습니다. -->
+        <div class="c-layer-popup kmi-popup type-modal" id="popupCancellationProcessing" role="dialog" aria-labelledby="popupCancellationProcessing_Label" aria-modal="true" aria-hidden="true">
+            <div class="modal-wrap">
+                <div class="popup-bg" aria-label="팝업의 배경입니다."></div>
+                <div class="modal-field" tabindex="0">
+                    <!-- 닫힘버튼 class: popup-btn-close -->
+                    <button type="button" class="popup-cls-btn popup-btn-close"><span class="skip">팝업 닫기</span></button>
+
+                    <div class="c-modal-body">
+                        <div class="c-modal-inner">
+                            <div class="in-cont">
+                                <p id="popupCancellationProcessing_Label">
+                                    취소처리 되었습니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="c-modal-footer">
+                        <div class="inner">
+                            <div class="buttons">
+                                <a href="javascript:void(0);" title="페이지이동" class="co-btn bg-navy-1"><span>확인</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- POPUP - 개인 추가금이 존재합니다.검진 시 병원에서 수납 부탁드립니다. -->
+        <div class="c-layer-popup kmi-popup type-modal" id="popupHospitalBill" role="dialog" aria-labelledby="popupHospitalBill_Label" aria-modal="true" aria-hidden="true">
+            <div class="modal-wrap">
+                <div class="popup-bg" aria-label="팝업의 배경입니다."></div>
+                <div class="modal-field" tabindex="0">
+                    <!-- 닫힘버튼 class: popup-btn-close -->
+                    <button type="button" class="popup-cls-btn popup-btn-close"><span class="skip">팝업 닫기</span></button>
+
+                    <div class="c-modal-body">
+                        <div class="c-modal-inner">
+                            <div class="in-cont">
+                                <p id="popupHospitalBill_Label">
+                                    개인 추가금이 존재합니다.<br>검진 시 병원에서 수납 부탁드립니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="c-modal-footer">
+                        <div class="inner">
+                            <div class="buttons">
+                                <a href="javascript:void(0);" title="팝업닫힘" class="co-btn is-outline-navy-1 popup-btn-close"><span>취소</span></a>
+                                <a href="javascript:void(0);" title="페이지이동" class="co-btn bg-navy-1"><span>확인</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- POPUP - 검진예약을 신청하시겠습니까? -->
+        <div class="c-layer-popup kmi-popup type-modal" id="popupApplyCheckup" role="dialog" aria-labelledby="popupApplyCheckup_Label" aria-modal="true" aria-hidden="true">
+            <div class="modal-wrap">
+                <div class="popup-bg" aria-label="팝업의 배경입니다."></div>
+                <div class="modal-field" tabindex="0">
+                    <!-- 닫힘버튼 class: popup-btn-close -->
+                    <button type="button" class="popup-cls-btn popup-btn-close"><span class="skip">팝업 닫기</span></button>
+
+                    <div class="c-modal-body">
+                        <div class="c-modal-inner">
+                            <div class="in-cont">
+                                <p id="popupApplyCheckup_Label">
+                                    검진예약을 신청하시겠습니까?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="c-modal-footer">
+                        <div class="inner">
+                            <div class="buttons">
+                                <a href="javascript:void(0);" title="팝업닫힘" class="co-btn is-outline-navy-1 popup-btn-close"><span>취소</span></a>
+                                <a href="javascript:void(0);" title="페이지이동" class="co-btn bg-navy-1"><span>확인</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- [ mod(230412) ] -->
+        <!-- POPUP - 당일 현장 결제 팝업 -->
+        <div class="c-layer-popup kmi-popup type-modal" id="popupTotalPriceInfo01" role="dialog" aria-labelledby="popupCancellationProcessing_Label" aria-modal="true" aria-hidden="true">
+            <div class="modal-wrap">
+                <div class="popup-bg" aria-label="팝업의 배경입니다."></div>
+                <div class="modal-field" tabindex="0">
+
+                    <div class="c-modal-body">
+                        <div class="c-modal-inner">
+                            <div class="in-cont">
+                                <p id="popupTotalPriceInfo01_Label">
+                                    당일 현장에서 결제하는 비용입니다<br>검진 상품 금액 + 추가검사 금액 합산 </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="c-modal-footer">
+                        <div class="inner">
+                            <div class="buttons">
+                                <a href="javascript:void(0);" title="페이지이동" class="co-btn bg-navy-1 popup-btn-close"><span>확인</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- POPUP - 서비스이용료 안내 팝업 -->
+        <div class="c-layer-popup kmi-popup type-modal" id="popupTotalPriceInfo02" role="dialog" aria-labelledby="popupTotalPriceInfo02_Label" aria-modal="true" aria-hidden="true">
+            <div class="modal-wrap">
+                <div class="popup-bg" aria-label="팝업의 배경입니다."></div>
+
+                <div class="modal-field" tabindex="0">
+                    <div class="c-modal-header">
+                        <!-- 닫힘버튼 class: popup-btn-close -->
+                        <button type="button" class="popup-cls-btn popup-btn-close"><span class="skip">팝업 닫기</span></button>
+                        <div class="c-modal-title-field">
+                            <h3 id="popupTotalPriceInfo02_Label" class="c-title">서비스이용료 안내</h3>
+                        </div>
+                    </div>
+
+                    <div class="c-modal-body">
+                        <div class="c-modal-inner">
+                            <div class="in-cont">
+                                • 맞춤형 건강검진 헬스케어 서비스
+                                <ul>
+                                    <li>- 빅데이터 기반 개인별 맞춤형 검진 추천</li>
+                                    <li>- 간호사 등 전문 상담인과 검진예약 상담</li>
+                                    <li>- 전국 300여개 검진기관 예약 대행</li>
+                                    <li>- 온라인으로 간편하게 서비스 진행(검진예약, 검진기관 정보 확인, 검진항목 비교 등)
+                                        정기적인 건강정보 제공(블로그, 카톡 등)</li>
+                                    <li>- 전국 의료기관 정보 제공 등</li>
+                                </ul>
+
+                                * 고객을 위한 서비스는 계속 추가됩니다.<br>* 시스템 이용료는 온라인으로 결제 됩니다.
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="c-modal-footer">
+                        <div class="inner">
+                            <div class="buttons">
+                                <button class="co-btn bg-navy-1 popup-btn-close"><span>확인</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [ // mod(230412) ] -->
+
+    </div>
+</body>
+
+</html>

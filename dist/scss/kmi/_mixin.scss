@@ -1,0 +1,428 @@
+@import 'variables';
+
+// Common
+@mixin ellipsisLine01 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+@mixin ellipsisMultiline($lineCnt, $lineHeight, $height, $maxHeight) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: $lineHeight;
+  max-height: $maxHeight;
+}
+
+@mixin after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+@mixin position($x, $y) {
+  position: absolute;
+  left: $x;
+  top: $y;
+
+  @if $x == 50% and $y == 50% {
+    transform: translate(-50%, -50%);
+  } @else if $x == 50% {
+    transform: translateX(-50%);
+  } @else if $y == 50% {
+    transform: translateY(-50%);
+  }
+}
+
+@mixin hide {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+@mixin is-blind {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+@mixin skipTxt {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  font-size: 1px;
+  line-height: 1px;
+  color: transparent;
+}
+
+// = Font
+// + font style
+@mixin fontStyle($font-size, $line-height: $line-height, $font-weight: 300, $letter-spacing: null) {
+  font: {
+    size: $font-size;
+    weight: $font-weight;
+  }
+  letter-spacing: $letter-spacing;
+  line-height: $line-height;
+}
+
+@mixin coTxtTitleHeadingLarge {
+  @include fontStyle($fs-heading-title-large, 2.5rem, 500, $g-letter-spacing-02);
+}
+
+@mixin coTxtTitleHeadingSmall {
+  @include fontStyle($fs-heading-title-small, 2rem, 500, $g-letter-spacing-02);
+}
+
+@mixin coTxtTitleLarge {
+  @include fontStyle($fs-title-large, $default-line-height, 400, $g-letter-spacing-02);
+}
+
+@mixin coTxtTitleSmall {
+  @include fontStyle($fs-title-small, $default-line-height, 400, $g-letter-spacing-02);
+}
+
+@mixin coTxtBody {
+  @include fontStyle($fs-body, $default-line-height, 300, $default-letter-spacing);
+}
+
+@mixin coTxtBodyLink {
+  @include fontStyle($fs-body-link, $default-line-height, 300, $default-letter-spacing);
+}
+
+@mixin coTxtBodySmall {
+  @include fontStyle($fs-body-small, $g-line-height-02, 300, $default-letter-spacing);
+}
+
+@mixin coTxtLabelLarge {
+  @include fontStyle($fs-label-large, $g-line-height-02, 400, $g-letter-spacing-02);
+}
+
+@mixin coTxtLabelMedium {
+  @include fontStyle($fs-label-medium, $g-line-height-03, 400, $g-letter-spacing-02);
+}
+
+@mixin coTxtBtn {
+  @include fontStyle($fs-body, $g-line-height-02, 400, null);
+}
+
+@mixin coTxtBtnSmall {
+  @include fontStyle($fs-button-sm, $g-line-height-03, 400, null);
+}
+
+@mixin coTxtCaption {
+  @include fontStyle($fs-body-small, 18px, 400, null);
+}
+
+@mixin coTxtTermsType02 {
+  // + 활용동의서
+  @include fontStyle(0.9375rem, $g-line-height-02, 300, $g-letter-spacing-02);
+}
+
+@mixin coTxtTitleSub {
+  @include fontStyle($fs-body, $g-line-height-02, 500, null);
+}
+@mixin coTxtButtonBtn {
+  @include fontStyle($fs-button, $g-line-height-02, 400, null);
+}
+@mixin coTxtButtonBtnSm {
+  @include fontStyle($fs-label-large, $g-line-height-03, 400, $default-letter-spacing);
+}
+@mixin coTxtButtonSmall {
+  @include fontStyle($fs-body, $g-line-height-02, 500, $default-letter-spacing);
+}
+@mixin coTxtSubCard {
+  @include fontStyle($fs-sub-card, $g-line-height-03, 400, $g-letter-spacing-02);
+}
+
+// = Form
+// + input text
+@mixin inputText {
+  border-radius: $input-border-radius;
+  padding: 0.75rem 1.25rem;
+  color: $default-font-color;
+  font: {
+    size: $default-font-size;
+    weight: $default-font-weight;
+    family: $font-name;
+  }
+}
+
+// + input focus
+@mixin inputTextFocus {
+  border-color: $input-focus-border-color;
+  transition: border-color $transition-3;
+}
+
+// + input disabled
+@mixin inputDisabledFocus {
+  border-color: $input-border-color;
+  transition: none;
+}
+// + input disabled
+@mixin inputReadonlyFocus {
+  border-color: $input-border-color;
+  transition: none;
+}
+
+// + is-error
+@mixin inputError {
+  border-color: $color-sub-03;
+}
+
+@mixin calcPercent($num1, $num2) {
+  $width: calc($num2 / $num1 * 100);
+  width: #{$width}+ '%';
+}
+
+@mixin clear {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+@mixin inputChkSquare {
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  & + .chk-label,
+  & + label.chk-label {
+    i {
+      cursor: pointer;
+      display: inline-block;
+      width: 24px;
+      min-width: 24px;
+      height: 24px;
+      background: {
+        image: url($image-ico-chkbox-sprite01);
+        position: -10px -10px;
+        size: 44px auto;
+      }
+    }
+  }
+
+  // + checked
+  &:checked {
+    & + .chk-label {
+      i {
+        background-position-y: -44px;
+      }
+      span {
+        color: $color-main;
+      }
+    }
+
+    &:disabled {
+      & + .chk-label {
+        i {
+          background-position-y: -112px;
+        }
+      }
+    }
+  }
+
+  // + disabled
+  &:disabled {
+    & + .chk-label {
+      i {
+        background-position-y: -78px;
+      }
+    }
+  }
+}
+// = Tab
+// + radio default
+@mixin radio-default {
+  padding: {
+    top: 0.5rem;
+    right: 1rem;
+    bottom: 0.5rem;
+    left: 1rem;
+  }
+  @include coTxtLabelLarge;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+  white-space: nowrap;
+  display: block;
+  color: $color-sub-01;
+  background-color: $color-white-100;
+  background-image: none;
+}
+// + radio checked
+@mixin radio-checked {
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(37, 57, 129, 0.2);
+  color: $color-white-100;
+  background-color: $color-main;
+  // background-image: url($image-ico-path + 'tab_overlay_01.png') right bottom/30px auto no-repeat;
+  background-image: url($image-ico-path + 'tab_overlay_01.png');
+  background-position: right bottom;
+  background-size: 1.875rem 1.25rem;
+  background-repeat: no-repeat;
+}
+// + anchor default
+@mixin anchor-default {
+  padding: {
+    top: 0.5rem;
+    right: 1rem;
+    bottom: 0.5rem;
+    left: 1rem;
+  }
+  @include coTxtLabelLarge;
+  color: $color-sub-01;
+  background: $color-white-100;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+  white-space: nowrap;
+  display: block;
+}
+// + radio active
+@mixin anchor-active {
+  color: $color-white-100;
+  background: url($image-ico-path + 'tab_overlay_01.png') $color-main right bottom/30px auto no-repeat;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(37, 57, 129, 0.2);
+}
+
+// 1줄 말줄임
+@mixin shortening-one {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+// 2줄 말줄임
+@mixin shortening-two {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+// hide input checkbox || radio
+@mixin hide-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  background-color: transparent;
+  color: transparent;
+  font-size: 1px;
+  line-height: 1px;
+  opacity: 0;
+}
+
+// card
+// + check type off
+@mixin card-check-type-off {
+  background-color: #fff;
+  padding: 0.1875rem;
+  border: 1px solid $color-black-05;
+  box-sizing: border-box;
+}
+// + check type on
+@mixin card-check-type-on {
+  background-color: transparent;
+  border-color: transparent;
+}
+// + check type on ::before
+@mixin card-check-type-on-before($borderRadius) {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity $transition-3 ease-in-out;
+  border: 3px solid transparent;
+  border-radius: $borderRadius;
+  background-image: linear-gradient(to bottom, $color-white-100, $color-white-100), linear-gradient(65deg, $color-sub-02 1%, $color-main 113%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+@mixin cardType01($card-radius) {
+  input[type='radio'],
+  input[type='checkbox'] {
+    & + label {
+      border-radius: $card-radius;
+      &:before {
+        border-radius: $card-radius;
+      }
+    }
+
+    &:checked {
+      & + label {
+        &:before {
+          border-radius: $card-radius;
+        }
+      }
+    }
+  }
+  &:before {
+    border-radius: $card-radius;
+  }
+  .inner {
+    border-radius: $card-radius;
+  }
+}
+
+// + thumbnail
+@mixin listThumbnailType($btmpadding) {
+  @if $btmpadding != null {
+    padding-bottom: #{$btmpadding} + '%';
+  }
+  position: relative;
+  overflow: hidden;
+  border: 1px solid $color-black-05;
+  border-radius: $thumbnail-radius;
+  > img {
+    min-width: 100%;
+    min-height: 100%;
+    @include position(50%, 50%);
+    object-fit: cover;
+  }
+}
+
+// = Media query
+
+@mixin devices($breakpoint) {
+  @if $breakpoint == mobileSm {
+    @media screen and (max-width: 280px) {
+      @content;
+    }
+  }
+}
+
+@mixin mSmHorizonSpacing {
+  padding: {
+    left: $mq-sm-default-h-spacing;
+    right: $mq-sm-default-h-spacing;
+  }
+}
+
+@mixin mSmGnbListHSpacing {
+  padding: {
+    left: $mq-sm-gnb-h-spacing;
+    right: $mq-sm-gnb-h-spacing;
+  }
+}
+
+@mixin swiperFullWidth {
+  .swiper-slide {
+    width: 100%;
+  }
+  overflow: hidden;
+}

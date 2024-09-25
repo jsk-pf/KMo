@@ -1,0 +1,322 @@
+// media query test
+
+@media (max-width: 370px) {
+  .co-main-card {
+    height: 11.75rem;
+    a.result,
+    p.result {
+      margin-top: 1.25rem;
+    }
+  }
+}
+
+@include devices(mobileSm) {
+  html,
+  body {
+    font-size: 15px;
+  }
+
+  input,
+  textarea {
+    max-width: 100%;
+    box-sizing: border-box;
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
+
+  // = GNB
+  .co-gnb {
+    right: calc(0rem - (100% - 2.666rem));
+    width: calc(100% - 2.666rem);
+
+    .gnb-header,
+    .gnb-btn-logout {
+      @include mSmHorizonSpacing;
+    }
+
+    .gnb-body {
+      li {
+        > a,
+        button {
+          @include mSmGnbListHSpacing;
+        }
+
+        .gnb-list {
+          a {
+            @include mSmGnbListHSpacing;
+          }
+        }
+      }
+    }
+  }
+
+  // = Login
+
+  // banner
+  .login-banner {
+    img {
+      right: auto;
+      left: 10.933rem;
+    }
+  }
+  .login-banner02 {
+    padding-left: 0.625rem;
+    img {
+      right: auto;
+      left: 12.3rem;
+    }
+  }
+  .login-block {
+    @include mSmHorizonSpacing;
+
+    .tab-panel {
+      & + .btn-list a {
+        &:nth-child(even) {
+          &:after {
+            @include after;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    &.type-default {
+      .img-logo {
+        width: 12.857rem;
+      }
+    }
+    .type-footer {
+      // a {
+      //   font-size: 1rem;
+      // }
+    }
+  }
+
+  // = Popup
+
+  // + c-full-layer
+  .c-full-layer {
+    .cont-box,
+    .full-header,
+    .full-footer,
+    .full-body .top-title-box,
+    .btn-floating,
+    .btn-floating.isScroll {
+      @include mSmHorizonSpacing;
+    }
+  }
+
+  // + c-layer-popup
+  .c-layer-popup {
+    .c-modal-header,
+    .c-modal-body,
+    .c-modal-footer {
+      padding: {
+        left: $mq-sm-popup-h-spacing;
+        right: $mq-sm-popup-h-spacing;
+      }
+    }
+  }
+  .ti-block,
+  .rv-block,
+  .rc-block,
+  .vgt-block,
+  .ri-block,
+  .hi-block,
+  .ni-block,
+  .mi-block,
+  .em-block,
+  .terms-block,
+  .guide-block,
+  .main-block,
+  .jo-block {
+    @include mSmHorizonSpacing;
+  }
+
+  .rv-block {
+    &.type-floating-btn {
+      @include mSmHorizonSpacing;
+    }
+  }
+
+  // = Form
+  input {
+    &[type='text'],
+    &[type='password'],
+    &[type='number'],
+    &[type='search'] {
+      @include mSmHorizonSpacing;
+    }
+  }
+
+  // = Button
+
+  button,
+  a {
+    &.co-btn {
+      padding : {
+        left: 0;
+        right: 0;
+      }
+    }
+    &.is-prev,
+    &.is-next {
+      > span {
+        line-height: 1.6rem;
+      }
+    }
+  }
+
+  .c-input {
+    min-height: 46px;
+  }
+
+  .c-input-btn-group {
+    .co-btn {
+      min-height: 46px;
+    }
+  }
+
+  // = 로그인 (LO)
+  .login-block {
+    .tab-panel {
+      & + .btn-list {
+        a {
+          padding: 0 0.4rem;
+        }
+      }
+    }
+  }
+  .c-full-layer {
+    .full-body {
+      .top-title-box {
+        font-size: 1.866rem;
+      }
+    }
+  }
+
+  // = 검진항목정보
+  .hi-block {
+    .item-info {
+      margin-left: -$mq-sm-default-h-spacing;
+      padding: 0.4rem;
+    }
+  }
+
+  .item-info {
+    a {
+      margin {
+        left: 0.666rem;
+        right: 0.666rem;
+      }
+      width: calc(50vw - 0.666rem - $mq-sm-default-h-spacing);
+    }
+  }
+
+  .c-modal-header {
+    .c-modal-title-field {
+      .c-title {
+        font-size: 1.4rem;
+        margin-right: 0.571rem;
+      }
+    }
+  }
+
+  // = Header
+  header {
+    &.header {
+      &.co-header {
+        padding: {
+          left: $mq-sm-default-h-spacing;
+          right: $mq-sm-default-h-spacing;
+        }
+      }
+    }
+  }
+
+  // + 검진기관 상세 full 팝업
+  #popupInstitutionDetails {
+    .instDetailsCenter {
+      &.swiper-ready {
+        .swiper-slide {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+
+  // = Main
+  .main-card-rsv-inquiry {
+    .hide-txt {
+      @include skipTxt;
+    }
+  }
+
+  .main-block {
+    .card_09 {
+      padding: {
+        left: 5.2rem;
+        right: 0.937rem;
+      }
+    }
+  }
+
+  // + subjectSwiper
+  .subjectSwiper,
+  .eventSwiper,
+  .resultSwiper {
+    @include swiperFullWidth;
+  }
+
+  // =Style
+  .login-block,
+  .ti-block,
+  .rv-block,
+  .rc-block,
+  .vgt-block,
+  .main-block,
+  .hi-block,
+  .ni-block,
+  .mi-block,
+  .em-block,
+  .terms-block,
+  .guide-block,
+  .jo-block {
+    .tit {
+      font-size: 1.866rem;
+    }
+  }
+
+  // = 검진예약(RV)
+  .c-full-layer {
+    &.popup-prd-additional-amount {
+      &#popupProductAdditionalAmount {
+        .top-title-box {
+          font-size: 1.466rem;
+        }
+        .cont-box {
+          dl {
+            dd {
+              &:first-of-type {
+                padding-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // = 검진 결과(RI)
+  .swiper {
+    &.examResSwiper {
+      .swiper-wrapper {
+        .swiper-slide {
+          width: 100%;
+        }
+      }
+    }
+  }
+} // E - media

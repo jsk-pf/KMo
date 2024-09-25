@@ -1,0 +1,20 @@
+.co-tooltip {
+  width: 1rem;
+  height: 1rem;
+  background-image: url($image-ico-path + 'ico_tooltip_question_20x20.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 1.25rem 1.25rem;
+  &.type-left-txt {
+    @include coTxtLabelMedium;
+    color: #fff;
+    width: auto;
+    height: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1.5rem;
+    background-image: url($image-ico-path + 'ico_tooltip_question_white_20x20.svg');
+    background-position: right center;
+  }
+}

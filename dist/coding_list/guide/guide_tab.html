@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Layout Guide</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scaLabel=no">
+	<!-- guide css -->
+	<link rel="stylesheet" href="../css/base.css">
+
+	<link rel="stylesheet" href="../../css/style.css">
+	<script src="../../lib/jquery/jquery.min.js"></script>
+
+	<!-- 이 화면에서만 사용되는 style -->
+	<style>
+		.c-tab.type-slide {
+			margin-left: -20px;
+			width: 100vw;
+			padding: 28px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wrap" class="coding_guide">
+		<h1 class="h1_guide">Tab</h1>
+		<div class="title-box">
+			<h2 class="h2_guide">공통</h2>
+		</div>
+		<div class="guide_descbox" aria-hidden="true">
+			<h3 class="g-title"></h3>
+			<div class="inner_desc">
+				<ul>
+					<li>
+						TAB 터치 시 : 선택됨 || 선택안됨
+						<p>- 대체텍스트: common.js 에서 구현</p>
+					</li>
+					<li>
+						TAB의 aria-controls와 panel의 aria-labelledby가 동일해야 됨
+						<p>- common.js 에서 구현</p>
+					</li>
+					<li>
+						type-panel :
+						<p>- panel은 tab의 수와 동일</p>
+						<p>- panel이 교체되는 case</p>
+					</li>
+					<!-- <li>
+              type-click :
+              <p>*** 사용안함 *** </p>
+              <p>- panel 1개</p>
+              <p>- panel 안의 내용과 aria-labelledby가 바뀌는 case</p>
+            </li> -->
+					<li>
+						type-move :
+						<p>- panel 1개</p>
+						<p>- tab 터치 시 페이지 이동 되는 case</p>
+						<p>- tab의 data-tablist와 panel의 data-panelname 필요함</p>
+					</li>
+					<li>
+						type-slide :
+						<p>- 가로가 길 경우 scroll되는 case</p>
+						<p>- 터치 시 선택된 tab : 중앙정렬</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- ===================================== Tab -->
+		<div class="title-box">
+			<h2 class="h2_guide">TAB</h2>
+		</div>
+
+		<!-- [TAB: type-basic type-panel] -->
+		<h3 class="h3_guide">TAB: type-basic type-panel</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+			<!--
+          * 탭 터치 시 panel이 바뀌는 case
+          * 탭의 aria-controls와 panel의 aria-labelledby가 동일해야 됨
+        -->
+			<ul class="c-tab type-basic type-panel" role="tablist">
+				<li role="tab" aria-controls="tab1-tab-panel">
+					<input type="radio" name="tabTypeBasic" id="tab1" checked>
+					<label for="tab1">TAB 1</label>
+				</li>
+				<li role="tab" aria-controls="tab2-tab-panel">
+					<input type="radio" name="tabTypeBasic" id="tab2">
+					<label for="tab2">TAB 2</label>
+				</li>
+			</ul>
+
+			<!--
+          * tab1 panel
+          * tab-panel show class: show || null
+        -->
+			<div class="tab-panel show" role="tabpanel" aria-labelledby="tab1-tab-panel">
+				<br>TAB 1 CONTENTS<br>
+			</div>
+			<!-- tab2 panel -->
+			<div class="tab-panel" role="tabpanel" aria-labelledby="tab2-tab-panel">
+				<br>TAB 2 CONTENTS<br>
+			</div>
+			<!-- ? // view -->
+		</div>
+		<!-- [ // TAB: type-basic type-panel] -->
+
+		<!-- [TAB: type-slide type-panel] -->
+		<h3 class="h3_guide">TAB: type-slide type-panel</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+			<!--
+          * 탭 터치 시 panel이 바뀌는 case
+          * 탭의 aria-controls와 panel의 aria-labelledby가 동일해야 됨
+        -->
+			<ul class="c-tab type-slide type-panel" role="tablist">
+				<li role="tab" aria-controls="tab1-slide-tab-panel">
+					<input type="radio" name="tabTypeSlide" id="tab1Slide" checked>
+					<label for="tab1Slide">TAB 1</label>
+				</li>
+				<li role="tab" aria-controls="tab2-slide-tab-panel">
+					<input type="radio" name="tabTypeSlide" id="tab2Slide">
+					<label for="tab2Slide">TAB 2</label>
+				</li>
+				<li role="tab" aria-controls="tab3-slide-tab-panel">
+					<input type="radio" name="tabTypeSlide" id="tab3Slide">
+					<label for="tab3Slide">TAB 3</label>
+				</li>
+				<li role="tab" aria-controls="tab4-slide-tab-panel">
+					<input type="radio" name="tabTypeSlide" id="tab4Slide">
+					<label for="tab4Slide">TAB 4</label>
+				</li>
+				<li role="tab" aria-controls="tab5-slide-tab-panel">
+					<input type="radio" name="tabTypeSlide" id="tab5Slide">
+					<label for="tab5Slide">TAB 5</label>
+				</li>
+				<li role="tab" aria-controls="tab6-slide-tab-panel">
+					<input type="radio" name="tabTypeSlide" id="tab6Slide">
+					<label for="tab6Slide">TAB 6</label>
+				</li>
+			</ul>
+
+			<!--
+          * tab1 panel
+          * tab-panel show class: show || null
+        -->
+			<div class="tab-panel show" role="tabpanel" aria-labelledby="tab1-slide-tab-panel">
+				<br>TAB 1 CONTENTS<br>
+			</div>
+			<!-- tab2 panel -->
+			<div class="tab-panel" role="tabpanel" aria-labelledby="tab2-slide-tab-panel">
+				<br>TAB 2 CONTENTS<br>
+			</div>
+			<!-- tab3 panel -->
+			<div class="tab-panel" role="tabpanel" aria-labelledby="tab3-slide-tab-panel">
+				<br>TAB 3 CONTENTS<br>
+			</div>
+			<!-- tab4 panel -->
+			<div class="tab-panel" role="tabpanel" aria-labelledby="tab4-slide-tab-panel">
+				<br>TAB 4 CONTENTS<br>
+			</div>
+			<!-- tab5 panel -->
+			<div class="tab-panel" role="tabpanel" aria-labelledby="tab5-slide-tab-panel">
+				<br>TAB 5 CONTENTS<br>
+			</div>
+			<!-- tab6 panel -->
+			<div class="tab-panel" role="tabpanel" aria-labelledby="tab6-slide-tab-panel">
+				<br>TAB 6 CONTENTS<br>
+			</div>
+			<!-- ? // view -->
+		</div>
+		<!-- [ // TAB: type-slide type-panel] -->
+
+		<!-- [TAB LEFT BUTTON: type-slide type-panel] -->
+		<h3 class="h3_guide">TAB LEFT BUTTON: type-slide type-panel</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+			<!--
+          * 탭 터치 시 panel이 바뀌는 case
+          * 탭 제일 왼쪽에 + 버튼 있음
+          * 탭의 aria-controls와 panel의 aria-labelledby가 동일해야 됨
+        -->
+			<ul class="c-tab type-slide type-panel" role="tablist">
+				<li>
+					<button class="ico-plus"><span class="skip">터치시 팝업열림</span></button>
+				</li>
+				<li role="tab" aria-controls="tab1-leftBtn-tab-panel">
+					<input type="radio" name="tabTypeLeftBtn" id="tab1LeftBtn" checked>
+					<label for="tab1LeftBtn">TAB 1</label>
+				</li>
+				<li role="tab" aria-controls="tab2-leftBtn-tab-panel">
+					<input type="radio" name="tabTypeLeftBtn" id="tab2LeftBtn">
+					<label for="tab2LeftBtn">TAB 2</label>
+				</li>
+			</ul>
+
+			<!--
+          * tab1 panel
+          * tab-panel show class: show || null
+        -->
+			<div class="tab-panel show" role="tabpanel" aria-labelledby="tab1-leftBtn-tab-panel">
+				<br>LEFT PLUS BUTTON TAB 1 CONTENTS<br>
+			</div>
+			<!-- tab2 panel -->
+			<div class="tab-panel" role="tabpanel" aria-labelledby="tab2-leftBtn-tab-panel">
+				<br>LEFT PLUS BUTTON TAB 2 CONTENTS<br>
+			</div>
+			<!-- ? // view -->
+		</div>
+		<!-- [ // TAB LEFT BUTTON: type-slide type-panel] -->
+
+		<!-- 사용 안함 - [TAB: type-slide type-click - input tag] -->
+		<!-- <h3 class="h3_guide">TAB: type-slide type-click - input tag</h3>
+      <div class="d_desc code"> -->
+		<!-- ? view -->
+		<!-- <div class="c-input-list type01">
+          <div class="row">
+            <div class="col per-column"> -->
+		<!--
+                * 탭 터치 시 panel이 바뀌는 case
+                * 탭의 aria-controls와 panel의 aria-labelledby가 동일해야 됨
+              -->
+		<!-- <ul class="c-tab type-slide type-click" role="tablist">
+                <li role="tab" aria-controls="tab1-click-tab-panel">
+                  <input type="radio" name="tabTypeclick" id="tab1click" checked>
+                  <label for="tab1click">TAB 1</label>
+                </li>
+                <li role="tab" aria-controls="tab2-click-tab-panel">
+                  <input type="radio" name="tabTypeclick" id="tab2click">
+                  <label for="tab2click">TAB 2</label>
+                </li>
+                <li role="tab" aria-controls="tab3-click-tab-panel">
+                  <input type="radio" name="tabTypeclick" id="tab3click">
+                  <label for="tab3click">TAB 3</label>
+                </li>
+                <li role="tab" aria-controls="tab4-click-tab-panel">
+                  <input type="radio" name="tabTypeclick" id="tab4click">
+                  <label for="tab4click">TAB 4</label>
+                </li>
+                <li role="tab" aria-controls="tab5-click-tab-panel">
+                  <input type="radio" name="tabTypeclick" id="tab5click">
+                  <label for="tab5click">TAB 5</label>
+                </li>
+                <li role="tab" aria-controls="tab6-click-tab-panel">
+                  <input type="radio" name="tabTypeclick" id="tab6click">
+                  <label for="tab6click">TAB 6</label>
+                </li>
+              </ul> -->
+
+		<!--
+                * tab panel
+                * tab-panel show class: show || null
+              -->
+		<!-- <div class="tab-panel show" role="tabpanel" aria-labelledby="tab1-click-tab-panel">
+                <br>TAB CONTENTS<br>
+              </div> -->
+		<!-- </div>
+          </div>
+        </div> -->
+		<!-- ? // view -->
+		<!-- </div> -->
+		<!-- [ // TAB: type-click - input tag] -->
+
+		<!-- [TAB: type-slide type-click - a tag] -->
+		<h3 class="h3_guide">TAB: type-slide type-click - a tag</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+			<!--
+          * 탭 터치 시 페이지 이동되는 case
+          * 탭의 aria-controls와 panel의 aria-labelledby가 동일해야 됨
+        -->
+			<ul class="c-tab type-slide type-move" role="tablist" data-tablist="move-tab">
+				<li role="tab" aria-controls="tab1-move-tab-panel">
+					<a href="javascript:void(0);" title="페이지 이동" class="tab active">TAB 1</a>
+				</li>
+				<li role="tab" aria-controls="tab2-move-tab-panel">
+					<a href="javascript:void(0);" title="페이지 이동" class="tab">TAB 2</a>
+				</li>
+				<li role="tab" aria-controls="tab3-move-tab-panel">
+					<a href="javascript:void(0);" title="페이지 이동" class="tab">TAB 3</a>
+				</li>
+				<li role="tab" aria-controls="tab4-move-tab-panel">
+					<a href="javascript:void(0);" title="페이지 이동" class="tab">TAB 4</a>
+				</li>
+				<li role="tab" aria-controls="tab5-move-tab-panel">
+					<a href="javascript:void(0);" title="페이지 이동" class="tab">TAB 5</a>
+				</li>
+				<li role="tab" aria-controls="tab6-move-tab-panel">
+					<a href="javascript:void(0);" title="페이지 이동" class="tab">TAB 6</a>
+				</li>
+			</ul>
+
+			<!--
+          * tab panel
+          * tab-panel show class: show || null
+          * 탭 터치 후 새로고침 된 후: panel의 aria-labelledby가 탭의 active class를 가진 aria-controls로 바뀜
+        -->
+			<div class="tab-panel show" role="tabpanel" aria-labelledby="tab1-move-tab-panel" data-panelname="move-tab">
+				<br>TAB CONTENTsS<br>
+			</div>
+			<!-- ? // view -->
+		</div>
+		<!-- [ // TAB: type-click - a tag] -->
+
+	</div>
+
+	<!-- guide script -->
+	<script src="../js/pretty.js"></script>
+
+	<script defer src="../../js/common.js"></script>
+</body>
+
+</html>

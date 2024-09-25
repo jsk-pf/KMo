@@ -1,0 +1,12 @@
+.swiper {
+  &.type-hide-arr {
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 1px;
+      height: 1px;
+      background-size: 1px 1px;
+      margin-top: -1px;
+      opacity: 0;
+    }
+  }
+}

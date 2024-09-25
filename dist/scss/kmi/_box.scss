@@ -1,0 +1,73 @@
+.box {
+  padding: {
+    top: 2rem;
+    right: 1.25rem;
+    bottom: 2rem;
+    left: 1.25rem;
+  }
+  background-color: $color-black-05;
+  border-radius: 0.75rem;
+  em {
+    font-weight: 500;
+  }
+  &.type1 {
+    .box-txt {
+      @include coTxtLabelMedium;
+      color: #777776;
+    }
+    .list {
+      margin-top: 0.75rem;
+    }
+  }
+  &.type2 {
+    .box-txt {
+      @include coTxtBody;
+      color: $color-black-60;
+      & + .box-txt {
+        margin-top: 0.75rem;
+      }
+    }
+  }
+  &.type3 {
+    @include coTxtBody;
+    color: $color-black-80;
+    background-color: $color-bg-04;
+    padding: 1rem 1.25rem;
+    p {
+      & ~ p {
+        margin-top: 0.75rem;
+      }
+    }
+    .c-txt-label-l + ul {
+      margin-top: 0.75rem;
+    }
+  }
+  &.type4 {
+    @include coTxtLabelLarge;
+    color: $color-black-60;
+    padding: 1rem 1.25rem;
+  }
+  &.type5 {
+    padding: 1.25rem;
+  }
+  &.type6 {
+    @include coTxtBody;
+    color: $color-black-80;
+    padding: 0.75rem 1.25rem;
+    a {
+      display: inline-block;
+      color: $color-sub-02;
+      text-decoration: underline;
+    }
+    p {
+      & ~ p {
+        margin-top: 0.75rem;
+      }
+    }
+  }
+  &.type7 {
+    @include coTxtLabelLarge;
+    color: $color-black-60;
+    padding: 1rem 1.25rem;
+  }
+}

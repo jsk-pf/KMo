@@ -1,0 +1,43 @@
+.item-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: calc(50vw - 0.625rem - 1.75rem);
+    height: calc(50vw - 0.625rem - 1.75rem);
+    min-height: 8rem;
+    max-height: 8.875rem;
+    text-align: center;
+    border: 1px solid $color-black-10;
+    border-radius: 0.75rem;
+    margin-top: 1.25rem;
+    padding: 0.8125rem 0.75rem;
+    &:nth-child(1n) {
+      margin-right: 0.625rem;
+      margin-left: 0.625rem;
+    }
+    &:nth-child(2n) {
+      margin-left: 0.625rem;
+      margin-right: 0.625rem;
+    }
+    img {
+      width: 2.875rem;
+      height: 2.875rem;
+    }
+    p {
+      @include coTxtTitleSub;
+      color: $color-black-60;
+      margin-top: 0.75rem;
+      width: 100%;
+      @include shortening-one;
+      span {
+        @include coTxtCaption;
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>Layout Guide</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scaLabel=no" />
+
+	<!-- guide css -->
+	<link rel="stylesheet" href="../css/base.css" />
+	<link rel="stylesheet" href="../../css/style.css" />
+	<script src="../../lib/jquery/jquery.min.js"></script>
+</head>
+<body>
+	<div id="wrap" class="coding_guide">
+		<h1 class="h1_guide">Popup</h1>
+		<div class="title-box">
+			<h2 class="h2_guide">Popup</h2>
+		</div>
+		<div class="guide_descbox" aria-hidden="true">
+			<h3 class="g-title"></h3>
+			<div class="inner_desc">
+				<ul>
+					<li> 동일 속성값 매칭<br /> 1. 팝업 연결 button [data-target] - .c-layer-popup [id]<br /> .c-layer-popup
+						[aria-labelledby] - .c-title 또는 팝업내용에 동일 속성값 부여 </li>
+					<li> 버튼 - 팝업 연동 script 이벤트 제어 [class="btn-open-popup"] </li>
+
+					<!-- <li>버튼 없이 팝업 제어할 경우 - .c-layer-popup 의 show 클래스 add/remove를 통한 제어 (common.js - popup 주석 참고)</li> -->
+					<li> 버튼의 기능이 두 가지 이상일 경우(ex. 페이지이동 && 팝업열림) <p>onclick="popupDirectClick(this)"</p>
+					</li>
+					<li> 팝업위치 : <p>body</p>
+						<p>&nbsp;┗ #container</p>
+						<p>&nbsp;┗ /#container</p>
+						<p>&nbsp;┗ popup</p>
+						<p>&nbsp;┗ gnb</p>
+						<p>&nbsp;┗ loading</p>
+						<p>/body</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- [ MODAL TYPE ] -->
+		<h3 class="h3_guide">MODAL TYPE</h3>
+		<div class="d_desc code">
+
+			<!-- ? view -->
+			<button type="button" class="btn-open-popup" data-toggle="modal" data-target="popupModalType01_01">
+				<span>OPEN POPUP</span>
+			</button>
+			<div class="c-layer-popup kmi-popup type-modal" id="popupModalType01_01" role="dialog"
+				aria-labelledby="popupModalType_Label" aria-modal="true" aria-hidden="true">
+				<div class="modal-wrap">
+					<div class="popup-bg" aria-label="팝업의 배경입니다."></div>
+					<div class="modal-field" tabindex="0">
+
+						<!-- 닫힘버튼 class: popup-btn-close -->
+						<button type="button" class="popup-cls-btn popup-btn-close">
+							<span class="skip">팝업 닫기</span>
+						</button>
+						<div class="c-modal-body">
+							<div class="c-modal-inner">
+
+								<!-- 팝업의 설명(대체텍스트)이 필요한 경우 -->
+
+								<!-- <h4 class="c-title skip" id="popupModalType_Label">대체 텍스트</h4> -->
+								<div class="in-cont">
+									<p id="popupModalType_Label">MODAL TYPE</p>
+								</div>
+							</div>
+						</div>
+						<div class="c-modal-footer">
+							<div class="inner">
+								<div class="buttons">
+									<button class="co-btn bg-navy-1 popup-btn-close">
+										<span>CLOSE</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ? // view -->
+		</div>
+
+		<!-- [ MODAL HEADER TYPE ] -->
+		<h3 class="h3_guide">MODAL HEADER TYPE</h3>
+		<div class="d_desc code">
+
+			<!-- ? view -->
+			<button type="button" class="btn-open-popup" data-toggle="modal" data-target="popupModalHeaderType01_01">
+				<span>OPEN POPUP</span>
+			</button>
+			<div class="c-layer-popup kmi-popup type-modal" id="popupModalHeaderType01_01" role="dialog"
+				aria-labelledby="popupModalHeaderType_Label" aria-modal="true" aria-hidden="true">
+				<div class="modal-wrap">
+					<div class="popup-bg" aria-label="팝업의 배경입니다."></div>
+					<div class="modal-field" tabindex="0">
+						<div class="c-modal-header">
+
+							<!-- 닫힘버튼 class: popup-btn-close -->
+							<button type="button" class="popup-cls-btn popup-btn-close">
+								<span class="skip">팝업 닫기</span>
+							</button>
+							<div class="c-modal-title-field">
+								<h3 id="popupModalHeaderType_Label" class="c-title">TITLE</h3>
+							</div>
+						</div>
+						<div class="c-modal-body">
+							<div class="c-modal-inner">
+
+								<!-- 팝업의 설명(대체텍스트)이 필요한 경우 -->
+
+								<!-- <h4 class="c-title skip" id="popupModalHeaderType_Label">대체 텍스트</h4> -->
+								<div class="in-cont">
+									<p>MODAL HEADER TYPE</p>
+								</div>
+							</div>
+						</div>
+						<div class="c-modal-footer">
+							<div class="inner">
+								<div class="buttons">
+									<button class="co-btn bg-navy-1 popup-btn-close">
+										<span>CLOSE</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ? // view -->
+		</div>
+
+		<!-- # [ mod(230421) ] -->
+
+		<!--
+				+ 폰트 색상 제어 : 별도 클래스 부여
+			-->
+
+		<!-- [ MODAL TYPE - HEADER + FOOTER FIXED ]-->
+		<h3 class="h3_guide">MODAL TYPE : HEADER FIXED + FOOTER NONE</h3>
+		<div class="d_desc code">
+
+			<!-- ? view -->
+			<button type="button" class="btn-open-popup" data-toggle="modal" data-target="popupModalHeaderType01_03">
+				<span>OPEN POPUP</span>
+			</button>
+			<div class="c-layer-popup kmi-popup type-modal type-h-fixed" id="popupModalHeaderType01_03" role="dialog"
+				aria-labelledby="popupModalHeaderType01_Label03" aria-modal="true" aria-hidden="true">
+				<div class="modal-wrap">
+					<div class="popup-bg" aria-label="팝업의 배경입니다."></div>
+					<div class="modal-field" tabindex="0">
+						<div class="c-modal-header">
+
+							<!-- 닫힘버튼 class: popup-btn-close -->
+							<button type="button" class="popup-cls-btn popup-btn-close">
+								<span class="skip">팝업 닫기</span>
+							</button>
+							<div class="c-modal-title-field">
+								<h3 id="popupModalHeaderType01_Label03" class="c-title cl-main-1"> TITLE </h3>
+							</div>
+						</div>
+						<div class="c-modal-body">
+							<div class="c-modal-inner">
+								<div class="in-cont">
+									<p> CONTENTS CONTENTS CONTENT CONTENTS CONTENTS CONTENT CONTENTS CONTENTS CONTENT CONTENTS CONTENTS
+										CONTENT CONTENTS CONTENTS CONTENT </p>
+									<div class="c-modal-middle">
+										<h4 class="c-sub-title">주의사항</h4>
+										<p>
+											CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="c-modal-footer">
+							<div class="inner">
+								<div class="buttons">
+									<button class="co-btn bg-navy-1 popup-btn-close">
+										<span>확인</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ? // view -->
+		</div>
+
+		<!-- [ // MODAL LAYER TYPE ]-->
+
+		<!-- # [// mod(230421) ] -->
+
+		<!-- [ MODAL TYPE - HEADER + FOOTER FIXED] -->
+		<h3 class="h3_guide">MODAL TYPE - HEADER + FOOTER FIXED</h3>
+		<div class="d_desc code">
+
+			<!-- ? view -->
+			<button type="button" class="btn-open-popup" data-toggle="modal" data-target="popupModalType01_02">
+				<span>OPEN POPUP</span>
+			</button>
+			<div class="c-layer-popup kmi-popup type-modal-hf-fixed" id="popupModalType01_02" role="dialog"
+				aria-labelledby="popupModalType01_02_Label" aria-modal="true" aria-hidden="true">
+				<div class="modal-wrap">
+					<div class="popup-bg" aria-label="팝업의 배경입니다."></div>
+					<div class="modal-field" tabindex="0">
+						<div class="c-modal-header">
+
+							<!-- 닫힘버튼 class: popup-btn-close -->
+							<button type="button" class="popup-cls-btn popup-btn-close">
+								<span class="skip">팝업 닫기</span>
+							</button>
+							<div class="c-modal-title-field">
+								<h3 id="popupModalType01_02_Label" class="c-title">TITLE</h3>
+							</div>
+						</div>
+						<div class="c-modal-body">
+							<div class="c-modal-inner">
+
+								<!-- 팝업의 설명(대체텍스트)이 필요한 경우 -->
+
+								<!-- <h4 class="c-title skip" id="popupModalType_Label">대체 텍스트</h4> -->
+								<div class="in-cont">
+									CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS
+								</div>
+							</div>
+						</div>
+						<div class="c-modal-footer">
+							<div class="inner">
+								<div class="buttons">
+									<button class="co-btn bg-navy-1 popup-btn-close">
+										<span>CLOSE</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- [ // MODAL TYPE - HEADER + FOOTER FIXED TYPE] -->
+		</div>
+		<h3 class="h3_guide">MODAL HEADER TYPE: LONG BODY</h3>
+		<div class="d_desc code">
+
+			<!-- ? view -->
+			<button type="button" class="btn-open-popup" data-toggle="modal" data-target="popupModalHeaderType01_02">
+				<span>OPEN POPUP</span>
+			</button>
+			<div class="c-layer-popup kmi-popup type-modal" id="popupModalHeaderType01_02" role="dialog"
+				aria-labelledby="popupModalHeaderType01_02_Label" aria-modal="true" aria-hidden="true">
+				<div class="modal-wrap">
+					<div class="popup-bg" aria-label="팝업의 배경입니다."></div>
+					<div class="modal-field" tabindex="0">
+						<div class="c-modal-header">
+
+							<!-- 닫힘버튼 class: popup-btn-close -->
+							<button type="button" class="popup-cls-btn popup-btn-close">
+								<span class="skip">팝업 닫기</span>
+							</button>
+							<div class="c-modal-title-field">
+								<h3 id="popupModalHeaderType01_02_Label" class="c-title"> TITLE TITLE TITLE TITLE TITLE TITLE TITLE
+									TITLE TITLE TITLE TITLE TITLE TITLE TITLE </h3>
+							</div>
+						</div>
+						<div class="c-modal-body">
+							<div class="c-modal-inner">
+
+								<!-- 팝업의 설명(대체텍스트)이 필요한 경우 -->
+
+								<!-- <h4 class="c-title skip" id="popupModalHeaderType01_02_Label">대체 텍스트</h4> -->
+								<div class="in-cont">
+									<p>
+										CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="c-modal-footer">
+							<div class="inner">
+								<div class="buttons">
+									<button class="co-btn bg-navy-1 popup-btn-close">
+										<span>CLOSE</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ? // view -->
+		</div>
+
+		<!-- [ // MODAL HEADER TYPE] -->
+
+		<!-- [ FULL TYPE ] -->
+		<h3 class="h3_guide">FULL TYPE</h3>
+		<div class="d_desc code">
+
+			<!-- ? view -->
+			<button type="button" class="btn-open-popup" data-toggle="modal" data-target="popupFullType01">
+				<span>OPEN POPUP</span>
+			</button>
+			<div class="c-full-layer kmi-popup type-full" id="popupFullType01" role="dialog"
+				aria-labelledby="popupFullType01_Label" aria-modal="true" aria-hidden="true">
+				<div class="c-container" tabindex="0">
+					<div class="full-header">
+						<button class="btn-go-back popup-btn-close">
+							<span>뒤로 가기</span>
+						</button>
+					</div>
+					<div class="full-body">
+						<h4 id="popupFullType01_Label" class="top-title-box">TITLE</h4>
+						<div class="cont-box">CONTENTS</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ? // view -->
+		</div>
+
+		<!-- [ // FULL TYPE] -->
+
+		<!-- [ FULL TYPE: LONG BODY ] -->
+		<h3 class="h3_guide">FULL TYPE: LONG BODY</h3>
+		<div class="d_desc code">
+
+			<!-- ? view -->
+			<button type="button" class="btn-open-popup" data-toggle="modal" data-target="popupFullType02">
+				<span>OPEN POPUP </span>
+			</button>
+			<div class="c-full-layer kmi-popup type-full" id="popupFullType02" role="dialog"
+				aria-labelledby="popupFullType02_Label" aria-modal="true" aria-hidden="true">
+				<div class="c-container" tabindex="0">
+					<div class="full-header">
+						<button class="btn-go-back popup-btn-close">
+							<span>뒤로 가기</span>
+						</button>
+					</div>
+					<div class="full-body">
+						<h4 id="popupFullType02_Label" class="top-title-box">TITLE</h4>
+						<div class="cont-box">
+							CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ? // view -->
+		</div>
+
+		<!-- [ // FULL TYPE: LONG BODY ] -->
+
+		<!-- [ FULL TYPE + FLOATING BUTTON ] -->
+		<h3 class="h3_guide">FULL TYPE + FLOATING BUTTON</h3>
+		<div class="d_desc code">
+
+			<!-- ? view -->
+			<button type="button" class="btn-open-popup" data-toggle="modal" data-target="popupFullType03">
+				<span>OPEN POPUP</span>
+			</button>
+			<div class="c-full-layer kmi-popup type-full" id="popupFullType03" role="dialog"
+				aria-labelledby="popupFullType03_Label" aria-modal="true" aria-hidden="true">
+				<div class="c-container" tabindex="0">
+					<div class="full-header">
+						<button class="btn-go-back popup-btn-close">
+							<span>뒤로 가기</span>
+						</button>
+					</div>
+					<div class="full-body">
+						<h4 id="popupFullType03_Label" class="top-title-box">TITLE</h4>
+						<div class="cont-box type-btn-floating">CONTENTS</div>
+
+						<!-- floating 버튼 -->
+						<div class="btn-floating">
+							<a href="javascript:void(0);" class="co-btn bg-navy-1" title="페이지이동"><span>확인</span></a>
+						</div>
+					</div>
+
+					<!-- <div class="full-footer">
+              <div class="buttons">
+                <button class="co-btn is-outline-navy-1 popup-btn-close"><span>닫기</span></button>
+                <button class="co-btn bg-navy-1"><span>확인</span></button>
+              </div>
+            </div> -->
+				</div>
+			</div>
+
+			<!-- ? // view -->
+		</div>
+
+		<!-- [ // FULL TYPE + FLOATING BUTTON ] -->
+
+		<!-- [ FULL TYPE + FLOATIN BUTTON: LONG BODY ] -->
+		<h3 class="h3_guide">FULL TYPE + FLOATIN BUTTON: LONG BODY</h3>
+		<div class="d_desc code">
+
+			<!-- ? view -->
+			<button type="button" class="btn-open-popup" data-toggle="modal" data-target="popupFullType04">
+				<span>OPEN POPUP </span>
+			</button>
+			<div class="c-full-layer kmi-popup type-full" id="popupFullType04" role="dialog"
+				aria-labelledby="popupFullType04_Label" aria-modal="true" aria-hidden="true">
+				<div class="c-container" tabindex="0">
+					<div class="full-header">
+						<button class="btn-go-back popup-btn-close">
+							<span>뒤로 가기</span>
+						</button>
+					</div>
+					<div class="full-body">
+						<h4 id="popupFullType04_Label" class="top-title-box">TITLE</h4>
+						<div class="cont-box type-btn-floating">
+							CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS
+						</div>
+
+						<!-- floating 버튼 -->
+						<div class="btn-floating">
+							<a href="javascript:void(0);" class="co-btn bg-navy-1" title="페이지이동"><span>확인</span></a>
+						</div>
+					</div>
+
+					<!-- <div class="full-footer">
+              <div class="buttons">
+                <button class="co-btn is-outline-navy-1 popup-btn-close"><span>닫기</span></button>
+                <button class="co-btn bg-navy-1"><span>확인</span></button>
+              </div>
+            </div> -->
+				</div>
+			</div>
+
+			<!-- ? // view -->
+		</div>
+
+		<!-- [ // FULL TYPE + FLOATIN BUTTON: LONG BODY ] -->
+
+		<!-- [ FULL FOOTER TYPE ] -->
+		<h3 class="h3_guide">FULL FOOTER TYPE</h3>
+		<div class="d_desc code">
+
+			<!-- ? view -->
+			<button type="button" class="btn-open-popup" data-toggle="modal" data-target="popupFullFooterType01">
+				<span>OPEN POPUP</span>
+			</button>
+			<div class="c-full-layer kmi-popup type-full-footer" id="popupFullFooterType01" role="dialog"
+				aria-labelledby="popupFullFooterType01_Label" aria-modal="true" aria-hidden="true">
+				<div class="c-container" tabindex="0">
+					<div class="full-header">
+						<button class="btn-go-back popup-btn-close">
+							<span>뒤로 가기</span>
+						</button>
+					</div>
+					<div class="full-body">
+						<h4 id="popupFullFooterType01_Label" class="top-title-box"> TITLE </h4>
+						<div class="cont-box">CONTENTS</div>
+					</div>
+
+					<!-- footer -->
+					<footer class="footer type-default">
+						<img src="../../images/logo/footer_logo_01.svg" alt="KMI 재단법인 한국의학연구소 KOREA MEDICAL INSTITUTE"
+							class="img-logo" />
+						<div class="btn-list type-footer">
+							<a href="javascript:void(0);" title="페이지 이동">이용약관</a>
+							<a href="javascript:void(0);" title="페이지 이동">개인정보처리방침</a>
+							<a href="javascript:void(0);" title="페이지 이동">이용가이드</a>
+						</div>
+						<div class="footer-txt"> 상호 : 재단법인 한국의학연구소 ㅣ 대표자 : 이상호<br /> 03173 서울시 종로구 세종대로 23길 54(당주동, 세종빌딩)<br /> 전화 :
+							<a href="tel:1599-7070">1599-7070</a> ㅣ 전자우편주소 : <a
+								href="mailto:webmaster@kmi.or.kr">webmaster@kmi.or.kr</a><br /> 사업자등록번호 : 130-82-06960 </div>
+						<div class="copyright">Copyright© KMI.All Rights Reserved.</div>
+					</footer>
+				</div>
+			</div>
+
+			<!-- ? // view -->
+		</div>
+
+		<!-- [ // FULL FOOTER TYPE ] -->
+
+		<!-- [ FULL FOOTER TYPE: LONG BODY ] -->
+		<h3 class="h3_guide">FULL FOOTER TYPE: LONG BODY</h3>
+		<div class="d_desc code">
+
+			<!-- ? view -->
+			<button type="button" class="btn-open-popup" data-toggle="modal" data-target="popupFullFooterType02">
+				<span>OPEN POPUP</span>
+			</button>
+			<div class="c-full-layer kmi-popup type-full-footer" id="popupFullFooterType02" role="dialog"
+				aria-labelledby="popupFullFooterType02_Label" aria-modal="true" aria-hidden="true">
+				<div class="c-container" tabindex="0">
+					<div class="full-header">
+						<button class="btn-go-back popup-btn-close">
+							<span>뒤로 가기</span>
+						</button>
+					</div>
+					<div class="full-body">
+						<h4 id="popupFullFooterType02_Label" class="top-title-box"> TITLE </h4>
+						<div class="cont-box">
+							CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS
+						</div>
+					</div>
+
+					<!-- footer -->
+					<footer class="footer type-default">
+						<img src="../../images/logo/footer_logo_01.svg" alt="KMI 재단법인 한국의학연구소 KOREA MEDICAL INSTITUTE"
+							class="img-logo" />
+						<div class="btn-list type-footer">
+							<a href="javascript:void(0);" title="페이지 이동">이용약관</a>
+							<a href="javascript:void(0);" title="페이지 이동">개인정보처리방침</a>
+							<a href="javascript:void(0);" title="페이지 이동">이용가이드</a>
+						</div>
+						<div class="footer-txt"> 상호 : 재단법인 한국의학연구소 ㅣ 대표자 : 이상호<br /> 03173 서울시 종로구 세종대로 23길 54(당주동, 세종빌딩)<br /> 전화 :
+							<a href="tel:1599-7070">1599-7070</a> ㅣ 전자우편주소 : <a
+								href="mailto:webmaster@kmi.or.kr">webmaster@kmi.or.kr</a><br /> 사업자등록번호 : 130-82-06960 </div>
+						<div class="copyright">Copyright© KMI.All Rights Reserved.</div>
+					</footer>
+				</div>
+			</div>
+
+			<!-- ? // view -->
+		</div>
+
+		<!-- [ // FULL FOOTER TYPE: LONG BODY ] -->
+
+		<!-- [ FULL FOOTER + FLOATING BUTTON TYPE ] -->
+		<h3 class="h3_guide">FULL FOOTER + FLOATING BUTTON TYPE</h3>
+		<div class="d_desc code">
+
+			<!-- ? view -->
+			<button type="button" class="btn-open-popup" data-toggle="modal" data-target="popupFullFooterFloatingType01">
+				<span>OPEN POPUP</span>
+			</button>
+			<div class="c-full-layer kmi-popup type-full-footer" id="popupFullFooterFloatingType01" role="dialog"
+				aria-labelledby="popupFullFooterFloatingType01_Label" aria-modal="true" aria-hidden="true">
+				<div class="c-container" tabindex="0">
+					<div class="full-header">
+						<button class="btn-go-back popup-btn-close">
+							<span>뒤로 가기</span>
+						</button>
+					</div>
+					<div class="full-body">
+						<h4 id="popupFullFooterFloatingType01_Label" class="top-title-box"> TITLE </h4>
+						<div class="cont-box">CONTENTS</div>
+					</div>
+
+					<!-- floating button -->
+					<div class="full-footer">
+						<div class="buttons">
+							<button class="co-btn bg-navy-1 popup-btn-close">
+								<i class="skip">터치 시 팝업 닫힘</i><span>확인</span>
+							</button>
+						</div>
+					</div>
+
+					<!-- footer -->
+					<footer class="footer type-default">
+						<img src="../../images/logo/footer_logo_01.svg" alt="KMI 재단법인 한국의학연구소 KOREA MEDICAL INSTITUTE"
+							class="img-logo" />
+						<div class="btn-list type-footer">
+							<a href="javascript:void(0);" title="페이지 이동">이용약관</a>
+							<a href="javascript:void(0);" title="페이지 이동">개인정보처리방침</a>
+							<a href="javascript:void(0);" title="페이지 이동">이용가이드</a>
+						</div>
+						<div class="footer-txt"> 상호 : 재단법인 한국의학연구소 ㅣ 대표자 : 이상호<br /> 03173 서울시 종로구 세종대로 23길 54(당주동, 세종빌딩)<br /> 전화 :
+							<a href="tel:1599-7070">1599-7070</a> ㅣ 전자우편주소 : <a
+								href="mailto:webmaster@kmi.or.kr">webmaster@kmi.or.kr</a><br /> 사업자등록번호 : 130-82-06960 </div>
+						<div class="copyright">Copyright© KMI.All Rights Reserved.</div>
+					</footer>
+				</div>
+			</div>
+
+			<!-- ? // view -->
+		</div>
+
+		<!-- [ // FULL FOOTER + FLOATING BUTTON TYPE ] -->
+
+		<!-- [ FULL FOOTER + FLOATING BUTTON TYPE: LONG BODY ] -->
+		<h3 class="h3_guide">FULL FOOTER + FLOATING BUTTON TYPE: LONG BODY</h3>
+		<div class="d_desc code">
+
+			<!-- ? view -->
+			<button type="button" class="btn-open-popup" data-toggle="modal" data-target="popupFullFooterFloatingType02">
+				<span>OPEN POPUP</span>
+			</button>
+			<div class="c-full-layer kmi-popup type-full-footer" id="popupFullFooterFloatingType02" role="dialog"
+				aria-labelledby="popupFullFooterFloatingType02_Label" aria-modal="true" aria-hidden="true">
+				<div class="c-container" tabindex="0">
+					<div class="full-header">
+						<button class="btn-go-back popup-btn-close">
+							<span>뒤로 가기</span>
+						</button>
+					</div>
+					<div class="full-body">
+						<h4 id="popupFullFooterFloatingType02_Label" class="top-title-box"> TITLE </h4>
+						<div class="cont-box">
+							CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS<br />CONTENTS
+						</div>
+					</div>
+
+					<!-- floating button -->
+					<div class="full-footer">
+						<div class="buttons">
+							<button class="co-btn bg-navy-1 popup-btn-close">
+								<i class="skip">터치 시 팝업 닫힘</i><span>확인</span>
+							</button>
+						</div>
+					</div>
+
+					<!-- footer -->
+					<footer class="footer type-default">
+						<img src="../../images/logo/footer_logo_01.svg" alt="KMI 재단법인 한국의학연구소 KOREA MEDICAL INSTITUTE"
+							class="img-logo" />
+						<div class="btn-list type-footer">
+							<a href="javascript:void(0);" title="페이지 이동">이용약관</a>
+							<a href="javascript:void(0);" title="페이지 이동">개인정보처리방침</a>
+							<a href="javascript:void(0);" title="페이지 이동">이용가이드</a>
+						</div>
+						<div class="footer-txt"> 상호 : 재단법인 한국의학연구소 ㅣ 대표자 : 이상호<br /> 03173 서울시 종로구 세종대로 23길 54(당주동, 세종빌딩)<br /> 전화 :
+							<a href="tel:1599-7070">1599-7070</a> ㅣ 전자우편주소 : <a
+								href="mailto:webmaster@kmi.or.kr">webmaster@kmi.or.kr</a><br /> 사업자등록번호 : 130-82-06960 </div>
+						<div class="copyright">Copyright© KMI.All Rights Reserved.</div>
+					</footer>
+				</div>
+			</div>
+
+			<!-- ? // view -->
+		</div>
+
+		<!-- [ // FULL FOOTER + FLOATING BUTTON TYPE: LONG BODY ] -->
+	</div>
+
+	<!-- guide script -->
+	<script src="../js/pretty.js"></script>
+	<script defer src="../../js/common.js"></script>
+</body>
+</html>

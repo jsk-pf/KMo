@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-title" content="With KMI">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="refresh" content="300">
+
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="author" content="With KMI">
+    <meta name="title" content="건강검진 서비스 - With KMI">
+    <meta name="description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta name="keywords" content="With KMI, 위드케이엠아이, 비타브릿지, vitabridge, 건강검진, 헬스케어서비스, 헬스케어">
+    <meta name="copyright" content="© 2022. KMI All Rights Reserved.">
+
+    <link rel="canonical" href="{유동 도메인 주소}.withkmi.or.kr">
+
+    <meta property="og:locale" content="ko-KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="With KMI - 건강검진 서비스">
+    <meta property="og:description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta property="og:image" content="../../images/kmi_info_img.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:url" content="https://{유동 도메인 주소}.withkmi.or.kr">
+    <meta property="og:site_name" content="With KMI">
+
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/logo/home-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/logo/home-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../../images/logo/home-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/logo/home-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/logo/home-icon-192x192.png">
+    <link rel="stylesheet" href="../../lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../lib/datepicker/datepicker.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/swiper/js/swiper.min.js"></script>
+    <script defer src="../../js/common.js"></script>
+    <title>건강검진 서비스 - With KMI</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="flex-wrap">
+            <div class="flex-container">
+
+                <a href="javascript:void(0);" title="페이지 이동" class="login-banner">
+                    <p>Since 1985</p>
+                    <p>평생을 건강하게</p>
+                    <img src="../../images/login_top_banner.png" alt="하트 사이로 의사 두 명이 서있는 일러스트">
+                </a>
+
+                <div class="login-block">
+                    <img src="../../images/dummy/dummy_logo03.png" alt="KMI 로고" class="login-logo">
+
+                    <ul class="c-tab type-basic type-panel" role="tablist">
+                        <li role="tab" aria-controls="all-login-tab-panel">
+                            <input type="radio" name="loginTab" id="allLogin" checked>
+                            <label for="allLogin">통합 로그인</label>
+                        </li>
+                        <li role="tab" aria-controls="comn-login-tab-panel">
+                            <input type="radio" name="loginTab" id="comnLogin">
+                            <label for="comnLogin">사업장 로그인</label>
+                        </li>
+                    </ul>
+
+                    <!--
+              * 통합 로그인 panel
+              * tab-panel show class: show || null
+            -->
+                    <div class="tab-panel show" role="tabpanel" aria-labelledby="all-login-tab-panel">
+                        <div class="c-input-list type01">
+                            <div class="row">
+                                <div class="col per-column">
+                                    <input type="text" class="c-input" placeholder="아이디를 입력해 주세요">
+                                </div>
+                                <div class="col per-column">
+                                    <input type="password" class="c-input" placeholder="비밀번호를 입력해 주세요">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="c-chkbox type01">
+                            <input type="checkbox" id="rememberID">
+                            <label for="rememberID" class="chk-label"><i></i><span>아이디 기억하기</span></label>
+                        </div>
+
+                        <a href="javascript:void(0);" title="페이지 이동" class="co-btn"><span>로그인</span></a>
+                    </div>
+
+                    <!-- 사업장 로그인 panel -->
+                    <div class="tab-panel" role="tabpanel" aria-labelledby="comn-login-tab-panel">
+                        <div class="c-input-list type01">
+                            <div class="row">
+                                <div class="col per-column">
+                                    <div class="c-input-search">
+                                        <input type="text" class="c-input" placeholder="사업장을 입력해 주세요">
+                                        <button type="button" class="btn-search"><span class="skip">검색</span></button>
+                                    </div>
+                                </div>
+                                <div class="col per-column">
+                                    <input type="text" class="c-input" placeholder="사번을 입력해 주세요">
+                                </div>
+                                <div class="col per-column">
+                                    <input type="password" class="c-input" placeholder="비밀번호를 입력해 주세요">
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="javascript:void(0);" title="페이지 이동" class="co-btn"><span>로그인</span></a>
+                    </div>
+
+                    <div class="btn-list">
+                        <a href="javascript:void(0);" target="_self" title="페이지 이동">회원가입</a>
+                        <a href="javascript:void(0);" target="_self" title="페이지 이동">사번/아이디 찾기</a>
+                        <a href="javascript:void(0);" target="_self" title="페이지 이동">비밀번호 찾기</a>
+                        <a href="javascript:void(0);" target="_self" title="페이지 이동">이용가이드</a>
+                    </div>
+
+                    <!-- [ mod(230130) ] -->
+                    <div class="info-box">
+                        <p>이용안내 문의 : <a href="tel:1533-0505">1533-0505</a></p>
+                        <p>평일 : 오전 07:00 ~ 오후 18:00<br>토요일 : 오전 07:00 ~ 오후 12:30 (일/공휴일 휴무)</p>
+                    </div>
+                    <!-- [ // mod(230130) ] -->
+                </div>
+            </div>
+
+            <!-- footer -->
+            <footer class="footer type-login border-top-type">
+                <img src="../../images/logo/footer_logo_02.svg" alt="KMI 재단법인 한국의학연구소 KOREA MEDICAL INSTITUTE">
+                <!-- [ mod(230130) ]-->
+                <div class="copyright">© 2022. <strong>KMI</strong> All Rights Reserved.</div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

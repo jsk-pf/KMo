@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-title" content="With KMI">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="refresh" content="300">
+
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="author" content="With KMI">
+    <meta name="title" content="건강검진 서비스 - With KMI">
+    <meta name="description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta name="keywords" content="With KMI, 위드케이엠아이, 비타브릿지, vitabridge, 건강검진, 헬스케어서비스, 헬스케어">
+    <meta name="copyright" content="© 2022. KMI All Rights Reserved.">
+
+    <link rel="canonical" href="{유동 도메인 주소}.withkmi.or.kr">
+
+    <meta property="og:locale" content="ko-KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="With KMI - 건강검진 서비스">
+    <meta property="og:description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta property="og:image" content="../../images/kmi_info_img.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:url" content="https://{유동 도메인 주소}.withkmi.or.kr">
+    <meta property="og:site_name" content="With KMI">
+
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/logo/home-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/logo/home-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../../images/logo/home-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/logo/home-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/logo/home-icon-192x192.png">
+    <link rel="stylesheet" href="../../lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../lib/datepicker/datepicker.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/swiper/js/swiper.min.js"></script>
+    <script defer src="../../js/common.js"></script>
+    <title>건강검진 서비스 - With KMI</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="flex-wrap">
+            <div class="flex-container">
+                <!-- BUTTON - 건강검진 결과 보기 -->
+                <button type="button" class="btn-open-popup" data-toggle="modal" data-target="popupViewcheckupResults"><em class="alt-txt">두번탭하면,팝업열림</em><span>팝업열림 - 건강검진 결과 보기</span></button>
+                <br><br><br>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP - 건강검진 결과 보기 -->
+    <div class="c-layer-popup kmi-popup type-modal" id="popupViewcheckupResults" role="dialog" aria-labelledby="popupViewcheckupResults_Label" aria-modal="true" aria-hidden="true">
+        <div class="modal-wrap">
+            <div class="popup-bg"></div>
+            <div class="modal-field" tabindex="0">
+                <div class="c-modal-header">
+                    <!-- 닫힘버튼 class: popup-btn-close -->
+                    <button type="button" class="popup-cls-btn popup-btn-close"><span class="skip">팝업 닫기</span></button>
+                    <div class="c-modal-title-field">
+                        <h3 id="popupViewcheckupResults_Label" class="c-title">건강검진 결과 보기</h3>
+                    </div>
+                </div>
+
+                <div class="c-modal-body">
+                    <div class="c-modal-inner">
+                        <div class="in-cont">
+                            <p>본인의 건강검진 결과가 아닌 경우 개인정보 보호법에 따라 검진 결과의 열람이 불가합니다.</p>
+                            <p>다만, 14세 미만의 어린이 및 청소년은 보호자(법정대리인)의 동의 후 열람이 가능합니다.</p>
+
+                            <div class="c-input-list type01">
+                                <div class="row">
+                                    <div class="col per-column">
+                                        <input type="text" class="c-input" placeholder="보호자">
+                                    </div>
+                                    <div class="col per-column">
+                                        <input type="number" pattern="/*d" class="c-input" placeholder="생년월일">
+                                    </div>
+                                    <div class="per-column">
+                                        <div class="row inner c-input-btn-group">
+                                            <div class="column input">
+                                                <input type="number" class="c-input" pattern="\d*" placeholder="휴대폰 전화번호">
+                                            </div>
+                                            <div class="column btns">
+                                                <button type="button" class="co-btn type02 type-input-btn"><span>인증받기</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col per-column">
+                                        <input type="text" class="c-input" placeholder="인증번호 입력">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [ mod(230105) ] 약관 -->
+                            <div class="terms type-box">
+                                <p class="co-terms-tit">만 14세 미만 아동의 개인정보 수집 · 이용에 대한 보호자(법정대리인) 동의 (필수 동의)</p>
+                                <div class="terms-box">
+                                    <div class="inner">
+                                        <div class="terms-row">
+                                            <div class="cont">
+                                                만 14세 미만 아동의 개인정보수집 등에 대한 안내 <br>
+                                                - 한국의학연구소는 관련 법률에 따라 만 14세 미만 아동의 개인정보수집에 대한 동의 확인 후에 검진결과 열람을 완료합니다.<br>
+                                                - 아동의 법정대리인은 아동 개인정보의 열람 및 정정 요구, 또는 개인정보의 수집, 이용 제공에 대한 동의의 철회를 요청할 수 있으며, 이러한 요청이 있을 경우 필요한 조치를 지체없이 취합니다.<br>
+                                                - 만 14세 미만 아동 및 동의확인을 위한 귀하의 개인정보는 개인정보보호정책에 명시한 목적 이외의 다른 용도로 사용되지 않으며 철저하게 관리되고 보호됩니다.<br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chk-list">
+                                    <div class="c-chkbox type-rdo">
+                                        <input type="radio" id="termsChk_01_01_Agree" name="termsChk_01_01">
+                                        <label for="termsChk_01_01_Agree" class="chk-label"><i></i><span>(필수) 동의합니다.</span></label>
+                                    </div>
+                                    <div class="c-chkbox type-rdo">
+                                        <input type="radio" id="termsChk_01_01_disAgree" name="termsChk_01_01">
+                                        <label for="termsChk_01_01_disAgree" class="chk-label"><i></i><span>동의하지 않습니다.</span></label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="c-modal-footer">
+                    <div class="inner">
+                        <div class="buttons">
+                            <a href="javascript:void(0);" class="co-btn bg-navy-1" title="페이지 이동"><span>확인</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

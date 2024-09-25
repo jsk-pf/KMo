@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-title" content="With KMI">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="refresh" content="300">
+
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="author" content="With KMI">
+    <meta name="title" content="건강검진 서비스 - With KMI">
+    <meta name="description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta name="keywords" content="With KMI, 위드케이엠아이, 비타브릿지, vitabridge, 건강검진, 헬스케어서비스, 헬스케어">
+    <meta name="copyright" content="© 2022. KMI All Rights Reserved.">
+
+    <link rel="canonical" href="{유동 도메인 주소}.withkmi.or.kr">
+
+    <meta property="og:locale" content="ko-KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="With KMI - 건강검진 서비스">
+    <meta property="og:description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta property="og:image" content="../../images/kmi_info_img.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:url" content="https://{유동 도메인 주소}.withkmi.or.kr">
+    <meta property="og:site_name" content="With KMI">
+
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/logo/home-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/logo/home-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../../images/logo/home-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/logo/home-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/logo/home-icon-192x192.png">
+    <link rel="stylesheet" href="../../lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../lib/datepicker/datepicker.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/swiper/js/swiper.min.js"></script>
+    <script defer src="../../js/common.js"></script>
+    <title>건강검진 서비스 - With KMI</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="flex-wrap">
+            <div class="flex-container">
+                <a href="javascript:void(0);" role="button" title="팝업열림" class="btn-open-popup" data-toggle="modal" data-target="popupInstitutionDetails">팝업 확인용 버튼</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- full popup - 검진기관 상세 - 검진센터 안내 -->
+    <div class="c-full-layer kmi-popup type-full popup-institution-details" id="popupInstitutionDetails" role="dialog" aria-labelledby="popupInstitutionDetails_Label" aria-modal="true" aria-hidden="true">
+        <div class="c-container" tabindex="0">
+            <div class="full-header">
+                <button class="btn-go-back popup-btn-close">
+                    <span>뒤로 가기</span>
+                </button>
+            </div>
+
+            <div class="full-body"><!-- + 검진센터 안내 -->
+                <h1 id="popupInstitutionDetails_Label" class="top-title-box type-sm">한국의학연구소 광주 검진센터</h1>
+
+                <div class="cont-box">
+                    <!--
+			* 탭 터치 시 panel이 바뀌는 case
+			* 탭의 aria-controls와 panel의 aria-labelledby가 동일해야 됨
+		-->
+                    <ul class="c-tab type-slide type-move" role="tablist" data-tablist="instDetTab">
+                        <li role="tab" aria-controls="institution-details-center">
+                            <a href="javascript:void(0);" title="페이지 이동" class="tab active">검진센터 안내</a>
+                        </li>
+                        <li role="tab" aria-controls="institution-details-manpower">
+                            <a href="javascript:void(0);" title="페이지 이동" class="tab">의료 인력 안내</a>
+                        </li>
+                        <li role="tab" aria-controls="institution-details-equipment">
+                            <a href="javascript:void(0);" title="페이지 이동" class="tab">의료장비 안내</a>
+                        </li>
+                    </ul>
+
+                    <!--
+			* 검진센터 안내 panel
+			* tab-panel show class: show || null
+		-->
+                    <div class="tab-panel show" role="tabpanel" aria-labelledby="institution-details-center" data-panelname="instDetTab">
+                        <!-- 검진센터 swiper -->
+                        <div class="swiper instDetailsCenter">
+                            <div class="skip">한국의학연구소 센터 이미지 목록</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide img-block">
+                                    <div class="image">
+                                        <img src="https://www.kmi.or.kr/images/center/busan/06_img_03.jpg" alt="센터 이미지 1">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide img-block">
+                                    <div class="image">
+                                        <img src="../../images/dummy/inst_det_center/dummy_inst_det_center_02.png" alt="센터 이미지 2">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide img-block">
+                                    <div class="image">
+                                        <img src="../../images/dummy/inst_det_center/dummy_inst_det_center_03.png" alt="센터 이미지 3">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+                        <h2>주소</h2>
+                        <div class="box type6">광주광역시 서구 상무중앙로 58(치평동, 타임스타워 빌딩 8~10층)</div>
+                        <div class="map">
+                            <!-- [comment] 개발 시 임시 내용 삭제 -->
+                            <!-- <img src="../../images/map/kmi_map_gwangju_center.png" alt="한국의학연구소광주검진센터지도"> -->
+                            지도영역
+                        </div>
+
+                        <h2>홈페이지</h2>
+                        <div class="box type6">
+                            <a href="https://www.kmi.or.kr" title="페이지이동" target="_blank">www.kmi.or.kr</a>
+                        </div>
+
+                        <h2>안내 전화</h2>
+                        <div class="box type6">
+                            <a href="tel:062-602-2100" title="전화 걸기">062-602-2100</a>
+                        </div>
+
+                        <h2>검진시간</h2>
+                        <div class="box type6">
+                            월, 화, 목, 금 : 07:00 ~ 16:00 (의사문진 : 07:00 ~ 14:00)<br>
+                            수요일, 토요일(5월~12월) : 07:00 ~ 12:30<br>
+                            점&nbsp;&nbsp;&nbsp;&nbsp;심 : 12:30 ~ 13:30
+                        </div>
+
+                        <h2>휴무안내</h2>
+                        <div class="box type6">일요일, 공휴일 휴무</div>
+
+                        <h2>검진 예약 시 특이 사항</h2>
+                        <div class="box type6">매일 오전 7시부터 선착순으로 접수하며 일찍 오실 수로 빨리 검진을 마무리할 수 있습니다. 참고하시기 바랍니다.</div>
+
+                        <h2>검진 기관 소개</h2>
+                        <div class="box type6">
+                            <p>최근 의료는 치료 중심에서 예방과 조기진단을 중심으로 발전하고 있습니다. 그리고 그 중심에는 건강검진이 차지하고 있습니다.</p>
+                            <p>저희 울산병원 평생건강증진센터는 2010년 확장 오픈하여 여러분께 한층 넓어지고 고급스러워진 공간과 양질의 서비스를 제고하기 위해 노력하고 있습니다.</p>
+                        </div>
+
+                        <h2>지하철</h2>
+                        <div class="box type6">1호선 : 상무역 5번 출구</div>
+
+                        <h2>버스</h2>
+                        <div class="box type6">
+                            <p>
+                                한국수자원공사 하차 (→농협운천지점 방면)<br>
+                                지선 : 518, 상무62, 상무64<br>
+                                간선 : 금호46, 매월16, 운림50, 일곡38, 지원25, 첨단22 좌석 : 좌석02<br>
+                                급행 : 순환01
+                            </p>
+                            <p>
+                                한국수자원공사 하차 (→한국국토정보공사 방면)<br>
+                                간선 : 금호46, 선운14, 운림50, 지원25, 첨단22<br>
+                                좌석 : 좌석02
+                            </p>
+                        </div>
+
+                        <h2>주차안내</h2>
+                        <div class="box type6">
+                            <p>수면내시경 시 대중교통을 이용하여 주세요.<br>주차공간이 협소하여 대중교통을 권해드립니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- script - swiper -->
+    <script src="../../js/common-swiper.js"></script>
+    <script>
+        function* swiperStep() {
+            yield swiperStep1();
+        }
+        const SWIPER_START = swiperStep();
+
+        function swiperStep1() {
+            const SWIPER = document.querySelectorAll('.swiper');
+            if (SWIPER.length > 0) swiperReadyCheck(SWIPER);
+        }
+
+        function swiperReadyCheck(_swiper) {
+            for (let i = 0; i < _swiper.length; i++) swiperReady(_swiper[i]);
+        }
+
+        function swiperReady(_swiperEl) {
+            const SLIDE = _swiperEl.querySelectorAll('.swiper-slide');
+            if (SLIDE.length > 1) {
+                _swiperEl.classList.add('swiper-ready');
+                swiperStep2(_swiperEl.classList);
+            }
+            if (SLIDE.length == 1) {
+                SLIDE[0].classList.add('swiper-slide-active');
+                const SKIP_EL = _swiperEl.querySelector('.skip');
+                const DOT_EL = _swiperEl.querySelector('.swiper-pagination');
+                if (SKIP_EL) SKIP_EL.remove();
+                if (DOT_EL) DOT_EL.remove();
+            }
+            if (SLIDE.length == 0) _swiperEl.remove();
+        }
+
+        function swiperStep2(_swiper) {
+            let swiper = swuperReturn(_swiper);
+            const SWIPER_INIT = new Swiper(swiper, {
+                loop: true,
+                spaceBetween: 20,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                observer: true,
+                observeParents: true,
+                on: {
+                    init: function() {
+                        swiperInitEvt(this);
+                    },
+                    slideChangeTransitionEnd: function() {
+                        swiperTransitionEndEvt(this);
+                    },
+                },
+            });
+        }
+
+        function swuperReturn(_rSwiper) {
+            let swiper = [];
+            for (let i = 0; i < _rSwiper.length; i++) swiper.push('.' + _rSwiper[i]);
+            swiper = swiper.join('');
+            return swiper;
+        }
+        // swiper 실행 명령
+        SWIPER_START.next();
+    </script>
+    <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=a96065ed4ed445b8e6cb7a5b5e6aef39&libraries=services"></script>
+    <script>
+        var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+        var options = { //지도를 생성할 때 필요한 기본 옵션
+            center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+            level: 3 //지도의 레벨(확대, 축소 정도)
+        };
+
+        var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+    </script>
+    <!-- // script - swiper -->
+</body>
+
+</html>

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Layout Guide</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scaLabel=no">
+	<!-- guide css -->
+	<link rel="stylesheet" href="../css/base.css">
+
+	<link rel="stylesheet" href="../../css/style.css">
+	<script src="../../lib/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id="wrap" class="coding_guide">
+		<h1 class="h1_guide">Form</h1>
+		<div class="title-box">
+			<h2 class="h2_guide">공통</h2>
+		</div>
+		<div class="guide_descbox">
+			<h3 class="g-title"></h3>
+			<div class="inner_desc">
+				<ul>
+					<li>유효성체크 error input 활성화 클래스 제어 : [class="is-error"]</li>
+				</ul>
+			</div>
+		</div>
+		<!-- ===================================== INPUT -->
+		<div class="title-box">
+			<h2 class="h2_guide">INPUT</h2>
+		</div>
+
+		<!-- [Input Basic] -->
+		<h3 class="h3_guide">Input Text</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+			<div class="row">
+				<div class="col">
+					<input type="text" class="c-input" value="text">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<input type="text" class="c-input" value="disabled" disabled>
+				</div>
+			</div>
+			<!-- disabled: background white -->
+			<div class="row">
+				<div class="col">
+					<input type="text" class="c-input type-white" value="disabled bg white" disabled>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<input type="text" class="c-input" value="readonly" readonly="readonly">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<input type="text" class="c-input is-error" value="error">
+					<p class="input-err-txt">아이디를 입력해 주세요.</p>
+				</div>
+			</div>
+
+			<!-- ? // view -->
+		</div>
+		<!-- [ // Input Basic] -->
+
+		<!-- [Input List] -->
+		<h3 class="h3_guide">Input List</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+			<div class="c-input-list type01">
+				<div class="row">
+					<div class="col per-column">
+						<input type="text" class="c-input" value="text">
+					</div>
+					<div class="col per-column">
+						<input type="text" class="c-input" value="disabled" disabled>
+					</div>
+					<div class="col per-column">
+						<input type="text" class="c-input" value="readonly" readonly="readonly">
+					</div>
+					<div class="col per-column">
+						<div class="c-input-search">
+							<input type="text" class="c-input">
+							<button type="button" class="btn-search"><span class="skip">검색</span></button>
+						</div>
+					</div>
+					<div class="col per-column">
+						<div class="c-input-search">
+							<input type="text" class="c-input is-error">
+							<button type="button" class="btn-search"><span class="skip">검색</span></button>
+						</div>
+					</div>
+					<div class="col per-column">
+						<div class="c-input-unit">
+							<input type="text" class="c-input">
+							<span class="unit">명</span>
+						</div>
+					</div>
+					<div class="col per-column">
+						<div class="c-input-unit">
+							<input type="text" class="c-input is-error">
+							<span class="unit">명</span>
+						</div>
+					</div>
+					<div class="col per-column">
+						<div class="c-input-date">
+							<input type="text" class="c-input btn-date-picker" placeholder="YYYY-MM-DD" autocomplete="off">
+							<span><i class="date-btn"></i></span>
+						</div>
+					</div>
+					<div class="col per-column">
+						<div class="c-input-date">
+							<input type="text" class="c-input btn-date-picker is-error" placeholder="YYYY-MM-DD" autocomplete="off">
+							<span><i class="date-btn"></i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ? // view -->
+		</div>
+		<!-- [ // Input List] -->
+
+		<!-- ===================================== INPUT TEXT + BUTTON -->
+		<div class="title-box">
+			<h2 class="h2_guide">INPUT TEXT + BUTTON</h2>
+		</div>
+
+		<!-- [Input Text + Button] -->
+		<h3 class="h3_guide">Input Text + Button</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+			<div class="row">
+				<div class="col">
+					<div class="row inner c-input-btn-group">
+						<div class="column input">
+							<input type="text" class="c-input">
+						</div>
+						<div class="column btns">
+							<button type="button" class="co-btn type02 type-input-btn"><span>Button</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ? // view -->
+		</div>
+		<!-- [ // Input Text + Button] -->
+
+		<!-- ===================================== SELECT -->
+		<div class="title-box">
+			<h2 class="h2_guide">SELECT</h2>
+		</div>
+
+		<!-- [Select Basic] -->
+		<h3 class="h3_guide">select basic</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+			<div class="col">
+				<div class="c-select">
+					<select title="선택">
+						<option value="" selected="">선택</option>
+						<option value="">option</option>
+						<option value="">option</option>
+						<option value="">option</option>
+					</select>
+				</div>
+			</div>
+			<br>
+			<div class="c-select is-error">
+				<select title="이메일 도메인 선택">
+					<option value="" selected="">직접입력</option>
+					<option value="">option</option>
+					<option value="">option</option>
+					<option value="">option</option>
+				</select>
+			</div>
+
+			<p class="input-err-txt">에러 문구.</p>
+			<!-- ? // view -->
+		</div>
+		<!-- [ // Select Basic] -->
+
+		<!-- ===================================== TEXTAREA -->
+		<div class="title-box">
+			<h2 class="h2_guide">TEXTAREA</h2>
+		</div>
+
+		<!-- [Textarea] -->
+		<h3 class="h3_guide">Text area</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+			<div class="row">
+				<div class="col">
+					<div class="c-txtarea-field">
+						<textarea id="inputChkPersoninfo01_05" class="c-txt-area type02"
+							placeholder="의료진에 전달하고자 하는 내용(ex 알러지, 복용약 등)을 입력해 주세요. 아스피린, 항 응고제, 혈압, 당뇨 기타 약이 있으시면 꼭 기재해 주세요. &#13;&#10;심장관련 질환이 있거나 수술 또는 병력, 치료중인 사항도 기입해주셔야 하며 검진 진행 시 제한이 있을 수 있습니다."></textarea>
+					</div>
+				</div>
+			</div>
+
+			<!-- ? // view -->
+		</div>
+		<!-- [ // Textarea] -->
+
+		<!-- ===================================== // TEXTAREA -->
+
+		<!-- ===================================== LABEL + INPUT -->
+		<div class="title-box">
+			<h2 class="h2_guide">LABEL + INPUT</h2>
+		</div>
+
+		<!-- [LABEL + INPUT] -->
+		<h3 class="h3_guide">BASIC</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+			<div class="row">
+				<div class="col label-input">
+					<label for="inputName">이름</label>
+					<input type="text" class="c-input" id="inputName" value="text">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col label-input">
+					<label for="">Label</label>
+					<input type="text" class="c-input" id="" value="disabled" disabled>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col label-input">
+					<label for="">Label</label>
+					<input type="text" class="c-input" value="readonly" id="" readonly="readonly">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col label-input">
+					<label for="">Label</label>
+					<div class="c-input-search">
+						<input type="text" class="c-input" id="">
+						<button type="button" class="btn-search"><span class="skip">검색</span></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- ? // view -->
+		</div>
+		<!-- [ // Input Basic] -->
+
+		<!-- [Input List] -->
+		<h3 class="h3_guide">Input List</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+			<div class="c-input-list type01">
+				<div class="row">
+					<div class="col per-column label-input">
+						<label for="inputName">이름<span class="essential" aria-hidden="true">*</span><em
+								class="skip">필수입력항목입니다</em></label>
+						<input type="text" class="c-input" id="" value="text">
+					</div>
+					<div class="col per-column label-input">
+						<label for="">Label</label>
+						<input type="text" class="c-input" id="" value="disabled" disabled>
+					</div>
+					<div class="col per-column label-input">
+						<label for="">Label</label>
+						<input type="text" class="c-input" value="readonly" id="" readonly="readonly">
+					</div>
+					<div class="col per-column label-input">
+						<label for="">Label</label>
+						<div class="c-input-search">
+							<input type="text" class="c-input" id="">
+							<button type="button" class="btn-search"><span class="skip">검색</span></button>
+						</div>
+					</div>
+					<div class="col per-column label-input">
+						<label for="">Label</label>
+						<div class="c-input-unit">
+							<input type="text" class="c-input" id="">
+							<span class="unit">명</span>
+						</div>
+					</div>
+					<div class="col per-column label-input">
+						<label for="">Label</label>
+						<div class="c-input-date">
+							<input type="text" class="c-input btn-date-picker" placeholder="YYYY-MM-DD" autocomplete="off" id="">
+							<span><i class="date-btn"></i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ? // view -->
+		</div>
+		<!-- [
+      <!-- ===================================== Input Group (Number)-->
+		<div class="title-box">
+			<h2 class="h2_guide">Input Group (Number)</h2>
+		</div>
+
+		<!-- [Basic] -->
+		<h3 class="h3_guide">Basic</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+
+			<div class="c-input-sub-group">
+				<div class="per-column">
+					<div class="row inner c-input-btn-group">
+						<div class="column input">
+							<input type="number" class="c-input" pattern="\d*">
+						</div>
+						<div class="column btns">
+							<button type="button" class="co-btn type02 type-input-btn"><span>인증받기</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="per-column">
+					<input type="number" class="c-input" pattern="\d*" placeholder="인증번호 입력해 주세요.">
+					<!-- [comment]
+              -	 인증 완료시 해당 input으로 변경
+            -->
+					<!-- <input type="text" class="c-input"  value="인증완료" readonly="readonly"> -->
+				</div>
+				<div class="per-column">
+					<!-- [comment]
+              -	 휴대전화 인증번호 5분 카운트
+            -->
+					<div class="c-input-count">
+						<input type="number" class="c-input" pattern="\d*" placeholder="인증번호 입력해 주세요.">
+						<span class="count">05:00</span>
+					</div>
+				</div>
+			</div>
+			<!-- ? // view -->
+		</div>
+
+		<!-- [Basic] -->
+		<h3 class="h3_guide">Basic (ERROR)</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+
+			<div class="c-input-sub-group">
+				<div class="per-column">
+					<div class="row inner c-input-btn-group">
+						<div class="column input">
+							<input type="number" class="c-input is-error" pattern="\d*">
+						</div>
+						<div class="column btns">
+							<button type="button" class="co-btn type02 type-input-btn"><span>인증받기</span></button>
+						</div>
+					</div>
+					<p class="input-err-txt">에러 문구.</p>
+				</div>
+				<div class="per-column">
+					<input type="number" class="c-input is-error" pattern="\d*" placeholder="인증번호 입력해 주세요.">
+					<p class="input-err-txt">에러 문구.</p>
+					<!-- [comment]
+              -	 인증 완료시 해당 input으로 변경
+            -->
+					<!-- <input type="text" class="c-input"  value="인증완료" readonly="readonly"> -->
+				</div>
+				<div class="per-column">
+					<!-- [comment]
+              -	 휴대전화 인증번호 5분 카운트
+            -->
+					<div class="c-input-count">
+						<input type="number" class="c-input is-error" pattern="\d*" placeholder="인증번호 입력해 주세요.">
+						<span class="count">05:00</span>
+					</div>
+					<p class="input-err-txt">에러 문구.</p>
+				</div>
+			</div>
+			<!-- ? // view -->
+		</div>
+		<!-- [ // Input List] -->
+
+		<!-- ===================================== EMAIL -->
+		<div class="title-box">
+			<h2 class="h2_guide">EMAIL</h2>
+		</div>
+
+		<!-- [Basic] -->
+		<h3 class="h3_guide">Basic</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+			<div class="row">
+				<div class="col">
+					<div class="row inner c-input-btn-group">
+						<div class="column input">
+							<input type="text" class="c-input">
+						</div>
+						<div class="column btns">
+							<button type="button" class="co-btn type02 type-input-btn"><span>Button</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- ? // view -->
+		</div>
+		<!-- [Basic + input Group] -->
+		<h3 class="h3_guide">Basic + input Group</h3>
+		<div class="d_desc code">
+			<div class="c-input-sub-group">
+				<div class="col per-column">
+					<div class="row inner c-input-btn-group">
+						<div class="column input">
+							<input type="text" class="c-input">
+						</div>
+						<div class="column btns">
+							<button type="button" class="co-btn type02 type-input-btn"><span>인증받기</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="col per-column">
+					<input type="text" placeholder="인증번호 입력해 주세요.">
+				</div>
+			</div>
+		</div>
+		<!-- ===================================== ADDRESS -->
+
+		<div class="title-box">
+			<h2 class="h2_guide">ADDRESS</h2>
+		</div>
+		<!-- [Basic] -->
+		<h3 class="h3_guide">Basic</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+			<div class="row">
+				<div class="col">
+					<!-- [Comment]
+							- 클릭 영역 : 전체
+							- 필요에 따라 input disabled 제거
+						-->
+					<a href="javascript:;" class="btn-address" role="button">
+						<div class="row inner c-input-btn-group">
+							<div class="column input">
+								<input type="text" class="c-input type-white" title="주소입력" placeholder="주소" disabled>
+							</div>
+							<div class="column btns">
+								<div class="co-btn type02 type-input-btn"><span>주소검색</span></div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<!-- ? // view -->
+		</div>
+
+		<!-- [Basic + input Group] -->
+		<h3 class="h3_guide">Basic + input Group</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+			<div class="c-input-list type01">
+				<div class="row">
+					<div class="col label-input">
+						<label>주소</label>
+						<div class="c-input-address-group">
+							<!-- [Comment]
+							- 클릭 영역 : 전체
+							- 필요에 따라 input disable 제거
+						-->
+							<a href="javascript:;" class="btn-address" role="button">
+								<div class="row inner c-input-btn-group">
+									<div class="column input">
+										<!-- [comment]
+												- 필요에 따라 disabled 제거
+											-->
+										<input type="text" class="c-input type-white" title="주소입력" placeholder="주소" disabled>
+									</div>
+									<div class="column btns">
+										<div class="co-btn type02 type-input-btn"><span>주소검색</span></div>
+									</div>
+								</div>
+							</a>
+							<div class="row input-addr-02">
+								<input type="text" class="c-input" title="상세주소 입력">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- ? // view -->
+		</div>
+
+		<!-- ===================================== Checkbox -->
+
+		<div class="title-box">
+			<h2 class="h2_guide">Checkbox</h2>
+		</div>
+		<!-- [Checkbox] -->
+		<h3 class="h3_guide">Checkbox - type01</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+			<div class="c-chkbox type01">
+				<input type="checkbox" id="chk01_01">
+				<label for="chk01_01" class="chk-label"><i></i></label>
+			</div>
+			<div class="c-chkbox type01">
+				<input type="checkbox" id="chk01_02" checked>
+				<label for="chk01_02" class="chk-label"><i></i></label>
+			</div>
+			<div class="c-chkbox type01">
+				<input type="checkbox" id="chk01_03" disabled>
+				<label for="chk01_03" class="chk-label"><i></i></label>
+			</div>
+			<div class="c-chkbox type01">
+				<input type="checkbox" id="chk01_04" checked disabled>
+				<label for="chk01_04" class="chk-label"><i></i></label>
+			</div>
+			<!-- ? // view -->
+		</div>
+
+		<h3 class="h3_guide">Checkbox List - type01</h3>
+
+		<div class="d_desc code">
+			<!-- ? view -->
+			<div class="co-chk-list type01">
+				<div class="c-rdochk type01">
+					<input type="radio" id="rdoCertifyWayPhone" name="rdoCertifyWay" checked="">
+					<label for="rdoCertifyWayPhone" class="chk-label"><i></i><span>휴대폰 인증</span></label>
+				</div>
+				<div class="c-rdochk type01">
+					<input type="radio" id="rdoCertifyWayIpin" name="rdoCertifyWay">
+					<label for="rdoCertifyWayIpin" class="chk-label"><i></i><span>아이핀 인증</span></label>
+				</div>
+			</div>
+			<!-- ? // view -->
+		</div>
+
+		<!-- [Checkbox + Label] -->
+		<h3 class="h3_guide">Checkbox</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+			<div class="c-chkbox type01">
+				<input type="checkbox" id="chk02_01">
+				<label for="chk02_01" class="chk-label"><i></i><span>label</span></label>
+			</div>
+			<div class="c-chkbox type01">
+				<input type="checkbox" id="chk02_02" checked>
+				<label for="chk02_02" class="chk-label"><i></i><span>label</span></label>
+			</div>
+			<div class="c-chkbox type01">
+				<input type="checkbox" id="chk02_03" disabled>
+				<label for="chk02_03" class="chk-label"><i></i><span>label</span></label>
+			</div>
+			<div class="c-chkbox type01">
+				<input type="checkbox" id="chk02_04" checked disabled>
+				<label for="chk02_04" class="chk-label"><i></i><span>label</span></label>
+			</div>
+			<!-- ? // view -->
+		</div>
+
+		<!-- ===================================== Radio -->
+		<div class="title-box">
+			<h2 class="h2_guide">Radio</h2>
+		</div>
+		<!-- [Radio] -->
+		<h3 class="h3_guide">Radio - type01</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+			<div class="c-rdochk type01">
+				<input type="radio" id="rdo01_01" name="rdo01">
+				<label for="rdo01_01" class="chk-label"><i></i></label>
+			</div>
+			<div class="c-rdochk type01">
+				<input type="radio" id="rdo01_02" name="rdo01" checked>
+				<label for="rdo01_02" class="chk-label"><i></i></label>
+			</div>
+			<div class="c-rdochk type01">
+				<input type="radio" id="rdo01_03" name="rdo01" disabled>
+				<label for="rdo01_03" class="chk-label"><i></i></label>
+			</div>
+			<div class="c-rdochk type01">
+				<input type="radio" id="rdo01_04" name="rdo01" checked disabled>
+				<label for="rdo01_04" class="chk-label"><i></i></label>
+			</div>
+			<!-- ? // view -->
+		</div>
+
+		<!-- [Radio + Label] -->
+		<h3 class="h3_guide">Checkbox</h3>
+		<div class="d_desc code">
+			<!-- ? view -->
+			<div class="c-rdochk type01">
+				<input type="radio" id="rdo02_01" name="rdo02">
+				<label for="rdo02_01" class="chk-label"><i></i><span>label</span></label>
+			</div>
+			<div class="c-rdochk type01">
+				<input type="radio" id="rdo02_02" name="rdo02" checked>
+				<label for="rdo02_02" class="chk-label"><i></i><span>label</span></label>
+			</div>
+			<div class="c-rdochk type01">
+				<input type="radio" id="rdo02_03" name="rdo02" disabled>
+				<label for="rdo02_03" class="chk-label"><i></i><span>label</span></label>
+			</div>
+			<div class="c-rdochk type01">
+				<input type="radio" id="rdo02_04" name="rdo02" checked disabled>
+				<label for="rdo02_04" class="chk-label"><i></i><span>label</span></label>
+			</div>
+			<!-- ? // view -->
+		</div>
+	</div>
+
+	<!-- guide script -->
+	<script src="../js/pretty.js"></script>
+
+	<script defer src="../../js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+// center block with footer
+// window height - footer height
+$center-pos: calc(-50% - (9px + 2.5rem));
+.center-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &.center-type {
+    margin: 0 auto;
+    text-align: center;
+  }
+}

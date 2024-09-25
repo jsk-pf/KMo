@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-title" content="With KMI">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="refresh" content="300">
+
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="author" content="With KMI">
+    <meta name="title" content="건강검진 서비스 - With KMI">
+    <meta name="description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta name="keywords" content="With KMI, 위드케이엠아이, 비타브릿지, vitabridge, 건강검진, 헬스케어서비스, 헬스케어">
+    <meta name="copyright" content="© 2022. KMI All Rights Reserved.">
+
+    <link rel="canonical" href="{유동 도메인 주소}.withkmi.or.kr">
+
+    <meta property="og:locale" content="ko-KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="With KMI - 건강검진 서비스">
+    <meta property="og:description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta property="og:image" content="../../images/kmi_info_img.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:url" content="https://{유동 도메인 주소}.withkmi.or.kr">
+    <meta property="og:site_name" content="With KMI">
+
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/logo/home-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/logo/home-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../../images/logo/home-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/logo/home-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/logo/home-icon-192x192.png">
+    <link rel="stylesheet" href="../../lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../lib/datepicker/datepicker.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/swiper/js/swiper.min.js"></script>
+    <script defer src="../../js/common.js"></script>
+    <title>건강검진 서비스 - With KMI</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="flex-wrap">
+            <div class="flex-container">
+                <button type="button" class="btn-open-popup" data-toggle="modal" data-target="popupDatePicker"><em class="alt-txt">두번탭하면,팝업열림</em><span>팝업열림 - DATE PICKER</span></button>
+
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <!-- full popup - DATE PICKER -->
+    <div class="c-full-layer kmi-popup type-full type-datepicker co-popup-datepicker" id="popupDatePicker" role="dialog" aria-labelledby="popupDatePicker_Label" aria-modal="true" aria-hidden="true">
+        <div class="c-container" tabindex="0">
+            <div class="full-header">
+                <button class="btn-go-back popup-btn-close">
+                    <span>뒤로 가기</span>
+                </button>
+            </div>
+
+            <div class="full-body">
+                <div class="cont-box">
+                    <h1>검진 시간 선택</h1>
+                    <p>원하시는 시간대를 설정해 주세요.</p>
+                    <div class="datepicker-list">
+                        <div class="input-block">
+                            <input type="radio" name="dateTime" id="dateTimeAll" checked>
+                            <label for="dateTimeAll">
+                                <span>전체</span>
+                            </label>
+                        </div>
+                        <div class="input-block">
+                            <input type="radio" name="dateTime" id="dateTimeAM">
+                            <label for="dateTimeAM">
+                                <span>오전</span>
+                            </label>
+                        </div>
+                        <div class="input-block">
+                            <input type="radio" name="dateTime" id="dateTimePM">
+                            <label for="dateTimePM">
+                                <span>오후</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <h1>검진 방법 선택</h1>
+                    <p>수면 대장내시경 항목은 병원 상황에 따라 검진을 두번 나눠서 진행하는 경우가 있으니 예약 가능한 일자를 확인 후 예약 바랍니다.</p>
+                    <div class="datepicker-list">
+                        <div class="input-block">
+                            <input type="radio" name="dateCase" id="sleepColonoscopy">
+                            <label for="sleepColonoscopy">
+                                <span>수면 대장내시경</span>
+                            </label>
+                        </div>
+                        <div class="input-block">
+                            <input type="radio" name="dateCase" id="separateProgress">
+                            <label for="separateProgress">
+                                <span>분리 검진 진행</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <h1>검진 일자선택</h1>
+                    <span class="alt-txt">대장내시경은,2023년,1월,10일,에,가장빠른,예약이,가능합니다</span>
+                    <p aria-hidden="true">대장내시경은 <span>2023.01.10 가장 빠른 예약</span>이 가능합니다.</p>
+                    <span class="alt-txt">예약하고싶은날짜를선택할수있는달력입니다,오늘날짜에선택되어있고,예약가능한날짜를선택한후,하단에확인버튼을누르면,희망일자에,선택한날짜가입력됩니다</span>
+                    <div id="c-datepicker" class="type-popup co-datepicker"></div>
+                    <div class="c-datepicker-info">
+                        <ul class="is-selected">
+                            <li class="alt-txt">선택된날짜는파란색글자와파란색라운드로표시됩니다</li>
+                            <li aria-hidden="true">선택</li>
+                        </ul>
+                        <ul class="is-holiday">
+                            <li class="alt-txt">휴일이나일요일은빨간색글자로표시됩니다</li>
+                            <li aria-hidden="true">휴일</li>
+                        </ul>
+                        <ul class="is-disabled">
+                            <li class="alt-txt">예약마감되어예약할수없는날짜는회색으로표시되고선택불가능합니다</li>
+                            <li aria-hidden="true">예약마감</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="btn-floating">
+                    <a href="javascript:void(0);" class="co-btn bg-navy-1" title="팝업닫힘"><span>확인</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- script: datapicker -->
+    <script src="../../lib/datepicker/datepicker.min.js"></script>
+    <script>
+        disabledDays.push('2022-11-7', '2022-11-8', '2022-11-9', '2022-11-10', '2022-11-11', '2022-11-12');
+
+        Promise.allSettled(disabledDays)
+            .then(([reservationClosed]) => {
+                $.datepicker.setDefaults(datepickerOptions);
+                $('.co-datepicker').datepicker({
+                    showOtherMonths: true,
+                    onSelect: function(dateText, inst) {
+                        // 선택한 날짜 return
+                        let dateAsString = dateText;
+                        let dateAsObject = $(this).datepicker('getDate');
+                        console.log($(this));
+                    },
+                });
+            })
+            .catch(console.log);
+    </script>
+    <!-- // script: datapicker -->
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+// = Button
+.co-btn {
+  display: block;
+  // width: 100%;
+  // text-align: center;
+  // border-radius: 100rem;
+  // background-color: $color-main;
+  // color: $color-white-100;
+  // line-height: $g-line-height-02;
+  // padding: $fs-body-small;
+  // white-space: nowrap;
+  // @include coTxtBtn;
+  // &:hover,
+  // &:active {
+  //   color: $color-white-100;
+  // }
+}
+
+// = Button List
+.c-button-list {
+  .per-column {
+    flex: 0 0 100%;
+    max-width: 100%;
+    & ~ .per-column {
+      margin-top: 1.25rem;
+    }
+  }
+
+  .per-column {
+    & ~ .c-input-email-group {
+      margin-top: 1.25rem;
+    }
+  }
+  &.chk-list-full {
+    > .col {
+      & + .col {
+        margin-top: 1.25rem;
+      }
+    }
+  }
+
+  .label-input {
+    & ~ .label-input {
+      margin-top: 1.75rem;
+    }
+  }
+}
+
+// = [230214] Add Common Type
+.c-ico-btn-type {
+  &.circle {
+    position: relative;
+    width: 2.25rem;
+    height: 2.25rem;
+    background: {
+      repeat: no-repeat;
+      position: center;
+    }
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
+  }
+
+  &.ico-person-01 {
+    background: {
+      image: url($image-ico-path + 'ico_person_01.svg');
+      size: 20px auto;
+    }
+    display: inline-block;
+  }
+
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-title" content="With KMI">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="refresh" content="300">
+
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="author" content="With KMI">
+    <meta name="title" content="건강검진 서비스 - With KMI">
+    <meta name="description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta name="keywords" content="With KMI, 위드케이엠아이, 비타브릿지, vitabridge, 건강검진, 헬스케어서비스, 헬스케어">
+    <meta name="copyright" content="© 2022. KMI All Rights Reserved.">
+
+    <link rel="canonical" href="{유동 도메인 주소}.withkmi.or.kr">
+
+    <meta property="og:locale" content="ko-KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="With KMI - 건강검진 서비스">
+    <meta property="og:description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta property="og:image" content="../../images/kmi_info_img.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:url" content="https://{유동 도메인 주소}.withkmi.or.kr">
+    <meta property="og:site_name" content="With KMI">
+
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/logo/home-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/logo/home-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../../images/logo/home-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/logo/home-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/logo/home-icon-192x192.png">
+    <link rel="stylesheet" href="../../lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../lib/datepicker/datepicker.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/swiper/js/swiper.min.js"></script>
+    <script defer src="../../js/common.js"></script>
+    <title>건강검진 서비스 - With KMI</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="flex-wrap"> <!-- Header -->
+            <header class="header co-header">
+                <!-- 기업 로고에 따른 alt값 부여 -->
+                <h1 class="logo">
+                    <a href="../vgt/vgt_01_001.html"><img src="../../images/dummy/dummy_logo02.png" alt="LG화학 로고"></a>
+                </h1>
+                <!-- 컬러로고: type-color -->
+                <!-- <h1 class="logo type-color">
+    <a href="javascrpit:void(0);"><img src="../../images/dummy/dummy_logo02.png" alt="LG화학 로고"></a>
+  </h1> -->
+                <div class="menu">
+                    <button type="button" class="btn-open-gnb">
+                        <span class="skip">전체 메뉴 열기</span>
+                        <img src="../../images/ico/ico_gnb_hamberger.svg" alt="전체메뉴 아이콘">
+                    </button>
+                </div>
+            </header>
+            <div class="flex-container">
+                <div class="ti-block">
+                    <h1 class="tit type-floating">건강검진 제도</h1>
+                    <!--
+              * 탭 터치 시 페이지 이동되는 case
+              * 탭의 aria-controls와 panel의 aria-labelledby가 동일해야 됨
+              * 스크롤 시 floating 되는 tab의 경우 div.tab-floating 필요
+            -->
+                    <div class="tab-floating">
+                        <ul class="c-tab type-slide type-move" role="tablist" data-tablist="healthSystem">
+                            <li role="tab" aria-controls="health-system-tab-panel">
+                                <a href="./TI_01_001.html" title="페이지 이동" class="tab active">건강검진 제도</a>
+                            </li>
+                            <li role="tab" aria-controls="our-health-tab-panel">
+                                <a href="./TI_01_002.html" title="페이지 이동" class="tab">우리 회사 검진제도 안내</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--
+              * 전체 panel
+              * tab-panel show class: show || null
+              * 탭 터치 후 새로고침 된 후: panel의 aria-labelledby가 탭의 active class를 가진 aria-controls로 바뀜
+            -->
+                    <div class="tab-panel show" role="tabpanel" aria-labelledby="health-system-tab-panel" data-panelname="healthSystem">
+                        <h2>일반 건강검진</h2>
+                        <p>지역세대주, 직장가입자, 20세 이상 세대원과 피부양자, 20세~64세 의료급여 수급권자</p>
+                        <h3>공통항목</h3>
+                        <ul>
+                            <li>1. 진찰, 상담, 신장, 체중, 허리둘레, 체질량지수, 시력, 청력, 혈압측정</li>
+                            <li>2. AST(SGOT), ALT(SGPT), 감마지티피</li>
+                            <li>3. 공복 혈당</li>
+                            <li>4. 요단백, 혈청 크레아티닌, 혈색소, 신사 구체 여과율(e-GFR)</li>
+                            <li>5. 흉부방사선촬영</li>
+                            <li>6. 구강검진</li>
+                        </ul>
+                        <h3>성&middot;연령별 검사 항목</h3>
+                        <ul class="list type1">
+                            <li>이상 지질혈증 : 남자 24세 이상, 여자 40세 이상, 4년 주기</li>
+                            <li>B형간염 검사(40세, 보균자 및 면역 자는 제외)</li>
+                            <li>치면 세균 막 검사(40세)</li>
+                            <li>골다공증(54&middot;66세 여성)</li>
+                            <li>정신건강검사 우울증(20&middot;30&middot;40&middot;50&middot;60&middot;70세) 해당 연령을 시작으로 10년 동안 1회</li>
+                            <li>생활습관 평가(40&middot;50&middot;60&middot;70세)</li>
+                            <li>노인신체기능검사(66&middot;70&middot;80세) </li>
+                            <li>인지 기능장애 검사(66세 이상 2년에 1회) 66세 이상, 2년 주기(66세, 68세, 70세. 만 해당)</li>
+                        </ul>
+                        <h2>암검진</h2>
+                        <ul>
+                            <li>위암 : 만 40세 이상인 자</li>
+                            <li>유방암 : 만 40세 이상 여성인 자</li>
+                            <li>대장암 : 만 50세 이상인 자</li>
+                            <li>간암 : 간암 발생 고위험군 해당자 (상반기 1회, 하반기 1회)</li>
+                            <li>자궁경부암 : 만 20세 이상 여성인 자(2년 1회)</li>
+                            <li>폐암 : 54세 ~ 74세 이상 남녀 중 30갑년 이상 흡연력 보유 고위험군(2년 1회)</li>
+                        </ul>
+                        <h3>검진항목</h3>
+                        <ul>
+                            <li>위암 : 위내시경검사(위장조영검사 선택 가능)</li>
+                            <li>유방암 : 유방촬영 검사</li>
+                            <li>대장암 : 분변 잠혈검사(FOBT) 이상 소견 시 대장내시경검사</li>
+                            <li>간암 : 간 초음파검사와 혈액검사 (혈청 알파태아단백 검사) 병행</li>
+                            <li>자궁경부암 : 자궁경부 세포 검사</li>
+                            <li>폐암 : 저선량 흉부 CT 검사와 사후 결과 상담</li>
+                        </ul>
+                        <h2>국가건강검진 위반 시 벌금</h2>
+                        <h3>사업주 벌금</h3>
+                        <ul>
+                            <li>업장 내 인원들에게 건강검진 진행 안내를 연 2회 이상 하였고, 그에 따른 제반 사항을 제공했다면 별도의 벌금이 발생하지 않습니다.</li>
+                            <li>다만, 위 내용을 이행하지 않았을 경우 업장 내 건강검진을 진행하지 않은 인원에 따라 1회 10만 원, 2회 20만 원, 3회 30만 원이 부과됩니다.</li>
+                            <li>(ex. 인원이 10명인 사업장이 건강검진 위반을 처음 한 경우 100만 원의 벌금 발생) 한 사업장 기준 최대 1,000만 원까지 가산되어 벌금이 청구될 수 있습니다.</li>
+                        </ul>
+                        <h3>직장인 벌금</h3>
+                        <ul>
+                            <li>사업주의 안내 (1년에 2회 이상)가 있었음에도 건강검진을 진행하지 않을 경우 1회 5만 원, 2회 10만 원, 3회 15만 원으로 벌금이 상승됩니다.</li>
+                            <li>(ex 각 인원 당 최대 벌금 상승 치는 최대 300만 원까지 가산 가능합니다.</li>
+                        </ul>
+                    </div>
+                </div> <button class="btn-move-top"><span class="skip">터치시최상단으로이동</span></button>
+            </div> <!-- footer -->
+            <footer class="footer type-default">
+                <a href="javascript:void(0);" title="페이지이동" class="img-logo"><img src="../../images/logo/footer_logo_01.svg" alt="KMI 재단법인 한국의학연구소 KOREA MEDICAL INSTITUTE"></a>
+
+                <!-- [ mod(230130) ] -->
+                <div class="btn-list type-footer"> <a href="javascript:void(0);" title="페이지 이동" class="personal-policy">개인정보처리방침</a>
+                    <a href="javascript:void(0);" title="페이지 이동">이용약관</a>
+                    <a href="javascript:void(0);" title="페이지 이동">이용가이드</a>
+                </div>
+
+                <div class="footer-txt">
+                    상호 : 재단법인 한국의학연구소 ㅣ 대표자 성명 : 이상호 ㅣ 본원 : (우)03173 서울시 종로구 세종대로 23길 54(당주동, 세종빌딩) ㅣ 사업자등록번호 : 130-82-06960 ㅣ 서비스 운영사 :
+                    ㈜옴니케어 ㅣ 전자우편주소 : <a href="mailto:webmaster@kmi.or.kr">webmaster@kmi.or.kr</a> ㅣ 고객문의 : <a href="tel:1533-0505">1533-0505</a> / 평일 : 오전 07:00 ~
+                    오후 18:00
+                    (토요일 오전 07:00 ~ 오후 12:30)
+                    (일/공휴일 휴무)
+                </div>
+
+                <div class="copyright">© 2022. <strong>KMI</strong> All Rights Reserved.</div>
+                <!-- [ // mod(230130) ] -->
+            </footer>
+        </div>
+    </div> <!-- GNB -->
+    <div class="co-gnb">
+        <!-- gnb bg -->
+        <div class="gnb-bg"></div>
+        <!-- gnb header -->
+        <div class="gnb-header">
+            <h1 class="profile">
+                <a href="javascrpit:void(0);" title="마이페이지로 이동">
+                    <img src="../../images/ico/ico_gnb_profile.svg" alt="기본 프로필">
+                    <span><em>홍길동</em> 님</span>
+                </a>
+            </h1>
+            <button class="btn-close-gnb">
+                <img src="../../images/ico/ico_close_white_34x34.svg" alt="전체메뉴 닫기">
+            </button>
+        </div>
+        <!-- gnb body -->
+        <ul class="gnb-body accordion-list">
+            <li>
+                <a href="../vgt/vgt_01_001.html" title="페이지 이동" class="btn-gnb-main">
+                    <h2>메인</h2>
+                </a>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuHealthCheckSystem" aria-controls="gnb-menu-health-check-system">
+                    <h2>건강검진 제도</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-health-check-system" role="region" aria-labelledby="gnbMenuHealthCheckSystem">
+                    <!-- [Comment]
+					+ 서브메뉴 현재 페이지 클래스 제어 : active
+				-->
+                    <a href="../ti/TI_01_001.html" title="페이지 이동" class="active">국가건강 검진 제도 안내</a>
+                    <a href="../ti/TI_01_002.html" title="페이지 이동">우리 회사 검진제도 안내</a>
+                </div>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuExamination" aria-controls="gnb-menu-examination">
+                    <h2>검진 예약/결과 조회</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-examination" role="region" aria-labelledby="gnbMenuExamination">
+                    <a href="../rv/RV_01_001_2.html" title="페이지 이동">검진 예약</a>
+                    <a href="../rv/RV_01_027.html" title="페이지 이동">예약 내역</a>
+                    <a href="../vgt/VGT_03_001.html" title="페이지 이동">검진기관</a>
+                    <a href="../ri/RI_01_001.html" title="페이지 이동">검진 결과</a>
+                </div>
+            </li>
+            <!-- [ mod(230310) ]
+	직무스트레스 메뉴  markup 변경
+	-->
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbJobStress" aria-controls="gnb-jobstress">
+                    <div class="gnb-mark">
+                        <h2>직무스트레스</h2>
+                        <div class="badge">
+                            <em>대상자</em>
+                        </div>
+                    </div>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-jobstress" role="region" aria-labelledby="gnbJobStress">
+                    <a href="../jo/JO_01_001.html" title="페이지 이동">검사하기</a>
+                    <a href="../jo/JO_02_001.html" title="페이지 이동">검사결과</a>
+                </div>
+            </li>
+            <!-- [ // mod(230309) ]-->
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuResultConsultation" aria-controls="gnb-menu-result-consultation">
+                    <h2>결과 상담</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-result-consultation" role="region" aria-labelledby="gnbMenuResultConsultation">
+                    <a href="../rc/RC_01_001.html" title="페이지 이동">결과 상담하기</a>
+                    <a href="../rc/RC_01_004.html" title="페이지 이동">상담 이력</a>
+                </div>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuHealthInformation" aria-controls="gnb-menu-health-information">
+                    <h2>건강 정보</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-health-information" role="region" aria-labelledby="gnbMenuHealthInformation">
+                    <a href="../hi/HI_01_001.html" title="페이지 이동">검진 항목 정보</a>
+                    <a href="../hi/HI_01_002_1.html" title="페이지 이동">영상 건강 정보</a>
+                    <a href="../hi/HI_01_003_1.html" title="페이지 이동">질환별 건강 정보</a>
+                    <a href="../hi/HI_01_004_1.html" title="페이지 이동">검진센터 탐방</a>
+                </div>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuCommunity" aria-controls="gnb-menu-community">
+                    <h2>커뮤니티</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-community" role="region" aria-labelledby="gnbMenuCommunity">
+                    <a href="../ni/NI_01_001.html" title="페이지 이동">이벤트</a>
+                    <a href="../ni/NI_01_002.html" title="페이지 이동">공지사항</a>
+                    <a href="../guide/GUIDE_01_004_4.html" title="페이지 이동">FAQ</a>
+                    <a href="../guide/GUIDE_01_004_1.html" title="페이지 이동">서비스 문의</a>
+                </div>
+            </li>
+        </ul>
+        <!-- gnb bottom button - logout -->
+        <a href="javascript:void(0);" class="gnb-btn-logout" title="전체 메뉴 닫히고 페이지 이동">
+            <img src="../../images/ico/ico_gnb_logout.svg" alt="로그아웃 아이콘">
+            <span>로그아웃</span>
+        </a>
+    </div>
+</body>
+
+</html>

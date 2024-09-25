@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-title" content="With KMI">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="refresh" content="300">
+
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="author" content="With KMI">
+    <meta name="title" content="건강검진 서비스 - With KMI">
+    <meta name="description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta name="keywords" content="With KMI, 위드케이엠아이, 비타브릿지, vitabridge, 건강검진, 헬스케어서비스, 헬스케어">
+    <meta name="copyright" content="© 2022. KMI All Rights Reserved.">
+
+    <link rel="canonical" href="{유동 도메인 주소}.withkmi.or.kr">
+
+    <meta property="og:locale" content="ko-KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="With KMI - 건강검진 서비스">
+    <meta property="og:description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta property="og:image" content="../../images/kmi_info_img.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:url" content="https://{유동 도메인 주소}.withkmi.or.kr">
+    <meta property="og:site_name" content="With KMI">
+
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/logo/home-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/logo/home-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../../images/logo/home-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/logo/home-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/logo/home-icon-192x192.png">
+    <link rel="stylesheet" href="../../lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../lib/datepicker/datepicker.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/swiper/js/swiper.min.js"></script>
+    <script defer src="../../js/common.js"></script>
+    <title>건강검진 서비스 - With KMI</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="flex-wrap">
+            <div class="flex-container">
+                <button type="button" class="btn-open-popup" data-toggle="modal" data-target="popupCompareExamRes"><span>팝업 확인용
+                        버튼</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- full popup - 검진결과비교 -->
+    <div class="c-full-layer kmi-popup type-full popup-chkupresult-compare" id="popupCompareExamRes" role="dialog" aria-labelledby="popupCompareExamRes_Label" aria-modal="true" aria-hidden="true">
+        <div class="c-container" tabindex="0">
+            <div class="full-header">
+                <button class="btn-go-back popup-btn-close">
+                    <span>뒤로 가기</span>
+                </button>
+            </div>
+
+            <div class="full-body">
+                <!-- [Common]
+						- chartjs Sample (Customizing 필요 (Zeplin 참고))
+					-->
+                <h1 id="popupCompareExamRes_Label" class="top-title-box">검진 결과 비교</h1>
+
+                <div class="cont-box">
+                    <h2 class="cont-title">LDL콜레스트롤(LDL-Chol)<a href="javascript:void(0);" title="두번탭하면이병원의상세한설명이있는팝업열림" class="ico-ques"></a></h2>
+
+                    <div class="chart-area">
+                        <canvas id="resultCompareChart01" class="compare-chart"></canvas>
+                    </div>
+
+                    <div class="btm-cont-box">
+                        <div class="box type3">최대 3개의 검진 결과에 대한 내역입니다.<br><br>검진 결과의 임상참고치는 검진 기관별 분석 방법의 차이로 임상참고치의 범위에 차이가 발생할
+                            수 있습니다.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- script - chart -->
+    <script src="../../lib/chartjs/chart.min.js"></script>
+    <script>
+        const ctx = document.getElementById('resultCompareChart01');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                datasets: [{
+                        type: 'line',
+                        label: 'Dataset 1',
+                        data: [1, 10, 20, 50],
+                        borderColor: 'rgba(37, 57, 129, 1)',
+                        backgroundColor: 'transparent',
+                        pointBorderColor: 'rgba(100, 112, 156, 1)',
+                        pointBorderWidth: 1,
+                        lineTension: 0,
+                    },
+                    {
+                        type: 'line',
+                        label: 'Dataset 2',
+                        data: [30, 40, 20, 50],
+                        borderColor: 'rgba(47, 122, 211, 1)',
+                        backgroundColor: 'transparent',
+                        pointBorderColor: 'rgba(47, 122, 211, 1)',
+                        pointBorderWidth: 1,
+                        lineTension: 0,
+                    },
+                    {
+                        type: 'line',
+                        label: 'Dataset 3',
+                        data: [40, 30, 20, 10],
+                        borderColor: 'rgba(255, 104, 89, 1)',
+                        backgroundColor: 'transparent',
+                        pointBorderColor: 'rgba(255, 104, 89, 1)',
+                        pointBorderWidth: 1,
+                        lineTension: 0,
+                    },
+                ],
+                labels: ['2022', '2021', '2020', '2019'],
+                layout: {
+                    padding: {
+                        top: 80,
+                    },
+                },
+            },
+        });
+    </script>
+
+    <!-- // script - chart -->
+</body>
+
+</html>

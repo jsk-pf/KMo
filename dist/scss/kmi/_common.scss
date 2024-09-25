@@ -1,0 +1,972 @@
+//	= Font
+
+// notch safe-area
+#container {
+  width: 100%;
+  height: 100%;
+  box-sizing: inherit;
+  overflow-x: hidden;
+  padding-top: 0;
+  // padding-top: var(--safe-top);
+  .flex-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .flex-container {
+      flex-grow: 1;
+      &.type-etc {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    header {
+      &.header {
+        &.co-header {
+          & + .flex-container {
+            margin-top: 5.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// loading
+.is-loading {
+  overflow: hidden;
+}
+
+// + font-name
+$fonts: (
+  'Thin': 100,
+  'Light': 300,
+  'Regular': 400,
+  'Medium': 500,
+  'Bold': 700,
+  'Black': 900,
+);
+
+@each $name, $size in $fonts {
+  @font-face {
+    font: {
+      family: #{$font-name};
+      weight: $size;
+      style: normal;
+    }
+
+    src: url('#{$font-path}#{$font-name}-#{$name}.woff') format('woff'), url('#{$font-path}#{$font-name}-#{$name}.woff2') format('woff2'), url('#{$font-path}#{$font-name}-#{$name}.otf') format('opentype');
+  }
+}
+
+// = color
+.cl-main-1 {
+  color: $color-main !important;
+}
+.cl-sub-1 {
+  color: $color-sub-01 !important;
+}
+.cl-sub-2 {
+  color: $color-sub-02 !important;
+}
+.cl-sub-3 {
+  color: $color-sub-03 !important;
+}
+.cl-sub-5 {
+  color: $color-sub-05 !important;
+}
+.cl-bg-3 {
+  color: $color-bg-03 !important;
+}
+.cl-bg-4 {
+  color: $color-bg-04 !important;
+}
+
+.cl-white-1 {
+  color: $color-white-100 !important;
+}
+.cl-white-op8 {
+  color: $color-white-80 !important;
+}
+.cl-white-op7 {
+  color: $color-white-70 !important;
+}
+.cl-white-op6 {
+  color: $color-white-60 !important;
+}
+.cl-white-op4 {
+  color: $color-white-40 !important;
+}
+.cl-white-op2 {
+  color: $color-white-20 !important;
+}
+
+.cl-black-1 {
+  color: $color-black-100 !important;
+}
+.cl-black-op8 {
+  color: $color-black-80 !important;
+}
+.cl-black-op6 {
+  color: $color-black-60 !important;
+}
+.cl-black-op4 {
+  color: $color-black-40 !important;
+}
+.cl-black-op2 {
+  color: $color-black-20 !important;
+}
+.cl-black-op1 {
+  color: $color-black-10 !important;
+}
+.cl-black-op05 {
+  color: $color-black-05 !important;
+  @include coTxtBody;
+}
+
+// + text
+.c-txt-tit-head-l {
+  @include coTxtTitleHeadingLarge;
+}
+.c-txt-tit-head-s {
+  @include coTxtTitleHeadingSmall;
+}
+.c-txt-tit-l {
+  @include coTxtTitleLarge;
+}
+
+.c-txt-tit-s {
+  @include coTxtTitleSmall;
+}
+
+.c-txt-nomal {
+  @include coTxtBody;
+}
+.c-txt-nomal-s {
+  @include coTxtBodySmall;
+}
+
+.c-txt-link {
+  @include coTxtBodyLink;
+}
+
+.c-txt-label-l {
+  @include coTxtLabelLarge;
+}
+
+.c-txt-label-m {
+  @include coTxtLabelMedium;
+}
+
+.c-txt-btn {
+  @include coTxtBtn;
+}
+
+.c-txt-btn-s {
+  @include coTxtBtnSmall;
+}
+
+// + align
+.ta-l {
+  text-align: left !important;
+}
+.ta-c {
+  text-align: center !important;
+}
+.ta-r {
+  text-align: right !important;
+}
+
+// + flex-align
+.justify-cont-s {
+  justify-content: flex-start !important;
+}
+.justify-cont-e {
+  justify-content: flex-end !important;
+}
+.justify-cont-c {
+  justify-content: center !important;
+}
+.justify-cont-sb {
+  justify-content: space-between !important;
+}
+.align-item-s {
+  align-items: flex-start !important;
+}
+.align-item-e {
+  align-items: flex-end !important;
+}
+.align-item-c {
+  align-items: center !important;
+}
+
+// + font weight
+.fw-bold {
+  font-weight: 700 !important;
+}
+
+// = grid
+// + row
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+}
+
+.col {
+  max-width: 100%;
+  flex: 1 1 0;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    flex: 0 0 math.percentage(math.div($i, 12));
+    max-width: math.percentage(math.div($i, 12));
+  }
+}
+
+.inner-row {
+  width: 100%;
+  flex: 1 1 auto;
+}
+
+.in-input-row {
+  & ~ .in-input-row {
+    margin-top: 3.75rem;
+		&:before {
+		}
+  }
+}
+// = input
+input {
+  &[type='text'],
+  &[type='password'],
+  &[type='number'],
+  &[type='search'],
+  &[type='tel'] {
+    outline: 0;
+    border: 1px solid $input-border-color;
+    border-radius: $input-border-radius;
+    padding: 0.6875rem 1.25rem;
+    width: 100%;
+    font: {
+      size: $default-font-size;
+      family: $font-name;
+      weight: $default-font-weight;
+    }
+    line-height: $input-line-height;
+    letter-spacing: $default-letter-spacing;
+  }
+  color: $color-black-80;
+}
+input::placeholder {
+  color: $color-black-40;
+}
+// = button
+.co-btn {
+  &.type02 {
+    padding: 1rem 1.25rem;
+    background-color: $color-main;
+    border-radius: 0 $input-border-radius $input-border-radius 0;
+    background: url($image-ico-path + 'btn_overlay_01.png') $color-main right bottom/60px auto no-repeat;
+
+    > span {
+      line-height: 1.125rem;
+    }
+  }
+  &.type-sm {
+    height: 1.75rem;
+    padding: 0.25rem 0.75rem;
+    width: auto;
+    & > span {
+      @include coTxtButtonBtnSm;
+    }
+  }
+  &.type-small {
+    width: 100%;
+    padding: {
+      top: 0.5rem;
+      right: 1.75rem;
+      bottom: 0.5rem;
+      left: 1.75rem;
+    }
+    & > span {
+      @include coTxtButtonSmall;
+    }
+  }
+  &.type-input-btn {
+    & > span {
+      @include coTxtButtonBtnSm;
+    }
+  }
+}
+
+// button
+.buttons {
+  display: flex;
+  flex: 1;
+
+  .co-btn {
+    &:only-child {
+      width: 100%;
+    }
+  }
+}
+
+button,
+a {
+  &.co-btn {
+    position: relative;
+    width: 100%;
+    font: {
+      size: 0;
+      family: $font-name;
+    }
+    padding: 0.75rem;
+    border-radius: 1.75rem;
+    text-align: center;
+    color: $color-white-100;
+    background-color: $color-main;
+    display: inline-block;
+    vertical-align: top;
+    & > span {
+      position: relative;
+      @include coTxtButtonBtn;
+      font-family: $font-name;
+      &.alt-txt {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1px;
+        height: 1px;
+        font-size: 1px;
+        line-height: 1px;
+        opacity: 0;
+        color: transparent;
+        display: block;
+      }
+    }
+
+    & ~ .co-btn {
+      margin-left: 1.25rem;
+    }
+
+    &:disabled {
+      background-color: $color-blue-02;
+    }
+  }
+
+  // + is-disable
+  &.is-disable {
+    background-color: $color-blue-02;
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  // + outline btn
+  $btn-outline: (
+    navy-1: $color-main,
+    disable: $color-blue-02,
+  );
+  @each $class, $line in $btn-outline {
+    &.is-outline-#{$class} {
+      border-width: 1px;
+      border-style: solid;
+      background-color: $color-white-100;
+      border-color: $line;
+      color: $line;
+      padding: 0.6875rem;
+
+      // &:hover {
+      //   opacity: 0.4;
+      // }
+    }
+  }
+
+  // + 이전 글, 다음 글
+  &.is-prev,
+  &.is-next {
+    > span {
+      @include coTxtButtonBtnSm;
+      line-height: 1.4rem;
+    }
+    color: $color-sub-01;
+    background-color: $color-black-05;
+    padding-left: 1.5rem;
+    &.is-disable {
+      opacity: 0.3;
+    }
+  }
+  &.is-prev {
+    padding-right: 1.5rem;
+    padding-left: 0.75rem;
+  }
+  &.is-next {
+    padding-left: 1.5rem;
+    padding-right: 0.75rem;
+  }
+}
+
+// = Module
+.skip {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  font-size: 1px;
+  line-height: 1px;
+  color: transparent;
+}
+
+// = 대체텍스트
+.alt-txt {
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  font-size: 1px !important;
+  line-height: 1px !important;
+  opacity: 0 !important;
+  color: transparent !important;
+  display: block !important;
+  &.type-title {
+    position: relative !important;
+    width: 100% !important;
+    left: auto !important;
+    top: auto !important;
+  }
+}
+
+// 최상단 이동 버튼
+.btn-move-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.75rem;
+  opacity: 0.9;
+  background-color: $color-main;
+  background-image: url($image-ico-path + 'ico_arrow_top_white_01.svg');
+  background-position: center center;
+  background-size: 2.125rem 2.125rem;
+  background-repeat: no-repeat;
+  z-index: 100;
+  &.hide {
+    display: none;
+  }
+  transition: bottom $transition-3 ease-in-out;
+}
+
+// common scrollbar
+.kmi-scroll,
+.textarea-scroll {
+  position: absolute;
+  right: 0.25rem;
+  top: 0.75rem;
+  width: 0.25rem;
+  height: calc(100% - 1.5rem);
+  background-color: transparent;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 2500;
+  transition: opacity $transition-1 ease-in-out;
+  span {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0.25rem;
+    height: 2.5rem;
+    background-color: $color-black-10;
+    border-radius: 1000px;
+  }
+  &.show {
+    opacity: 1;
+  }
+}
+.c-layer-popup {
+  .modal-wrap {
+    .modal-field {
+      .kmi-scroll {
+        z-index: 1997;
+      }
+    }
+  }
+}
+.kmi-popup {
+  &.show {
+    &.type-full,
+    &.type-full-footer {
+      .kmi-scroll {
+        position: fixed;
+        top: 4.75rem;
+        height: calc(100% - 5.5rem);
+      }
+    }
+    .kmi-scroll {
+      z-index: 2501;
+    }
+  }
+}
+.c-txtarea-field {
+  position: relative;
+  .textarea-scroll {
+    height: calc(100% - 2.5rem);
+    top: 1.25rem;
+  }
+}
+
+// left, right block
+.c-loc {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  line-height: 0;
+  &.type-right {
+    text-align: right;
+  }
+}
+
+// = list
+.co-list-card {
+  > li {
+    white-space: initial;
+  }
+  &[class*='circle'] {
+    > li {
+      position: relative;
+      &:before {
+        content: '';
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $color-black-20;
+        display: inline-block;
+        position: absolute;
+      }
+    }
+  }
+  // circle
+  &.circle {
+    li {
+      color: inherit;
+      padding-left: 12px;
+      & ~ li {
+        margin-top: 0.75rem;
+      }
+      &:before {
+        top: 11px;
+        left: 0;
+      }
+    }
+  }
+  // circle01
+  &.circle01 {
+    li {
+      color: $color-black-60;
+      @include coTxtCaption;
+      padding-left: 14px;
+      &:before {
+        top: 11px;
+        left: 0;
+      }
+    }
+  }
+  // circle02
+  &.circle02 {
+    li {
+      @include fontStyle(14px, 30px, 300);
+      padding-left: 12px;
+      &:before {
+        top: 14px;
+        left: 0;
+      }
+    }
+  }
+  // circle03
+  &.circle03 {
+    li {
+      padding-left: 12px;
+      &:before {
+        top: 14px;
+        left: 0;
+      }
+    }
+  }
+
+  // + number-01
+  &.number01 {
+    > li {
+      list-style: none;
+      counter-increment: list-cnt01;
+      position: relative;
+      &:before {
+        content: counter(list-cnt01);
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid $color-black-50;
+      }
+      @include coTxtBody;
+    }
+  }
+
+  &.number02 {
+    > li {
+      list-style: none;
+      counter-increment: list-cnt02;
+      position: relative;
+      font: {
+        size: $fs-body;
+      }
+
+      &:before {
+        content: counter(list-cnt02) '.';
+        display: inline-block;
+        text-align: left;
+        line-height: 1;
+        padding-right: 4px;
+      }
+    }
+  }
+}
+
+// [20230210 Add Common Style]
+// .co-block {
+//   .tit {
+//     & + .c-select {
+//       margin-top: 1.25rem;
+//       & + .info-txt {
+//         margin: 3.75rem 0 0.75rem;
+//         position: relative;
+//         display: block;
+//         text-align: right;
+//         li {
+//           & ~ li {
+//             @include coTxtLabelMedium;
+//             color: $color-black-60;
+//             span {
+//               color: $color-sub-02;
+//               display: inline-block;
+//               margin: 0 0.25rem;
+//             }
+//           }
+//         }
+//         & + .sub-card.type2 {
+//           & ~ .sub-card.type2 {
+//             margin-top: 2.5rem;
+//           }
+//         }
+//       }
+//     }
+//     & + h2 {
+//       margin-top: 2.5rem;
+//       & ~ h2 {
+//         padding-top: 3.75rem;
+//         position: relative;
+//       }
+//     }
+//   }
+//   h2 {
+//     @include coTxtTitleLarge;
+//     color: $color-black-80;
+//     position: relative;
+//     &.type-link {
+//       display: flex;
+//       align-items: center;
+//       justify-content: space-between;
+//       a {
+//         font-size: 0.75rem;
+//         line-height: 1.25rem;
+//         color: $color-sub-02;
+//         text-decoration: underline;
+//       }
+//     }
+//     & + .c-input-list {
+//       margin-top: 1.25rem;
+//     }
+//     & + h3 {
+//       margin-top: 1.25rem;
+//       & ~ h3 {
+//         padding-top: 1.75rem;
+//       }
+//     }
+//     & + .tag-list {
+//       margin-top: 1.375rem;
+//       & + .type-link {
+//         padding-top: 4.25rem;
+//         &::after {
+//           top: 1.75rem;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// + co-article
+.co-article {
+  > h2 {
+    @include coTxtTitleLarge;
+    margin-bottom: 1.25rem;
+  }
+  & ~ .co-article {
+    margin-top: 3.75rem;
+  }
+}
+
+.tit {
+  & + .co-article {
+    margin-top: 2.5rem;
+  }
+}
+
+// =  등록된 컨텐츠 없음
+.null-contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.25rem 0;
+  img {
+    width: 7rem;
+    height: auto;
+    opacity: 0.8;
+  }
+  p {
+    @include coTxtLabelLarge;
+    color: $color-black-80;
+    margin-top: 0.75rem;
+  }
+  &.type-default {
+    // p {
+    //   @include coTxtBody;
+    //   color: $color-black-80;
+    //   margin: 0;
+    // }
+  }
+  &.type-round,
+  &.type-shadow {
+    border: 1px solid $color-black-05;
+    border-radius: 0.75rem;
+    background: $color-white-100;
+    padding: 1.25rem 0;
+  }
+  // + type-shadow
+  &.type-shadow {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+  }
+}
+
+// = Description
+// + type01
+.co-description {
+  @at-root {
+    .cont-box {
+      > .co-description {
+        &:first-of-type {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+  padding: 2.5rem 0;
+  position: relative;
+  &.type01 {
+    // h2 {
+    //   @include coTxtTitleHeadingSmall;
+    //   color: $color-black-80;
+    //   & + p {
+    //     & + h3 {
+    //       padding-top: 5rem;
+    //       position: relative;
+    //       &::after {
+    //         content: '';
+    //         display: block;
+    //         position: absolute;
+    //         width: 100%;
+    //         height: 1px;
+    //         top: 2.5rem;
+    //         left: 0;
+    //         background-color: $color-black-10;
+    //       }
+    //     }
+    //   }
+    //   & + ul {
+    //     margin-top: 1.25rem;
+    //     li {
+    //       & ~ li {
+    //         margin-top: 0.75rem;
+    //       }
+    //     }
+    //     & + h3 {
+    //       & + ul {
+    //         margin-top: 1.25rem;
+    //         li {
+    //           & ~ li {
+    //             margin-top: 0.75rem;
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    //   & + h3 {
+    //     margin-top: 1.25rem;
+    //     & + ul {
+    //       li {
+    //         & + li {
+    //           margin-top: 0.75rem;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+    // h3 {
+    //   @include coTxtTitleSmall;
+    //   color: $color-sub-02;
+    //   & ~ h3 {
+    //     margin-top: 3.75rem;
+    //   }
+    //   & + ul {
+    //     margin-top: 1rem;
+    //     li {
+    //       & ~ li {
+    //         margin-top: 0.5rem;
+    //       }
+    //     }
+    //     &.list {
+    //       &.type1 {
+    //         li {
+    //           &::after {
+    //             top: 0.75rem;
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+    // p,
+    // ul li {
+    //   @include coTxtBody;
+    //   color: $color-black-80;
+    // }
+    // p {
+    //   margin-top: 1.25rem;
+    // }
+    // ul {
+    //   & + h2 {
+    //     padding-top: 5rem;
+    //     position: relative;
+    //     & + h3 {
+    //       margin-top: 1.25rem;
+    //     }
+    //     & ~ h3 {
+    //       & + ul {
+    //         li {
+    //           & ~ li {
+    //             margin-top: 0.75rem;
+    //           }
+    //         }
+    //       }
+    //     }
+    //     &::after {
+    //       content: '';
+    //       display: block;
+    //       position: absolute;
+    //       width: 100%;
+    //       height: 1px;
+    //       top: 2.5rem;
+    //       left: 0;
+    //       background-color: $color-black-10;
+    //     }
+    //   }
+    //   & + h3 {
+    //     margin-top: 3.75rem;
+    //   }
+    // }
+  }
+
+  .c-title {
+    color: $color-sub-02;
+    margin-bottom: 1rem;
+    @include coTxtTitleLarge;
+
+    & + .c-list {
+      margin-top: 1rem;
+    }
+  }
+
+  & ~ .co-description {
+    // margin-top: 3.75rem;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      top: 0;
+      left: 0;
+      background-color: $color-black-10;
+    }
+  }
+}
+
+// = List
+.c-list {
+  > li {
+    margin-top: 0.5rem;
+    color: $color-black-80;
+  }
+  &.type01 {
+  }
+}
+
+// + 완료 화면
+.co-complete-block {
+  .box {
+    p {
+      color: $color-black-60;
+    }
+  }
+}
+
+.c-complete-field {
+  text-align: center;
+  .tit {
+    text-align: left;
+  }
+  .cont {
+    @include coTxtLabelLarge;
+  }
+  > img {
+    margin: 2.5rem auto;
+    width: 10.9375rem;
+    max-width: 175px;
+  }
+
+  h2 {
+    @include coTxtTitleLarge;
+    color: $color-sub-02;
+
+    & + .cont {
+      margin-top: 0.75rem;
+      color: $color-black-60;
+    }
+  }
+  & + .box {
+    margin-top: 20px;
+  }
+}
+
+.c-txt-link {
+  &.lined {
+    text-decoration: underline;
+  }
+}

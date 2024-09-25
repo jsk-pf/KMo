@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>KMI MOBILE</title>
+	<script type="text/javascript" src="./js/dtree.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+</head>
+
+<body>
+	<div class="coding_guide">
+		<h1 class="c_left">KMI MOBILE</h1>
+		<h2 class="h2_guide">File Tree</h2>
+		<div class="dtree">
+			<p>
+				<a href="javascript: p.openAll();"><img src="./img/btn_expand.gif" alt="Expand All"></a> <a
+					href="javascript: p.closeAll();"><img src="./img/btn_collapse.gif" alt="Collapse All"></a>
+			</p>
+			<script type="text/javascript">
+				var dir = '../coding_list/guide/';
+				var tree1 = {
+					index: {
+						main: ['../coding_list/coding_main.html', '', 'blank'],
+					},
+					Info: {
+						Guide: {
+							// Header: [dir + 'guide_Header.html', '', 'blank'],
+							// KMI: [dir + 'guide_KMI.html', '', 'blank'],
+							Popup: [dir + 'guide_popup.html', '', 'blank'],
+							Form: [dir + 'guide_form.html', '', 'blank'],
+							Tab: [dir + 'guide_Tab.html', '', 'blank'],
+							GnbMenu: [dir + 'guide_Menu.html', '', 'blank'],
+						},
+					},
+				};
+				var p = new dTree('p', tree1);
+				document.write(p);
+			</script>
+			<p>
+				<a href="javascript: d.openAll();"><img src="./img/btn_expand.gif" alt="Expand All"></a> <a
+					href="javascript: d.closeAll();"><img src="./img/btn_collapse.gif" alt="Collapse All"></a>
+			</p>
+			<!-- = Dist 목록 -->
+			<script>
+				var dir2 = '../html/';
+				var tree = {
+					Publishing: {
+						'VGT-01-002 / GNB메뉴': [dir2 + 'vgt/VGT_01_002.html', '', 'blank'],
+						layout: {
+							layout01: [dir2 + 'layout/layout01.html', '', 'blank'],
+						},
+						etc: {
+							Error: [dir2 + 'etc/Error.html', '', 'blank'],
+							'Under Construction': [dir2 + 'etc/under_construction.html', '', 'blank'],
+							Loading: [dir2 + 'etc/loading.html', '', 'blank'],
+						},
+						'로그인 (LO)': {
+							// 'LO-01-001 / 로그인': [dir2 + 'lo/LO_01_001_1.html', '', 'blank'],
+							'LO-01-001 / 로그인(WITHKMI)': [dir2 + 'lo/LO_01_001_1_1.html', '', 'blank'],
+							// 'LO-01-001 / 로그인(로고 미등록)': [dir2 + 'lo/LO_01_001_2.html', '', 'blank'],
+							'LO-01-001 / 로그인(로고 미등록WITH-KMI)': [dir2 + 'lo/LO_01_001_2_1.html', '', 'blank'],
+							'LO-01-004 / 통합 로그인': [dir2 + 'lo/LO_01_004.html', '', 'blank'],
+							'LO-01-004 / 팝업': [dir2 + 'lo/LO_01_001_1_popup.html', '', 'blank'],
+							'LO-01-005 / 검색': [dir2 + 'lo/LO_01_005.html', '', 'blank'],
+							'LO-01-006 / 아이디 찾기(휴대전화)': [dir2 + 'lo/LO_01_006_1.html', '', 'blank'],
+							'LO-01-007 / 아이디 확인': [dir2 + 'lo/LO_01_007.html', '', 'blank'],
+							'LO-01-008 / 비밀번호 찾기_01': [dir2 + 'lo/LO_01_008_1.html', '', 'blank'],
+							'LO-01-008 / 비밀번호 찾기_02': [dir2 + 'lo/LO_01_008_2.html', '', 'blank'],
+							'LO-01-008 / 비밀번호 찾기_03': [dir2 + 'lo/LO_01_008_3.html', '', 'blank'],
+							'LO-01-010 / 약관동의': [dir2 + 'lo/LO_01_010.html', '', 'blank'],
+							'LO-01-010-01 / 본인인증': [dir2 + 'lo/LO_01_010_01.html', '', 'blank'],
+							'LO-01-010 / 팝업': [dir2 + 'lo/LO_01_010_popup.html', '', 'blank'],
+							'LO-01-011 / 비밀번호 변경': [dir2 + 'lo/LO_01_011.html', '', 'blank'],
+							'LO-01-012 / 아이디 및 비밀번호': [dir2 + 'lo/LO_01_012.html', '', 'blank'],
+							'LO-01-013 / 개인정보입력': [dir2 + 'lo/LO_01_013_1.html', '', 'blank'],
+							'LO-02-001 / 검진결과 보기': [dir2 + 'lo/LO_02_001.html', '', 'blank'],
+							'LO-02-001 / 로그인 안내': [dir2 + 'lo/LO_02_001_popup.html', '', 'blank'],
+							'LO-02-002 / 검진결과': [dir2 + 'lo/LO_02_002.html', '', 'blank'],
+						},
+						'메인 (VGT)': {
+							'VGT-01-001 / Main': [dir2 + 'vgt/VGT_01_001.html', '', 'blank'],
+							'VGT-01-001 / Main(로딩)': [dir2 + 'vgt/VGT_01_001_loading.html', '', 'blank'],
+							'VGT-01-001 / 팝업: Main': [dir2 + 'vgt/VGT_01_001_popup.html', '', 'blank'],
+							'VGT-01-001(popup) / 검진활용 동의서 팝업': [dir2 + 'vgt/VGT_01_001_popup02.html', '', 'blank'],
+							'VGT-01-003 / 건강검진 결과 보기': [dir2 + 'vgt/VGT_01_003.html', '', 'blank'],
+							'VGT-01-004 / 건강검진 결과 전달': [dir2 + 'vgt/VGT_01_004.html', '', 'blank'],
+							'VGT-01-005 / 약관동의': [dir2 + 'vgt/VGT_01_005.html', '', 'blank'],
+							'VGT-01-006 / 재직알림': [dir2 + 'vgt/VGT_01_006.html', '', 'blank'],
+							'VGT-01-006 / 팝업: 재직알림': [dir2 + 'vgt/VGT_01_006_popup.html', '', 'blank'],
+						},
+						'건강검진제도 (TI)': {
+							'TI-01-001 / 건강검진 제도': [dir2 + 'ti/TI_01_001.html', '', 'blank'],
+							'TI-01-002 / 우리회사 검진제도안내': [dir2 + 'ti/TI_01_002.html', '', 'blank'],
+						},
+						'검진예약 (RV)': {
+							'RV-01-001 / 검진 대상자': [dir2 + 'rv/RV_01_001_2.html', '', 'blank'],
+							'RV-01-001(popup) / 검진 대상자 삭제 팝업': [dir2 + 'rv/RV_01_001_2_popup.html', '', 'blank'],
+							'RV-01-001 / 검진 대상자(대상자 없음)': [dir2 + 'rv/RV_01_001_1.html', '', 'blank'],
+							'RV-01-025 / 대상자 추가(회사지원)': [dir2 + 'rv/RV_01_025.html', '', 'blank'],
+							'RV-01-026 / 대상자 추가(개인비용)': [dir2 + 'rv/RV_01_026.html', '', 'blank'],
+							'RV-01-025-1 / 대상자 추가(회사지원금선택)': [dir2 + 'rv/RV_01_025_1.html', '', 'blank'],
+							'RV-01-002 / 검진기관_01': [dir2 + 'rv/RV_01_002.html', '', 'blank'],
+							'RV-01-004-2 / 세부 검진항목': [dir2 + 'rv/RV_01_004_2.html', '', 'blank'],
+							'RV-01-004-2-01 / 팝업: 세부 검진항목 상세': [dir2 + 'rv/RV_01_004_2_01.html', '', 'blank'],
+							'RV-01-006 / 기관 상세 검진센터안내': [dir2 + 'rv/RV_01_006.html', '', 'blank'],
+							'RV-01-007 / 기관 상세 의료인력안내': [dir2 + 'rv/RV_01_007.html', '', 'blank'],
+							'RV-01-008 / 기관 상세 의료장비안내': [dir2 + 'rv/RV_01_008.html', '', 'blank'],
+							'RV-01-012 / 검사항목_1': [dir2 + 'rv/RV_01_012.html', '', 'blank'],
+							'RV-01-012 / 팝업: 검사항목_1': [dir2 + 'rv/RV_01_012_popup.html', '', 'blank'],
+							'RV-01-012_01 / 팝업: 특이사항 문구': [dir2 + 'rv/RV_01_012_01_popup.html', '', 'blank'],
+							'RV-01-015 / 검진일자_01': [dir2 + 'rv/RV_01_015.html', '', 'blank'],
+							// 'RV-01-016 / 검진일자_02(DatePicker)': [dir2 + 'rv/RV_01_016.html', '', 'blank'],
+							// 'RV-01-016 / 팝업: 검진일자_02': [dir2 + 'rv/RV_01_016_popup.html', '', 'blank'],
+							'RV-01-016 / 검진일자_02(DatePicker-jQuery)': [dir2 + 'rv/RV_01_016_jq.html', '', 'blank'],
+							'RV-01-017 / 연기검사': [dir2 + 'rv/RV_01_017.html', '', 'blank'],
+							'RV-01-017 / 팝업: 연기검사': [dir2 + 'rv/RV_01_017_popup.html', '', 'blank'],
+							'RV-01-018 / 개인정보 입력': [dir2 + 'rv/RV_01_018.html', '', 'blank'],
+							'RV-01-019 / 최종확인': [dir2 + 'rv/RV_01_019.html', '', 'blank'],
+							'RV-01-019 / 팝업: 최종확인': [dir2 + 'rv/RV_01_019_popup.html', '', 'blank'],
+							'RV-01-019-01 / 검진 전 유의사항': [dir2 + 'rv/RV_01_019_01.html', '', 'blank'],
+							'RV-01-019-02 / 상품 추가금': [dir2 + 'rv/RV_01_019_02.html', '', 'blank'],
+							'RV-01-020 / 예약완료': [dir2 + 'rv/RV_01_020.html', '', 'blank'],
+						},
+						'검진내역 (RV)': {
+							'RV-01-027 / 검진결과': [dir2 + 'rv/RV_01_027.html', '', 'blank'],
+							'RV-01-027 / 팝업 - 예약상세': [dir2 + 'rv/RV_01_027_popup.html', '', 'blank'],
+							'RV-01-029 / 예약내역 필터': [dir2 + 'rv/RV_01_029.html', '', 'blank'],
+							'RV-01-031 / 변경신청 검사항목': [dir2 + 'rv/RV_01_031.html', '', 'blank'],
+							'RV-01-031 / 팝업': [dir2 + 'rv/RV_01_031_popup.html', '', 'blank'],
+							'RV-01-033 / 변경신청 검진일자': [dir2 + 'rv/RV_01_033.html', '', 'blank'],
+							'RV-01-034 / 변경신청 개인정보 입력': [dir2 + 'rv/RV_01_034.html', '', 'blank'],
+							'RV-01-036 / 검진 취소신청': [dir2 + 'rv/RV_01_036.html', '', 'blank'],
+						},
+						'검진기관 (VGT)': {
+							'VGT-03-001 / 검진기관': [dir2 + 'vgt/VGT_03_001.html', '', 'blank'],
+							'VGT-03-001-01 / 검진센터 안내(RV-01-006 동일)': [dir2 + 'rv/RV_01_006.html', '', 'blank'],
+							'VGT-03-001-02 / 의료 인력 안내(RV-01-007 동일)': [dir2 + 'rv/RV_01_007.html', '', 'blank'],
+							'VGT-03-001-03 / 의료장비 안내(RV-01-008 동일)': [dir2 + 'rv/RV_01_008.html', '', 'blank'],
+						},
+						'검진결과 (RI)': {
+							'RI-01-001 / 검진결과': [dir2 + 'ri/RI_01_001.html', '', 'blank'],
+							'RI-01-001_1 / 검진결과 없는경우': [dir2 + 'ri/RI_01_001_1.html', '', 'blank'],
+							'RI-01-002-02 / 검진결과 더보기': [dir2 + 'ri/RI_01_002_02.html', '', 'blank'],
+							'RI-01-004 / 검진 결과 비교': [dir2 + 'ri/RI_01_004.html', '', 'blank'],
+							'RI-01-005 / 검진 결과 비교(그래프)': [dir2 + 'ri/RI_01_005.html', '', 'blank'],
+						},
+						'직무스트레스 (JO) ': {
+							'JO-01-001 / 검사하기 (대상자 정보+약관)': [dir2 + 'jo/JO_01_001.html', '', 'blank'],
+							'JO-01-001(popup) / 검사하기 (약관) 관련 팝업': [dir2 + 'jo/JO_01_001_popup.html', '', 'blank'],
+							'JO-01-001-01 / 검사하기 대상자 선택 팝업': [dir2 + 'jo/JO_01_001_01.html', '', 'blank'],
+							'JO-01-003 / 대상자가 없는 경우': [dir2 + 'jo/JO_01_003.html', '', 'blank'],
+							'JO-01-002 / 검사하기': [dir2 + 'jo/JO_01_002.html', '', 'blank'],
+							'JO-01-002 (popup) / 검사하기': [dir2 + 'jo/JO_01_002_popup.html', '', 'blank'],
+							'JO-01-002-01 / 직무스트레스 요인 팝업': [dir2 + 'jo/JO_01_002_01.html', '', 'blank'],
+							'JO-01-004 / 직무스트레스_검사완료': [dir2 + 'jo/JO_01_004.html', '', 'blank'],
+							'JO-02-001 / 검사결과': [dir2 + 'jo/JO_02_001.html', '', 'blank'],
+							'JO-02-001-1 / 직무스트레스_검사 결과 결과처리중': [dir2 + 'jo/JO_02_001_1.html', '', 'blank'],
+							'JO-02-004 / 직무스트레스 검사 결과(이력이 없는 경우)': [dir2 + 'jo/JO_02_004.html', '', 'blank'],
+							'JO-02-005 / 직무스트레스 검사독려 팝업': [dir2 + 'jo/JO_02_005.html', '', 'blank'],
+						},
+						'결과상담 (RC)': {
+							'RC-01-001 / 결과상담': [dir2 + 'rc/RC_01_001.html', '', 'blank'],
+							'RC-01-001 / 팝업: 결과상담': [dir2 + 'rc/RC_01_001_popup.html', '', 'blank'],
+							'RC-01-002 / 결과상담 완료': [dir2 + 'rc/RC_01_002.html', '', 'blank'],
+							'RC-01-004 / 상담내역': [dir2 + 'rc/RC_01_004.html', '', 'blank'],
+						},
+						'건강정보 (HI)': {
+							'HI-01-001 / 검진항목정보': [dir2 + 'hi/HI_01_001.html', '', 'blank'],
+							'HI-01-001 / 검진항목정보 상세': [dir2 + 'hi/HI_01_001_popup.html', '', 'blank'],
+							'HI-01-002 / 영상건강정보': [dir2 + 'hi/HI_01_002_1.html', '', 'blank'],
+							'HI-01-002 / 영상건강정보_상세': [dir2 + 'hi/HI_01_002_2.html', '', 'blank'],
+							'HI-01-003 / 질환별 건강정보': [dir2 + 'hi/HI_01_003_1.html', '', 'blank'],
+							'HI-01-003 / 질환별 건강정보_상세': [dir2 + 'hi/HI_01_003_2.html', '', 'blank'],
+							'HI-01-004 / 검진센터 탐방': [dir2 + 'hi/HI_01_004_1.html', '', 'blank'],
+							'HI-01-004 / 검진센터 탐방 상세': [dir2 + 'hi/HI_01_004_2.html', '', 'blank'],
+						},
+						'커뮤니티 (NI)': {
+							'NI-01-001 / 이벤트': [dir2 + 'ni/NI_01_001.html', '', 'blank'],
+							'NI-01-001-01 / 이벤트_상세': [dir2 + 'ni/NI_01_001_01.html', '', 'blank'],
+							'NI-01-002 / 공지사항': [dir2 + 'ni/NI_01_002.html', '', 'blank'],
+							'NI-01-002-01 / 공지사항 상세': [dir2 + 'ni/NI_01_002_01.html', '', 'blank'],
+							'NI-01-003 / 서비스문의_상담내역': [dir2 + 'ni/NI_01_003.html', '', 'blank'],
+							'NI-01-004 / 서비스문의_상담하기': [dir2 + 'ni/NI_01_004.html', '', 'blank'],
+							'NI-01-005 / 서비스문의_문의내역': [dir2 + 'ni/NI_01_005.html', '', 'blank'],
+						},
+						'내정보 (MI)': {
+							'MI-01-001 / 개인정보 확인': [dir2 + 'mi/MI_01_001_popup.html', '', 'blank'],
+							'MI-01-002 / 개인정보 입력': [dir2 + 'mi/MI_01_002.html', '', 'blank'],
+							'MI-01-002 / 개인정보 변경': [dir2 + 'mi/MI_01_002_01.html', '', 'blank'],
+						},
+						'채용검진 (EM)': {
+							'LO-02-001(EM-01-001) / 로그인': [dir2 + 'em/EM_01_001.html', '', 'blank'],
+							'LO-02-001-popup(EM-01-001 / 팝업': [dir2 + 'em/EM_01_001_popup.html', '', 'blank'],
+							'LO-02-002(EM-01-002) / 약관동의': [dir2 + 'em/EM_01_002.html', '', 'blank'],
+							'LO-02-003(EM-01-003) / 본인인증': [dir2 + 'em/EM_01_003.html', '', 'blank'],
+							'RV-03-001(EM-01-004) / 검진 대상자': [dir2 + 'em/EM_01_004.html', '', 'blank'],
+							'RV-03-002(EM-01-005) / 검진기관': [dir2 + 'em/EM_01_005.html', '', 'blank'],
+							'EM-01-005-01 / 세부 검진항목': [dir2 + 'em/EM_01_005_01.html', '', 'blank'],
+							'EM-01-005-02 / 팝업: 세부 검진항목': [dir2 + 'em/EM_01_005_02.html', '', 'blank'],
+							'EM-01-006-01 / 검진센터 안내(RV-01-006 동일)': [dir2 + 'rv/RV_01_006.html', '', 'blank'],
+							'EM-01-006-02 / 의료 인력 안내(RV-01-007 동일)': [dir2 + 'rv/RV_01_007.html', '', 'blank'],
+							'EM-01-006-03 / 의료장비 안내(RV-01-008 동일)': [dir2 + 'rv/RV_01_008.html', '', 'blank'],
+							'EM-01-007 / 검진 일자': [dir2 + 'em/EM_01_007.html', '', 'blank'],
+							'EM-01-007 / 검진 일자 선택': [dir2 + 'em/EM_01_007_01.html', '', 'blank'],
+							'EM-01-008 / 최종확인': [dir2 + 'em/EM_01_008.html', '', 'blank'],
+							'EM-01-008-01 / 검진 전 유의사항': [dir2 + 'em/EM_01_008_01.html', '', 'blank'],
+							'EM-01-009 (RV-03-006) / 예약 완료': [dir2 + 'em/EM_01_009.html', '', 'blank'],
+						},
+						이용약관: {
+							이용약관: [dir2 + 'terms/TERMS_01_001.html', '', 'blank'],
+							개인정보처리방침: [dir2 + 'terms/TERMS_01_002.html', '', 'blank'],
+							'개인정보처리방침_목록제공 팝업': [dir2 + 'terms/TERMS_01_002_popup.html', '', 'blank'],
+							'개인정보처리방침_검진기관 제공받는자 팝업': [dir2 + 'terms/TERMS_01_002_popup02.html', '', 'blank'],
+						},
+						'이용 가이드': {
+							'로그인 / 로그인 하기': [dir2 + 'guide/GUIDE_01_001_1.html', '', 'blank'],
+							'로그인 / 아이디 찾기': [dir2 + 'guide/GUIDE_01_001_2.html', '', 'blank'],
+							'로그인 / 비밀번호 찾기': [dir2 + 'guide/GUIDE_01_001_3.html', '', 'blank'],
+							메인: [dir2 + 'guide/GUIDE_01_002.html', '', 'blank'],
+							'검진예약 / 검진 대상자': [dir2 + 'guide/GUIDE_01_003_1.html', '', 'blank'],
+							'검진예약 / 검진 예약': [dir2 + 'guide/GUIDE_01_003_2.html', '', 'blank'],
+							'검진예약 / 검진 결과 확인': [dir2 + 'guide/GUIDE_01_003_3.html', '', 'blank'],
+							'검진예약 / 검진기관': [dir2 + 'guide/GUIDE_01_003_4.html', '', 'blank'],
+							'고객센터 / 서비스 문의': [dir2 + 'guide/GUIDE_01_004_1.html', '', 'blank'],
+							'고객센터 / 공지사항': [dir2 + 'guide/GUIDE_01_004_3.html', '', 'blank'],
+							'고객센터 / FAQ': [dir2 + 'guide/GUIDE_01_004_4.html', '', 'blank'],
+						},
+						'기타요청': {
+							'lgDisplay_popup': [dir2 + 'etc02/lgdisplay_popup.html', '', 'blank'],
+						},
+					},
+				};
+				var d = new dTree('d', tree);
+				document.write(d);
+			</script>
+		</div>
+	</div>
+</body>
+
+</html>

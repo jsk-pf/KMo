@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Layout Guide</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scaLabel=no">
+	<!-- guide css -->
+	<link rel="stylesheet" href="../css/base.css">
+
+	<link rel="stylesheet" href="../../css/style.css">
+	<script src="../../lib/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id="wrap" class="coding_guide">
+		<h1 class="h1_guide">MENU</h1>
+		<div class="title-box">
+			<h2 class="h2_guide">공통</h2>
+		</div>
+		<div class="guide_descbox">
+			<h3 class="g-title"></h3>
+			<div class="inner_desc">
+				<ul>
+					<li>
+						현재페이지에 따른 클래스 제어 필요<br>
+						- 메인메뉴 Class 제어 [class="accordion type-open-one"] 클래스 추가/제거 : open <br>
+						- 서브메뉴 Class 제어 [class="gnb-list accordion-body > a"] 클래스 추가/제거 : active
+					</li>
+					<li>
+						gnb 위치 :
+						<p>body</p>
+						<p>&nbsp;┗ #container</p>
+						<p>&nbsp;┗ /#container</p>
+						<p>&nbsp;┗ popup</p>
+						<p>&nbsp;┗ gnb</p>
+						<p>&nbsp;┗ loading</p>
+						<p>/body</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- ===================================== MENU -->
+		<div class="title-box">
+			<h2 class="h2_guide">MENU</h2>
+		</div>
+
+		<!-- [MENU] -->
+		<h3 class="h3_guide">MENU</h3>
+		<div class="d_desc code">
+			<button class="co-btn btn-open-gnb"><span>BUTTON: GNB SHOW</span></button>
+		</div>
+		<!-- [ // MENU] -->
+	</div>
+
+	<!-- ? view -->
+	<!-- hide/show class: show || null -->
+	<div class="co-gnb">
+		<!-- gnb bg -->
+		<div class="gnb-bg"></div>
+
+		<!-- gnb header -->
+		<div class="gnb-header">
+			<h1 class="profile">
+				<a href="javascrpit:void(0);" title="개인설정 페이지 이동">
+					<img src="../../images/ico/ico_gnb_profile.svg" alt="기본 프로필">
+					<span><em>홍길동</em> 님</span>
+				</a>
+			</h1>
+			<button class="btn-close-gnb">
+				<img src="../../images/ico/ico_close_white_34x34.svg" alt="전체메뉴 닫기">
+			</button>
+		</div>
+
+		<!-- gnb body -->
+		<ul class="gnb-body accordion-list">
+			<li>
+				<a href="javascript:void(0);" title="페이지 이동" class="btn-gnb-main">
+					<h2>메인</h2>
+				</a>
+			</li>
+			<li class="accordion type-open-one">
+				<button class="accordion-header" id="gnbMenuHealthCheckSystem" aria-controls="gnb-menu-health-check-system">
+					<h2>건강검진 제도</h2>
+					<img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+				</button>
+				<div class="gnb-list accordion-body" id="gnb-menu-health-check-system" role="region"
+					aria-labelledby="gnbMenuHealthCheckSystem">
+					<!-- [Comment]
+							- 서브메뉴의 현재 페이지 클래스 제어 : active
+						-->
+					<a href="javascript:void(0);" title="페이지 이동" class="active">국가건강 검진 제도 안내</a>
+				</div>
+			</li>
+			<li class="accordion type-open-one">
+				<button class="accordion-header" id="gnbMenuExamination" aria-controls="gnb-menu-examination">
+					<h2>검진 예약/결과 조회</h2>
+					<img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+				</button>
+				<div class="gnb-list accordion-body" id="gnb-menu-examination" role="region"
+					aria-labelledby="gnbMenuExamination">
+					<a href="javascript:void(0);" title="페이지 이동">검진 예약</a>
+					<a href="javascript:void(0);" title="페이지 이동">예약 내역</a>
+					<a href="javascript:void(0);" title="페이지 이동">검진기관</a>
+					<a href="javascript:void(0);" title="페이지 이동">검진 결과</a>
+				</div>
+			</li>
+			<!-- [ mod(230207) ] 직무스트레스 추가-->
+			<li class="accordion type-open-one">
+				<button class="accordion-header" id="gnbMenuJobStress" aria-controls="gnb-menu-jobstress">
+					<h2>직무스트레스</h2>
+					<img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+				</button>
+				<div class="gnb-list accordion-body" id="gnb-menu-jobstress" role="region" aria-labelledby="gnbMenuJobStress">
+					<a href="javascript:void(0);" title="페이지 이동">검사하기</a>
+					<a href="javascript:void(0);" title="페이지 이동">결과보기</a>
+				</div>
+			</li>
+			<li class="accordion type-open-one">
+				<button class="accordion-header" id="gnbMenuResultConsultation" aria-controls="gnb-menu-result-consultation">
+					<h2>결과 상담</h2>
+					<img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+				</button>
+				<div class="gnb-list accordion-body" id="gnb-menu-result-consultation" role="region"
+					aria-labelledby="gnbMenuResultConsultation">
+					<a href="javascript:void(0);" title="페이지 이동">결과 상담하기</a>
+					<a href="javascript:void(0);" title="페이지 이동">상담 이력</a>
+				</div>
+			</li>
+			<li class="accordion type-open-one">
+				<button class="accordion-header" id="gnbMenuHealthInformation" aria-controls="gnb-menu-health-information">
+					<h2>건강 정보</h2>
+					<img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+				</button>
+				<div class="gnb-list accordion-body" id="gnb-menu-health-information" role="region"
+					aria-labelledby="gnbMenuHealthInformation">
+					<a href="javascript:void(0);" title="페이지 이동">검진 항목 정보</a>
+					<a href="javascript:void(0);" title="페이지 이동">영상 건강 정보</a>
+					<a href="javascript:void(0);" title="페이지 이동">질환별 건강 정보</a>
+					<a href="javascript:void(0);" title="페이지 이동">검진센터 탐방</a>
+				</div>
+			</li>
+			<li class="accordion type-open-one">
+				<button class="accordion-header" id="gnbMenuCommunity" aria-controls="gnb-menu-community">
+					<h2>커뮤니티</h2>
+					<img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+				</button>
+				<div class="gnb-list accordion-body" id="gnb-menu-community" role="region" aria-labelledby="gnbMenuCommunity">
+					<a href="javascript:void(0);" title="페이지 이동">이벤트</a>
+					<a href="javascript:void(0);" title="페이지 이동">공지사항</a>
+					<a href="javascript:void(0);" title="페이지 이동">FAQ</a>
+					<a href="javascript:void(0);" title="페이지 이동">서비스 문의</a>
+				</div>
+			</li>
+		</ul>
+
+		<!-- gnb bottom button - logout -->
+		<a href="javascript:void(0);" class="gnb-btn-logout" title="전체 메뉴 닫히고 페이지 이동">
+			<img src="../../images/ico/ico_gnb_logout.svg" alt="로그아웃 아이콘">
+			<span>로그아웃</span>
+		</a>
+	</div>
+	<!-- ? // view -->
+
+	<!-- guide script -->
+	<script src="../js/pretty.js"></script>
+
+	<script defer src="../../js/common.js"></script>
+</body>
+
+</html>

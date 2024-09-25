@@ -1,0 +1,105 @@
+//= Generic
+// + global
+$g-font-size: 16px !default;
+
+// + default
+$default-font-size: 1rem !default;
+$default-font-weight: 300 !default;
+$default-font-color: #1c1c1c !default;
+
+$default-line-height: 1.75rem !default; // 28px
+$default-letter-spacing: -0.0187rem !default; // -0.3px
+
+// + line-height
+$g-line-height-02: 1.5rem !default;
+$g-line-height-03: 1.25rem !default;
+
+// + letter-spacing
+$g-letter-spacing-02: -0.0313rem !default; // -0.5px
+
+// =font
+$font-name: 'NotoSansKR';
+$font-path: '../fonts/';
+
+// + font size
+$fs-body: 1rem !default;
+$fs-body-link: 1rem !default;
+$fs-body-small: 0.75rem !default;
+$fs-heading-title-large: 2rem !default;
+$fs-heading-title-small: 1.5rem !default;
+$fs-title-large: 1.25rem !default;
+$fs-title-small: 1.125rem !default;
+$fs-label-large: 0.875rem !default;
+$fs-label-medium: 0.75rem !default;
+$fs-button: 1rem !default;
+$fs-button-sm: 0.875rem !default;
+$fs-sub-card: 0.75rem !default;
+
+// + color
+$color-main: #253981 !default;
+$color-blue-02: #b9c0d9 !default;
+$color-sub-01: #7e8397 !default;
+$color-sub-02: #2f7ad3 !default;
+$color-sub-03: #ba1d3c !default;
+$color-sub-05: #aacae6 !default;
+$color-orange-1: #ff6859;
+$color-white-100: #fff !default;
+$color-white-80: rgba(255, 255, 255, 0.8) !default;
+$color-white-70: rgba(255, 255, 255, 0.7) !default;
+$color-white-60: rgba(255, 255, 255, 0.6) !default;
+$color-white-40: rgba(255, 255, 255, 0.4) !default;
+$color-white-20: rgba(255, 255, 255, 0.2) !default;
+$color-bg-03: #ecf1f8 !default;
+$color-bg-04: #f6f6f8 !default;
+$color-black-100: #1c1c1c !default;
+$color-black-80: rgba(28, 28, 28, 0.8) !default;
+$color-black-60: rgba(28, 28, 28, 0.6) !default;
+$color-black-50: rgba(28, 28, 28, 0.5) !default;
+$color-black-40: rgba(28, 28, 28, 0.4) !default;
+$color-black-20: rgba(28, 28, 28, 0.2) !default;
+$color-black-10: rgba(28, 28, 28, 0.1) !default;
+$color-black-05: rgba(28, 28, 28, 0.05) !default;
+
+// + image
+$image-path: '../images/';
+$image-ico-path: $image-path + 'ico/';
+$image-ico-sprite01: $image-ico-path + 'ico_sprite_01.png';
+$image-ico-sprite02: $image-ico-path + 'ico_sprite_02.png';
+$image-ico-chkbox-sprite01: $image-ico-path + 'ico_chkbox_sprite_01.png';
+$image-ico-radio-sprite01: $image-ico-path + 'ico_radio_sprite_01.png';
+                                                                   
+// = input
+$input-border-color: $color-black-20;
+$input-border-radius: 1.25rem;
+$input-line-height: $default-line-height;
+$input-letter-spacing: $default-letter-spacing;
+$input-focus-border-color: $color-main;
+$input-in-ico-size: 1.625rem;
+
+// + height
+$height-vh-unit: calc(var(--vh, 1vh) * 100);
+
+// + padding
+$g-content-spacing-w: 1.75rem;
+$g-article-spacing-v-40: 2.5rem;
+$g-article-spacing-v-60: 3.75rem;
+
+// + table
+$table-border-color: $color-black-10;
+
+// + transition
+$transition-1: 0.1s;
+$transition-3: 0.3s;
+$transition-4: 0.4s;
+
+// = media query
+$mq-sm-default-h-spacing: 1.066rem;
+$mq-sm-width: 280px;
+
+// + gnb
+$mq-sm-gnb-h-spacing: 0.8rem;
+
+// + popup
+$mq-sm-popup-h-spacing: 1.333rem;
+
+$thumbnail-radius: 0.75rem;

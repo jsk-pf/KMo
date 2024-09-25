@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-title" content="With KMI">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="refresh" content="300">
+
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="author" content="With KMI">
+    <meta name="title" content="건강검진 서비스 - With KMI">
+    <meta name="description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta name="keywords" content="With KMI, 위드케이엠아이, 비타브릿지, vitabridge, 건강검진, 헬스케어서비스, 헬스케어">
+    <meta name="copyright" content="© 2022. KMI All Rights Reserved.">
+
+    <link rel="canonical" href="{유동 도메인 주소}.withkmi.or.kr">
+
+    <meta property="og:locale" content="ko-KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="With KMI - 건강검진 서비스">
+    <meta property="og:description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta property="og:image" content="../../images/kmi_info_img.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:url" content="https://{유동 도메인 주소}.withkmi.or.kr">
+    <meta property="og:site_name" content="With KMI">
+
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/logo/home-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/logo/home-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../../images/logo/home-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/logo/home-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/logo/home-icon-192x192.png">
+    <link rel="stylesheet" href="../../lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../lib/datepicker/datepicker.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/swiper/js/swiper.min.js"></script>
+    <script defer src="../../js/common.js"></script>
+    <title>건강검진 서비스 - With KMI</title>
+</head>
+
+<body>
+    <div id="container">
+        <button type="button" class="btn-open-popup" data-toggle="modal" data-target="popupExamInstitutionList"><span>OPEN
+                POPUP</span></button>
+
+        <div class="c-full-layer kmi-popup type-full" id="popupExamInstitutionList" role="dialog" aria-labelledby="popupExamInstitutionList_Label01" aria-modal="true" aria-hidden="true">
+            <div class="c-container" tabindex="0">
+                <div class="full-header">
+                    <button class="btn-go-back popup-btn-close">
+                        <span>뒤로 가기</span>
+                    </button>
+                </div>
+
+                <div class="full-body">
+                    <h4 id="popupExamInstitutionList_Label01" class="top-title-box">검진기관 제공받는 자</h4>
+
+                    <div class="cont-box">
+                        <div class="offered-examination">
+                            <ul class="offered-exam-list">
+                                <li>가톨릭관동대학교 국제성모병원</li>
+                                <li>갑을장유병원</li>
+                                <li>강남고려병원</li>
+                                <li>강남베드로병원</li>
+                                <li>강남병원</li>
+                                <li>강남세브란스병원</li>
+                                <li>강남지인병원</li>
+                                <li>강남하트스캔</li>
+                                <li>강동경희대학교병원</li>
+                                <li>강북삼성병원 건강검진센터</li>
+                                <li>강북삼성병원 수원검진센터</li>
+                                <li>강원대학교병원</li>
+                                <li>건국대학교병원</li>
+                                <li>건양대학교병원</li>
+                                <li>건주병원</li>
+                                <li>검단탑병원</li>
+                                <li>경기도의료원 수원병원</li>
+                                <li>경북대학교병원</li>
+                                <li>경산세명병원</li>
+                                <li>경상대학교병원</li>
+                                <li>경희의료원</li>
+                                <li>계명대학교 대구동산병원</li>
+                                <li>고려대학교 구로병원</li>
+                                <li>고신대학교 복음병원</li>
+                                <li>광교윌내과</li>
+                                <li>광동한방병원</li>
+                                <li>광명성애병원</li>
+                                <li>광주보훈병원</li>
+                                <li>광주수완병원</li>
+                                <li>광주은병원</li>
+                                <li>광주현대병원</li>
+                                <li>광주KS병원</li>
+                                <li>광혜병원</li>
+                                <li>구로성심병원</li>
+                                <li>구미강동병원</li>
+                                <li>구트병원</li>
+                                <li>군산의료원</li>
+                                <li>군포지샘병원</li>
+                                <li>그레이스병원</li>
+                                <li>김해복음병원</li>
+                                <li>김해중앙병원</li>
+                                <li>나래의료재단</li>
+                                <li>나사렛국제병원</li>
+                                <li>남양주한양병원</li>
+                                <li>남천병원</li>
+                                <li>뉴고려병원</li>
+                                <li>늘좋은내과의원</li>
+                                <li>다보스병원</li>
+                                <li>다온헬스케어</li>
+                                <li>당진종합병원</li>
+                                <li>대경영상의학과</li>
+                                <li>대구가톨릭대학교병원</li>
+                                <li>대구곽병원</li>
+                                <li>대구보건대학교병원</li>
+                                <li>대구의료원</li>
+                                <li>대구파티마병원</li>
+                                <li>대전온누리수</li>
+                                <li>대한산업보건협회_전북</li>
+                                <li>도봉병원</li>
+                                <li>동군산병원</li>
+                                <li>동수원병원</li>
+                                <li>동아대학교병원</li>
+                                <li>동탄제일병원</li>
+                                <li>동해동인병원</li>
+                                <li>둔산속편한내과</li>
+                                <li>드림내과</li>
+                                <li>든든한병원</li>
+                                <li>리더스헬스케어</li>
+                                <li>맑은샘병원</li>
+                                <li>메디플라워헬스케어</li>
+                                <li>메디피움_동탄</li>
+                                <li>메디피움_분당</li>
+                                <li>메디피움_판교</li>
+                                <li>목포기독병원</li>
+                                <li>목포시의료원</li>
+                                <li>목포중앙병원</li>
+                                <li>목포한국병원</li>
+                                <li>미래의료재단</li>
+                                <li>민병원</li>
+                                <li>바른메디내과</li>
+                                <li>박희붕프리미어검진센터</li>
+                                <li>베스트내과_구로</li>
+                                <li>베스트내과_방배</li>
+                                <li>베스트내과_청담</li>
+                                <li>보바스기념병원</li>
+                                <li>부산미래IFC검진센터</li>
+                                <li>부산의료원</li>
+                                <li>부천세종병원, 부평세림병원</li>
+                                <li>분당서울대학교병원</li>
+                                <li>분당엠디그린병원</li>
+                                <li>분당제생병원</li>
+                                <li>삼성센트럴의원</li>
+                                <li>삼성센트럴의원</li>
+                                <li>삼성창원병원</li>
+                                <li>삼영의료재단 둔산병원</li>
+                                <li>삼육부산병원</li>
+                                <li>삼일병원</li>
+                                <li>삼천포서울병원</li>
+                                <li>삼천포제일병원</li>
+                                <li>상남굿모닝내과병원</li>
+                                <li>서산중앙병원</li>
+                                <li>서울메디케어</li>
+                                <li>서울베스트의료의원</li>
+                                <li>신사우리베스트내과의원</li>
+                                <li>서울부민병원</li>
+                                <li>서울세계로병원</li>
+                                <li>서울속편한내과</li>
+                                <li>서울을지대학교병원</li>
+                                <li>서울중앙의료의원</li>
+                                <li>서울현대병원</li>
+                                <li>서울DMC종합검진센터</li>
+                                <li>성가롤로병원</li>
+                                <li>성모메디칼의원</li>
+                                <li>성모척관병원</li>
+                                <li>성빈센트병원</li>
+                                <li>성애병원</li>
+                                <li>세계로병원</li>
+                                <li>세란병원</li>
+                                <li>세명기독병원</li>
+                                <li>세브란스헬스체크업</li>
+                                <li>세준건강진단센터</li>
+                                <li>소중한메디케어</li>
+                                <li>속초보광병원</li>
+                                <li>송파서울병원</li>
+                                <li>순천한국병원</li>
+                                <li>순천향대학교 부천병원</li>
+                                <li>순천향대학교 서울병원</li>
+                                <li>순천향대학교 천안병원</li>
+                                <li>시흥센트럴병원</li>
+                                <li>아주대학교병원</li>
+                                <li>아폴로헬스케어</li>
+                                <li>안성성모병원</li>
+                                <li>안중백병원</li>
+                                <li>양산제일병원</li>
+                                <li>에스중앙병원</li>
+                                <li>에이치요양병원</li>
+                                <li>에이치플러스 양지병원</li>
+                                <li>여수전남병원</li>
+                                <li>여천전남병원</li>
+                                <li>영남대학교병원</li>
+                                <li>영도병원</li>
+                                <li>온종합병원건강검진서면센터</li>
+                                <li>우리원헬스케어</li>
+                                <li>우석대학교부속한방병원</li>
+                                <li>울들병원</li>
+                                <li>울산굿모닝병원</li>
+                                <li>울산동강병원</li>
+                                <li>울산병원</li>
+                                <li>울산시티병원</li>
+                                <li>울산제일병원</li>
+                                <li>울산중앙병원</li>
+                                <li>원광대학교 산본병원</li>
+                                <li>원광대학교병원</li>
+                                <li>원주성지병원</li>
+                                <li>원주의료원</li>
+                                <li>유성선병원</li>
+                                <li>의정부백병원</li>
+                                <li>이대목동병원</li>
+                                <li>이대서울병원</li>
+                                <li>이샘병원</li>
+                                <li>이천금강병원</li>
+                                <li>인제대학교</li>
+                                <li>부산백병원</li>
+                                <li>인제대학교 해운대백병원</li>
+                                <li>인천성모병원</li>
+                                <li>인천성민병원</li>
+                                <li>인천세종병원</li>
+                                <li>인터케어 건강검진센터</li>
+                                <li>인하대학교병원</li>
+                                <li>전주내과영상의학과</li>
+                                <li>전주대자인병원</li>
+                                <li>전주미래내과</li>
+                                <li>전주병원</li>
+                                <li>전주속편한내과</li>
+                                <li>전주수병원</li>
+                                <li>전주신기독병원</li>
+                                <li>전주열린병원</li>
+                                <li>전주예수병원</li>
+                                <li>제주대학교병원</li>
+                                <li>제주한라병원</li>
+                                <li>좋은강안병원</li>
+                                <li>좋은문화병원</li>
+                                <li>좋은삼선병원</li>
+                                <li>좋은삼정병원</li>
+                                <li>중앙대학교병원</li>
+                                <li>진주고려병원</li>
+                                <li>진주반도병원</li>
+                                <li>진주한일병원</li>
+                                <li>진헬스건강검진센터</li>
+                                <li>차움검진센터_삼성분원</li>
+                                <li>참편안한현진해내과</li>
+                                <li>창원세종내과</li>
+                                <li>창원파티마병원</li>
+                                <li>천안충무병원</li>
+                                <li>천주성삼병원</li>
+                                <li>첨단종합병원</li>
+                                <li>청담차움</li>
+                                <li>청주성모병원</li>
+                                <li>청주의료원</li>
+                                <li>청주푸른병원</li>
+                                <li>청주하나병원</li>
+                                <li>청주효성병원</li>
+                                <li>춘천인성병원</li>
+                                <li>춘해병원</li>
+                                <li>충주중앙병원</li>
+                                <li>칠곡가톨릭대학교병원</li>
+                                <li>평택굿모닝병원</li>
+                                <li>평택박애병원</li>
+                                <li>평택성모병원</li>
+                                <li>포항성모병원</li>
+                                <li>포항좋은선린병원</li>
+                                <li>필립메디컬_분당센터</li>
+                                <li>필립메디컬_서울센터</li>
+                                <li>하나로의료재단_강남</li>
+                                <li>하나로의료재단_종로</li>
+                                <li>한국건강관리협회 강원도지부</li>
+                                <li>한국건강관리협회 경기도지부</li>
+                                <li>한국건강관리협회 경상남도지부</li>
+                                <li>한국건강관리협회 경상북도지부</li>
+                                <li>한국건강관리협회 광주전남지부</li>
+                                <li>한국건강관리협회 대구광역지부</li>
+                                <li>한국건강관리협회 부산광역지부</li>
+                                <li>한국건강관리협회 서울강남지부</li>
+                                <li>한국건강관리협회 서울동부지부</li>
+                                <li>한국건강관리협회 서울서부지부</li>
+                                <li>한국건강관리협회 울산광역지부</li>
+                                <li>한국건강관리협회 인천광역지부</li>
+                                <li>한국건강관리협회 전라북도지부</li>
+                                <li>한국건강관리협회 제주자치지부</li>
+                                <li>한국건강관리협회 충북세종지부</li>
+                                <li>한국건강관리협회 충청남도지부</li>
+                                <li>한림대학교 강동성심병원</li>
+                                <li>한림대학교 동탄성심병원</li>
+                                <li>한림대학교 성심병원</li>
+                                <li>한림대학교 춘천성심병원</li>
+                                <li>창원한마음병원</li>
+                                <li>한미메디컬센터</li>
+                                <li>한빛영상의학센터</li>
+                                <li>한신메디피아</li>
+                                <li>한일병원</li>
+                                <li>현대유비스병원</li>
+                                <li>혜민병원</li>
+                                <li>호원병원</li>
+                                <li>홍익병원</li>
+                                <li>BHS한서병원</li>
+                                <li>CMI중앙의료재단</li>
+                                <li>GC녹십자아이메드_강남센터</li>
+                                <li>GC녹십자아이메드_강북센터</li>
+                                <li>GSH광양서울병원</li>
+                                <li>HM병원</li>
+                                <li>JH제일병원</li>
+                                <li>영주진단방사선과의원</li>
+                                <li>대동병원</li>
+                                <li>오산한국병원</li>
+                                <li>경산중앙병원</li>
+                                <li>정읍아산병원</li>
+                                <li>남원의료원</li>
+                                <li>에이치메디컬의원</li>
+                                <li>삼척의료원</li>
+                                <li>하남SD병원</li>
+                                <li>세종여주병원</li>
+                                <li>일산차병원</li>
+                                <li>아산충무병원</li>
+                                <li>세명영상의학과의원</li>
+                                <li>순천향대학교 구미병원</li>
+                                <li>가톨릭대학교 은평성모병원</li>
+                                <li>화순성심병원</li>
+                                <li>고창병원</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

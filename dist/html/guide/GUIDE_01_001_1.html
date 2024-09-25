@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-title" content="With KMI">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="refresh" content="300">
+
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="author" content="With KMI">
+    <meta name="title" content="건강검진 서비스 - With KMI">
+    <meta name="description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta name="keywords" content="With KMI, 위드케이엠아이, 비타브릿지, vitabridge, 건강검진, 헬스케어서비스, 헬스케어">
+    <meta name="copyright" content="© 2022. KMI All Rights Reserved.">
+
+    <link rel="canonical" href="{유동 도메인 주소}.withkmi.or.kr">
+
+    <meta property="og:locale" content="ko-KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="With KMI - 건강검진 서비스">
+    <meta property="og:description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta property="og:image" content="../../images/kmi_info_img.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:url" content="https://{유동 도메인 주소}.withkmi.or.kr">
+    <meta property="og:site_name" content="With KMI">
+
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/logo/home-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/logo/home-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../../images/logo/home-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/logo/home-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/logo/home-icon-192x192.png">
+    <link rel="stylesheet" href="../../lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../lib/datepicker/datepicker.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/swiper/js/swiper.min.js"></script>
+    <script defer src="../../js/common.js"></script>
+    <title>건강검진 서비스 - With KMI</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="flex-wrap">
+            <!-- Header -->
+            <header class="header co-header">
+                <!-- 기업 로고에 따른 alt값 부여 -->
+                <h1 class="logo">
+                    <a href="../vgt/vgt_01_001.html"><img src="../../images/dummy/dummy_logo02.png" alt="LG화학 로고"></a>
+                </h1>
+                <!-- 컬러로고: type-color -->
+                <!-- <h1 class="logo type-color">
+    <a href="javascrpit:void(0);"><img src="../../images/dummy/dummy_logo02.png" alt="LG화학 로고"></a>
+  </h1> -->
+                <div class="menu">
+                    <button type="button" class="btn-open-gnb">
+                        <span class="skip">전체 메뉴 열기</span>
+                        <img src="../../images/ico/ico_gnb_hamberger.svg" alt="전체메뉴 아이콘">
+                    </button>
+                </div>
+            </header>
+            <div class="flex-container">
+                <div class="guide-block">
+                    <h1 class="tit type-floating">이용 가이드</h1>
+
+                    <!--
+              * 탭 터치 시 페이지 이동되는 case
+              * 탭의 aria-controls와 panel의 aria-labelledby가 동일해야 됨
+              * 스크롤 시 floating 되는 tab의 경우 div.tab-floating 필요
+            -->
+                    <div class="tab-floating">
+                        <ul class="c-tab type-slide type-move" role="tablist" data-tablist="guide">
+                            <li role="tab" aria-controls="guide-login-tab-panel">
+                                <a href="javascript:void(0);" title="페이지 이동" class="tab active">로그인</a>
+                            </li>
+                            <li role="tab" aria-controls="guide-main-tab-panel">
+                                <a href="javascript:void(0);" title="페이지 이동" class="tab">메인</a>
+                            </li>
+                            <li role="tab" aria-controls="guide-reservation-tab-panel">
+                                <a href="javascript:void(0);" title="페이지 이동" class="tab">검진예약</a>
+                            </li>
+                            <li role="tab" aria-controls="guide-service-tab-panel">
+                                <a href="javascript:void(0);" title="페이지 이동" class="tab">고객센터</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--
+              * 전체 panel
+              * tab-panel show class: show || null
+              * 탭 터치 후 새로고침 된 후: panel의 aria-labelledby가 탭의 active class를 가진 aria-controls로 바뀜
+            -->
+                    <div class="tab-panel show" role="tabpanel" aria-labelledby="guide-login-tab-panel" data-panelname="guide">
+
+                        <div class="c-select type-shadow">
+                            <select title="로그인 하기">
+                                <option selected>로그인 하기</option>
+                                <option>아이디 찾기</option>
+                                <option>비밀번호 찾기</option>
+                            </select>
+                        </div>
+
+                        <h2>일반 회원 로그인 하기</h2>
+                        <h3>아이디/비밀번호 입력</h3>
+                        <p>회원 가입 시 등록한 아이디 비밀번호를 입력 시 로그인 버튼이 활성화 됩니다.<br>활성화 된 버튼을 선택하면 회원님의 아이디로 로그인 되며 KMI 서비스를 원활히 이용 가능합니다.
+                        </p>
+                        <img src="../../images/kmi_guide/login/do_login/img_guide_login_1.png" alt="아이디기억하기가 체크 안 된 아이디와 비밀번호 입력하는 로그인화면">
+
+                        <h3>아이디 저장</h3>
+                        <p>아이디 저장 항목 선택 시 체크박스가 활성화 되며 다음에 로그인할 시 아이디가 저장된 상태로 노출됩니다.</p>
+                        <img src="../../images/kmi_guide/login/do_login/img_guide_login_2.png" alt="아이디기억하기가 체크 된 아이디와 비밀번호 입력하는 로그인화면">
+
+                        <h2>사번으로 로그인 하기(최초 로그인)</h2>
+                        <h3><span>STEP 1.</span> 사번 / 비밀번호 입력</h3>
+                        <p>임직원 분의 사번과 생년월일을 입력 후 로그인 가능합니다.<br>로그인 버튼을 클릭 하시면 다음 절차로 이동 합니다.</p>
+                        <img src="../../images/kmi_guide/login/do_login/img_guide_login_3.png" alt="아이디기억하기가 체크 안 된 사번과 비밀번호 입력하는 로그인화면">
+
+                        <h3><span>STEP 2.</span> 첫 방문 임직원 로그인</h3>
+                        <p>첫 방문 회원이 처음 로그인을 시도할 경우에는 약관동의 절차를 진행 하셔야 합니다.<br>필수 약관 동의 후 본인 인증하기 버튼을 선택 하면 다음 절차로 이동 합니다.</p>
+                        <img src="../../images/kmi_guide/login/do_login/img_guide_login_4.png" alt="회원가입 및 확인1단계, 이용약관에 동의를 요구하는 화면">
+
+                        <h3><span>STEP 3.</span> 본인 인증</h3>
+                        <p>선택에서 인증을 원하시는 방법을 선택하시고, 인증받기 버튼을 눌러 인증을 진행해 주세요.</p>
+                        <img src="../../images/kmi_guide/login/do_login/img_guide_login_5.png" alt="회원가입 및 확인2단계, 본인인증을 위해 휴대폰과 아이핀중 하나를 선택하는 화면">
+
+                        <h3><span>STEP 4.</span> 비밀번호 재설정</h3>
+                        <p>새 비밀번호를 입력 후 새 비밀번호 확인을 입력해 주세요.</p>
+                        <img src="../../images/kmi_guide/login/do_login/img_guide_login_6.png" alt="회원가입 및 확인3단계, 비밀번호를 재설정하는 화면">
+
+                        <h3><span>STEP 5.</span> 개인정보 입력</h3>
+                        <p>본인의 개인 정보를 입력 후 KMI 서비스를 이용하실 수 있습니다.</p>
+                        <img src="../../images/kmi_guide/login/do_login/img_guide_login_7.png" alt="회원가입 및 확인4단계, 개인정보를 입력하는 화면">
+
+                        <h2>아이디로 로그인하기(최초 로그인)</h2>
+                        <h3><span>STEP 1.</span> 아이디 / 비밀번호 입력</h3>
+                        <p>아이디에 임직원 분의 휴대폰 번호와 비밀번호에 생년월일을 입력 후 로그인 가능합니다.<br>로그인 버튼을 클릭 하시면 다음 절차로 이동 합니다.</p>
+                        <img src="../../images/kmi_guide/login/do_login/img_guide_login_8.png" alt="아이디기억하기가 체크 된 아이디와 비밀번호 입력하는 로그인화면">
+
+                        <h3><span>STEP 2.</span> 첫 방문 임직원 로그인</h3>
+                        <p>첫 방문 회원이 처음 로그인을 시도할 경우에는 약관동의 절차를 진행 하셔야 합니다.<br>필수 약관 동의 후 본인 인증하기 버튼을 선택 하면 다음 절차로 이동 합니다.</p>
+                        <img src="../../images/kmi_guide/login/do_login/img_guide_login_9.png" alt="회원가입 및 확인1단계, 이용약관에 동의를 요구하는 화면">
+
+                        <h3><span>STEP 3.</span> 본인 인증</h3>
+                        <p>선택에서 인증을 원하시는 방법을 선택하시고, 인증받기 버튼을 눌러 인증을 진행해 주세요.</p>
+                        <img src="../../images/kmi_guide/login/do_login/img_guide_login_10.png" alt="회원가입 및 확인2단계, 본인인증을 위해 휴대폰과 아이핀중 하나를 선택하는 화면">
+
+                        <h3><span>STEP 4.</span> 아이디 및 비밀번호 재설정</h3>
+                        <p>새 비밀번호를 입력 후 새 비밀번호 확인을 입력해 주세요.</p>
+                        <img src="../../images/kmi_guide/login/do_login/img_guide_login_11.png" alt="회원가입 및 확인3단계, 아이디 중복 확인 후  비밀번호를 재설정하는 화면">
+
+                        <h3><span>STEP 5.</span> 개인정보 입력</h3>
+                        <p>본인의 개인 정보를 입력 후 KMI 서비스를 이용하실 수 있습니다.</p>
+                        <img src="../../images/kmi_guide/login/do_login/img_guide_login_12.png" alt="회원가입 및 확인4단계, 개인정보를 입력하는 화면">
+
+                    </div>
+
+                </div>
+
+                <button class="btn-move-top"><span class="skip">터치시최상단으로이동</span></button>
+            </div>
+
+            <!-- footer -->
+            <footer class="footer type-default">
+                <a href="javascript:void(0);" title="페이지이동" class="img-logo"><img src="../../images/logo/footer_logo_01.svg" alt="KMI 재단법인 한국의학연구소 KOREA MEDICAL INSTITUTE"></a>
+
+                <!-- [ mod(230130) ] -->
+                <div class="btn-list type-footer"> <a href="javascript:void(0);" title="페이지 이동" class="personal-policy">개인정보처리방침</a>
+                    <a href="javascript:void(0);" title="페이지 이동">이용약관</a>
+                    <a href="javascript:void(0);" title="페이지 이동">이용가이드</a>
+                </div>
+
+                <div class="footer-txt">
+                    상호 : 재단법인 한국의학연구소 ㅣ 대표자 성명 : 이상호 ㅣ 본원 : (우)03173 서울시 종로구 세종대로 23길 54(당주동, 세종빌딩) ㅣ 사업자등록번호 : 130-82-06960 ㅣ 서비스 운영사 :
+                    ㈜옴니케어 ㅣ 전자우편주소 : <a href="mailto:webmaster@kmi.or.kr">webmaster@kmi.or.kr</a> ㅣ 고객문의 : <a href="tel:1533-0505">1533-0505</a> / 평일 : 오전 07:00 ~
+                    오후 18:00
+                    (토요일 오전 07:00 ~ 오후 12:30)
+                    (일/공휴일 휴무)
+                </div>
+
+                <div class="copyright">© 2022. <strong>KMI</strong> All Rights Reserved.</div>
+                <!-- [ // mod(230130) ] -->
+            </footer>
+        </div>
+    </div>
+    <!-- GNB -->
+    <!-- // GNB -->
+</body>
+
+</html>

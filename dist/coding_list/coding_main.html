@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>KMI MOBILE</title>
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+	<section class="section main-frame">
+		<h2 class="main-title">작업 전달 사항</h2>
+		<div class="table-wrapper">
+			<div class="update-date"><em class="fc-blue">(update: 22.10.11)</em></div>
+			<table class="fl-table">
+				<colgroup>
+					<col style="width: 20%">
+					<col style="width: 70%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>구분</th>
+						<th>내용</th>
+						<th>작성일시</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>공통</th>
+						<td>
+							<ul class="cont-list">
+								<li>
+									<em class="fc-red">※ UI개발 원본 파일 수정 X <br>- github push 금지 </em>
+								</li>
+								<li>
+									<p>수정이 필요한 파일(*.js, *.html)의 경우 UI개발 원본 소스와 개발용 소스를 별도로 관리하여 코드 수정</p>
+								</li>
+							</ul>
+						</td>
+						<td class="date">22.10.06</td>
+					</tr>
+					<tr>
+						<th>작업 환경</th>
+						<td>
+							<ul class="cont-list">
+								<li>문서 및 버전 : HTML5, SCSS, ES6~, jQuery</li>
+								<li>인코딩 : UTF-8</li>
+								<li>Build System: Gulp</li>
+								<li>IE 호환성 대응 완료 <br>- SCSS → CSS/CSS3 컴파일 (Gulp) <br>- ES6 → ES5 컴파일 (Babel) </li>
+								<li>웹 접근성 : Markup 부분 대응</li>
+								<li> 퍼블리싱 소스 기준 : iOS, Android 호환 테스트 완료 </li>
+							</ul>
+						</td>
+						<td class="date">22.10.06</td>
+					</tr>
+					<tr>
+						<th>GNB</th>
+						<td>
+							<ul class="cont-list">
+								<li>Guide 소스 활용 (<a href="./guide/guide_Menu.html"
+										style="color: blue; text-decoration: underline; margin-left: 5px">guide/guide_Menu.html</a>)</li>
+							</ul>
+						</td>
+						<td class="date">22.10.11</td>
+					</tr>
+					<tr>
+						<th>Form</th>
+						<td>
+							<ul class="cont-list">
+								<li>Guide 소스 확인 필수 :<a href="./guide/guide_form.html"
+										style="color: blue; text-decoration: underline; margin-left: 5px">guide/guide_form.html</a></li>
+								<li>유효성 체크 안내 문구 : guide_form.html 참고</li>
+							</ul>
+						</td>
+						<td class="date">22.10.06</td>
+					</tr>
+					<tr>
+						<th>Popup</th>
+						<td>
+							<ul class="cont-list">
+								<li>Guide 소스 확인 필수 :<a href="./guide/guide_popup.html"
+										style="color: blue; text-decoration: underline; margin-left: 5px">guide/guide_popup.html</a></li>
+								<li>경고문 등 팝업 소스 참고</li>
+							</ul>
+						</td>
+						<td class="date">22.10.06</td>
+					</tr>
+					<tr>
+						<th>수정 코드 전달</th>
+						<td>
+							<ul class="cont-list">
+								<li>git log 확인하여 코드 수정 부분 일괄 반영</li>
+								<li>퍼블리싱과 관련한 불필요한 comment 주석은 개발 소스에서 삭제</li>
+							</ul>
+						</td>
+						<td class="date">22.10.06</td>
+					</tr>
+					<tr>
+						<th>수정/추가 코드 전달</th>
+						<td>
+							<ul class="cont-list">
+								<li>
+									<div>최신 파일 다운로드 시 <span class="fc-red">전체 파일 </span> 일괄 덮어쓰기</div>
+								</li>
+								<li>Source Diff 후 Markup Source 일괄 반영</li>
+								<li>
+									<div> 소스 내 전달사항 및 수정 부분 주석 표기방식 <div class="exam">ex) type1</div>
+										<span class="code">&lt;!-- [ mod(220602) ] --&gt;</span>
+										<div class="exam">ex) type2</div>
+										<div class="code" style="display: inline-block"> &lt;!-- [ mod(220602) ] <br>
+											<span class="space"></span>- 수정사항] <br>--&gt;
+										</div>
+									</div>
+								</li>
+								<li>퍼블리싱 소스 내 <em class="fc-red" style="padding-left:5px; padding-right:5px;"> Guide comment 주석은 개발 소스에서
+										삭제</em>후 작업 요망</li>
+								<li style="display:block"> 팝업 등 일부 소스 응용 시 <u class="fc-red">소스 파악 후 해당 부분의 소스만 Copy&Paste 사용 (html 소스
+										전체 Copy X)</u><br>
+									<em class="fc-red">* html, title 등 마크업 소스 중복 선언 절대 사용 X (Web Standard Error)</em>
+								</li>
+							</ul>
+						</td>
+						<td class="date">22.10.06</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+</body>
+
+</html>

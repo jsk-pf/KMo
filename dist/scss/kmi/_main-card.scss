@@ -1,0 +1,111 @@
+.co-main-card {
+  position: relative;
+  width: 100%;
+  height: 12.25em;
+  border-radius: 1.25rem;
+  background: linear-gradient(76.21deg, #ffffff -39.15%, $color-sub-02 12.07%, $color-main 99.51%);
+  padding: 1.25rem;
+  overflow: hidden;
+  box-sizing: border-box;
+  img {
+    position: absolute;
+    opacity: 0.35;
+    filter: drop-shadow(0 0.25rem 0.625rem rgba(0, 0, 0, 0.25));
+    // 검진결과보기 KMI 이미지
+    &.img-view-test-results {
+      top: -2.125rem;
+      right: -0.5rem;
+      width: auto;
+      height: 10.5rem;
+    }
+    // 검진 결과 등록 미신청
+    &.img-non-registration {
+      top: -2rem;
+      right: -0.5rem;
+      width: 10rem;
+      height: auto;
+    }
+    // 검진 결과 전달
+    &.img-delivery-results {
+      top: -2.125rem;
+      right: -0.5rem;
+      width: 10rem;
+      height: auto;
+    }
+    // 예약 대기
+    &.img-waiting-reservation {
+      top: -2.5rem;
+      right: -0.75rem;
+      width: 10.625rem;
+      height: auto;
+    }
+    // 예약 하기
+    &.img-make-reservation {
+      top: -2.5rem;
+      right: -0.75rem;
+      width: auto;
+      height: 10.5rem;
+    }
+  }
+  span,
+  dl,
+  dt,
+  dd,
+  p.location {
+    position: relative;
+    color: #fff;
+  }
+  span,
+  p.location {
+    @include coTxtLabelMedium;
+  }
+  span {
+    display: inline-block;
+    margin-top: -0.125rem;
+  }
+  dl {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 0.25rem;
+    dt {
+      &.name {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+      }
+    }
+    dd {
+      &.date {
+        @include coTxtLabelLarge;
+        color: $color-white-80;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+  a.result,
+  p.result {
+    position: relative;
+    background: $color-white-70;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.25);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3rem;
+    margin-top: 1.75rem;
+    span {
+      @include coTxtBtn;
+      color: $color-main;
+    }
+  }
+  .co-tooltip {
+    &.type-left-txt {
+      position: absolute;
+      right: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+}

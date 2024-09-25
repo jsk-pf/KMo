@@ -1,0 +1,235 @@
+.terms {
+  margin-top: 2.5rem;
+  .c-chkbox {
+    display: block;
+    input[type='checkbox'] {
+      & + label {
+        display: inline-flex;
+      }
+    }
+  }
+  &.type-basic {
+    p {
+      @include coTxtLabelMedium;
+      color: $color-black-40;
+      margin-top: 0.75rem;
+    }
+  }
+  &.type-box {
+    .terms-box {
+      position: relative;
+      padding: {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      background-color: $color-black-05;
+      width: 100%;
+      max-height: 7.5rem;
+      border-radius: 1.25rem;
+      border: 1px solid $color-black-20;
+      margin-top: 0.75rem;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      .inner {
+        position: relative;
+        max-height: 7.5rem;
+        overflow-y: auto;
+        padding: 0.75rem 1.25rem;
+        background-color: transparent;
+        overflow-y: auto;
+        .terms-row {
+          @include coTxtLabelMedium;
+          color: $color-black-60;
+
+          h2,
+          h3,
+          h4,
+          p,
+          span,
+          .terms-ord-list li {
+            @include coTxtLabelMedium;
+            margin-top: 0;
+          }
+          .co-list-card {
+            > li {
+              @include coTxtLabelMedium;
+              &:before {
+                width: 0.75rem;
+                height: 0.75rem;
+                font-size: 0.625rem;
+                line-height: 0.75rem;
+                margin-right: 0.125rem;
+              }
+            }
+          }
+        }
+        &::-webkit-scrollbar,
+        &::-webkit-scrollbar-thumb {
+          display: none;
+        }
+      }
+      .terms_scroll {
+        position: absolute;
+        right: 0.25rem;
+        top: 0.75rem;
+        width: 0.25rem;
+        height: calc(100% - 1.5rem);
+        background-color: transparent;
+        opacity: 0;
+        overflow: hidden;
+        transition: opacity $transition-1 ease-in-out;
+        span {
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 0.25rem;
+          height: 2.5rem;
+          background-color: $color-black-10;
+          border-radius: 1000px;
+        }
+        &.show {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .terms-box {
+    & + .chk-list {
+      margin-top: 0.75rem;
+    }
+  }
+  .chk-list {
+    > .c-chkbox {
+      & ~ .c-chkbox {
+        margin-top: 0.75rem;
+      }
+    }
+  }
+  .co-terms-tit {
+    @include coTxtLabelLarge;
+    color: $color-black-40;
+    & + .terms-box {
+      margin-top: 0.75rem;
+    }
+  }
+}
+
+.terms-block {
+  .c-terms-section {
+    > h1 {
+      @include coTxtTitleHeadingSmall;
+    }
+    & ~ .c-terms-section {
+      margin-top: 0;
+    }
+    h1,
+    h2,
+    h3 {
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+}
+
+.terms-box {
+  .c-terms-section {
+    h1,
+    h2,
+    h3,
+    p,
+    span,
+    li {
+      color: $color-black-60;
+    }
+  }
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: #e9e9e9;
+    margin: 1rem 0;
+  }
+  b {
+    color: #494949;
+    margin-bottom: 0.25rem;
+    font-weight: 400;
+  }
+}
+
+.rv-block {
+  .c-terms-section {
+    h1,
+    h2,
+    h3 {
+      padding-top: 0;
+    }
+  }
+}
+
+.co-terms-tbl {
+  caption {
+    @include skipTxt;
+  }
+  margin: {
+    top: 1rem;
+    bottom: 1rem;
+  }
+  thead {
+    th {
+      padding: 4px;
+      @include coTxtLabelMedium;
+      border-top: 1px solid #e9e9e9;
+      color: #494949;
+      text-align: center;
+    }
+  }
+  tbody {
+    border-top: 2px solid #d2d2d1;
+    th,
+    td {
+      padding: 4px 0;
+      border-bottom: 1px solid #e9e9e9;
+      @include coTxtLabelMedium;
+      color: $color-black-60;
+    }
+    th {
+      &[scope='col'] {
+        color: $color-black-80;
+      }
+      text-align: center;
+    }
+  }
+}
+
+.terms-field {
+  .c-terms-section {
+    h2 {
+      @include coTxtTitleLarge;
+    }
+    h2 {
+      & ~ h3 {
+        margin-top: 20px;
+      }
+    }
+    h2,
+    h3 {
+      margin-top: 2.5rem;
+    }
+    // h3 {
+    //   margin-top: 1.25rem;
+    // }
+    & ~ .c-terms-section {
+      margin-top: 3.75rem;
+    }
+  }
+  .terms-ord-list {
+    & + h3 {
+      margin-top: 2.5rem;
+    }
+  }
+  .terms-ord-list {
+    margin-top: 0.25rem;
+  }
+}

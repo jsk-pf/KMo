@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-title" content="With KMI">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="refresh" content="300">
+
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="author" content="With KMI">
+    <meta name="title" content="건강검진 서비스 - With KMI">
+    <meta name="description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta name="keywords" content="With KMI, 위드케이엠아이, 비타브릿지, vitabridge, 건강검진, 헬스케어서비스, 헬스케어">
+    <meta name="copyright" content="© 2022. KMI All Rights Reserved.">
+
+    <link rel="canonical" href="{유동 도메인 주소}.withkmi.or.kr">
+
+    <meta property="og:locale" content="ko-KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="With KMI - 건강검진 서비스">
+    <meta property="og:description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta property="og:image" content="../../images/kmi_info_img.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:url" content="https://{유동 도메인 주소}.withkmi.or.kr">
+    <meta property="og:site_name" content="With KMI">
+
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/logo/home-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/logo/home-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../../images/logo/home-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/logo/home-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/logo/home-icon-192x192.png">
+    <link rel="stylesheet" href="../../lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../lib/datepicker/datepicker.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/swiper/js/swiper.min.js"></script>
+    <script defer src="../../js/common.js"></script>
+    <title>건강검진 서비스 - With KMI</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="flex-wrap">
+            <div class="flex-container">
+                <a href="javascript:void(0);" role="button" title="팝업열림" class="btn-open-popup" data-toggle="modal" data-target="popupInstitutionDetails">팝업 확인용 버튼</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- full popup - 검진기관 상세 - 의료 인력 안내 -->
+    <div class="c-full-layer kmi-popup type-full popup-institution-details" id="popupInstitutionDetails" role="dialog" aria-labelledby="popupInstitutionDetails_Label" aria-modal="true" aria-hidden="true">
+        <div class="c-container" tabindex="0">
+            <div class="full-header">
+                <button class="btn-go-back popup-btn-close">
+                    <span>뒤로 가기</span>
+                </button>
+            </div>
+
+            <div class="full-body"><!-- + 의료장비 안내 -->
+                <h1 id="popupInstitutionDetails_Label" class="top-title-box type-sm">한국의학연구소 광주 검진센터</h1>
+
+                <div class="cont-box equip-detail-article">
+                    <!--
+			* 탭 터치 시 panel이 바뀌는 case
+			* 탭의 aria-controls와 panel의 aria-labelledby가 동일해야 됨
+		-->
+                    <ul class="c-tab type-slide type-move" role="tablist" data-tablist="instDetTab">
+                        <li role="tab" aria-controls="institution-details-center">
+                            <a href="javascript:void(0);" title="페이지 이동" class="tab">검진센터 안내</a>
+                        </li>
+                        <li role="tab" aria-controls="institution-details-manpower">
+                            <a href="javascript:void(0);" title="페이지 이동" class="tab">의료 인력 안내</a>
+                        </li>
+                        <li role="tab" aria-controls="institution-details-equipment">
+                            <a href="javascript:void(0);" title="페이지 이동" class="tab active">의료장비 안내</a>
+                        </li>
+                    </ul>
+
+                    <!--
+			* 의료 인력 안내 panel
+			* tab-panel show class: show || null
+		-->
+                    <div class="tab-panel show" role="tabpanel" aria-labelledby="institution-details-equipment" data-panelname="instDetTab">
+                        <div class="accordion-list">
+                            <div class="accordion type-equipment type-open-one">
+                                <button class="accordion-header" id="instequipment1" aria-controls="instequipment-1">
+                                    <div class="thumbnail">
+                                        <img src="../../images/dummy/medical_institution/dummy_institution_thumb_01.jpg" alt="">
+                                    </div>
+                                    <ul>
+                                        <li>PET-CT</li>
+                                        <li class="info-txt">
+                                            <div>
+                                                PET은 우리 몸의 대사 변화를 직접 확인할 수 있는 예민한 검사 방법이지만 병소의 정확한 위치는 알기 어렵습니다. 이 단점을 극복하기 위하여 PET의 장점과 CT의 장점을 보완한
+                                                PET-CT는 구조적으로 변화를 함께 관찰함으로써 검사의 정확성이 향상되고, 검사시간이 단축되었습니다. 전신의 조기암 발견 및
+                                                암의 전이 여부에 대한 판별, 병소의 위치를 정확하고 빠르게 알아낼 수 있는 첨단 정밀진단 장비입니다.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </button>
+                                <div class="accordion-body" id="instequipment-1" role="region" aria-labelledby="instequipment1"></div>
+                            </div>
+
+                            <div class="accordion type-equipment type-open-one">
+                                <button class="accordion-header" id="instequipment2" aria-controls="instequipment-2">
+                                    <div class="thumbnail">
+                                        <img src="../../images/dummy/medical_institution/dummy_institution_thumb_02.jpg" alt="">
+                                    </div>
+                                    <ul>
+                                        <li>MRI</li>
+                                        <li class="info-txt">
+                                            <div>MRI는 자기공명 원리를 임상진단에 적용한 장비로 기존의 CT로는 자기공명 원리를 임상진단에 적용한 장비로 기존의 CT로는</div>
+                                        </li>
+                                    </ul>
+                                </button>
+                                <div class="accordion-body" id="instequipment-2" role="region" aria-labelledby="instequipment2">
+                                    <h2 class="box-tit">장비 명</h2>
+                                    <div class="box type6">MRI</div>
+
+                                    <h2 class="box-tit">도입 연도</h2>
+                                    <div class="box type6">2010</div>
+
+                                    <h2 class="box-tit">모델명</h2>
+                                    <div class="box type6">Magnetom Essenaa</div>
+
+                                    <h2 class="box-tit">보유수</h2>
+                                    <div class="box type6">1</div>
+
+                                    <h2 class="box-tit">장비 소개</h2>
+                                    <div class="box type6">
+                                        MRI는 자기공명 원리를 임상진단에 적용한 장비로 기존의 CT로는 불가능하였던 전신 촬영이 가능하고, 인체에 무해하며 뛰어난 해상도를 가지고 있습니다. MRI는 신경이나 근육, 관절 등의 검사에
+                                        우수합니다.<br>수술하지 않고 인체 내부를 자세히 관찰할 수 있는 고선명 영상 기법으로서 어떠한 통증도
+                                        없으며, 방사선을 이용하지 않아 인체에 부작용이 전혀 없습니다.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion type-equipment type-open-one">
+                                <button class="accordion-header" id="instequipment3" aria-controls="instequipment-3">
+                                    <div class="thumbnail">
+                                        <img src="../../images/dummy/medical_institution/dummy_institution_thumb_03.jpg" alt="">
+                                    </div>
+                                    <ul>
+                                        <li>CT</li>
+                                        <li class="info-txt">
+                                            <div>
+                                                CT란 인체의 목적 부위를 여러 방향에서 조사하여 투과한 X-선을 검출기로 수집하고 그 부위에 대한 X-선 흡수 차이를 컴퓨터가 수학적 기법을 이용하여 재구성하는 촬영기법을 말합니다.
+                                                종래의 X-선 사진상에 비하여 혈액, 뇌척수액, 백질, 회백질, 종양 등을 구분하는데 우수한 분해능력과 대조도를
+                                                가지며 미세한 부분의 흡수 차를 표현할 수 있어 영상진단 분야에 있어서 아주 중요한 영역을 차지하고 있습니다.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </button>
+                                <div class="accordion-body" id="instequipment-3" role="region" aria-labelledby="instequipment3"></div>
+                            </div>
+
+                            <div class="accordion type-equipment type-open-one">
+                                <button class="accordion-header" id="instequipment4" aria-controls="instequipment-4">
+                                    <div class="thumbnail">
+                                        <img src="../../images/dummy/medical_institution/dummy_institution_thumb_04.jpg" alt="">
+                                    </div>
+                                    <ul>
+                                        <li>MD-CT(64채널)</li>
+                                        <li class="info-txt">
+                                            <div>기존의 CT에 비해 좀 더 빠른 시간 안에 훨씬 많은 양의 자료를 얻음으로써, 영상진단의 정확성뿐만 아니라 다양한 영상 정보를 제공하는 최첨단 영상 의료장비입니다.</div>
+                                        </li>
+                                    </ul>
+                                </button>
+                                <div class="accordion-body" id="instequipment-4" role="region" aria-labelledby="instequipment4"></div>
+                            </div>
+
+                            <div class="accordion type-equipment type-open-one">
+                                <button class="accordion-header" id="instequipment5" aria-controls="instequipment-5">
+                                    <div class="thumbnail">
+                                        <img src="../../images/dummy/medical_institution/dummy_institution_thumb_05.jpg" alt="">
+                                    </div>
+                                    <ul>
+                                        <li>MD-CT (DUAL 64채널)</li>
+                                        <li class="info-txt">
+                                            <div>
+                                                심근경색증을 전문적으로 진단하는 장비로 독일 지멘스사에서 세계 최초로 개발되어 국내에 5번째로 도입된 최신 장비입니다. 현재 OECD 국가 가운데 급성심근경색증 사망률이 가장 높은 것으로
+                                                보고되고 있으며 그동안 검사의 위험성과 효과적인 조기진단의 방법을 찾기 어려웠으나 본 병원에 도입된 DSCT로
+                                                보다 안전하고 확실한 검사 보장을 할 수 있습니다. 돌연사로 이어지는 심장병 사전검사로 충분히 예방할 수 있습니다.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </button>
+                                <div class="accordion-body" id="instequipment-5" role="region" aria-labelledby="instequipment5"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+.c-tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  li {
+    position: relative;
+    input[type="radio"] {
+      @include hide-input;
+    }
+  }
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+  &.type-basic {
+    justify-content: center;
+    li {
+      flex-grow: 1;
+      text-align: center;
+      input[type="radio"] {
+        & + label {
+          position: relative;
+          @include coTxtLabelLarge;
+          color: $color-black-60;
+          text-align: center;
+          display: block;
+          width: 100%;
+          padding: 0 0 0.5rem;
+          box-sizing: border-box;
+          transition: color $transition-3 ease-in-out;
+        }
+        &:checked {
+          & + label {
+					color: $color-main;
+          }
+        }
+      }
+    }
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    &::after {
+      height: 2px;
+      background-color: $color-main;
+      z-index: 2;
+      transition: left $transition-1 ease-in;
+    }
+    &::before {
+      width: 100%;
+      height: 1px;
+      background-color: $color-sub-01;
+      z-index: 1;
+    }
+    // li 개수
+    &.tab-len-2 {
+      &::after {
+        width: calc(100% / 2);
+      }
+    }
+    // 하단 bar
+    &.tab-active-0 {
+      &::after {
+        left: 0;
+      }
+    }
+    &.tab-active-1 {
+      &::after {
+        left: calc(100% / 2);
+      }
+    }
+  }
+
+  &.type-slide {
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    li {
+      margin-left: 1.25rem;
+      input[type="radio"] {
+        & + label {
+          @include radio-default;
+          transition:
+            background-color $transition-3 ease-in-out,
+            background-image $transition-3 ease-in-out,
+            color $transition-3 ease-in-out;
+        }
+        &:checked {
+          & + label {
+            @include radio-checked;
+          }
+        }
+      }
+      a {
+        &.tab-link {
+          @include radio-default;
+        }
+      }
+      // 페이지 이동 tab
+      & > a {
+        @include anchor-default;
+        &.active {
+          @include anchor-active;
+        }
+        &.is-disable {
+          pointer-events: none;
+          background: $color-black-05;
+          box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+          span {
+            color: $color-black-60;
+          }
+        }
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+.tab-panel {
+  display: none;
+  &.show {
+    display: block;
+  }
+}

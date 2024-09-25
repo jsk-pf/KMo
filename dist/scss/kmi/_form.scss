@@ -1,0 +1,648 @@
+// = Common
+
+.c-input {
+  width: 100%;
+  // + focus
+  &:focus {
+    @include inputTextFocus;
+  }
+
+  // + error
+  &.is-error {
+    @include inputError;
+  }
+
+  & + .input-err-txt,
+  & + .input-ref-txt {
+    margin-top: 0.25rem;
+  }
+
+  // + disabled
+  &:disabled {
+    border-color: $color-black-10;
+    background-color: $color-black-05;
+    opacity: 1;
+    -webkit-text-color: inherit;
+  }
+  // + disabled: background whte
+  &:disabled {
+    &.type-white {
+      background-color: $color-white-100;
+      border-color: $color-black-20;
+      &.is-error {
+        @include inputError;
+      }
+    }
+  }
+
+  &[readonly='readonly'] {
+    border-color: $color-black-10;
+    background-color: $color-black-05;
+  }
+}
+
+.c-select,
+.c-input-search,
+.c-input-date,
+.c-input-btn-group,
+.c-txt-area {
+  & + .input-ref-txt,
+  & + .input-err-txt {
+    margin-top: 0.25rem;
+  }
+}
+
+.input-err-txt,
+.input-ref-txt {
+  @include coTxtLabelMedium;
+}
+.input-err-txt {
+  color: $color-sub-03;
+}
+
+.input-ref-txt {
+  color: $color-black-60;
+}
+
+.input-ref-txt {
+  & + .input-err-txt {
+    margin-top: 0.25rem;
+  }
+}
+
+.input-err-txt {
+  & + .input-ref-txt {
+    margin-top: 0.25rem;
+  }
+}
+
+// = Input List
+.c-input-list {
+  .per-column {
+    flex: 0 0 100%;
+    max-width: 100%;
+    & ~ .per-column {
+      margin-top: 1.25rem;
+    }
+  }
+
+  .per-column {
+    & ~ .c-input-email-group {
+      margin-top: 1.25rem;
+    }
+  }
+  &.chk-list-full {
+    > .col {
+      & + .col {
+        margin-top: 1.25rem;
+      }
+    }
+  }
+
+  .label-input {
+    & ~ .label-input {
+      margin-top: 1.75rem;
+    }
+    &:only-child {
+      margin-top: 1.25rem;
+    }
+  }
+}
+
+.c-input-sub-group {
+  .col ~ .col,
+  .per-column ~ .per-column {
+    margin-top: 0.75rem;
+  }
+  &.type1 {
+    .per-column {
+      // margin-top: 0.75rem;
+      // & + .per-column {
+      //   margin-top: 1.25rem;
+      //   & + .per-column {
+      //     margin-top: 0.75rem;
+      //   }
+      // }
+    }
+  }
+}
+
+// = Search
+
+.c-input-search {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  input[type='text'] {
+    flex: 1 1 auto;
+    padding-right: 3.5rem;
+    // readonly
+    &[readonly='readonly'] {
+      &:focus {
+        @include inputReadonlyFocus;
+      }
+    }
+    &:not(.is-error) {
+      &:focus {
+        @include inputTextFocus;
+      }
+    }
+  }
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .btn-search {
+    background: url($image-ico-path + 'ico_search_01.png') 0 /#{$input-in-ico-size} no-repeat;
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: $input-in-ico-size;
+    height: $input-in-ico-size;
+    content: '';
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  // + input-view
+  &.input-view {
+    .btn-search {
+      right: 0;
+    }
+  }
+}
+
+// = Date
+// + input date
+.c-input-date {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  input[type='text'] {
+    flex: 1 1 auto;
+    padding-right: 3.5rem;
+    + span {
+      display: inline-block;
+
+      i.date-btn {
+        background: url($image-ico-path + 'ico_date_01.png') 0 / #{$input-in-ico-size} no-repeat;
+        position: absolute;
+        right: 1.25rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: $input-in-ico-size;
+        height: $input-in-ico-size;
+        content: '';
+        display: inline-block;
+        overflow: hidden;
+      }
+    }
+    &:not(.is-error) {
+      &:focus {
+        @include inputTextFocus;
+      }
+    }
+    // readonly
+    &[readonly='readonly'] {
+      &:focus {
+        @include inputReadonlyFocus;
+      }
+    }
+  }
+}
+
+// = Select
+.c-select {
+  position: relative;
+  font-size: 0;
+  width: 100%;
+  &:after {
+    background: url($image-ico-path + 'ico_arrow_01.svg') 0 / #{$input-in-ico-size} no-repeat;
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: $input-in-ico-size;
+    height: $input-in-ico-size;
+    content: '';
+    display: inline-block;
+  }
+
+  select::ms-expand {
+    display: none;
+  }
+
+  select {
+    outline: 0;
+    border: 1px solid $input-border-color;
+    border-radius: $input-border-radius;
+    padding: 0.6875rem 1.25rem;
+    width: 100%;
+    font: {
+      size: $default-font-size;
+      family: $font-name;
+      weight: $default-font-weight;
+    }
+    line-height: $input-line-height;
+    letter-spacing: $default-letter-spacing;
+    color: $color-black-80;
+    &:focus {
+      @include inputTextFocus;
+    }
+    &:disabled {
+      @include inputDisabledFocus;
+    }
+  }
+
+  // + is-error
+  &.is-error {
+    select {
+      @include inputError;
+    }
+  }
+
+  // + shadow type
+  &.type-shadow {
+    select {
+      @include coTxtLabelLarge;
+      color: $color-black-80;
+      border: 1px solid $color-black-05;
+      box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.08);
+      border-radius: 0.75rem;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    &:after {
+      right: 1.25rem;
+      width: 1.25rem;
+      height: 1.25rem;
+      background-image: url($image-ico-path + 'ico_arrow_select_01.svg');
+      background-position: center center;
+      background-size: 1.25rem 1.25rem;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+// = Unit
+.c-input-unit {
+  position: relative;
+  input[type='text'] {
+    width: 100%;
+    padding-right: 1.25rem;
+    // readonly
+    &[readonly='readonly'] {
+      &:focus {
+        @include inputReadonlyFocus;
+      }
+    }
+  }
+
+  .unit {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.25rem;
+    text-align: center;
+    color: $color-sub-01;
+    @include coTxtBody;
+  }
+}
+
+// = Count
+.c-input-count {
+  position: relative;
+  input[type='text'],
+  input[type='number'] {
+    width: 100%;
+    padding-right: 4.25rem;
+    // readonly
+    &[readonly='readonly'] {
+      &:focus {
+        @include inputReadonlyFocus;
+      }
+    }
+    &.is-error {
+      & + .count {
+        color: $color-sub-03;
+      }
+    }
+  }
+
+  .count {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.25rem;
+    text-align: center;
+    color: $color-sub-01;
+    @include coTxtBody;
+  }
+}
+
+// = Textarea
+.c-txtarea-field {
+  height: 100%;
+  width: 100%;
+}
+textarea,
+.c-txt-area {
+  display: block;
+  border: 1px solid $input-border-color;
+  height: 10rem;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  @include inputText;
+  padding: 0.75rem 1.25rem;
+  min-width: 100%;
+  color: $color-black-80;
+  resize: none;
+
+  &.is-error {
+    @include inputError;
+  }
+  &:not(.is-error) {
+    &:focus {
+      @include inputTextFocus;
+    }
+  }
+  textarea {
+    &[readonly='readonly'] {
+      @include inputReadonlyFocus;
+      min-height: initial;
+      height: 100%;
+      overflow: auto;
+      &:focus {
+        @include inputTextFocus;
+        border: 0;
+        box-shadow: none;
+        transition: none;
+      }
+    }
+  }
+}
+
+// = c-input-btn-group
+.c-input-btn-group {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  flex-wrap: nowrap;
+  .input {
+    flex: 1 1 auto;
+  }
+  .btns {
+    flex-basis: 5.7rem;
+    width: 5.75rem;
+    flex: 0 0 5.75rem;
+    > button {
+      width: 100%;
+      padding: 1rem 0;
+    }
+  }
+  input {
+    &[type='text'],
+    &[type='password'],
+    &[type='tel'],
+    &[type='number'] {
+      border-radius: $input-border-radius 0 0 $input-border-radius;
+    }
+  }
+
+  @at-root .row {
+    &.c-input-btn-group {
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+// = label-input
+.label-input {
+  label,
+  .c-label-txt {
+    @include coTxtLabelMedium;
+    margin-bottom: 8px;
+    display: flex;
+    color: $color-black-80;
+  }
+
+  // + 필수입력항목
+  label {
+    position: relative;
+    .essential {
+      color: $color-sub-03;
+      display: inline-block;
+      margin-left: 0.125rem;
+    }
+  }
+
+  // + 오른쪽 버튼
+  &.type-link {
+    .label-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 8px;
+      label {
+        display: inline-flex;
+        margin-bottom: 0;
+      }
+      a {
+        @include coTxtLabelMedium;
+        color: $color-black-80;
+        color: $color-sub-02;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .c-select {
+    width: 100%;
+  }
+
+  .co-btn {
+    width: 100%;
+  }
+}
+.label-block {
+  &.type01 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    label {
+      margin-bottom: 0;
+      & + .co-tooltip {
+        margin: {
+          top: 0.0625rem;
+          left: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+// = email
+.c-input-email-group {
+  > .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+//+ c-input-address-group
+.c-input-address-group {
+  .input-addr-02 {
+    margin-top: 0.75rem;
+  }
+}
+
+// = Checkbox, Radio
+.c-chkbox,
+.c-rdochk {
+  display: inline-block;
+  position: relative;
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    position: absolute;
+    opacity: 0;
+    & + .chk-label,
+    & + label.chk-label {
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      flex: 0;
+      i {
+        cursor: pointer;
+        display: inline-block;
+        background: {
+          repeat: no-repeat;
+        }
+      }
+
+      > span {
+        margin-left: 8px;
+        color: $color-black-40;
+        @include coTxtLabelLarge;
+      }
+    }
+  }
+}
+
+// =  co-chk-list
+.co-chk-list {
+  // + type01
+  &.type01 {
+    $gap: 0.625rem;
+    margin: {
+      left: -$gap;
+      right: -$gap;
+    }
+    > .c-rdochk,
+    > .c-chkbox {
+      padding: {
+        left: $gap;
+        right: $gap;
+      }
+    }
+  }
+  // + type02
+  &.type02 {
+    .c-rdochk {
+      margin-left: 1.25rem;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// = Checkbox
+.c-chkbox {
+  // + type01
+  &.type01 {
+    input[type='checkbox'] {
+      @include inputChkSquare;
+    }
+  }
+  // + type-rdo
+  &.type-rdo {
+    input[type='radio'] {
+      @include inputChkSquare;
+    }
+  }
+}
+
+// = Radio
+.c-rdochk {
+  // + type01
+  &.type01 {
+    input[type='radio'] {
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      & + .chk-label,
+      & + label.chk-label {
+        i {
+          cursor: pointer;
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background: {
+            image: url($image-ico-radio-sprite01);
+            position: -10px -10px;
+            size: 40px auto;
+          }
+        }
+      }
+
+      // + checked
+      &:checked {
+        & + .chk-label {
+          i {
+            background-position-y: -40px;
+          }
+          span {
+            color: $color-main;
+          }
+        }
+
+        &:disabled {
+          & + .chk-label {
+            i {
+              background-position-y: -100px;
+            }
+          }
+        }
+      }
+
+      // + disabled
+      &:disabled {
+        & + .chk-label {
+          i {
+            background-position-y: -70px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.btn-address {
+  .type-input-btn {
+    padding: 1rem 0;
+    max-height: 52px;
+    line-height: 1;
+    text-align: center;
+    > span {
+      color: $color-white-100;
+    }
+  }
+}

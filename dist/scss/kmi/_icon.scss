@@ -1,0 +1,198 @@
+// = ico-type01
+$ico-type01-position-res: 0;
+$ico-type01-spacing: 44;
+$ico-type01-position-y-01: -#{$ico-type01-spacing}px;
+$ico-type01-position-y-02: -#{$ico-type01-spacing * 2}px;
+$ico-type01-bg-size: auto 166px;
+$ico-type01-size: 34px;
+
+$ico-list01: (sub_menu, add01, add02, check01, check02, check03, date, date-check, document-search, arrow01, arrow02, arrow03, arrow04, arrow05, close01, close02, search, home, nav01, nav02, nav03, nav04, nav05, logout, info01, info02, info03, filter, eye, upload);
+
+.t-i-menu01 {
+  background-position: 0 0;
+}
+
+.ico-type01 {
+  background: {
+    image: url($image-ico-sprite01);
+    size: $ico-type01-bg-size;
+    repeat: no-repeat;
+  }
+  width: $ico-type01-size;
+  height: $ico-type01-size;
+  display: inline-block;
+  @include is-blind;
+
+  @each $icon in $ico-list01 {
+    $ico-type01-position-res: $ico-type01-position-res + 44;
+
+    &.t-i-#{$icon} {
+      background-position: #{-$ico-type01-position-res}px 0;
+    }
+  }
+
+  // + menu01
+  &.t-i-menu01-02 {
+    background-position: 0 $ico-type01-position-y-01;
+  }
+}
+
+// + check01
+$ico-list01-check01: (check01-2, check01-3);
+$ico-check01-pos: 0;
+@each $icon in $ico-list01-check01 {
+  $ico-check01-pos: $ico-check01-pos + $ico-type01-spacing;
+  .ico-type01 {
+    &.t-i-#{$icon} {
+      background-position: -176px #{-$ico-check01-pos}px;
+    }
+  }
+}
+// + check02
+$ico-list01-check02: (check02-2, check02-3);
+$ico-check02-pos: 0;
+@each $icon in $ico-list01-check02 {
+  $ico-check02-pos: $ico-check02-pos + $ico-type01-spacing;
+  .ico-type01 {
+    &.t-i-#{$icon} {
+      background-position: -220px #{-$ico-check02-pos}px;
+    }
+  }
+}
+
+// + check03
+.ico-type01 {
+  &.t-i-check03-2 {
+    background-position: -264px $ico-type01-position-y-01;
+  }
+}
+
+// + date
+.ico-type01 {
+  &.t-i-date-2 {
+    background-position: -308px $ico-type01-position-y-01;
+  }
+}
+
+// + date-check
+.ico-type01 {
+  &.t-i-date-check-2 {
+    background-position: -352px $ico-type01-position-y-01;
+  }
+}
+
+// + document-search
+.ico-type01 {
+  &.t-i-document-search-2 {
+    background-position: -395px $ico-type01-position-y-01;
+  }
+}
+
+// + arrow01
+$ico-list01-arrow01: (arrow01-2, arrow01-3);
+$ico-arrow01-pos: 0;
+@each $icon in $ico-list01-arrow01 {
+  $ico-arrow01-pos: $ico-arrow01-pos + $ico-type01-spacing;
+  .ico-type01 {
+    &.t-i-#{$icon} {
+      background-position: -440px #{-$ico-arrow01-pos}px;
+    }
+  }
+}
+
+// + arrow02
+$ico-list01-arrow02: (arrow02-2, arrow02-3);
+$ico-arrow02-pos: 0;
+@each $icon in $ico-list01-arrow02 {
+  $ico-arrow02-pos: $ico-arrow02-pos + $ico-type01-spacing;
+  .ico-type01 {
+    &.t-i-#{$icon} {
+      background-position: -484px #{-$ico-arrow02-pos}px;
+    }
+  }
+}
+
+// + arrow03
+$ico-list01-arrow03: (arrow03-2, arrow03-3, arrow03-4);
+$ico-arrow03-pos: 0;
+@each $icon in $ico-list01-arrow03 {
+  $ico-arrow03-pos: $ico-arrow03-pos + $ico-type01-spacing;
+  .ico-type01 {
+    &.t-i-#{$icon} {
+      background-position: -528px #{-$ico-arrow03-pos}px;
+    }
+  }
+}
+
+// + arrow04
+$ico-list01-arrow04: (arrow04-2, arrow04-3);
+$ico-arrow04-pos: 0;
+@each $icon in $ico-list01-arrow04 {
+  $ico-arrow04-pos: $ico-arrow04-pos + $ico-type01-spacing;
+  .ico-type01 {
+    &.t-i-#{$icon} {
+      background-position: -4572px #{-$ico-arrow04-pos}px;
+    }
+  }
+}
+
+// + home
+.ico-type01 {
+  &.t-i-home-2 {
+    background-position: -792px $ico-type01-position-y-01;
+  }
+}
+
+// + nav01
+.ico-type01 {
+  &.t-i-nav01-2 {
+    background-position: -836px $ico-type01-position-y-01;
+  }
+}
+
+// + nav02
+.ico-type01 {
+  &.t-i-nav02-2 {
+    background-position: -880px $ico-type01-position-y-01;
+  }
+}
+
+// + nav03
+.ico-type01 {
+  &.t-i-nav03-2 {
+    background-position: -924px $ico-type01-position-y-01;
+  }
+}
+
+// + nav04
+.ico-type01 {
+  &.t-i-nav04-2 {
+    background-position: -968px $ico-type01-position-y-01;
+  }
+}
+
+// + nav05
+.ico-type01 {
+  &.t-i-nav05-2 {
+    background-position: -1012px $ico-type01-position-y-01;
+  }
+}
+
+// + info01
+$ico-list01-info01: (info01-2, info01-3);
+$ico-info01-pos: 0;
+@each $icon in $ico-list01-info01 {			
+  $ico-info01-pos: $ico-info01-pos + $ico-type01-spacing;
+  .ico-type01 {
+    &.t-i-#{$icon} {
+      background-position: -1100px #{-$ico-info01-pos}px;
+    }
+  }
+}
+
+.ico-check-01 {
+	width: 17px;
+	height: 13px;
+	background:url($image-ico-path + 'ico_check_01.png') center/17px auto no-repeat;
+	display: inline-block;
+}

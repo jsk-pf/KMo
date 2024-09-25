@@ -1,0 +1,204 @@
+$icon: 'ico_gnb_main', 'ico_gnb_health_check_system', 'ico_gnb_examination', 'ico_gnb_jobstress', 'ico_gnb_result_consultation', 'ico_gnb_health_information', 'ico_gnb_community';
+.co-gnb {
+  position: fixed;
+  right: calc(0rem - (100% - 3.75rem));
+  top: 0;
+  width: calc(100% - 3.75rem);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transition: right $transition-3 ease-in-out;
+  .gnb-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-black-60;
+    opacity: 0;
+    transition: opacity $transition-3 ease-in-out;
+  }
+  .gnb-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-main;
+    width: 100%;
+    height: 5.25rem;
+    padding: 1.5625rem 1.25rem;
+    z-index: 2001;
+    h1 {
+      &.profile {
+        a {
+          img {
+            width: 26px;
+            height: 26px;
+          }
+          span,
+          span em {
+            @include coTxtTitleSub;
+            color: $color-white-100;
+          }
+          span {
+            display: inline-block;
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+    button {
+      img {
+        width: 2.125rem;
+        height: 2.125rem;
+        min-width: 34px;
+        min-height: 34px;
+      }
+    }
+  }
+  .gnb-body {
+    position: relative;
+    display: block;
+    background-color: $color-white-100;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 2001;
+    li {
+      display: block;
+      > a,
+      button {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 3.875rem;
+        padding: 0.875rem 1.25rem;
+        text-align: left;
+        h2 {
+          @include coTxtButtonBtnSm;
+          color: $color-sub-01;
+          flex-grow: 1;
+          padding-left: 2.375rem;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          height: 2.125rem;
+          background-size: 2.125rem 2.125rem;
+          background-position: left center;
+          background-repeat: no-repeat;
+          transition: all $transition-3 ease-out;
+        }
+        &:active {
+          h2 {
+            color: $color-main;
+          }
+        }
+
+        .gnb-mark {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-grow: 1;
+          > h2 {
+            display: inline-flex;
+            flex-grow: 0;
+          }
+        }
+      }
+      .gnb-list {
+        width: 100%;
+        a {
+          @include coTxtLabelLarge;
+          color: $color-sub-01;
+          background-color: $color-bg-04;
+          padding: 0.875rem 1.25rem;
+          display: block;
+          &.active {
+            background-color: $color-bg-03;
+            color: $color-main;
+          }
+        }
+      }
+    }
+    @each $image in $icon {
+      $i: index($icon, $image);
+      li:nth-child(#{$i}) {
+        > a,
+        button {
+          h2 {
+            background-image: url($image-ico-path + '/gnb/#{$image}.svg');
+          }
+          &:active {
+            h2 {
+              color: $color-main;
+              background-image: url($image-ico-path + '/gnb/#{$image}_on.svg');
+            }
+          }
+        }
+        &.open {
+          > a,
+          button {
+            h2 {
+              color: $color-main;
+              background-image: url($image-ico-path + '/gnb/#{$image}_on.svg');
+            }
+          }
+        }
+      }
+    }
+  }
+  .gnb-btn-logout {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $color-white-100;
+    width: 100%;
+    height: 3.625rem;
+    padding: 0.75rem 1.25rem;
+    border-top: 1px solid $color-black-10;
+    z-index: 2001;
+    img {
+      width: 2.125rem;
+      height: 2.125rem;
+    }
+    span {
+      @include coTxtButtonBtnSm;
+      color: $color-sub-01;
+    }
+  }
+  &.show {
+    right: 0;
+    .gnb-bg {
+      opacity: 1;
+    }
+  }
+
+  .badge {
+    margin-left: 1rem;
+    display: inline-flex;
+    font-size: 0;
+    > em {
+      padding: 0 0.4375rem;
+      display: inline-block;
+      border-radius: 0.25rem;
+      background-color: $color-orange-1;
+      @include fontStyle(0.75rem, 1.25rem, 500);
+      text-align: center;
+      color: $color-white-100;
+      font-style: normal;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0.25rem;
+        left: -0.4375rem;
+        border-top: 0.375rem solid transparent;
+        border-bottom: 0.375rem solid transparent;
+        border-right: 0.5rem solid $color-orange-1;
+      }
+    }
+  }
+}

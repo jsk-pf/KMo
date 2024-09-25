@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-title" content="With KMI">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="refresh" content="300">
+
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="author" content="With KMI">
+    <meta name="title" content="건강검진 서비스 - With KMI">
+    <meta name="description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta name="keywords" content="With KMI, 위드케이엠아이, 비타브릿지, vitabridge, 건강검진, 헬스케어서비스, 헬스케어">
+    <meta name="copyright" content="© 2022. KMI All Rights Reserved.">
+
+    <link rel="canonical" href="{유동 도메인 주소}.withkmi.or.kr">
+
+    <meta property="og:locale" content="ko-KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="With KMI - 건강검진 서비스">
+    <meta property="og:description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta property="og:image" content="../../images/kmi_info_img.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:url" content="https://{유동 도메인 주소}.withkmi.or.kr">
+    <meta property="og:site_name" content="With KMI">
+
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/logo/home-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/logo/home-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../../images/logo/home-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/logo/home-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/logo/home-icon-192x192.png">
+    <link rel="stylesheet" href="../../lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../lib/datepicker/datepicker.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/swiper/js/swiper.min.js"></script>
+    <script defer src="../../js/common.js"></script>
+    <title>건강검진 서비스 - With KMI</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="flex-wrap">
+            <!-- Header -->
+            <header class="header co-header">
+                <!-- 기업 로고에 따른 alt값 부여 -->
+                <h1 class="logo">
+                    <a href="../vgt/vgt_01_001.html"><img src="../../images/dummy/dummy_logo02.png" alt="LG화학 로고"></a>
+                </h1>
+                <!-- 컬러로고: type-color -->
+                <!-- <h1 class="logo type-color">
+    <a href="javascrpit:void(0);"><img src="../../images/dummy/dummy_logo02.png" alt="LG화학 로고"></a>
+  </h1> -->
+                <div class="menu">
+                    <button type="button" class="btn-open-gnb">
+                        <span class="skip">전체 메뉴 열기</span>
+                        <img src="../../images/ico/ico_gnb_hamberger.svg" alt="전체메뉴 아이콘">
+                    </button>
+                </div>
+            </header>
+            <div class="flex-container">
+                <div class="ni-block">
+                    <h1 class="tit type-floating">서비스 문의</h1>
+
+                    <!--
+              * 탭 터치 시 페이지 이동되는 case
+              * 탭의 aria-controls와 panel의 aria-labelledby가 동일해야 됨
+              * 스크롤 시 floating 되는 tab의 경우 div.tab-floating 필요
+            -->
+                    <div class="tab-floating">
+                        <ul class="c-tab type-slide type-move" role="tablist" data-tablist="contact">
+                            <li role="tab" aria-controls="contact-tab-panel">
+                                <a href="javascript:void(0);" title="페이지 이동" class="tab active">문의하기</a>
+                            </li>
+                            <li role="tab" aria-controls="contact-list-tab-panel">
+                                <a href="javascript:void(0);" title="페이지 이동" class="tab">문의내역</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--
+              * 전체 panel
+              * tab-panel show class: show || null
+              * 탭 터치 후 새로고침 된 후: panel의 aria-labelledby가 탭의 active class를 가진 aria-controls로 바뀜
+            -->
+                    <div class="tab-panel show" role="tabpanel" aria-labelledby="contact-tab-panel" data-panelname="contact">
+
+                        <div class="c-input-list service-form">
+                            <div class="row">
+                                <div class="col per-column label-input">
+                                    <label for="selectService">인증방법</label>
+                                    <div class="c-select">
+                                        <select title="선택" id="selectService">
+                                            <option value="" selected="">선택</option>
+                                            <option value="">오류신고</option>
+                                            <option value="">서비스제안</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col per-column label-input">
+                                    <label for="serviceContents">문의내용</label>
+                                    <div class="c-txtarea-field">
+                                        <textarea id="serviceContents" class="c-txt-area" placeholder="내용을 입력하세요."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- [ mod(230105) ] 약관 -->
+                        <div class="terms type-box">
+                            <p class="co-terms-tit">개인정보 정보 수집 및 이용동의 (필수 동의)</p>
+                            <div class="terms-box">
+                                <div class="inner">
+                                    <div class="terms-row">
+                                        <div class="cont">
+                                            개인정보보호법에 따라 KMI의 WITH KMI 서비스에서 회원 가입 및 건강검진을 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간, 동의 거부권 및 동의 거부
+                                            시 불이익에 관한 사항을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍니다.
+                                            <div class="co-terms-tbl-field">
+                                                <table class="co-terms-tbl type01 tbl-terms01">
+                                                    <caption>
+                                                        개인정보 정보 수집 및 이용동의 정보 : 수집·이용 목적, 제공받는 목적에 대한 정보
+                                                    </caption>
+                                                    <colgroup>
+                                                        <col style="width:45%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>수집·이용 목적</th>
+                                                            <th>제공받는 목적</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td scope="row">회원가입</td>
+                                                            <td>성명, 성별, 생년월일, 휴대전화번호 혹은 유선전화번호, 이메일, 주소, 동일인식별정보(CI)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td scope="row">본인인증 조회</td>
+                                                            <td>성명, 성별, 생년월일, 내외국인 정보, 이동정보통신사 및 휴대전화번호, 휴대폰이나 아이핀을 통한 본인 인증 시 수집되는 CI/DI 값 등 회원 본인 확인을 위해 필요한 식별자 정보</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td scope="row">검진대상자 등록</td>
+                                                            <td>성명, 성별, 생년월일, 휴대전화번호, 이메일</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td scope="row">직무스트레스 대상자 등록</td>
+                                                            <td>성명, 성별, 생년월일</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td scope="row">검진 결과상담</td>
+                                                            <td>성명, 생년월일, 검진결과 상담을 위한 고객의 요청사항. 검진이력</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td scope="row">검진 예약</td>
+                                                            <td>성명, 성별, 생년월일, 휴대전화번호, 이메일, 고객의 검진예약에 따른 검진 요청사항, 검진이력</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td scope="row">검진결과 조회</td>
+                                                            <td>성명, 생년월일, 본인확인정보(C.I), 이메일, 주소</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td scope="row">서비스, 오류, 제안, 기타문의</td>
+                                                            <td>성명, 이메일</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <b>보유·이용기간</b><br>
+                                            KMI는 회원이 탈퇴하는 경우 또는 서비스 종료, 기업검진회원의 경우 위탁계약 종료 또는 위탁사 요청시 개인정보를 지체없이 파기하고 있습니다.<br>
+                                            단, 회원에게 개인정보 보관기간에 대해 별도의 동의를 얻은 경우, 또는 법령에서 일정 기간 정보보관 의무를 부과하는 경우에는 해당 기간 동안 개인정보를 안전하게 보관합니다.
+                                            <hr>
+                                            ※ 보유·이용기간 등 상세한 내용은 개인정보처리방침을 확인해주시기 바랍니다.<br>
+                                            ※ 회원은 개인정보의 수집 및 이용 동의를 거부할 권리가 있습니다. 다만 WITH KMI 서비스에 회원가입 및 검진예약시 수집하는 최소한의 개인정보, 즉 필수항목에 대한 수집 및 이용 동의를 거부하실 경우
+                                            회원가입 및 검진예약이 어려울 수 있습니다.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chk-list">
+                                <div class="c-chkbox type-rdo">
+                                    <input type="radio" id="termsChk_01_01_Agree" name="termsChk_01_01">
+                                    <label for="termsChk_01_01_Agree" class="chk-label"><i></i><span>(필수) 동의합니다.</span></label>
+                                </div>
+                                <div class="c-chkbox type-rdo">
+                                    <input type="radio" id="termsChk_01_01_disAgree" name="termsChk_01_01">
+                                    <label for="termsChk_01_01_disAgree" class="chk-label"><i></i><span>동의하지 않습니다.</span></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 등록하기 -->
+                        <button class="co-btn btn-view-more"><span class="alt-txt">페이지 이동</span><span>등록하기</span></button>
+                    </div>
+                </div>
+
+                <!-- 상단으로 이동 버튼 -->
+                <button class="btn-move-top"><span class="skip">터치시최상단으로이동</span></button>
+            </div>
+            <!-- footer -->
+            <footer class="footer type-default">
+                <a href="javascript:void(0);" title="페이지이동" class="img-logo"><img src="../../images/logo/footer_logo_01.svg" alt="KMI 재단법인 한국의학연구소 KOREA MEDICAL INSTITUTE"></a>
+
+                <!-- [ mod(230130) ] -->
+                <div class="btn-list type-footer"> <a href="javascript:void(0);" title="페이지 이동" class="personal-policy">개인정보처리방침</a>
+                    <a href="javascript:void(0);" title="페이지 이동">이용약관</a>
+                    <a href="javascript:void(0);" title="페이지 이동">이용가이드</a>
+                </div>
+
+                <div class="footer-txt">
+                    상호 : 재단법인 한국의학연구소 ㅣ 대표자 성명 : 이상호 ㅣ 본원 : (우)03173 서울시 종로구 세종대로 23길 54(당주동, 세종빌딩) ㅣ 사업자등록번호 : 130-82-06960 ㅣ 서비스 운영사 :
+                    ㈜옴니케어 ㅣ 전자우편주소 : <a href="mailto:webmaster@kmi.or.kr">webmaster@kmi.or.kr</a> ㅣ 고객문의 : <a href="tel:1533-0505">1533-0505</a> / 평일 : 오전 07:00 ~
+                    오후 18:00
+                    (토요일 오전 07:00 ~ 오후 12:30)
+                    (일/공휴일 휴무)
+                </div>
+
+                <div class="copyright">© 2022. <strong>KMI</strong> All Rights Reserved.</div>
+                <!-- [ // mod(230130) ] -->
+            </footer>
+        </div>
+    </div>
+    <!-- GNB -->
+    <!-- // GNB -->
+</body>
+
+</html>

@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-title" content="With KMI">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="refresh" content="300">
+
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="author" content="With KMI">
+    <meta name="title" content="건강검진 서비스 - With KMI">
+    <meta name="description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta name="keywords" content="With KMI, 위드케이엠아이, 비타브릿지, vitabridge, 건강검진, 헬스케어서비스, 헬스케어">
+    <meta name="copyright" content="© 2022. KMI All Rights Reserved.">
+
+    <link rel="canonical" href="{유동 도메인 주소}.withkmi.or.kr">
+
+    <meta property="og:locale" content="ko-KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="With KMI - 건강검진 서비스">
+    <meta property="og:description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta property="og:image" content="../../images/kmi_info_img.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:url" content="https://{유동 도메인 주소}.withkmi.or.kr">
+    <meta property="og:site_name" content="With KMI">
+
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/logo/home-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/logo/home-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../../images/logo/home-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/logo/home-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/logo/home-icon-192x192.png">
+    <link rel="stylesheet" href="../../lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../lib/datepicker/datepicker.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/swiper/js/swiper.min.js"></script>
+    <script defer src="../../js/common.js"></script>
+    <title>건강검진 서비스 - With KMI</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="flex-wrap">
+            <!-- Header -->
+            <header class="header co-header">
+                <!-- 기업 로고에 따른 alt값 부여 -->
+                <h1 class="logo">
+                    <a href="../vgt/vgt_01_001.html"><img src="../../images/dummy/dummy_logo02.png" alt="LG화학 로고"></a>
+                </h1>
+                <!-- 컬러로고: type-color -->
+                <!-- <h1 class="logo type-color">
+    <a href="javascrpit:void(0);"><img src="../../images/dummy/dummy_logo02.png" alt="LG화학 로고"></a>
+  </h1> -->
+                <div class="menu">
+                    <button type="button" class="btn-open-gnb">
+                        <span class="skip">전체 메뉴 열기</span>
+                        <img src="../../images/ico/ico_gnb_hamberger.svg" alt="전체메뉴 아이콘">
+                    </button>
+                </div>
+            </header>
+            <div class="flex-container">
+                <div class="ri-block">
+                    <h1 class="tit type-floating">검진 결과</h1>
+                    <p class="txt">내용</p>
+                    <div class="c-select">
+                        <select title="전체">
+                            <option selected>전체</option>
+                            <!-- [ mod(230413) ] 내용 표기 추가 -->
+                            <option>option</option>
+                        </select>
+                    </div>
+
+                    <!-- swiper -->
+                    <div class="swiper examResSwiper">
+                        <div class="skip">검진 받은 병원 리스트입니다. 리스트는 슬라이드 방식입니다.</div>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide card_04">
+                                <div class="inner">
+                                    <em class="alt-txt">2022년3월15일</em>
+                                    <p class="hospital-date" aria-hidden="true">2022-03-15</p>
+                                    <p class="hospital-name">한국의학연구소 광화문1</p>
+                                    <div class="badges">
+                                        <span>정밀종합검진 - 일반형</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide card_04">
+                                <div class="inner">
+                                    <em class="alt-txt">2022년3월15일</em>
+                                    <p class="hospital-date" aria-hidden="true">2022-03-15</p>
+                                    <p class="hospital-name">한국의학연구소 광화문2</p>
+                                    <div class="badges">
+                                        <span>정밀종합검진 - 일반형</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide card_04">
+                                <div class="inner">
+                                    <em class="alt-txt">2022년3월15일</em>
+                                    <p class="hospital-date" aria-hidden="true">2022-03-15</p>
+                                    <p class="hospital-name">한국의학연구소 광화문3</p>
+                                    <div class="badges">
+                                        <span>정밀종합검진 - 일반형</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide card_04">
+                                <div class="inner">
+                                    <em class="alt-txt">2022년3월15일</em>
+                                    <p class="hospital-date" aria-hidden="true">2022-03-15</p>
+                                    <p class="hospital-name">한국의학연구소 광화문4</p>
+                                    <div class="badges">
+                                        <span>정밀종합검진 - 일반형</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide card_04">
+                                <div class="inner">
+                                    <em class="alt-txt">2022년3월15일</em>
+                                    <p class="hospital-date" aria-hidden="true">2022-03-15</p>
+                                    <p class="hospital-name">한국의학연구소 광화문5</p>
+                                    <div class="badges">
+                                        <span>정밀종합검진 - 일반형</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <!-- tab -->
+                    <div class="tab-floating">
+                        <ul class="c-tab type-slide type-panel" role="tablist">
+                            <li role="tab" aria-controls="general-opinion-tab-panel">
+                                <input type="radio" name="examinationResult" id="examAll" checked>
+                                <label for="examAll">종합소견</label>
+                            </li>
+                            <li role="tab" aria-controls="basic-inspection-tab-panel">
+                                <input type="radio" name="examinationResult" id="examBasic">
+                                <label for="examBasic">기본검사</label>
+                            </li>
+                            <li role="tab" aria-controls="blood-test-tab-panel">
+                                <input type="radio" name="examinationResult" id="examBlood">
+                                <label for="examBlood">혈액검사</label>
+                            </li>
+                            <li role="tab" aria-controls="exam-equipment-tab-panel">
+                                <input type="radio" name="examinationResult" id="examEquipment">
+                                <label for="examEquipment">장비검사</label>
+                            </li>
+                            <li role="tab" aria-controls="exam-etc-tab-panel">
+                                <input type="radio" name="examinationResult" id="examEtc">
+                                <label for="examEtc">기타검사</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- + 종합소견 panel -->
+                    <div class="tab-panel show" role="tabpanel" aria-labelledby="general-opinion-tab-panel">
+                        <!-- 종합소견 -->
+                        <div class="accordion type1 type-inner-btn open">
+                            <div class="accordion-header" id="resultGeneralOpinion" aria-controls="result-general-opinion">
+                                <p class="acc-tit">종합소견</p>
+                                <a href="javascript:void(0)" class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </div>
+                            <div class="accordion-body" id="result-general-opinion" role="region" aria-labelledby="resultGeneralOpinion">
+                                <ul class="list type1">
+                                    <li>흉부촬영상 좌상의 비활동성의 섬유흔 소견입니다.</li>
+                                    <li>고혈압 전단계 입니다. 고혈압으로 발전할 가능성이 높으므로 금주, 금연 및 저염식이, 규칙적인 운동하시고 정기적으로 혈압 측정 하시기 바랍니다.</li>
+                                    <li>우내시경 검사상 만성 표재성 위염 소견입니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- + 기본검사 panel -->
+                    <div class="tab-panel" role="tabpanel" aria-labelledby="basic-inspection-tab-panel">
+                        <!-- 신체 계측 및 혈압 검사 -->
+                        <div class="accordion type1 open">
+                            <button class="accordion-header" id="resultBodyMeasurBlood" aria-controls="result-body-measur-blood">
+                                <span class="alt-txt">신체계측,및,혈압검사,6개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">신체 계측 및 혈압 검사 (<span>6</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-body-measur-blood" role="region" aria-labelledby="resultBodyMeasurBlood">
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">신장(cm)<button class="co-tooltip" aria-label="두번탭하면,상세팝업열림"></button></p>
+                                    </li>
+                                    <li>
+                                        <p class="card-res">현재결과 2</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">혈압(mmHg)</p>
+                                    </li>
+                                    <li>
+                                        <p class="card-res">현재결과 2</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">체중(kg)<button class="co-tooltip" aria-label="두번탭하면,상세팝업열림"></button></p>
+                                    </li>
+                                    <li>
+                                        <p class="card-res">현재결과 2</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">허리둘레(복위cm)<button class="co-tooltip" aria-label="두번탭하면,상세팝업열림"></button></p>
+                                    </li>
+                                    <li>
+                                        <p class="card-res">현재결과 2</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">체질량지수(BMI)<button class="co-tooltip" aria-label="두번탭하면,상세팝업열림"></button></p>
+                                    </li>
+                                    <li>
+                                        <p class="card-res">현재결과 2</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">허벅지둘레<button class="co-tooltip" aria-label="두번탭하면,상세팝업열림"></button></p>
+                                    </li>
+                                    <li>
+                                        <p class="card-res">현재결과 2</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 시력, 안저촬영, 안압검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultEye" aria-controls="result-eye">
+                                <span class="alt-txt">시력,안저촬영,안압검사,5개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">시력, 안저촬영, 안압검사 (<span>5</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-eye" role="region" aria-labelledby="resultEye">
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">좌측시력<button class="co-tooltip" aria-label="두번탭하면,상세팝업열림"></button></p>
+                                    </li>
+                                    <li>
+                                        <p class="card-res">현재결과 3</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">우측시력</p>
+                                    </li>
+                                    <li>
+                                        <p class="card-res">현재결과 2</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">안압<button class="co-tooltip" aria-label="두번탭하면,상세팝업열림"></button></p>
+                                    </li>
+                                    <li>
+                                        <p class="card-res">현재결과 2</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">색각<button class="co-tooltip" aria-label="두번탭하면,상세팝업열림"></button></p>
+                                    </li>
+                                    <li>
+                                        <p class="card-res">현재결과 2</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">안저<button class="co-tooltip" aria-label="두번탭하면,상세팝업열림"></button></p>
+                                    </li>
+                                    <li>
+                                        <p class="card-res">현재결과 2</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 청력검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultEar" aria-controls="result-ear">
+                                <span class="alt-txt">청력검사,8개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">청력검사 (<span>8</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-ear" role="region" aria-labelledby="resultEar">
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">250Hz<button class="co-tooltip" aria-label="두번탭하면,상세팝업열림"></button></p>
+                                    </li>
+                                    <li>
+                                        <em class="alt-txt">좌측청력은31,우측청력은65,입니다</em>
+                                        <p class="card-res" aria-hidden="true">31/65</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">500Hz</p>
+                                    </li>
+                                    <li>
+                                        <em class="alt-txt">좌측청력은31,우측청력은65,입니다</em>
+                                        <p class="card-res" aria-hidden="true">31/65</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">1000Hz</p>
+                                    </li>
+                                    <li>
+                                        <em class="alt-txt">좌측청력은31,우측청력은65,입니다</em>
+                                        <p class="card-res" aria-hidden="true">31/65</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">2000Hz</p>
+                                    </li>
+                                    <li>
+                                        <em class="alt-txt">좌측청력은31,우측청력은65,입니다</em>
+                                        <p class="card-res" aria-hidden="true">31/65</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">3000Hz</p>
+                                    </li>
+                                    <li>
+                                        <em class="alt-txt">좌측청력은50,우측청력은65,입니다</em>
+                                        <p class="card-res" aria-hidden="true">50/65</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">4000Hz</p>
+                                    </li>
+                                    <li>
+                                        <em class="alt-txt">좌측청력은50,우측청력은65,입니다</em>
+                                        <p class="card-res" aria-hidden="true">50/65</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">6000Hz</p>
+                                    </li>
+                                    <li>
+                                        <em class="alt-txt">좌측청력은50,우측청력은65,입니다</em>
+                                        <p class="card-res" aria-hidden="true">50/65</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">소견</p>
+                                    </li>
+                                    <li>
+                                        <p class="card-res">정상</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 소변검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultPee" aria-controls="result-pee">
+                                <span class="alt-txt">소변검사,5개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">소변검사 (<span>5</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-pee" role="region" aria-labelledby="resultPee"></div>
+                        </div>
+
+                        <!-- 대사증후군 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultMetabolicSyndrome" aria-controls="result-metabolic-syndrome">
+                                <span class="alt-txt">대사증후군,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">대사증후군 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-large-intestine" role="region" aria-labelledby="resultLargeIntestine"></div>
+                        </div>
+                    </div>
+
+                    <!-- + 혈액검사 panel -->
+                    <div class="tab-panel" role="tabpanel" aria-labelledby="blood-test-tab-panel">
+                        <!-- 혈액질환 -->
+                        <div class="accordion type1 open">
+                            <button class="accordion-header" id="resultBloodDisease" aria-controls="result-blood-disease">
+                                <span class="alt-txt">혈액질환,7개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">혈액질환 (<span>7</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-blood-disease" role="region" aria-labelledby="resultBloodDisease">
+                            </div>
+                        </div>
+
+                        <!-- 혈액 기타 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultBloodOther" aria-controls="result-blood-other">
+                                <span class="alt-txt">혈액기타검사,3개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">혈액 기타 검사 (<span>3</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-blood-other" role="region" aria-labelledby="resultBloodOther">
+                            </div>
+                        </div>
+
+                        <!-- 빈혈 관련 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultAnemia" aria-controls="result-anemia">
+                                <span class="alt-txt">빈혈관련검사,7개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">빈혈 관련 검사 (<span>7</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-anemia" role="region" aria-labelledby="resultAnemia"></div>
+                        </div>
+
+                        <!-- 갑상선기능 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultThyroid" aria-controls="result-thyroid">
+                                <span class="alt-txt">갑상선기능검사,5개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">갑상선기능 검사 (<span>5</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-thyroid" role="region" aria-labelledby="resultThyroid"></div>
+                        </div>
+
+                        <!-- 간기능검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultLiver" aria-controls="result-liver">
+                                <span class="alt-txt">간기능검사,15개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">간기능검사 (<span>15</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-liver" role="region" aria-labelledby="resultLiver"></div>
+                        </div>
+
+                        <!-- 간염 표지자 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultHepatitis" aria-controls="result-hepatitis">
+                                <span class="alt-txt">간염표지자검사,10개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">간염 표지자 검사 (<span>10</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-hepatitis" role="region" aria-labelledby="resultHepatitis"></div>
+                        </div>
+
+                        <!-- 지질대사 및 심혈관계 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultLipidMetabolism" aria-controls="result-lipid-metabolism">
+                                <span class="alt-txt">지질대사및심혈관계검사,8개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">지질대사 및 심혈관계 검사 (<span>8</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-lipid-metabolism" role="region" aria-labelledby="resultLipidMetabolism"></div>
+                        </div>
+
+                        <!-- 당뇨검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultDiabetes" aria-controls="result-diabetes">
+                                <span class="alt-txt">당뇨검사,4개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">당뇨검사 (<span>4</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-diabetes" role="region" aria-labelledby="resultDiabetes"></div>
+                        </div>
+
+                        <!-- 신장기능 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultKidneyFunc" aria-controls="result-kidney-func">
+                                <span class="alt-txt">신장기능검사,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">신장기능 검사 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-kidney-func" role="region" aria-labelledby="resultKidneyFunc">
+                            </div>
+                        </div>
+
+                        <!-- 췌장기능 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultPancreas" aria-controls="result-pancreas">
+                                <span class="alt-txt">췌장기능검사,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">췌장기능 검사 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-pancreas" role="region" aria-labelledby="resultPancreas"></div>
+                        </div>
+
+                        <!-- 통풍 및 염증반응 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultGouty" aria-controls="result-gouty">
+                                <span class="alt-txt">통풍및염증반응검사,4개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">통풍 및 염증반응 검사 (<span>4</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-kidney-gouty" role="region" aria-labelledby="resultGouty"></div>
+                        </div>
+
+                        <!-- 종양표지자 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultTumor" aria-controls="result-tumor">
+                                <span class="alt-txt">종양표지자검사,8개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">종양표지자 검사 (<span>8</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-tumor" role="region" aria-labelledby="resultTumor"></div>
+                        </div>
+                    </div>
+
+                    <!-- + 장비검사 panel -->
+                    <div class="tab-panel" role="tabpanel" aria-labelledby="exam-equipment-tab-panel">
+                        <!-- 폐기능 검사 -->
+                        <div class="accordion type1 open">
+                            <button class="accordion-header" id="resultLung" aria-controls="result-lung">
+                                <span class="alt-txt">폐기능검사,4개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">폐기능 검사 (<span>4</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-lung" role="region" aria-labelledby="resultLung">
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">노력성폐활량(FVC%)<button class="co-tooltip" aria-label="두번탭하면,상세팝업열림"></button></p>
+                                    </li>
+                                    <li>
+                                        <p class="card-res">L(%)</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">1초간노력성폐활량(FEV1%)<button class="co-tooltip" aria-label="두번탭하면,상세팝업열림"></button>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="card-res">L(%)</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">1초율(FEV1/FVC%)</p>
+                                    </li>
+                                    <li>
+                                        <p class="card-res">L(%)</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">소견</p>
+                                    </li>
+                                    <li>
+                                        <p class="card-res">정상</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 체성분 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultBodyComposition" aria-controls="result-body-composition">
+                                <span class="alt-txt">체성분검사,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">체성분 검사 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-body-composition" role="region" aria-labelledby="resultBodyComposition"></div>
+                        </div>
+
+                        <!-- 심전도 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultECG" aria-controls="result-ECG">
+                                <span class="alt-txt">심전도검사,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">심전도 검사 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-ECG" role="region" aria-labelledby="resultECG"></div>
+                        </div>
+
+                        <!-- 골밀도 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultBoneDensity" aria-controls="result-bone-density">
+                                <span class="alt-txt">골밀도검사,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">골밀도 검사 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-bone-density" role="region" aria-labelledby="resultBoneDensity">
+                            </div>
+                        </div>
+
+                        <!-- 동맥경화 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultArteriosclerosis" aria-controls="result-arteriosclerosis">
+                                <span class="alt-txt">동맥경화검사,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">동맥경화 검사 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-arteriosclerosis" role="region" aria-labelledby="resultArteriosclerosis"></div>
+                        </div>
+
+                        <!-- 복부초음파 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultAbdominalUltrasound" aria-controls="result-abdominal-ultrasound">
+                                <span class="alt-txt">복부초음파검사,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">복부초음파 검사 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-abdominal-ultrasound" role="region" aria-labelledby="resultAbdominalUltrasound"></div>
+                        </div>
+
+                        <!-- 갑상선초음파 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultThyroidUltrasound" aria-controls="result-thyroid-ultrasound">
+                                <span class="alt-txt">갑상선초음파검사,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">갑상선초음파 검사 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-thyroid-ultrasound" role="region" aria-labelledby="resultThyroidUltrasound"></div>
+                        </div>
+
+                        <!-- 경동맥초음파 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultCarotidUltrasound" aria-controls="result-carotid-ultrasound">
+                                <span class="alt-txt">경동맥초음파검사,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">경동맥초음파 검사 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-carotid-ultrasound" role="region" aria-labelledby="resultCarotidUltrasound"></div>
+                        </div>
+
+                        <!-- 전립선초음파 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultProstateUltrasound" aria-controls="result-prostate-ultrasound">
+                                <span class="alt-txt">전립선초음파검사,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">전립선초음파 검사 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-prostate-ultrasound" role="region" aria-labelledby="resultProstateUltrasound"></div>
+                        </div>
+
+                        <!-- 심장초음파 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultEchocardiography" aria-controls="result-echocardiography">
+                                <span class="alt-txt">심장초음파검사,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">심장초음파 검사 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-echocardiography" role="region" aria-labelledby="resultEchocardiography"></div>
+                        </div>
+
+                        <!-- 부인과 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultGynecology" aria-controls="result-gynecology">
+                                <span class="alt-txt">부인과검사,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">부인과 검사 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-gynecology" role="region" aria-labelledby="resultGynecology"></div>
+                        </div>
+
+
+
+                        <!-- 위 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultStomach02" aria-controls="result-stomach02">
+                                <span class="alt-txt">위검사,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">위 검사 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-stomach02" role="region" aria-labelledby="resultStomach02"></div>
+                        </div>
+
+
+                        <!-- 대장 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultLargeIntestine02" aria-controls="result-large-intestine02">
+                                <span class="alt-txt">대장검사,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">대장 검사 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-large-intestine02" role="region" aria-labelledby="resultLargeIntestine02"></div>
+                        </div>
+
+
+                        <!-- 흉부 X선 검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultChestXray" aria-controls="result-chest-xray">
+                                <span class="alt-txt">흉부X선검사,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">흉부 X선 검사 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-chest-xray" role="region" aria-labelledby="resultChestXray">
+                                <ul class="card_06">
+                                    <li>
+                                        <p class="card-tit">현재결과<button class="co-tooltip" aria-label="두번탭하면,상세팝업열림"></button></p>
+                                    </li>
+                                    <li>
+                                        <p class="card-res">흉부직접촬영 : 섬유혼, 좌싱</p>
+                                        <a class="co-btn is-outline-navy-1 type-sm" title="팝업열림"><span>비교하기</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- +  기타검사 panel -->
+                    <div class="tab-panel" role="tabpanel" aria-labelledby="exam-etc-tab-panel">
+                        <!-- 특수 검사 -->
+                        <div class="accordion type1 open">
+                            <button class="accordion-header" id="resultSpecial" aria-controls="result-special">
+                                <span class="alt-txt">특수검사,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">특수 검사 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-special" role="region" aria-labelledby="resultSpecial"></div>
+                        </div>
+
+                        <!-- 유전자 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultGene" aria-controls="result-gene">
+                                <span class="alt-txt">유전자,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">유전자 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-gene" role="region" aria-labelledby="resultGene"></div>
+                        </div>
+
+                        <!-- 생체나이 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultBiologicalAge" aria-controls="result-biological-age">
+                                <span class="alt-txt">생체나이,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">생체나이 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-biological-age" role="region" aria-labelledby="resultBiologicalAge"></div>
+                        </div>
+
+                        <!-- 한방검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultOrientalMedicine" aria-controls="result-oriental-medicine">
+                                <span class="alt-txt">한방검사,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">한방검사 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-oriental-medicine" role="region" aria-labelledby="resultOrientalMedicine"></div>
+                        </div>
+
+                        <!-- 탈모검사 -->
+                        <div class="accordion type1">
+                            <button class="accordion-header" id="resultHairLoss" aria-controls="result-hair-loss">
+                                <span class="alt-txt">탈모검사,1개항목있음</span>
+                                <p class="acc-tit" aria-hidden="true">탈모검사 (<span>1</span>)</p>
+                                <img src="../../images/ico/ico_arrow_accordion.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                            </button>
+                            <div class="accordion-body" id="result-hair-loss" role="region" aria-labelledby="resultHairLoss"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-move-top"><span class="skip">터치시최상단으로이동</span></button>
+            </div>
+            <!-- footer -->
+            <footer class="footer type-default">
+                <a href="javascript:void(0);" title="페이지이동" class="img-logo"><img src="../../images/logo/footer_logo_01.svg" alt="KMI 재단법인 한국의학연구소 KOREA MEDICAL INSTITUTE"></a>
+
+                <!-- [ mod(230130) ] -->
+                <div class="btn-list type-footer"> <a href="javascript:void(0);" title="페이지 이동" class="personal-policy">개인정보처리방침</a>
+                    <a href="javascript:void(0);" title="페이지 이동">이용약관</a>
+                    <a href="javascript:void(0);" title="페이지 이동">이용가이드</a>
+                </div>
+
+                <div class="footer-txt">
+                    상호 : 재단법인 한국의학연구소 ㅣ 대표자 성명 : 이상호 ㅣ 본원 : (우)03173 서울시 종로구 세종대로 23길 54(당주동, 세종빌딩) ㅣ 사업자등록번호 : 130-82-06960 ㅣ 서비스 운영사 :
+                    ㈜옴니케어 ㅣ 전자우편주소 : <a href="mailto:webmaster@kmi.or.kr">webmaster@kmi.or.kr</a> ㅣ 고객문의 : <a href="tel:1533-0505">1533-0505</a> / 평일 : 오전 07:00 ~
+                    오후 18:00
+                    (토요일 오전 07:00 ~ 오후 12:30)
+                    (일/공휴일 휴무)
+                </div>
+
+                <div class="copyright">© 2022. <strong>KMI</strong> All Rights Reserved.</div>
+                <!-- [ // mod(230130) ] -->
+            </footer>
+        </div>
+    </div>
+    <!-- GNB -->
+    <!-- // GNB -->
+
+    <!-- script - swiper -->
+    <script src="../../js/common-swiper.js"></script>
+    <script>
+        function* swiperStep() {
+            yield swiperStep1();
+        }
+        const SWIPER_START = swiperStep();
+
+        function swiperStep1() {
+            const SWIPER = document.querySelectorAll('.swiper');
+            if (SWIPER.length > 0) swiperReadyCheck(SWIPER);
+        }
+
+        function swiperReadyCheck(_swiper) {
+            for (let i = 0; i < _swiper.length; i++) swiperReady(_swiper[i]);
+        }
+
+        function swiperReady(_swiperEl) {
+            const SLIDE = _swiperEl.querySelectorAll('.swiper-slide');
+            if (SLIDE.length > 1) {
+                _swiperEl.classList.add('swiper-ready');
+                swiperStep2(_swiperEl.classList);
+            }
+            if (SLIDE.length == 1) {
+                SLIDE[0].classList.add('swiper-slide-active');
+                const SKIP_EL = _swiperEl.querySelector('.skip');
+                const DOT_EL = _swiperEl.querySelector('.swiper-pagination');
+                if (SKIP_EL) SKIP_EL.remove();
+                if (DOT_EL) DOT_EL.remove();
+            }
+            if (SLIDE.length == 0) _swiperEl.remove();
+        }
+
+        function swiperStep2(_swiper) {
+            let swiper = swuperReturn(_swiper);
+            const SWIPER_INIT = new Swiper(swiper, {
+                slidesPerView: 'auto',
+                spaceBetween: 20,
+                loop: false,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                sldiesPerGroup: 1,
+                slideToClickedSlide: true,
+                breakpoints: {
+                    280: {
+                        slidePerView: 1,
+                        spaceBetween: 30,
+                    },
+                },
+                on: {
+                    init: function() {
+                        swiperInitEvt(this);
+                    },
+                    slideChangeTransitionEnd: function() {
+                        swiperTransitionEndEvt(this);
+                    },
+                    reachEnd: function() {
+                        this.snapGrid = [...this.slidesGrid];
+                    },
+                },
+            });
+        }
+
+        function swuperReturn(_rSwiper) {
+            let swiper = [];
+            for (let i = 0; i < _rSwiper.length; i++) swiper.push('.' + _rSwiper[i]);
+            swiper = swiper.join('');
+            return swiper;
+        }
+        // swiper 실행 명령
+        SWIPER_START.next();
+    </script>
+    <!-- // script - swiper -->
+    <!-- GNB -->
+    <div class="co-gnb">
+        <!-- gnb bg -->
+        <div class="gnb-bg"></div>
+        <!-- gnb header -->
+        <div class="gnb-header">
+            <h1 class="profile">
+                <a href="javascrpit:void(0);" title="마이페이지로 이동">
+                    <img src="../../images/ico/ico_gnb_profile.svg" alt="기본 프로필">
+                    <span><em>홍길동</em> 님</span>
+                </a>
+            </h1>
+            <button class="btn-close-gnb">
+                <img src="../../images/ico/ico_close_white_34x34.svg" alt="전체메뉴 닫기">
+            </button>
+        </div>
+        <!-- gnb body -->
+        <ul class="gnb-body accordion-list">
+            <li>
+                <a href="../vgt/vgt_01_001.html" title="페이지 이동" class="btn-gnb-main">
+                    <h2>메인</h2>
+                </a>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuHealthCheckSystem" aria-controls="gnb-menu-health-check-system">
+                    <h2>건강검진 제도</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-health-check-system" role="region" aria-labelledby="gnbMenuHealthCheckSystem">
+                    <!-- [Comment]
+					+ 서브메뉴 현재 페이지 클래스 제어 : active
+				-->
+                    <a href="../ti/TI_01_001.html" title="페이지 이동" class="active">국가건강 검진 제도 안내</a>
+                    <a href="../ti/TI_01_002.html" title="페이지 이동">우리 회사 검진제도 안내</a>
+                </div>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuExamination" aria-controls="gnb-menu-examination">
+                    <h2>검진 예약/결과 조회</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-examination" role="region" aria-labelledby="gnbMenuExamination">
+                    <a href="../rv/RV_01_001_2.html" title="페이지 이동">검진 예약</a>
+                    <a href="../rv/RV_01_027.html" title="페이지 이동">예약 내역</a>
+                    <a href="../vgt/VGT_03_001.html" title="페이지 이동">검진기관</a>
+                    <a href="../ri/RI_01_001.html" title="페이지 이동">검진 결과</a>
+                </div>
+            </li>
+            <!-- [ mod(230310) ]
+	직무스트레스 메뉴  markup 변경
+	-->
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbJobStress" aria-controls="gnb-jobstress">
+                    <div class="gnb-mark">
+                        <h2>직무스트레스</h2>
+                        <div class="badge">
+                            <em>대상자</em>
+                        </div>
+                    </div>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-jobstress" role="region" aria-labelledby="gnbJobStress">
+                    <a href="../jo/JO_01_001.html" title="페이지 이동">검사하기</a>
+                    <a href="../jo/JO_02_001.html" title="페이지 이동">검사결과</a>
+                </div>
+            </li>
+            <!-- [ // mod(230309) ]-->
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuResultConsultation" aria-controls="gnb-menu-result-consultation">
+                    <h2>결과 상담</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-result-consultation" role="region" aria-labelledby="gnbMenuResultConsultation">
+                    <a href="../rc/RC_01_001.html" title="페이지 이동">결과 상담하기</a>
+                    <a href="../rc/RC_01_004.html" title="페이지 이동">상담 이력</a>
+                </div>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuHealthInformation" aria-controls="gnb-menu-health-information">
+                    <h2>건강 정보</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-health-information" role="region" aria-labelledby="gnbMenuHealthInformation">
+                    <a href="../hi/HI_01_001.html" title="페이지 이동">검진 항목 정보</a>
+                    <a href="../hi/HI_01_002_1.html" title="페이지 이동">영상 건강 정보</a>
+                    <a href="../hi/HI_01_003_1.html" title="페이지 이동">질환별 건강 정보</a>
+                    <a href="../hi/HI_01_004_1.html" title="페이지 이동">검진센터 탐방</a>
+                </div>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuCommunity" aria-controls="gnb-menu-community">
+                    <h2>커뮤니티</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-community" role="region" aria-labelledby="gnbMenuCommunity">
+                    <a href="../ni/NI_01_001.html" title="페이지 이동">이벤트</a>
+                    <a href="../ni/NI_01_002.html" title="페이지 이동">공지사항</a>
+                    <a href="../guide/GUIDE_01_004_4.html" title="페이지 이동">FAQ</a>
+                    <a href="../guide/GUIDE_01_004_1.html" title="페이지 이동">서비스 문의</a>
+                </div>
+            </li>
+        </ul>
+        <!-- gnb bottom button - logout -->
+        <a href="javascript:void(0);" class="gnb-btn-logout" title="전체 메뉴 닫히고 페이지 이동">
+            <img src="../../images/ico/ico_gnb_logout.svg" alt="로그아웃 아이콘">
+            <span>로그아웃</span>
+        </a>
+    </div>
+</body>
+
+</html>

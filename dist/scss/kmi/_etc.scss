@@ -1,0 +1,77 @@
+// /etc/Error.html, /etc/under_construction.html
+.type-404,
+.type-update {
+  padding: 0 $g-article-spacing-v-40;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  > img {
+    height: auto;
+  }
+  h4,
+  p {
+    text-align: center;
+    word-break: keep-all;
+  }
+  h4 {
+    @include coTxtTitleHeadingSmall;
+    color: $color-black-80;
+    margin-top: 3.75rem;
+  }
+  p {
+    @include coTxtBody;
+    color: $color-black-60;
+    margin-top: 0.75rem;
+  }
+}
+// /etc/Error.html
+.type-404 {
+  > img {
+    width: 10rem;
+  }
+  a {
+    margin-top: 2.5rem;
+  }
+}
+// /etc/under_construction.html
+.type-update {
+  > img {
+    width: 12.25rem;
+  }
+}
+// /etc/loading.html
+.type-loading {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 3001;
+  padding: {
+    left: 2.5rem;
+    right: 2.5rem;
+  }
+  > img {
+    width: 280px;
+    max-width: 100%;
+  }
+  p {
+    @include coTxtBody;
+    color: $color-black-60;
+    text-align: center;
+  }
+}
+.loading-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-white-80;
+  z-index: 3000;
+}

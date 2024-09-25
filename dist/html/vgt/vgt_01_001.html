@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-title" content="With KMI">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="refresh" content="300">
+
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="author" content="With KMI">
+    <meta name="title" content="건강검진 서비스 - With KMI">
+    <meta name="description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta name="keywords" content="With KMI, 위드케이엠아이, 비타브릿지, vitabridge, 건강검진, 헬스케어서비스, 헬스케어">
+    <meta name="copyright" content="© 2022. KMI All Rights Reserved.">
+
+    <link rel="canonical" href="{유동 도메인 주소}.withkmi.or.kr">
+
+    <meta property="og:locale" content="ko-KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="With KMI - 건강검진 서비스">
+    <meta property="og:description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta property="og:image" content="../../images/kmi_info_img.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:url" content="https://{유동 도메인 주소}.withkmi.or.kr">
+    <meta property="og:site_name" content="With KMI">
+
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/logo/home-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/logo/home-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../../images/logo/home-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/logo/home-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/logo/home-icon-192x192.png">
+    <link rel="stylesheet" href="../../lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../lib/datepicker/datepicker.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/swiper/js/swiper.min.js"></script>
+    <script defer src="../../js/common.js"></script>
+    <title>건강검진 서비스 - With KMI</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="flex-wrap"> <!-- Header -->
+            <header class="header co-header">
+                <!-- 기업 로고에 따른 alt값 부여 -->
+                <h1 class="logo">
+                    <a href="../vgt/vgt_01_001.html"><img src="../../images/dummy/dummy_logo02.png" alt="LG화학 로고"></a>
+                </h1>
+                <!-- 컬러로고: type-color -->
+                <!-- <h1 class="logo type-color">
+    <a href="javascrpit:void(0);"><img src="../../images/dummy/dummy_logo02.png" alt="LG화학 로고"></a>
+  </h1> -->
+                <div class="menu">
+                    <button type="button" class="btn-open-gnb">
+                        <span class="skip">전체 메뉴 열기</span>
+                        <img src="../../images/ico/ico_gnb_hamberger.svg" alt="전체메뉴 아이콘">
+                    </button>
+                </div>
+            </header>
+            <div class="flex-container">
+                <div class="main-block">
+                    <h1 class="alt-txt">김크미님</h1>
+                    <h1 aria-hidden="true"><span>김크미</span>님</h1>
+                    <p>오늘도 건강한 하루 보내세요!</p>
+                    <ul class="c-tab type-slide type-panel" role="tablist">
+                        <li>
+                            <button class="ico-plus"><span class="skip">이중탭하면검진대상자추가팝업열림</span></button>
+                        </li>
+                        <li role="tab" aria-controls="subject-tab-panel">
+                            <input type="radio" name="healthScreenings" id="screeningSubject" checked>
+                            <label for="screeningSubject">검진 대상자</label>
+                        </li>
+                        <li role="tab" aria-controls="result-tab-panel">
+                            <input type="radio" name="healthScreenings" id="screeningResult">
+                            <label for="screeningResult">검진 결과</label>
+                        </li>
+                    </ul>
+                    <!-- swiper - 검진 대상자 -->
+                    <div class="tab-panel show" role="tabpanel" aria-labelledby="subject-tab-panel">
+                        <!-- swiper -->
+                        <div class="swiper subjectSwiper">
+                            <div class="skip">검진대상자 리스트입니다. 리스트는 슬라이드 방식입니다.</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide co-main-card type-basic">
+                                    <img src="../../images/logo/kmi/kmi_04.png" alt="검진을 예약할 생각에 기뻐하는 KMI 캐릭터" class="img-make-reservation">
+                                    <span>본인</span>
+                                    <dl>
+                                        <dt class="name">김크순</dt>
+                                        <dd class="date">1988-06-30</dd>
+                                    </dl>
+                                    <div class="tag-list type-main-card">
+                                        <ul>
+                                            <li># 회사지원</li>
+                                            <li># 개인결제</li>
+                                            <li># 종함검진</li>
+                                            <li># 특수검진</li>
+                                            <li># 회사지원</li>
+                                            <li># 개인결제</li>
+                                            <li># 종함검진</li>
+                                            <li># 특수검진</li>
+                                        </ul>
+                                    </div>
+                                    <a href="javascript:void(0);" title="페이지 이동" class="result"><span>예약하기</span></a>
+                                </div>
+                                <div class="swiper-slide co-main-card type-basic">
+                                    <img src="../../images/logo/kmi/kmi_03.png" alt="예약을 대기해야되서 시무룩한 KMI 캐릭터" class="img-waiting-reservation">
+                                    <button class="co-tooltip type-left-txt">
+                                        <em class="skip">팝업열림</em>
+                                        <span>예약상세</span>
+                                    </button>
+                                    <span>본인</span>
+                                    <dl>
+                                        <dt class="name">김크순</dt>
+                                        <dd class="date">1988-06-30</dd>
+                                    </dl>
+                                    <div class="tag-list type-main-card">
+                                        <ul>
+                                            <li># 회사지원</li>
+                                            <li># 개인결제</li>
+                                            <li># 종함검진</li>
+                                            <li># 특수검진</li>
+                                            <li># 회사지원</li>
+                                            <li># 개인결제</li>
+                                            <li># 종함검진</li>
+                                            <li># 특수검진</li>
+                                        </ul>
+                                    </div>
+                                    <p class="result"><span>예약대기</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <!-- swiper - 검진 결과 -->
+                    <div class="tab-panel" role="tabpanel" aria-labelledby="result-tab-panel">
+                        <!-- swiper -->
+                        <div class="swiper resultSwiper">
+                            <div class="skip">검진 결과 리스트입니다. 리스트는 슬라이드 방식입니다.</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide co-main-card type-basic">
+                                    <img src="../../images/logo/kmi/kmi_03.png" alt="검진결과 등록이 미신청되어 당황하는 KMI 캐릭터" class="img-non-registration">
+                                    <span>본인</span>
+                                    <dl>
+                                        <dt class="name">김크순</dt>
+                                        <dd class="date">1988-06-30</dd>
+                                    </dl>
+                                    <p class="location">한국의학연구소 광화문센터</p>
+                                    <p class="result"><span>검진 결과 등록 미신청</span></p>
+                                </div>
+                                <div class="swiper-slide co-main-card type-basic">
+                                    <img src="../../images/logo/kmi/kmi_02.png" alt="건강검진을 마치고 지쳐있는 KMI 캐릭터" class="img-delivery-results">
+                                    <span>본인</span>
+                                    <dl>
+                                        <dt class="name">김크순</dt>
+                                        <dd class="date">1988-06-30</dd>
+                                    </dl>
+                                    <p class="location">한국의학연구소 광화문센터</p>
+                                    <a href="javascript:void(0);" title="페이지 이동" class="result"><span>검진 결과 전달</span></a>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <h2>소식 알림</h2>
+                    <div class="card_09">
+                        <img src="../../images/ico/ico_main_notice_reservation_application.svg" alt="동그라미 안에 체크표시가 있는 아이콘" aria-hidden="true">
+                        <em class="alt-txt">예약신청기간,2020년5월20일부터,2020년5월20일까지</em>
+                        <p aria-hidden="true">예약 신청 기간</p>
+                        <p aria-hidden="true">2020.05.20 ~ 2020.05.20</p>
+                    </div>
+                    <div class="card_09">
+                        <img src="../../images/ico/ico_main_notice_examination_period.svg" alt="달력 아이콘" aria-hidden="true">
+                        <em class="alt-txt">검진기간,2020년5월20일부터,2020년5월20일까지</em>
+                        <p aria-hidden="true">검진 기간</p>
+                        <p aria-hidden="true">2020.05.20 ~ 2020.05.20</p>
+                    </div>
+                    <h2><a href="../ni/NI_01_001.html" title="페이지 이동">이벤트</a></h2>
+                    <!-- swiper - 이벤트 -->
+                    <div class="swiper eventSwiper">
+                        <div class="skip">검진 결과 리스트입니다. 리스트는 슬라이드 방식입니다.</div>
+                        <div class="swiper-wrapper">
+                            <a href="javascript:void(0);" title="페이지 이동" class="swiper-slide">
+                                <img src="../../images/dummy/dummy_event_thumb_03.jpg" alt="대체텍스트 필수">
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동" class="swiper-slide">
+                                <img src="../../images/dummy/dummy_event_thumb_03.jpg" alt="대체텍스트 필수">
+                            </a>
+                            <a href="javascript:void(0);" title="페이지 이동" class="swiper-slide">
+                                <img src="../../images/dummy/dummy_event_thumb_03.jpg" alt="대체텍스트 필수">
+                            </a>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <h2>예약/결과 조회</h2>
+                    <a href="javascript:void(0);" title="페이지이동" class="card_09 main-card-rsv-inquiry">
+                        <img src="../../images/ico/ico_main_result_reservation_confirm.svg" alt="체크표시가된 달력 아이콘" aria-hidden="true">
+                        <p><span class="hide-txt">건강검진</span> 예약확인</p>
+                        <p>예약 확인하기</p>
+                    </a>
+                    <a href="javascript:void(0);" title="페이지이동" class="card_09 main-card-rsv-inquiry">
+                        <img src="../../images/ico/ico_main_result_query_results.svg" alt="차트위에 돋보기가 있는 아이콘" aria-hidden="true">
+                        <p><span class="hide-txt">건강검진</span> 결과조회</p>
+                        <p>결과 조회하기</p>
+                    </a>
+                    <h2 class="alt-txt type-title">공지사항</h2>
+                    <!-- swiper - 공지사항 -->
+                    <div class="swiper noticeSwiper type-hide-arr">
+                        <button class="btn-swiper-stop" data-swiper="examinationPeriod" aria-label="자동롤링되고있는리스트입니다두번탭하면자동롤링이멈춥니다" onclick="rollingSwiper(this)"></button>
+                        <div class="swiper-wrapper">
+                            <a href="javascript:void(0);" title="페이지이동" class="swiper-slide">
+                                <em class="alt-txt">주제는서비스입니다,제목은7월9일서버점검입니다</em>
+                                <p aria-hidden="true">서비스</p>
+                                <p aria-hidden="true">7월 9일 서버 점검</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지이동" class="swiper-slide">
+                                <em class="alt-txt">주제는서비스입니다,제목은7월9일서버점검입니다</em>
+                                <p aria-hidden="true">서비스</p>
+                                <p aria-hidden="true">7월 9일 서버 점검</p>
+                            </a>
+                            <a href="javascript:void(0);" title="페이지이동" class="swiper-slide">
+                                <em class="alt-txt">주제는서비스입니다,제목은7월9일서버점검입니다</em>
+                                <p aria-hidden="true">서비스</p>
+                                <p aria-hidden="true">7월 9일 서버 점검</p>
+                            </a>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div> <!-- footer -->
+            <footer class="footer type-default">
+                <a href="javascript:void(0);" title="페이지이동" class="img-logo"><img src="../../images/logo/footer_logo_01.svg" alt="KMI 재단법인 한국의학연구소 KOREA MEDICAL INSTITUTE"></a>
+
+                <!-- [ mod(230130) ] -->
+                <div class="btn-list type-footer"> <a href="javascript:void(0);" title="페이지 이동" class="personal-policy">개인정보처리방침</a>
+                    <a href="javascript:void(0);" title="페이지 이동">이용약관</a>
+                    <a href="javascript:void(0);" title="페이지 이동">이용가이드</a>
+                </div>
+
+                <div class="footer-txt">
+                    상호 : 재단법인 한국의학연구소 ㅣ 대표자 성명 : 이상호 ㅣ 본원 : (우)03173 서울시 종로구 세종대로 23길 54(당주동, 세종빌딩) ㅣ 사업자등록번호 : 130-82-06960 ㅣ 서비스 운영사 :
+                    ㈜옴니케어 ㅣ 전자우편주소 : <a href="mailto:webmaster@kmi.or.kr">webmaster@kmi.or.kr</a> ㅣ 고객문의 : <a href="tel:1533-0505">1533-0505</a> / 평일 : 오전 07:00 ~
+                    오후 18:00
+                    (토요일 오전 07:00 ~ 오후 12:30)
+                    (일/공휴일 휴무)
+                </div>
+
+                <div class="copyright">© 2022. <strong>KMI</strong> All Rights Reserved.</div>
+                <!-- [ // mod(230130) ] -->
+            </footer>
+        </div>
+    </div>
+    <!-- GNB -->
+    <!-- //GNB -->
+    <!-- script - swiper -->
+    <script src="../../js/common-swiper.js"></script>
+    <script>
+        let swiperSubject = new Object(),
+            swiperResult = new Object(),
+            swiperEvent = new Object(),
+            swiperNotice = new Object();
+
+        function* swiperStep() {
+            yield swiperStep1();
+        }
+        const SWIPER_START = swiperStep();
+
+        function swiperStep1() {
+            const SWIPER = document.querySelectorAll('.swiper');
+            if (SWIPER.length > 0) swiperReadyCheck(SWIPER);
+        }
+
+        function swiperReadyCheck(_swiper) {
+            for (let i = 0; i < _swiper.length; i++) swiperReady(_swiper[i]);
+        }
+
+        function swiperReady(_swiperEl) {
+            const SLIDE = _swiperEl.querySelectorAll('.swiper-slide');
+            if (SLIDE.length > 1) {
+                if (!_swiperEl.classList.contains('swiper-ready')) _swiperEl.classList.add('swiper-ready');
+                swiperStep2(_swiperEl.classList);
+            }
+            if (SLIDE.length == 1) {
+                SLIDE[0].classList.add('swiper-slide-active');
+                const SKIP_EL = _swiperEl.querySelector('.skip');
+                const DOT_EL = _swiperEl.querySelector('.swiper-pagination');
+                const ARR_NEXT_EL = _swiperEl.querySelector('.swiper-button-next');
+                const ARR_PREV_EL = _swiperEl.querySelector('.swiper-button-prev');
+                const STOP_BTN_EL = _swiperEl.querySelector('.btn-swiper-stop');
+                if (SKIP_EL) SKIP_EL.remove();
+                if (DOT_EL) DOT_EL.remove();
+                if (ARR_NEXT_EL) ARR_NEXT_EL.remove();
+                if (ARR_PREV_EL) ARR_PREV_EL.remove();
+                if (STOP_BTN_EL) STOP_BTN_EL.remove();
+            }
+            if (SLIDE.length == 0) _swiperEl.remove();
+        }
+
+        function swiperStep2(_swiper) {
+            let swiper = swuperReturn(_swiper);
+            if (swiper.includes('subjectSwiper')) {
+                const SUBJECT_SWIPER = new Swiper(swiper, {
+                    slidesPerView: 'auto',
+                    spaceBetween: 12,
+                    loop: true,
+                    pagination: {
+                        el: '.subjectSwiper .swiper-pagination',
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        260: {
+                            slidesPerView: 1,
+                        },
+                    },
+                    on: {
+                        init: function() {
+                            swiperInitEvt(this);
+                            swiperSubject = this;
+                        },
+                        slideChangeTransitionEnd: function() {
+                            swiperTransitionEndEvt(this);
+                        },
+                    },
+                });
+            }
+            if (swiper.includes('resultSwiper')) {
+                const RESULT_SWIPER = new Swiper(swiper, {
+                    slidesPerView: 'auto',
+                    spaceBetween: 12,
+                    loop: true,
+                    pagination: {
+                        el: '.resultSwiper .swiper-pagination',
+                        clickable: true,
+                    },
+
+                    observer: true,
+                    observeParents: true,
+                    on: {
+                        init: function() {
+                            swiperInitEvt(this);
+                            swiperResult = this;
+                        },
+                        slideChangeTransitionEnd: function() {
+                            swiperTransitionEndEvt(this);
+                        },
+                    },
+                });
+            }
+            if (swiper.includes('eventSwiper')) {
+                const EVENT_SWIPER = new Swiper(swiper, {
+                    slidesPerView: 1,
+                    spaceBetween: 12,
+                    loop: true,
+                    pagination: {
+                        el: '.eventSwiper .swiper-pagination',
+                        clickable: true,
+                    },
+                    on: {
+                        init: function() {
+                            swiperInitEvt(this);
+                            swiperEvent = this;
+                        },
+                        slideChangeTransitionEnd: function() {
+                            swiperTransitionEndEvt(this);
+                        },
+                    },
+                });
+            }
+            if (swiper.includes('noticeSwiper')) {
+                const NOTICE_SWIPER = new Swiper(swiper, {
+                    direction: 'vertical',
+                    loop: true,
+                    allowTouchMove: false,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                    speed: 1000,
+                    navigation: {
+                        nextEl: '.noticeSwiper .swiper-button-next',
+                        prevEl: '.noticeSwiper .swiper-button-prev',
+                    },
+                    on: {
+                        init: function() {
+                            swiperInitEvt(this);
+                            swiperNotice = this;
+                        },
+                        slideChangeTransitionEnd: function() {
+                            swiperTransitionEndEvt(this);
+                        },
+                    },
+                });
+            }
+        }
+
+        function swuperReturn(_rSwiper) {
+            let swiper = [];
+            for (let i = 0; i < _rSwiper.length; i++) swiper.push('.' + _rSwiper[i]);
+            swiper = swiper.join('');
+            return swiper;
+        }
+
+        function tabClick() {
+            var TAB_EL = document.querySelectorAll('.c-tab li');
+            if (TAB_EL.length > 0) tabClickEvt(TAB_EL);
+        }
+
+        function tabClickEvt(_tabEl) {
+            for (let i = 0; i < _tabEl.length; i++)
+                _tabEl[i].addEventListener('click', function() {
+                    tabClickEvtComn(this);
+                });
+        }
+
+        function tabClickEvtComn(_this) {
+            if (_this.getAttribute('role') == 'tab') {
+                const TAB_CONTROLS = _this.getAttribute('aria-controls');
+                const PANEL_EL = document.querySelector('.tab-panel[aria-labelledby="' + TAB_CONTROLS + '"]');
+                const PANEL_SWIPER = PANEL_EL.querySelector('.swiper');
+                if (PANEL_SWIPER.classList.contains('subjectSwiper')) swiperInitEvt(swiperSubject);
+                if (PANEL_SWIPER.classList.contains('resultSwiper')) swiperInitEvt(swiperResult);
+            }
+        }
+        tabClick();
+        SWIPER_START.next();
+    </script> <!-- GNB -->
+    <div class="co-gnb">
+        <!-- gnb bg -->
+        <div class="gnb-bg"></div>
+        <!-- gnb header -->
+        <div class="gnb-header">
+            <h1 class="profile">
+                <a href="javascrpit:void(0);" title="마이페이지로 이동">
+                    <img src="../../images/ico/ico_gnb_profile.svg" alt="기본 프로필">
+                    <span><em>홍길동</em> 님</span>
+                </a>
+            </h1>
+            <button class="btn-close-gnb">
+                <img src="../../images/ico/ico_close_white_34x34.svg" alt="전체메뉴 닫기">
+            </button>
+        </div>
+        <!-- gnb body -->
+        <ul class="gnb-body accordion-list">
+            <li>
+                <a href="../vgt/vgt_01_001.html" title="페이지 이동" class="btn-gnb-main">
+                    <h2>메인</h2>
+                </a>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuHealthCheckSystem" aria-controls="gnb-menu-health-check-system">
+                    <h2>건강검진 제도</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-health-check-system" role="region" aria-labelledby="gnbMenuHealthCheckSystem">
+                    <!-- [Comment]
+					+ 서브메뉴 현재 페이지 클래스 제어 : active
+				-->
+                    <a href="../ti/TI_01_001.html" title="페이지 이동" class="active">국가건강 검진 제도 안내</a>
+                    <a href="../ti/TI_01_002.html" title="페이지 이동">우리 회사 검진제도 안내</a>
+                </div>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuExamination" aria-controls="gnb-menu-examination">
+                    <h2>검진 예약/결과 조회</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-examination" role="region" aria-labelledby="gnbMenuExamination">
+                    <a href="../rv/RV_01_001_2.html" title="페이지 이동">검진 예약</a>
+                    <a href="../rv/RV_01_027.html" title="페이지 이동">예약 내역</a>
+                    <a href="../vgt/VGT_03_001.html" title="페이지 이동">검진기관</a>
+                    <a href="../ri/RI_01_001.html" title="페이지 이동">검진 결과</a>
+                </div>
+            </li>
+            <!-- [ mod(230310) ]
+	직무스트레스 메뉴  markup 변경
+	-->
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbJobStress" aria-controls="gnb-jobstress">
+                    <div class="gnb-mark">
+                        <h2>직무스트레스</h2>
+                        <div class="badge">
+                            <em>대상자</em>
+                        </div>
+                    </div>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-jobstress" role="region" aria-labelledby="gnbJobStress">
+                    <a href="../jo/JO_01_001.html" title="페이지 이동">검사하기</a>
+                    <a href="../jo/JO_02_001.html" title="페이지 이동">검사결과</a>
+                </div>
+            </li>
+            <!-- [ // mod(230309) ]-->
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuResultConsultation" aria-controls="gnb-menu-result-consultation">
+                    <h2>결과 상담</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-result-consultation" role="region" aria-labelledby="gnbMenuResultConsultation">
+                    <a href="../rc/RC_01_001.html" title="페이지 이동">결과 상담하기</a>
+                    <a href="../rc/RC_01_004.html" title="페이지 이동">상담 이력</a>
+                </div>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuHealthInformation" aria-controls="gnb-menu-health-information">
+                    <h2>건강 정보</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-health-information" role="region" aria-labelledby="gnbMenuHealthInformation">
+                    <a href="../hi/HI_01_001.html" title="페이지 이동">검진 항목 정보</a>
+                    <a href="../hi/HI_01_002_1.html" title="페이지 이동">영상 건강 정보</a>
+                    <a href="../hi/HI_01_003_1.html" title="페이지 이동">질환별 건강 정보</a>
+                    <a href="../hi/HI_01_004_1.html" title="페이지 이동">검진센터 탐방</a>
+                </div>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuCommunity" aria-controls="gnb-menu-community">
+                    <h2>커뮤니티</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-community" role="region" aria-labelledby="gnbMenuCommunity">
+                    <a href="../ni/NI_01_001.html" title="페이지 이동">이벤트</a>
+                    <a href="../ni/NI_01_002.html" title="페이지 이동">공지사항</a>
+                    <a href="../guide/GUIDE_01_004_4.html" title="페이지 이동">FAQ</a>
+                    <a href="../guide/GUIDE_01_004_1.html" title="페이지 이동">서비스 문의</a>
+                </div>
+            </li>
+        </ul>
+        <!-- gnb bottom button - logout -->
+        <a href="javascript:void(0);" class="gnb-btn-logout" title="전체 메뉴 닫히고 페이지 이동">
+            <img src="../../images/ico/ico_gnb_logout.svg" alt="로그아웃 아이콘">
+            <span>로그아웃</span>
+        </a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-title" content="With KMI">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="refresh" content="300">
+
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="author" content="With KMI">
+    <meta name="title" content="건강검진 서비스 - With KMI">
+    <meta name="description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta name="keywords" content="With KMI, 위드케이엠아이, 비타브릿지, vitabridge, 건강검진, 헬스케어서비스, 헬스케어">
+    <meta name="copyright" content="© 2022. KMI All Rights Reserved.">
+
+    <link rel="canonical" href="{유동 도메인 주소}.withkmi.or.kr">
+
+    <meta property="og:locale" content="ko-KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="With KMI - 건강검진 서비스">
+    <meta property="og:description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta property="og:image" content="../../images/kmi_info_img.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:url" content="https://{유동 도메인 주소}.withkmi.or.kr">
+    <meta property="og:site_name" content="With KMI">
+
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/logo/home-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/logo/home-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../../images/logo/home-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/logo/home-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/logo/home-icon-192x192.png">
+    <link rel="stylesheet" href="../../lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../lib/datepicker/datepicker.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/swiper/js/swiper.min.js"></script>
+    <script defer src="../../js/common.js"></script>
+    <title>건강검진 서비스 - With KMI</title>
+</head>
+
+<body>
+    <a href="javascript:void(0);" class="btn-open-popup" title="팝업열림" data-toggle="modal" data-target="popupDetailedExamItems">팝업 확인용 버튼</a>
+
+    <!-- full popup - 세부 검진항목 -->
+    <div class="c-full-layer kmi-popup type-full" id="popupDetailedExamItems" role="dialog" aria-labelledby="popupDetailedExamItems_Label" aria-modal="true" aria-hidden="true">
+        <div class="c-container" tabindex="0">
+            <div class="full-header">
+                <button class="btn-go-back popup-btn-close">
+                    <span>뒤로 가기</span>
+                </button>
+            </div>
+
+            <div class="full-body">
+                <h1 id="popupDetailedExamItems_Label" class="top-title-box type-sm">세부 검진항목 보기</h1>
+
+                <div class="cont-box">
+                    <h2>정밀종합검진 일반형</h2>
+                    <p>기본 건강검진(화이트) 프로그램에 최근 발병률이 높아진 질병을 체크하고자 초음파 검사(경동맥 초음파, 심장 초음파와 CT 검사를 강화했습니다.</p>
+
+                    <div class="c-select">
+                        <select title="전체">
+                            <option selected>전체</option>
+                            <option>option</option>
+                        </select>
+                    </div>
+                    <div class="table-wrap">
+                        <span class="alt-txt">세부검진항목의구분과검사항목을알려주는 테이블입니다</span>
+                        <table class="rv-table-1">
+                            <thead>
+                                <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">검사항목</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" rowspan="6">이학적검사</th>
+                                    <td>
+                                        <p>
+                                            <span>의사초진 및 상담 의사초진 및 상담</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>키</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>몸무게</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>시력 (좌)</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>시력 (우)</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="last">
+                                        <p>
+                                            <span>혈압</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" rowspan="9">빈혈 및 혈액 검사 (혈액질환 1)</th>
+                                    <td>
+                                        <p>
+                                            <span>RBC</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>Hb</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>Hct</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>MCV</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>MCH</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>MCHC</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>RDW</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>Platelet count </span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="last">
+                                        <p>
+                                            <span>MPV</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" rowspan="7">빈혈등 혈액질환(※CBC+Diff)(총17종)</th>
+                                    <td>
+                                        <p>
+                                            <span>WBC</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>분획호중구</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>봉상호중구</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>임파구</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>단핵구</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>호산구</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="last">
+                                        <p>
+                                            <span>호염기구</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" rowspan="9">선택 1</th>
+                                    <td>
+                                        <p>
+                                            <span>안압 검사</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>안지 검사</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>갑상선 초음파</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>전립선 초음파</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>경동맥 초음파</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>골반(자궁) 초음파</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>유방 초음파</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>동맥경화 검사</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="last">
+                                        <p>
+                                            <span>골밀도 검사</span>
+                                            <a href="javascript:void(0);" role="button" title="팝업 열림" class="ico-ques type-big"></a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" rowspan="9">선택 2</th>
+                                    <td>
+                                        <p>
+                                            <span>위, 십이지장 검사</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    ;
+</body>
+
+</html>

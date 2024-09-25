@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-title" content="With KMI">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="refresh" content="300">
+
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="author" content="With KMI">
+    <meta name="title" content="건강검진 서비스 - With KMI">
+    <meta name="description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta name="keywords" content="With KMI, 위드케이엠아이, 비타브릿지, vitabridge, 건강검진, 헬스케어서비스, 헬스케어">
+    <meta name="copyright" content="© 2022. KMI All Rights Reserved.">
+
+    <link rel="canonical" href="{유동 도메인 주소}.withkmi.or.kr">
+
+    <meta property="og:locale" content="ko-KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="With KMI - 건강검진 서비스">
+    <meta property="og:description" content="With KMI는 건강검진 서비스를 제공합니다. 건강검진 예약과 결과 정보까지 확인하실 수 있습니다.">
+    <meta property="og:image" content="../../images/kmi_info_img.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:url" content="https://{유동 도메인 주소}.withkmi.or.kr">
+    <meta property="og:site_name" content="With KMI">
+
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/logo/home-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/logo/home-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../../images/logo/home-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/logo/home-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/logo/home-icon-192x192.png">
+    <link rel="stylesheet" href="../../lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../lib/datepicker/datepicker.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/swiper/js/swiper.min.js"></script>
+    <script defer src="../../js/common.js"></script>
+    <title>건강검진 서비스 - With KMI</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="flex-wrap type-tab-scroll"> <!-- Header -->
+            <header class="header co-header">
+                <!-- 기업 로고에 따른 alt값 부여 -->
+                <h1 class="logo">
+                    <a href="../vgt/vgt_01_001.html"><img src="../../images/dummy/dummy_logo02.png" alt="LG화학 로고"></a>
+                </h1>
+                <!-- 컬러로고: type-color -->
+                <!-- <h1 class="logo type-color">
+    <a href="javascrpit:void(0);"><img src="../../images/dummy/dummy_logo02.png" alt="LG화학 로고"></a>
+  </h1> -->
+                <div class="menu">
+                    <button type="button" class="btn-open-gnb">
+                        <span class="skip">전체 메뉴 열기</span>
+                        <img src="../../images/ico/ico_gnb_hamberger.svg" alt="전체메뉴 아이콘">
+                    </button>
+                </div>
+            </header>
+            <div class="flex-container">
+                <div class="co-block jo-block">
+                    <h1 class="tit type-step type-floating"> 직무스트레스 검사하기 </h1>
+                    <div class="tab-floating">
+                        <ul class=" c-tab type-slide type-scroll" role="tablist" id="jobStressTabList">
+                            <li role="tab" aria-controls="jobstress-exam-tab01-panel" class="tab-scroll-item">
+                                <input type="radio" name="jobStressExam" id="jobstressExam01" checked>
+                                <label for="jobstressExam01">물리환경</label>
+                            </li>
+                            <li role="tab" aria-controls="jobstress-exam-tab02-panel" class="tab-scroll-item">
+                                <input type="radio" name="jobStressExam" id="jobstressExam02">
+                                <label for="jobstressExam02">직무환경</label>
+                            </li>
+                            <li role="tab" aria-controls="jobstress-exam-tab03-panel" class="tab-scroll-item">
+                                <input type="radio" name="jobStressExam" id="jobstressExam03">
+                                <label for="jobstressExam03">직무자율</label>
+                            </li>
+                            <li role="tab" aria-controls="jobstress-exam-tab04-panel" class="tab-scroll-item">
+                                <input type="radio" name="jobStressExam" id="jobstressExam04">
+                                <label for="jobstressExam04">관계갈등</label>
+                            </li>
+                            <li role="tab" aria-controls="jobstress-exam-tab05-panel" class="tab-scroll-item">
+                                <input type="radio" name="jobStressExam" id="jobstressExam05">
+                                <label for="jobstressExam05">물리환경</label>
+                            </li>
+                            <li role="tab" aria-controls="jobstress-exam-tab06-panel" class="tab-scroll-item">
+                                <input type="radio" name="jobStressExam" id="jobstressExam06">
+                                <label for="jobstressExam06">조직체계</label>
+                            </li>
+                            <li role="tab" aria-controls="jobstress-exam-tab07-panel" class="tab-scroll-item">
+                                <input type="radio" name="jobStressExam" id="jobstressExam07">
+                                <label for="jobstressExam07">보상부적절</label>
+                            </li>
+                            <li role="tab" aria-controls="jobstress-exam-tab08-panel" class="tab-scroll-item">
+                                <input type="radio" name="jobStressExam" id="jobstressExam08">
+                                <label for="jobstressExam08">직장문화</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="jobstress-title-field">
+                        <h2 class="title">직무스트레스 측정도구<button class="co-tooltip" aria-label="팝업 열림"></button>
+                        </h2>
+                        <p class="cont">현재 일하면서 귀하의 생각이나 느낌에 가장 가까운 곳에 체크하여 주시기 바랍니다.</p>
+                    </div>
+                    <!-- jo-exam-list-box -->
+                    <div class="jo-exam-listbox">
+                        <!-- 스트레스 검사항목 -->
+                        <!-- [comment]
+		- 검사완료 버튼 클릭 시 미선택 항목이 있는 경우 해당항목으로 스크롤 이벤트 애니메이션 적용  및 텍스트 컬러 변경 처리 필요
+		- 컬러 제어 클래스 : is-error
+	-->
+                        <div class="scroll-tab-field">
+                            <div class="jo-exam-field" id="jobstress-exam-tab01-panel" role="tabpanel">
+                                <h3 class="title">A. 물리환경</h3>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup01-01">
+                                    <!-- 선택 미 항목 내용 컬러 변경 시 클래스 추가 : is-error  -->
+                                    <p id="jobstressChkgroup01-01" class="cont is-error">1.근무 장소가 깨끗하고 쾌적하다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress01-chk01-01" name="jobstress01-chk01">
+                                            <label for="jobstress01-chk01-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress01-chk01-02" name="jobstress01-chk01">
+                                            <label for="jobstress01-chk01-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress01-chk01-03" name="jobstress01-chk01">
+                                            <label for="jobstress01-chk01-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress01-chk01-04" name="jobstress01-chk01">
+                                            <label for="jobstress01-chk01-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup01-02">
+                                    <p id="jobstressChkgroup01-02" class="cont">2. 내 일은 위험하며 사고를 당할 가능성이 있다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress01-chk02-01" name="jobstress01-chk02">
+                                            <label for="jobstress01-chk02-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress01-chk02-02" name="jobstress01-chk02">
+                                            <label for="jobstress01-chk02-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress01-chk02-03" name="jobstress01-chk02">
+                                            <label for="jobstress01-chk02-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress01-chk02-04" name="jobstress01-chk02">
+                                            <label for="jobstress01-chk02-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup01-03">
+                                    <p id="jobstressChkgroup01-03" class="cont">3. 내 업무는 불편한 자세로 오랫동안 일을 해야 한다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress01-chk03-01" name="jobstress01-chk03">
+                                            <label for="jobstress01-chk03-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress01-chk03-02" name="jobstress01-chk03">
+                                            <label for="jobstress01-chk03-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress01-chk03-03" name="jobstress01-chk03">
+                                            <label for="jobstress01-chk03-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress01-chk03-04" name="jobstress01-chk03">
+                                            <label for="jobstress01-chk03-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="jo-exam-field" id="jobstress-exam-tab02-panel" role="tabpanel">
+                                <h3 class="title">B. 직무환경</h3>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup02-01">
+                                    <p id="jobstressChkgroup02-01" class="cont">4. 나는 일이 많아 항상 시간에 쫓기며 일한다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk01-01" name="jobstress02-chk01">
+                                            <label for="jobstress02-chk01-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk01-02" name="jobstress02-chk01">
+                                            <label for="jobstress02-chk01-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk01-03" name="jobstress02-chk01">
+                                            <label for="jobstress02-chk01-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk01-04" name="jobstress02-chk01">
+                                            <label for="jobstress02-chk01-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup02-02">
+                                    <p id="jobstressChkgroup02-02" class="cont">5. 현재 하던 일을 끝내기 전에 다른 일을 하도록 지시 받는다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk02-01" name="jobstress02-chk02">
+                                            <label for="jobstress02-chk02-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk02-02" name="jobstress02-chk02">
+                                            <label for="jobstress02-chk02-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk02-03" name="jobstress02-chk02">
+                                            <label for="jobstress02-chk02-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk02-04" name="jobstress02-chk02">
+                                            <label for="jobstress02-chk02-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup02-03">
+                                    <p id="jobstressChkgroup02-03" class="cont">6. 업무량이 현저하게 증가하였다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk03-01" name="jobstress02-chk03">
+                                            <label for="jobstress02-chk03-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk03-02" name="jobstress02-chk03">
+                                            <label for="jobstress02-chk03-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk03-03" name="jobstress02-chk03">
+                                            <label for="jobstress02-chk03-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk03-04" name="jobstress02-chk03">
+                                            <label for="jobstress02-chk03-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup02-04">
+                                    <p id="jobstressChkgroup02-04" class="cont">7. 나는 동료나 부하직원을 돌보고 책임져야 할 부담을 안고 있다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk04-01" name="jobstress02-chk04">
+                                            <label for="jobstress02-chk04-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk04-02" name="jobstress02-chk04">
+                                            <label for="jobstress02-chk04-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk04-03" name="jobstress02-chk04">
+                                            <label for="jobstress02-chk04-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk04-04" name="jobstress02-chk04">
+                                            <label for="jobstress02-chk04-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup02-05">
+                                    <p id="jobstressChkgroup02-05" class="cont">8. 내 업무는 장시간 동안 집중력이 요구된다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk05-01" name="jobstress02-chk05">
+                                            <label for="jobstress02-chk05-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk05-02" name="jobstress02-chk05">
+                                            <label for="jobstress02-chk05-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk05-03" name="jobstress02-chk05">
+                                            <label for="jobstress02-chk05-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk05-04" name="jobstress02-chk05">
+                                            <label for="jobstress02-chk05-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup02-06">
+                                    <p id="jobstressChkgroup02-06" class="cont">9. 업무 수행 중에 충분한 휴식(짬)이 주어진다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk06-01" name="jobstress02-chk06">
+                                            <label for="jobstress02-chk06-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk06-02" name="jobstress02-chk06">
+                                            <label for="jobstress02-chk06-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk06-03" name="jobstress02-chk06">
+                                            <label for="jobstress02-chk06-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk06-04" name="jobstress02-chk06">
+                                            <label for="jobstress02-chk06-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup02-07">
+                                    <p id="jobstressChkgroup02-07" class="cont">10. 일이 많아서 직장과 가정에 다 잘하기가 힘들다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk07-01" name="jobstress02-chk07">
+                                            <label for="jobstress02-chk07-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk07-02" name="jobstress02-chk07">
+                                            <label for="jobstress02-chk07-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk07-03" name="jobstress02-chk07">
+                                            <label for="jobstress02-chk07-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk07-04" name="jobstress02-chk07">
+                                            <label for="jobstress02-chk07-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup02-08">
+                                    <p id="jobstressChkgroup02-08" class="cont">11. 여러 가지 일을 동시에 해야 한다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk08-01" name="jobstress02-chk08">
+                                            <label for="jobstress02-chk08-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk08-02" name="jobstress02-chk08">
+                                            <label for="jobstress02-chk08-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk08-03" name="jobstress02-chk08">
+                                            <label for="jobstress02-chk08-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress02-chk08-04" name="jobstress02-chk08">
+                                            <label for="jobstress02-chk08-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="jo-exam-field" id="jobstress-exam-tab03-panel" role="tabpanel">
+                                <h3 class="title">C. 직무자율</h3>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup03-01">
+                                    <p id="jobstressChkgroup03-01" class="cont">12. 내 업무는 창의력을 필요로 한다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk01-01" name="jobstress03-chk01">
+                                            <label for="jobstress03-chk01-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk01-02" name="jobstress03-chk01">
+                                            <label for="jobstress03-chk01-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk01-03" name="jobstress03-chk01">
+                                            <label for="jobstress03-chk01-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk01-04" name="jobstress03-chk01">
+                                            <label for="jobstress03-chk01-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup03-02">
+                                    <p id="jobstressChkgroup03-02" class="cont">13. 업무 관련 사항(업무의 일정, 업무량, 회의 시간 등)이 예고 없이 갑작스럽게
+                                        정해지거나 바뀐다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk02-01" name="jobstress03-chk02">
+                                            <label for="jobstress03-chk02-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk02-02" name="jobstress03-chk02">
+                                            <label for="jobstress03-chk02-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk02-03" name="jobstress03-chk02">
+                                            <label for="jobstress03-chk02-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk02-04" name="jobstress03-chk02">
+                                            <label for="jobstress03-chk02-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup03-03">
+                                    <p id="jobstressChkgroup03-03" class="cont">14. 내 업무를 수행하기 위해서는 높은 수준의 기술이나 지식이 필요하다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk03-01" name="jobstress03-chk03">
+                                            <label for="jobstress03-chk03-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk03-02" name="jobstress03-chk03">
+                                            <label for="jobstress03-chk03-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk03-03" name="jobstress03-chk03">
+                                            <label for="jobstress03-chk03-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk03-04" name="jobstress03-chk03">
+                                            <label for="jobstress03-chk03-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup03-04">
+                                    <p id="jobstressChkgroup03-04" class="cont">15. 작업시간, 업무수행과정에서 나에게 결정할 권한이 주어지며 영향력을 행사 할 수
+                                        있다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk04-01" name="jobstress03-chk04">
+                                            <label for="jobstress03-chk04-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk04-02" name="jobstress03-chk04">
+                                            <label for="jobstress03-chk04-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk04-03" name="jobstress03-chk04">
+                                            <label for="jobstress03-chk04-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk04-04" name="jobstress03-chk04">
+                                            <label for="jobstress03-chk04-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup03-05">
+                                    <p id="jobstressChkgroup03-05" class="cont">16. 나의 업무량과 작업스케줄을 스스로 조절할 수 있다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk05-01" name="jobstress03-chk05">
+                                            <label for="jobstress03-chk05-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk05-02" name="jobstress03-chk05">
+                                            <label for="jobstress03-chk05-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk05-03" name="jobstress03-chk05">
+                                            <label for="jobstress03-chk05-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress03-chk05-04" name="jobstress03-chk05">
+                                            <label for="jobstress03-chk05-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="jo-exam-field" id="jobstress-exam-tab04-panel" role="tabpanel">
+                                <h3 class="title">D. 관계갈등</h3>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup04-01">
+                                    <p id="jobstressChkgroup04-01" class="cont">17. 나의 상사는 업무를 완료하는데 도움을 준다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress04-chk01-01" name="jobstress04-chk01">
+                                            <label for="jobstress04-chk01-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress04-chk01-02" name="jobstress04-chk01">
+                                            <label for="jobstress04-chk01-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress04-chk01-03" name="jobstress04-chk01">
+                                            <label for="jobstress04-chk01-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress04-chk01-04" name="jobstress04-chk01">
+                                            <label for="jobstress04-chk01-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup04-02">
+                                    <p id="jobstressChkgroup04-02" class="cont">18. 나의 동료는 업무를 완료하는데 도움을 준다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress04-chk02-01" name="jobstress04-chk02">
+                                            <label for="jobstress04-chk02-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress04-chk02-02" name="jobstress04-chk02">
+                                            <label for="jobstress04-chk02-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress04-chk02-03" name="jobstress04-chk02">
+                                            <label for="jobstress04-chk02-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress04-chk02-04" name="jobstress04-chk02">
+                                            <label for="jobstress04-chk02-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup04-03">
+                                    <p id="jobstressChkgroup04-03" class="cont">19. 직장에서 내가 힘들 때 내가 힘들다는 것을 알아주고 이해해 주는
+                                        사람이 있다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress04-chk03-01" name="jobstress04-chk03">
+                                            <label for="jobstress04-chk03-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress04-chk03-02" name="jobstress04-chk03">
+                                            <label for="jobstress04-chk03-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress04-chk03-03" name="jobstress04-chk03">
+                                            <label for="jobstress04-chk03-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress04-chk03-04" name="jobstress04-chk03">
+                                            <label for="jobstress04-chk03-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup04-04">
+                                    <p id="jobstressChkgroup04-04" class="cont">20. 직장생활의 고충을 함께 나눌 동료가 있다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress04-chk04-01" name="jobstress04-chk04">
+                                            <label for="jobstress04-chk04-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress04-chk04-02" name="jobstress04-chk04">
+                                            <label for="jobstress04-chk04-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress04-chk04-03" name="jobstress04-chk04">
+                                            <label for="jobstress04-chk04-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress04-chk04-04" name="jobstress04-chk04">
+                                            <label for="jobstress04-chk04-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="jo-exam-field" id="jobstress-exam-tab05-panel" role="tabpanel">
+                                <h3 class="title">E. 물리환경</h3>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup05-01">
+                                    <p id="jobstressChkgroup05-01" class="cont">21. 지금의 직장을 옮겨도 나에게 적합한 새로운 일을 쉽게 찾을 수 있다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk01-01" name="jobstress05-chk01">
+                                            <label for="jobstress05-chk01-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk01-02" name="jobstress05-chk01">
+                                            <label for="jobstress05-chk01-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk01-03" name="jobstress05-chk01">
+                                            <label for="jobstress05-chk01-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk01-04" name="jobstress05-chk01">
+                                            <label for="jobstress05-chk01-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup05-02">
+                                    <p id="jobstressChkgroup05-02" class="cont">22. 현재의 직장을 그만두더라도 현재 수준만큼의 직업 (직장)을 쉽게 구할 수
+                                        있다.
+                                    </p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk02-01" name="jobstress05-chk02">
+                                            <label for="jobstress05-chk02-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk02-02" name="jobstress05-chk02">
+                                            <label for="jobstress05-chk02-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk02-03" name="jobstress05-chk02">
+                                            <label for="jobstress05-chk02-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk02-04" name="jobstress05-chk02">
+                                            <label for="jobstress05-chk02-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup05-03">
+                                    <p id="jobstressChkgroup05-03" class="cont">23. 직장사정이 불안하여 미래가 불확실하다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk03-01" name="jobstress05-chk03">
+                                            <label for="jobstress05-chk03-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk03-02" name="jobstress05-chk03">
+                                            <label for="jobstress05-chk03-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk03-03" name="jobstress05-chk03">
+                                            <label for="jobstress05-chk03-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk03-04" name="jobstress05-chk03">
+                                            <label for="jobstress05-chk03-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup05-04">
+                                    <p id="jobstressChkgroup05-04" class="cont">24. 나의 직업은 실직하거나 해고당할 염려가 없다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk04-01" name="jobstress05-chk04">
+                                            <label for="jobstress05-chk04-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk04-02" name="jobstress05-chk04">
+                                            <label for="jobstress05-chk04-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk04-03" name="jobstress05-chk04">
+                                            <label for="jobstress05-chk04-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk04-04" name="jobstress05-chk04">
+                                            <label for="jobstress05-chk04-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup05-05">
+                                    <p id="jobstressChkgroup05-05" class="cont">25. 앞으로 2년 동안 현재의 내 직업을 잃을 가능성이 있다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk05-01" name="jobstress05-chk05">
+                                            <label for="jobstress05-chk05-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk05-02" name="jobstress05-chk05">
+                                            <label for="jobstress05-chk05-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk05-03" name="jobstress05-chk05">
+                                            <label for="jobstress05-chk05-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk05-04" name="jobstress05-chk05">
+                                            <label for="jobstress05-chk05-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup05-06">
+                                    <p id="jobstressChkgroup05-06" class="cont">26. 나의 근무조건이나 상황에 바람직하지 못한 변화(구조조정)가 있었거나 있을
+                                        것으로
+                                        예상된다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk06-01" name="jobstress05-chk06">
+                                            <label for="jobstress05-chk06-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk06-02" name="jobstress05-chk06">
+                                            <label for="jobstress05-chk06-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk06-03" name="jobstress05-chk06">
+                                            <label for="jobstress05-chk06-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress05-chk06-04" name="jobstress05-chk06">
+                                            <label for="jobstress05-chk06-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="jo-exam-field" id="jobstress-exam-tab06-panel" role="tabpanel">
+                                <h3 class="title">F. 조직체계</h3>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup06-01">
+                                    <p id="jobstressChkgroup06-01" class="cont">27. 우리 직장은 근무평가, 인사제도(승진, 부서배치 등)가 공정하고 합리적이다.
+                                    </p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk01-01" name="jobstress06-chk01">
+                                            <label for="jobstress06-chk01-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk01-02" name="jobstress06-chk01">
+                                            <label for="jobstress06-chk01-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk01-03" name="jobstress06-chk01">
+                                            <label for="jobstress06-chk01-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk01-04" name="jobstress06-chk01">
+                                            <label for="jobstress06-chk01-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup06-02">
+                                    <p id="jobstressChkgroup06-02" class="cont">28. 업무수행에 필요한 인원, 공간, 시설, 장비, 훈련 등의 지원이 잘
+                                        이루어지고
+                                        있다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk02-01" name="jobstress06-chk02">
+                                            <label for="jobstress06-chk02-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk02-02" name="jobstress06-chk02">
+                                            <label for="jobstress06-chk02-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk02-03" name="jobstress06-chk02">
+                                            <label for="jobstress06-chk02-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk02-04" name="jobstress06-chk02">
+                                            <label for="jobstress06-chk02-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup06-03">
+                                    <p id="jobstressChkgroup06-03" class="cont">29. 우리 부서와 타 부서간에는 마찰이 없고 업무협조가 잘 이루어진다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk03-01" name="jobstress06-chk03">
+                                            <label for="jobstress06-chk03-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk03-02" name="jobstress06-chk03">
+                                            <label for="jobstress06-chk03-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk03-03" name="jobstress06-chk03">
+                                            <label for="jobstress06-chk03-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk03-04" name="jobstress06-chk03">
+                                            <label for="jobstress06-chk03-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup06-04">
+                                    <p id="jobstressChkgroup06-04" class="cont">30. 근로자, 간부, 경영주 모두가 직장을 위해 한마음으로 일을 한다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk04-01" name="jobstress06-chk04">
+                                            <label for="jobstress06-chk04-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk04-02" name="jobstress06-chk04">
+                                            <label for="jobstress06-chk04-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk04-03" name="jobstress06-chk04">
+                                            <label for="jobstress06-chk04-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk04-04" name="jobstress06-chk04">
+                                            <label for="jobstress06-chk04-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup06-05">
+                                    <p id="jobstressChkgroup06-05" class="cont">31. 일에 대한 나의 생각을 반영할 수 있는 기회와 통로가 있다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk05-01" name="jobstress06-chk05">
+                                            <label for="jobstress06-chk05-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk05-02" name="jobstress06-chk05">
+                                            <label for="jobstress06-chk05-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk05-03" name="jobstress06-chk05">
+                                            <label for="jobstress06-chk05-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk05-04" name="jobstress06-chk05">
+                                            <label for="jobstress06-chk05-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup06-06">
+                                    <p id="jobstressChkgroup06-06" class="cont">32. 나의 경력개발과 승진은 무난히 잘 될 것으로 예상한다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk06-01" name="jobstress06-chk06">
+                                            <label for="jobstress06-chk06-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk06-02" name="jobstress06-chk06">
+                                            <label for="jobstress06-chk06-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk06-03" name="jobstress06-chk06">
+                                            <label for="jobstress06-chk06-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk06-04" name="jobstress06-chk06">
+                                            <label for="jobstress06-chk06-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup06-07">
+                                    <p id="jobstressChkgroup06-07" class="cont">33. 내 현재 직위는 나의 교육 및 경력에 비추어볼 때 적절하다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk07-01" name="jobstress06-chk07">
+                                            <label for="jobstress06-chk07-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk07-02" name="jobstress06-chk07">
+                                            <label for="jobstress06-chk07-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk07-03" name="jobstress06-chk07">
+                                            <label for="jobstress06-chk07-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress06-chk07-04" name="jobstress06-chk07">
+                                            <label for="jobstress06-chk07-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="jo-exam-field" id="jobstress-exam-tab07-panel" role="tabpanel">
+                                <h3 class="title">G. 보상부적절</h3>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup07-01">
+                                    <p id="jobstressChkgroup07-01" class="cont">34. 나의 직업은 내가 평소 기대했던 것에 미치지 못한다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk01-01" name="jobstress07-chk01">
+                                            <label for="jobstress07-chk01-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk01-02" name="jobstress07-chk01">
+                                            <label for="jobstress07-chk01-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk01-03" name="jobstress07-chk01">
+                                            <label for="jobstress07-chk01-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk01-04" name="jobstress07-chk01">
+                                            <label for="jobstress07-chk01-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup07-02">
+                                    <p id="jobstressChkgroup07-02" class="cont">35. 나의 모든 노력과 업적을 고려할 때 내 봉급/수입은 적절하다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk02-01" name="jobstress07-chk02">
+                                            <label for="jobstress07-chk02-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk02-02" name="jobstress07-chk02">
+                                            <label for="jobstress07-chk02-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk02-03" name="jobstress07-chk02">
+                                            <label for="jobstress07-chk02-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk02-04" name="jobstress07-chk02">
+                                            <label for="jobstress07-chk02-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup07-03">
+                                    <p id="jobstressChkgroup07-03" class="cont">36. 나의 모든 노력과 업적을 고려할 때, 나는 직장에서 제대로 존중과 신임을
+                                        받고
+                                        있다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk03-01" name="jobstress07-chk03">
+                                            <label for="jobstress07-chk03-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk03-02" name="jobstress07-chk03">
+                                            <label for="jobstress07-chk03-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk03-03" name="jobstress07-chk03">
+                                            <label for="jobstress07-chk03-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk03-04" name="jobstress07-chk03">
+                                            <label for="jobstress07-chk03-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup07-04">
+                                    <p id="jobstressChkgroup07-04" class="cont">37. 나는 지금 하는 일에 흥미를 느낀다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk04-01" name="jobstress07-chk04">
+                                            <label for="jobstress07-chk04-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk04-02" name="jobstress07-chk04">
+                                            <label for="jobstress07-chk04-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk04-03" name="jobstress07-chk04">
+                                            <label for="jobstress07-chk04-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk04-04" name="jobstress07-chk04">
+                                            <label for="jobstress07-chk04-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup07-05">
+                                    <p id="jobstressChkgroup07-05" class="cont">38. 내 사정이 앞으로 더 좋아질 것을 생각하면 힘든 줄 모르고 일하게 된다.
+                                    </p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk05-01" name="jobstress07-chk05">
+                                            <label for="jobstress07-chk05-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk05-02" name="jobstress07-chk05">
+                                            <label for="jobstress07-chk05-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk05-03" name="jobstress07-chk05">
+                                            <label for="jobstress07-chk05-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk05-04" name="jobstress07-chk05">
+                                            <label for="jobstress07-chk05-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup07-06">
+                                    <p id="jobstressChkgroup07-06" class="cont">39. 나의 능력을 개발하고 발휘할 수 있는 기회가 주어진다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk06-01" name="jobstress07-chk06">
+                                            <label for="jobstress07-chk06-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk06-02" name="jobstress07-chk06">
+                                            <label for="jobstress07-chk06-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk06-03" name="jobstress07-chk06">
+                                            <label for="jobstress07-chk06-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress07-chk06-04" name="jobstress07-chk06">
+                                            <label for="jobstress07-chk06-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="jo-exam-field" id="jobstress-exam-tab08-panel" role="tabpanel">
+                                <h3 class="title">H. 직장문화</h3>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup08-01">
+                                    <p id="jobstressChkgroup08-01" class="cont">40. 회식자리가 불편하다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress08-chk01-01" name="jobstress08-chk01">
+                                            <label for="jobstress08-chk01-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress08-chk01-02" name="jobstress08-chk01">
+                                            <label for="jobstress08-chk01-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress08-chk01-03" name="jobstress08-chk01">
+                                            <label for="jobstress08-chk01-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress08-chk01-04" name="jobstress08-chk01">
+                                            <label for="jobstress08-chk01-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup08-02">
+                                    <p id="jobstressChkgroup08-02" class="cont">41. 나는 기준이나 일관성이 없는 상태로 업무 지시를 받는다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress08-chk02-01" name="jobstress08-chk02">
+                                            <label for="jobstress08-chk02-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress08-chk02-02" name="jobstress08-chk02">
+                                            <label for="jobstress08-chk02-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress08-chk02-03" name="jobstress08-chk02">
+                                            <label for="jobstress08-chk02-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress08-chk02-04" name="jobstress08-chk02">
+                                            <label for="jobstress08-chk02-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup08-03">
+                                    <p id="jobstressChkgroup08-03" class="cont">42. 직장의 분위기가 권위적이고 수직적이다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress08-chk03-01" name="jobstress08-chk03">
+                                            <label for="jobstress08-chk03-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress08-chk03-02" name="jobstress08-chk03">
+                                            <label for="jobstress08-chk03-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress08-chk03-03" name="jobstress08-chk03">
+                                            <label for="jobstress08-chk03-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress08-chk03-04" name="jobstress08-chk03">
+                                            <label for="jobstress08-chk03-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exam-article" role="group" aria-labelledby="jobstressChkgroup08-04">
+                                    <p id="jobstressChkgroup08-04" class="cont">43. 남성, 여성이라는 성적인 차이 때문에 불이익을 받는다.</p>
+                                    <div class="row">
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress08-chk04-01" name="jobstress08-chk04">
+                                            <label for="jobstress08-chk04-01" class="chk-label"><i></i><span>전혀 그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress08-chk04-02" name="jobstress08-chk04">
+                                            <label for="jobstress08-chk04-02" class="chk-label"><i></i><span>그렇지 않다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress08-chk04-03" name="jobstress08-chk04">
+                                            <label for="jobstress08-chk04-03" class="chk-label"><i></i><span>그렇다</span></label>
+                                        </div>
+                                        <div class="c-chkbox type-jobstress">
+                                            <input type="radio" id="jobstress08-chk04-04" name="jobstress08-chk04">
+                                            <label for="jobstress08-chk04-04" class="chk-label"><i></i><span>매우 그렇다</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="jo-btm-refcont">
+                        <p>설문지 데이터 출처 : KOSHA GUIDE (<a href="https://www.kosha.or.kr/" title="새 창 열림" class="c-txt-link lined" target="_blank">https://www.kosha.or.kr/</a>)</p>
+                    </div>
+                    <div class="c-btn-bottom type01">
+                        <a href="javascript:void(0);" class="co-btn btn-next" title="페이지이동"><span>검사완료</span></a>
+                    </div>
+                </div> <button class="btn-move-top"><span class="skip">터치시최상단으로이동</span></button>
+            </div> <!-- footer -->
+            <footer class="footer type-default">
+                <a href="javascript:void(0);" title="페이지이동" class="img-logo"><img src="../../images/logo/footer_logo_01.svg" alt="KMI 재단법인 한국의학연구소 KOREA MEDICAL INSTITUTE"></a>
+
+                <!-- [ mod(230130) ] -->
+                <div class="btn-list type-footer"> <a href="javascript:void(0);" title="페이지 이동" class="personal-policy">개인정보처리방침</a>
+                    <a href="javascript:void(0);" title="페이지 이동">이용약관</a>
+                    <a href="javascript:void(0);" title="페이지 이동">이용가이드</a>
+                </div>
+
+                <div class="footer-txt">
+                    상호 : 재단법인 한국의학연구소 ㅣ 대표자 성명 : 이상호 ㅣ 본원 : (우)03173 서울시 종로구 세종대로 23길 54(당주동, 세종빌딩) ㅣ 사업자등록번호 : 130-82-06960 ㅣ 서비스 운영사 :
+                    ㈜옴니케어 ㅣ 전자우편주소 : <a href="mailto:webmaster@kmi.or.kr">webmaster@kmi.or.kr</a> ㅣ 고객문의 : <a href="tel:1533-0505">1533-0505</a> / 평일 : 오전 07:00 ~
+                    오후 18:00
+                    (토요일 오전 07:00 ~ 오후 12:30)
+                    (일/공휴일 휴무)
+                </div>
+
+                <div class="copyright">© 2022. <strong>KMI</strong> All Rights Reserved.</div>
+                <!-- [ // mod(230130) ] -->
+            </footer>
+        </div>
+    </div> <!-- GNB -->
+    <div class="co-gnb">
+        <!-- gnb bg -->
+        <div class="gnb-bg"></div>
+        <!-- gnb header -->
+        <div class="gnb-header">
+            <h1 class="profile">
+                <a href="javascrpit:void(0);" title="마이페이지로 이동">
+                    <img src="../../images/ico/ico_gnb_profile.svg" alt="기본 프로필">
+                    <span><em>홍길동</em> 님</span>
+                </a>
+            </h1>
+            <button class="btn-close-gnb">
+                <img src="../../images/ico/ico_close_white_34x34.svg" alt="전체메뉴 닫기">
+            </button>
+        </div>
+        <!-- gnb body -->
+        <ul class="gnb-body accordion-list">
+            <li>
+                <a href="../vgt/vgt_01_001.html" title="페이지 이동" class="btn-gnb-main">
+                    <h2>메인</h2>
+                </a>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuHealthCheckSystem" aria-controls="gnb-menu-health-check-system">
+                    <h2>건강검진 제도</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-health-check-system" role="region" aria-labelledby="gnbMenuHealthCheckSystem">
+                    <!-- [Comment]
+					+ 서브메뉴 현재 페이지 클래스 제어 : active
+				-->
+                    <a href="../ti/TI_01_001.html" title="페이지 이동" class="active">국가건강 검진 제도 안내</a>
+                    <a href="../ti/TI_01_002.html" title="페이지 이동">우리 회사 검진제도 안내</a>
+                </div>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuExamination" aria-controls="gnb-menu-examination">
+                    <h2>검진 예약/결과 조회</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-examination" role="region" aria-labelledby="gnbMenuExamination">
+                    <a href="../rv/RV_01_001_2.html" title="페이지 이동">검진 예약</a>
+                    <a href="../rv/RV_01_027.html" title="페이지 이동">예약 내역</a>
+                    <a href="../vgt/VGT_03_001.html" title="페이지 이동">검진기관</a>
+                    <a href="../ri/RI_01_001.html" title="페이지 이동">검진 결과</a>
+                </div>
+            </li>
+            <!-- [ mod(230310) ]
+	직무스트레스 메뉴  markup 변경
+	-->
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbJobStress" aria-controls="gnb-jobstress">
+                    <div class="gnb-mark">
+                        <h2>직무스트레스</h2>
+                        <div class="badge">
+                            <em>대상자</em>
+                        </div>
+                    </div>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-jobstress" role="region" aria-labelledby="gnbJobStress">
+                    <a href="../jo/JO_01_001.html" title="페이지 이동">검사하기</a>
+                    <a href="../jo/JO_02_001.html" title="페이지 이동">검사결과</a>
+                </div>
+            </li>
+            <!-- [ // mod(230309) ]-->
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuResultConsultation" aria-controls="gnb-menu-result-consultation">
+                    <h2>결과 상담</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-result-consultation" role="region" aria-labelledby="gnbMenuResultConsultation">
+                    <a href="../rc/RC_01_001.html" title="페이지 이동">결과 상담하기</a>
+                    <a href="../rc/RC_01_004.html" title="페이지 이동">상담 이력</a>
+                </div>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuHealthInformation" aria-controls="gnb-menu-health-information">
+                    <h2>건강 정보</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-health-information" role="region" aria-labelledby="gnbMenuHealthInformation">
+                    <a href="../hi/HI_01_001.html" title="페이지 이동">검진 항목 정보</a>
+                    <a href="../hi/HI_01_002_1.html" title="페이지 이동">영상 건강 정보</a>
+                    <a href="../hi/HI_01_003_1.html" title="페이지 이동">질환별 건강 정보</a>
+                    <a href="../hi/HI_01_004_1.html" title="페이지 이동">검진센터 탐방</a>
+                </div>
+            </li>
+            <li class="accordion type-open-one">
+                <button class="accordion-header" id="gnbMenuCommunity" aria-controls="gnb-menu-community">
+                    <h2>커뮤니티</h2>
+                    <img src="../../images/ico/ico_gnb_arrow.svg" alt="화살표 아이콘" aria-hidden="true" class="img-acc-arrow">
+                </button>
+                <div class="gnb-list accordion-body" id="gnb-menu-community" role="region" aria-labelledby="gnbMenuCommunity">
+                    <a href="../ni/NI_01_001.html" title="페이지 이동">이벤트</a>
+                    <a href="../ni/NI_01_002.html" title="페이지 이동">공지사항</a>
+                    <a href="../guide/GUIDE_01_004_4.html" title="페이지 이동">FAQ</a>
+                    <a href="../guide/GUIDE_01_004_1.html" title="페이지 이동">서비스 문의</a>
+                </div>
+            </li>
+        </ul>
+        <!-- gnb bottom button - logout -->
+        <a href="javascript:void(0);" class="gnb-btn-logout" title="전체 메뉴 닫히고 페이지 이동">
+            <img src="../../images/ico/ico_gnb_logout.svg" alt="로그아웃 아이콘">
+            <span>로그아웃</span>
+        </a>
+    </div>
+    <script src="../../js/common02.js"></script>
+</body>
+
+</html>
